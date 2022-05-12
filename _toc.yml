@@ -1,0 +1,54 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+options:
+  numbered: True
+
+chapters:
+- file: sequences_and_series/limits.md
+- file: sequences_and_series/series.md
+- file: sequences_and_series/convergence.md
+- file: complex_numbers/complex_numbers.md
+- file: differentiation_and_integration/differentiation.md
+- file: differentiation_and_integration/integration.md
+- file: sequences_and_series/taylor_series.md
+- file: odes/intro_odes.md
+- file: odes/1st_order_odes.md
+- file: odes/2nd_order_odes.md
+- file: python/ode_solver_demo.ipynb
+
+- file: VectorCalculus/partialdifferentiation
+- file: VectorCalculus/integrationprelim
+- file: VectorCalculus/vectoralgebra
+- file: VectorCalculus/calculusonfields
+- file: VectorCalculus/divandcurl
+- file: VectorCalculus/coordinatesystems
+- file: VectorCalculus/lineintegrals
+- file: VectorCalculus/volumeintegrals
+- file: VectorCalculus/surfaceintegrals
+- file: VectorCalculus/vectorcalctheorems
+
+- file: ProofLogic/setsnotation
+- file: ProofLogic/functions
+- file: ProofLogic/propositionallogic
+- file: ProofLogic/methodsofproof
+
+
+- file: LinearAlgebra/linear_systems_matrices/echelon_form.md
+- file: LinearAlgebra/linear_systems_matrices/matrices.md
+- file: LinearAlgebra/linear_systems_matrices/linear_maps.md
+- file: LinearAlgebra/linear_systems_matrices/inverses.md
+- file: LinearAlgebra/linear_systems_matrices/determinants.md
+- file: LinearAlgebra/eigenvectors/notes.md
+- file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
+
+#- file: LinearAlgebra/problems/problems_1.md
+
+- file: DynamicalSystems/phase_portrait.md
+- file: DynamicalSystems/linearclassify.md
+- file: DynamicalSystems/linearize.md
+- file: DynamicalSystems/limit_cycles.md
+- file: DynamicalSystems/python_examples.md
+
