@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>15. Line Integrals &#8212; My sample book</title>
+    <title>18. Line Integrals &#8212; My sample book</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,28 +33,30 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="16. Multidimensional Integrals" href="volumeintegrals.html" />
-    <link rel="prev" title="14. Coordinate Systems" href="coordinatesystems.html" />
+    <link rel="next" title="19. Multidimensional Integrals" href="volumeintegrals.html" />
+    <link rel="prev" title="17. Coordinate Systems" href="coordinatesystems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,138 +137,153 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../odes/Intro_ODEs.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_ODEs.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="partialdifferentiation.html">
-   9. Multivariable Calculus
+   12. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="integrationprelim.html">
-   10. Integration Preliminaries
+   13. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   11. Vectors and Vector Algebra
+   14. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
-   12. Vector Fields
+   15. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
-   13. Variations of Fields
+   16. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
-   14. Coordinate Systems
+   17. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   15. Line Integrals
+   18. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="volumeintegrals.html">
-   16. Multidimensional Integrals
+   19. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="surfaceintegrals.html">
-   17. Surface Integrals
+   20. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   18. Vector Calculus Theorems
+   21. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   19. Set Theory
+   22. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   20. Functions
+   23. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
+   24. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
+   25. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
+   26. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   24. Matrices
+   27. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
+   28. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   26. Inverses
+   29. Inverses
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   27. Determinants
+   30. Determinants
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
+   31. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
+   32. Matrix Diagonalisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
+   33. The phase portrait
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/linearclassify.html">
-   31. Linear systems
+   34. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
+   35. Bifurcation analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
+   36. Limit cycles
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/python_examples.html">
-   34. Python code
+   37. Python code
   </a>
  </li>
 </ul>
@@ -358,19 +375,19 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-line-integrals">
-   15.1. Calculating Line Integrals
+   18.1. Calculating Line Integrals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples-of-line-integrals">
-     15.1.1. Examples of Line Integrals
+     18.1.1. Examples of Line Integrals
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservative-vector-fields">
-   15.2. Conservative Vector Fields
+   18.2. Conservative Vector Fields
   </a>
  </li>
 </ul>
@@ -395,19 +412,19 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-line-integrals">
-   15.1. Calculating Line Integrals
+   18.1. Calculating Line Integrals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples-of-line-integrals">
-     15.1.1. Examples of Line Integrals
+     18.1.1. Examples of Line Integrals
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservative-vector-fields">
-   15.2. Conservative Vector Fields
+   18.2. Conservative Vector Fields
   </a>
  </li>
 </ul>
@@ -419,23 +436,23 @@
             
               <div>
                 
-  <div class="section" id="line-integrals">
-<h1><span class="section-number">15. </span>Line Integrals<a class="headerlink" href="#line-integrals" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="line-integrals">
+<h1><span class="section-number">18. </span>Line Integrals<a class="headerlink" href="#line-integrals" title="Permalink to this headline">¶</a></h1>
 <p>Following on from the idea of breaking up a function into infintesimal sections <span class="math notranslate nohighlight">\(\mathrm{d} s\)</span>, we can think about a path through a vector field <span class="math notranslate nohighlight">\(\bf A(r)\)</span>, as depicted
-in <a class="reference internal" href="#lineintegral"><span class="std std-numref">Fig. 15.1</span></a>.  Starting from some vector <span class="math notranslate nohighlight">\(\bf r_A\)</span> we can follow some path through the vector field (which we denote <span class="math notranslate nohighlight">\(C\)</span>), with the path following the
+in <a class="reference internal" href="#lineintegral"><span class="std std-numref">Fig. 18.1</span></a>.  Starting from some vector <span class="math notranslate nohighlight">\(\bf r_A\)</span> we can follow some path through the vector field (which we denote <span class="math notranslate nohighlight">\(C\)</span>), with the path following the
 field’s direction at each point before finishing at point <span class="math notranslate nohighlight">\(\bf r_B\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[I = \int_C {\bf G(r)} \cdot \mathrm{d}{\bf r}\]</div>
 <div class="figure align-default" id="lineintegral">
 <img alt="../_images/lineintegral.png" src="../_images/lineintegral.png" />
-<p class="caption"><span class="caption-number">Fig. 15.1 </span><span class="caption-text">Ilustration of a line integral, with <span class="math notranslate nohighlight">\(I = \int_C {\bf G(r)}\cdot \mathrm{d}{\bf r}\)</span></span><a class="headerlink" href="#lineintegral" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 18.1 </span><span class="caption-text">Ilustration of a line integral, with <span class="math notranslate nohighlight">\(I = \int_C {\bf G(r)}\cdot \mathrm{d}{\bf r}\)</span></span><a class="headerlink" href="#lineintegral" title="Permalink to this image">¶</a></p>
 </div>
 <p>We see that that this is a scalar, found from the scalar product of <span class="math notranslate nohighlight">\(\bf G\)</span> with the differential line element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf r}\)</span>.</p>
 <p>IF we pick a closed path, we call this a <b>Loop Integral</b>:</p>
 <div class="math notranslate nohighlight">
 \[I = \oint_C {\bf G(r)} \cdot \mathrm{d}{\bf r}\]</div>
 <div class="section" id="calculating-line-integrals">
-<h2><span class="section-number">15.1. </span>Calculating Line Integrals<a class="headerlink" href="#calculating-line-integrals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.1. </span>Calculating Line Integrals<a class="headerlink" href="#calculating-line-integrals" title="Permalink to this headline">¶</a></h2>
 <p>Whilst the notation for a line integral looks compact, it does not really make it clear <em>how</em> we can evaluate over a path <span class="math notranslate nohighlight">\(C\)</span>.  In order to make progress,
 we need to parametrise the path, lets say with some variable <span class="math notranslate nohighlight">\(t\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -450,7 +467,7 @@ we need to parametrise the path, lets say with some variable <span class="math n
 \[I = \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_a^b {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t
 \]</div>
 <div class="section" id="examples-of-line-integrals">
-<h3><span class="section-number">15.1.1. </span>Examples of Line Integrals<a class="headerlink" href="#examples-of-line-integrals" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">18.1.1. </span>Examples of Line Integrals<a class="headerlink" href="#examples-of-line-integrals" title="Permalink to this headline">¶</a></h3>
 <p>As an example lets consider the vector field:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix}\end{split}\]</div>
@@ -511,7 +528,7 @@ we need to parametrise the path, lets say with some variable <span class="math n
 </div>
 </div>
 <div class="section" id="conservative-vector-fields">
-<h2><span class="section-number">15.2. </span>Conservative Vector Fields<a class="headerlink" href="#conservative-vector-fields" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.2. </span>Conservative Vector Fields<a class="headerlink" href="#conservative-vector-fields" title="Permalink to this headline">¶</a></h2>
 <p>There is an important class of vector fields, known as <b>conservative vector fields</b>, for which line integrals do not depend on
 which path is taken from rA to rB, and for which all loop integrals are zero.  We see that our example</p>
 <div class="math notranslate nohighlight">
@@ -593,13 +610,13 @@ that <span class="math notranslate nohighlight">\({\bf G} = \nabla \phi\)</span>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">14. </span>Coordinate Systems</p>
+            <p class="prev-next-title"><span class="section-number">17. </span>Coordinate Systems</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="volumeintegrals.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">16. </span>Multidimensional Integrals</p>
+        <p class="prev-next-title"><span class="section-number">19. </span>Multidimensional Integrals</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

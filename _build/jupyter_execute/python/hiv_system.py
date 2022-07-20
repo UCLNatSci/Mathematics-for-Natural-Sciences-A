@@ -52,7 +52,7 @@ plt.legend(loc='best')
 plt.show()
 
 
-# In[2]:
+# In[ ]:
 
 
 # Model definition
@@ -64,7 +64,7 @@ t,I= 0,1     ## initial conditions
 print(dIdt(I,t,mu,r0)) # slope at t=0
 
 
-# In[3]:
+# In[ ]:
 
 
 h,tmax=0.1,10     ## define step size and tmax
@@ -82,13 +82,13 @@ plt.plot(tlist,ilist)
 
 
 
-# In[4]:
+# In[ ]:
 
 
 print(np.append(tlist,1))
 
 
-# In[5]:
+# In[ ]:
 
 
 # Model definition
@@ -107,7 +107,7 @@ I = odeint(dIdt,I0,t,args=(1/14,3))
 plt.plot(t,I,'b-')
 
 
-# In[6]:
+# In[ ]:
 
 
 
@@ -129,7 +129,7 @@ I = odeint(dIdt,z0,t)
 plt.plot(t,I,'b-')
 
 
-# In[7]:
+# In[ ]:
 
 
 # Model definition
@@ -159,7 +159,7 @@ plt.legend(loc='best')
 plt.show()
 
 
-# In[8]:
+# In[ ]:
 
 
 import numpy as np
@@ -188,7 +188,7 @@ plt.legend(loc='best')
 plt.show()
 
 
-# In[9]:
+# In[ ]:
 
 
 # Model definition
@@ -216,7 +216,7 @@ plt.legend(loc='best')
 plt.show()
 
 
-# In[10]:
+# In[ ]:
 
 
 # Model definition

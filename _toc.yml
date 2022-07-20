@@ -10,13 +10,18 @@ chapters:
 - file: sequences_and_series/limits.md
 - file: sequences_and_series/series.md
 - file: sequences_and_series/convergence.md
+
 - file: complex_numbers/complex_numbers.md
+
 - file: differentiation_and_integration/differentiation.md
 - file: differentiation_and_integration/integration.md
+
 - file: sequences_and_series/taylor_series.md
-- file: odes/intro_odes.md
-- file: odes/1st_order_odes.md
-- file: odes/2nd_order_odes.md
+
+- file: odes/Intro_ODEs.md
+- file: odes/1st_order_ODEs.md
+- file: odes/2nd_order_ODEs.md
+
 - file: python/ode_solver_demo.ipynb
 
 - file: VectorCalculus/partialdifferentiation
@@ -34,7 +39,6 @@ chapters:
 - file: ProofLogic/functions
 - file: ProofLogic/propositionallogic
 - file: ProofLogic/methodsofproof
-
 
 - file: LinearAlgebra/linear_systems_matrices/echelon_form.md
 - file: LinearAlgebra/linear_systems_matrices/matrices.md

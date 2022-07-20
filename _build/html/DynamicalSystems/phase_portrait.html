@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30. The phase portrait &#8212; My sample book</title>
+    <title>33. The phase portrait &#8212; My sample book</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,28 +33,30 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="31. Linear systems" href="linearclassify.html" />
-    <link rel="prev" title="29. Matrix Diagonalisation" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html" />
+    <link rel="next" title="34. Linear systems" href="linearclassify.html" />
+    <link rel="prev" title="32. Matrix Diagonalisation" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,138 +137,153 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../odes/Intro_ODEs.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_ODEs.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
+   12. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
+   13. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
+   14. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
+   15. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
+   16. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
+   17. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
+   18. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
+   19. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
+   20. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
+   21. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   19. Set Theory
+   22. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   20. Functions
+   23. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
+   24. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
+   25. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
+   26. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   24. Matrices
+   27. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
+   28. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   26. Inverses
+   29. Inverses
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   27. Determinants
+   30. Determinants
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
+   31. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
+   32. Matrix Diagonalisation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   30. The phase portrait
+   33. The phase portrait
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="linearclassify.html">
-   31. Linear systems
+   34. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="linearize.html">
-   32. Bifurcation analysis
+   35. Bifurcation analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="limit_cycles.html">
-   33. Limit cycles
+   36. Limit cycles
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python_examples.html">
-   34. Python code
+   37. Python code
   </a>
  </li>
 </ul>
@@ -378,49 +395,49 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-motivating-example-in-1d">
-   30.1. A motivating example in 1D
+   33.1. A motivating example in 1D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-motivating-example-in-2d">
-   30.2. A motivating example in 2D
+   33.2. A motivating example in 2D
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-numerically">
-     30.2.1. Solving numerically
+     33.2.1. Solving numerically
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#time-series-plots">
-     30.2.2. Time series plots
+     33.2.2. Time series plots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#state-space-plots">
-     30.2.3. State space plots
+     33.2.3. State space plots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     30.2.4. The phase portrait
+     33.2.4. The phase portrait
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-vector-field">
-     30.2.5. The vector field
+     33.2.5. The vector field
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classifying-different-behaviours">
-     30.2.6. Classifying different behaviours
+     33.2.6. Classifying different behaviours
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise">
-   30.3. Exercise
+   33.3. Exercise
   </a>
  </li>
 </ul>
@@ -445,49 +462,49 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-motivating-example-in-1d">
-   30.1. A motivating example in 1D
+   33.1. A motivating example in 1D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-motivating-example-in-2d">
-   30.2. A motivating example in 2D
+   33.2. A motivating example in 2D
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-numerically">
-     30.2.1. Solving numerically
+     33.2.1. Solving numerically
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#time-series-plots">
-     30.2.2. Time series plots
+     33.2.2. Time series plots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#state-space-plots">
-     30.2.3. State space plots
+     33.2.3. State space plots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     30.2.4. The phase portrait
+     33.2.4. The phase portrait
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-vector-field">
-     30.2.5. The vector field
+     33.2.5. The vector field
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classifying-different-behaviours">
-     30.2.6. Classifying different behaviours
+     33.2.6. Classifying different behaviours
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise">
-   30.3. Exercise
+   33.3. Exercise
   </a>
  </li>
 </ul>
@@ -499,12 +516,12 @@
             
               <div>
                 
-  <div class="section" id="the-phase-portrait">
-<h1><span class="section-number">30. </span>The phase portrait<a class="headerlink" href="#the-phase-portrait" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-phase-portrait">
+<h1><span class="section-number">33. </span>The phase portrait<a class="headerlink" href="#the-phase-portrait" title="Permalink to this headline">¶</a></h1>
 <p>In this section, we introduce the phase portrait representation of an autonomous ODE. This is a plot of the solution <em>state space</em>, illustrating any equilibrium points and selected trajectories. We usually do not need to solve the ODE to obtain the phase portrait.</p>
 <p>We train ourselves to understand the behaviour from looking at the phase plane, because we can often construct the phase plane even when there is no exact solution.</p>
 <div class="section" id="a-motivating-example-in-1d">
-<span id="motv-exam"></span><h2><span class="section-number">30.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
+<span id="motv-exam"></span><h2><span class="section-number">33.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following ODE, subject to the given initial condition :</p>
 <p>\begin{equation}
 \dot{x}=2x, \qquad x(0)=x_0.
@@ -549,7 +566,7 @@ Here the graphs of <span class="math notranslate nohighlight">\((x,\dot{x})\)</s
 </div>
 </div>
 <div class="section" id="a-motivating-example-in-2d">
-<span id="undamp-pend"></span><h2><span class="section-number">30.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
+<span id="undamp-pend"></span><h2><span class="section-number">33.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE. The term with coefficient <span class="math notranslate nohighlight">\(k\)</span> represents frictional effects, and the term with coefficient <span class="math notranslate nohighlight">\(\omega^2\)</span> represents the weight of the pendulum.</p>
 <p>\begin{equation}
 \ddot{x}+k\dot{x}+\omega^2\sin(x)=0
@@ -590,7 +607,7 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </div>
 <br>
 <div class="section" id="solving-numerically">
-<h3><span class="section-number">30.2.1. </span>Solving numerically<a class="headerlink" href="#solving-numerically" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">33.2.1. </span>Solving numerically<a class="headerlink" href="#solving-numerically" title="Permalink to this headline">¶</a></h3>
 <p>We can solve the system to obtain the angular displacement <span class="math notranslate nohighlight">\(x(t)\)</span> and the velocity <span class="math notranslate nohighlight">\(y(t)\)</span> for given parameters and initial conditions.</p>
 <p>In the work that follows we will choose <span class="math notranslate nohighlight">\(k=0\)</span>, which means there are no losses due to friction. We will take <span class="math notranslate nohighlight">\(\omega=1\)</span> and we will begin by choosing initial conditions <span class="math notranslate nohighlight">\(x(0)=1\)</span>, <span class="math notranslate nohighlight">\(y(0)=0\)</span>.</p>
 <p>The solution uses the <code class="docutils literal notranslate"><span class="pre">odeint</span></code> function which is a numerical ODE solver. We specify the timepoints <code class="docutils literal notranslate"><span class="pre">t</span></code> that we require the solution value for. The solver returns <code class="docutils literal notranslate"><span class="pre">X</span></code> which is the numeric solution at those timepoints. Each column in <code class="docutils literal notranslate"><span class="pre">X</span></code> gives the solution values for one of the dependent variables, so for this system there will be two columns.</p>
@@ -613,11 +630,23 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Parameter values</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <br>
 </div>
 <div class="section" id="time-series-plots">
-<h3><span class="section-number">30.2.2. </span>Time series plots<a class="headerlink" href="#time-series-plots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">33.2.2. </span>Time series plots<a class="headerlink" href="#time-series-plots" title="Permalink to this headline">¶</a></h3>
 <p>We can plot the time series for the given parameters and conditions, as shown below. Most of the code here is just twiddles to improve how the plot looks, such as changes to the axis limits or plot labels. The main functional part of the code is the following line that plots the timepoints <code class="docutils literal notranslate"><span class="pre">t</span></code> against the solutions for <span class="math notranslate nohighlight">\(x\)</span>, which are found in the first column of array <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
 </pre></div>
@@ -636,16 +665,13 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_9_0.png" class="align-center" src="../_images/phase_portrait_9_0.png" />
-</div>
 </div>
 <br>
 <p>If we want to understand how the system behaves for a range of initial conditions or when subjected to a small perturbation, we would need to re-solve and compare multiple solutions. This is inconvenient.</p>
 <br>
 </div>
 <div class="section" id="state-space-plots">
-<h3><span class="section-number">30.2.3. </span>State space plots<a class="headerlink" href="#state-space-plots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">33.2.3. </span>State space plots<a class="headerlink" href="#state-space-plots" title="Permalink to this headline">¶</a></h3>
 <p>We can make better progress by working in state space. This time, there are two state variables, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> and so the state space is <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. This makes sense, because to solve a second order ODE we need to have two initial conditions. In this case we have one condition for the initial angular displacement <span class="math notranslate nohighlight">\(x(0)\)</span> and one condition for the initial angular velocity <span class="math notranslate nohighlight">\(y(0)\)</span>.</p>
 <p>The plot below shows the solution trajectory in state space corresponding to the parameter values and initial conditions that we used in the time series plot above.</p>
 <p>The main functional part of the code is the following line that plots <span class="math notranslate nohighlight">\(x\)</span> against <span class="math notranslate nohighlight">\(y\)</span> by extracting each column from array <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
@@ -663,9 +689,6 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_11_0.png" class="align-center" src="../_images/phase_portrait_11_0.png" />
-</div>
 </div>
 <br>
 <p><strong>Observations</strong></p>
@@ -678,13 +701,10 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 <br>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">30.2.4. </span>The phase portrait<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">33.2.4. </span>The phase portrait<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>The plot below illustrates several solution trajectories for the undamped pendulum on the same sketch. The equilibrium points are also marked. Notice the difference in character between solution trajectories near to <span class="math notranslate nohighlight">\(x=0\)</span> compared to those near <span class="math notranslate nohighlight">\(x=\pm\pi\)</span>. The former corresponds to the pendulum in the downward vertical position, whilst the latter corresponds to the pendulum in the upward vertical position.</p>
 <p>Initialising the pendulum with a low/moderate speed provides backward and forward oscillations of constant amplitude (closed trajectories). However, for larger value of the initial speed the pendulum performs complete revolutions (open trajectories). The <em>separatrix</em> is the curve that separates the open and closed trajectories. It is identified on the sketch in dashed blue.</p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_13_0.png" class="align-center" src="../_images/phase_portrait_13_0.png" />
-</div>
 </div>
 <p>We can classify the equilibrium points as follows:</p>
 <p><strong>Stationary point at <span class="math notranslate nohighlight">\((0,0)\)</span></strong></p>
@@ -699,7 +719,7 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </div>
 </div>
 <div class="section" id="the-vector-field">
-<h3><span class="section-number">30.2.5. </span>The vector field<a class="headerlink" href="#the-vector-field" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">33.2.5. </span>The vector field<a class="headerlink" href="#the-vector-field" title="Permalink to this headline">¶</a></h3>
 <p>We can also infer solution trajectories by plotting the vector field <span class="math notranslate nohighlight">\((\dot{x},\dot{y})\)</span> in state space. Since there is no explicit time dependence on the right-hand side, the change vectors remain static and the solution will follow a trajectory tangent to them.</p>
 <p>In Python we can use the <code class="docutils literal notranslate"><span class="pre">quiver</span></code> function to plot the vector field, as shown below-left. It can be difficult to infer the behaviour from the vector field alone, but by combining plots of the vector field with a few solution trajectories we can usually get a good overview.</p>
 <p>Replacing the <code class="docutils literal notranslate"><span class="pre">quiver</span></code> function with the <code class="docutils literal notranslate"><span class="pre">streamplot</span></code> function results in an attempt by Python to create the curves that are tangent to the vector field, as shown below-right.</p>
@@ -730,9 +750,6 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_15_0.png" src="../_images/phase_portrait_15_0.png" />
-</div>
 </div>
 <p>The quality of the streamplots is usually not very satisfactory unless additional painstaking work is undertaken to force a better result. An example of a better result is shown below.</p>
 <p>However, by combining  rough-and-ready streamplots with mathematical analysis we can usually get a very clear understanding of the system dynamics.</p>
@@ -757,9 +774,6 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_17_0.png" class="align-center" src="../_images/phase_portrait_17_0.png" />
-</div>
 </div>
 <div class="admonition-side-note-on-phase-paths admonition">
 <p class="admonition-title">Side note on phase paths</p>
@@ -774,7 +788,7 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </div>
 </div>
 <div class="section" id="classifying-different-behaviours">
-<h3><span class="section-number">30.2.6. </span>Classifying different behaviours<a class="headerlink" href="#classifying-different-behaviours" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">33.2.6. </span>Classifying different behaviours<a class="headerlink" href="#classifying-different-behaviours" title="Permalink to this headline">¶</a></h3>
 <p>In the each of the time series and state space plots above we considered the undamped case <span class="math notranslate nohighlight">\(k=0\)</span>. Now we will repeat our methodology for the case where there is a small amount of damping <span class="math notranslate nohighlight">\(k=0.4\)</span>. The following code produces a rough-and-ready version of the phase portrait shown below.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">=</span><span class="mf">0.4</span>
 <span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
@@ -782,15 +796,12 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_19_0.png" class="align-center" src="../_images/phase_portrait_19_0.png" />
-</div>
 </div>
 <p>The addition of damping does not change the locations of the equilibria, but it dos affect their stability. All solutions decay gradually towards the equilibrium at <span class="math notranslate nohighlight">\((0,0)\)</span>. This is represented by an inward-spiralling trajectory on the phase diagram. The pendulum oscillates with decaying amplitude.</p>
 </div>
 </div>
 <div class="section" id="exercise">
-<h2><span class="section-number">30.3. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">33.3. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <div class="toggle docutils container">
 <p><strong>Solution:</strong></p>
 <p>There is a stationary point at</p>
@@ -835,9 +846,6 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/phase_portrait_21_0.png" src="../_images/phase_portrait_21_0.png" />
-</div>
 <p>We see that the nature of the equilibrium point depends on parameter <span class="math notranslate nohighlight">\(c\)</span>, when the other parameters are kept fixed. We will see in a later chapter that the qualitative behaviour of systems can be highly sensitive to small changes in parameter values.</p>
 </div>
 </div>
@@ -872,13 +880,13 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">29. </span>Matrix Diagonalisation</p>
+            <p class="prev-next-title"><span class="section-number">32. </span>Matrix Diagonalisation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="linearclassify.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">31. </span>Linear systems</p>
+        <p class="prev-next-title"><span class="section-number">34. </span>Linear systems</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

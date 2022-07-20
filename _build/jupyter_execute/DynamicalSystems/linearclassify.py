@@ -572,7 +572,7 @@ glue("rayl_fig", fig, display=False)
 # 
 # The system has one real eigenvalue, which is negative and two that are positive
 
-# In[11]:
+# In[ ]:
 
 
 from numpy import linalg as la
@@ -588,7 +588,7 @@ for i in k:
 # 
 # Here, plotting the 2d phase portrait at a constant value of $z$ shows the stable spiral
 
-# In[12]:
+# In[ ]:
 
 
 x=np.linspace(-10, 10, 10)
@@ -607,7 +607,7 @@ plt.show()
 
 # Plotting one of the solution trajectories can illustrate the nature of the equilibrium point in three dimensions:
 
-# In[13]:
+# In[ ]:
 
 
 init=np.real(4*v[:,2]+[1,1,0])

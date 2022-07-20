@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ordinary Differential Equations &#8212; My sample book</title>
+    <title>8. Ordinary Differential Equations &#8212; My sample book</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,26 +33,30 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. First Order ODEs" href="1st_order_ODEs.html" />
+    <link rel="prev" title="7. Taylor series" href="../sequences_and_series/taylor_series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +100,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
    1. Limits of Functions and Sequences
@@ -132,139 +136,154 @@
    7. Taylor series
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1st_order_ODEs.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2nd_order_ODEs.html">
+   10. Second Order ODEs
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
+   12. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
+   13. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
+   14. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
+   15. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
+   16. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
+   17. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
+   18. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
+   19. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
+   20. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
+   21. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   19. Set Theory
+   22. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   20. Functions
+   23. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
+   24. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
+   25. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
+   26. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   24. Matrices
+   27. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
+   28. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   26. Inverses
+   29. Inverses
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   27. Determinants
+   30. Determinants
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
+   31. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
+   32. Matrix Diagonalisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
+   33. The phase portrait
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/linearclassify.html">
-   31. Linear systems
+   34. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
+   35. Bifurcation analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
+   36. Limit cycles
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/python_examples.html">
-   34. Python code
+   37. Python code
   </a>
  </li>
 </ul>
@@ -356,17 +375,17 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-terminology">
-   Introduction and terminology
+   8.1. Introduction and terminology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initial-boundary-conditions">
-   Initial/boundary conditions
+   8.2. Initial/boundary conditions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homogeneous-linear-odes">
-   Homogeneous linear ODEs
+   8.3. Homogeneous linear ODEs
   </a>
  </li>
 </ul>
@@ -391,17 +410,17 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-terminology">
-   Introduction and terminology
+   8.1. Introduction and terminology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initial-boundary-conditions">
-   Initial/boundary conditions
+   8.2. Initial/boundary conditions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homogeneous-linear-odes">
-   Homogeneous linear ODEs
+   8.3. Homogeneous linear ODEs
   </a>
  </li>
 </ul>
@@ -413,14 +432,14 @@
             
               <div>
                 
-  <div class="section" id="ordinary-differential-equations">
-<h1>Ordinary Differential Equations<a class="headerlink" href="#ordinary-differential-equations" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="ordinary-differential-equations">
+<h1><span class="section-number">8. </span>Ordinary Differential Equations<a class="headerlink" href="#ordinary-differential-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction-and-terminology">
-<h2>Introduction and terminology<a class="headerlink" href="#introduction-and-terminology" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Introduction and terminology<a class="headerlink" href="#introduction-and-terminology" title="Permalink to this headline">¶</a></h2>
 <p>Any equation that contains derivatives is called a “differential equation”. If the equation contains only a single dependent variable then it is known as an “ordinary differential equation” (ODE).</p>
 <p>An example of an ODE that appears very commonly in physical sciences is the Airy equation, which is given by</p>
 <div class="math notranslate nohighlight" id="equation-airyode">
-<span class="eqno">()<a class="headerlink" href="#equation-airyode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy\]</div>
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-airyode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy\]</div>
 <p>The Airy equation is a <em>second order</em> differential equation because the highest derivative in the equation is a second order derivative.
 It is a linear ODE because it does not contain any products of terms involving the dependent variable <span class="math notranslate nohighlight">\(y\)</span>, such as <span class="math notranslate nohighlight">\(y^2\)</span> or <span class="math notranslate nohighlight">\(y \frac{\mathrm{d}y}{\mathrm{d}x}\)</span> or <span class="math notranslate nohighlight">\(\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2\)</span>. Linear ODEs are normally much easier to solve than nonlinear ones.</p>
 <div class="important admonition">
@@ -439,12 +458,12 @@ It is a linear ODE because it does not contain any products of terms involving t
 \end{equation*}</p>
 <p>Examples of this type can be solved by direct integration. For example, the problem <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x}=3x^2\)</span> may be integrated to give <span class="math notranslate nohighlight">\(y=x^3+\text{const}\)</span>.</p>
 <p>However, the majority of differential equations that we encounter in real world problems are not directly integrable.
-The second order ODE in equation <a class="reference internal" href="#equation-airyode">()</a>, for example, cannot be solved by this method, and in fact its relatively innocent appearance hides a wealth of interesting mathematics.</p>
+The second order ODE in equation <a class="reference internal" href="#equation-airyode">(8.1)</a>, for example, cannot be solved by this method, and in fact its relatively innocent appearance hides a wealth of interesting mathematics.</p>
 <p>The strategy for solving differential equations involves classifying different types of problem that we know how to solve, and building up an armoury of techniques.
 In this chapter we will look at methods for solving some important types of first- and second order ODE.</p>
 </div>
 <div class="section" id="initial-boundary-conditions">
-<h2>Initial/boundary conditions<a class="headerlink" href="#initial-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Initial/boundary conditions<a class="headerlink" href="#initial-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>When we integrate or otherwise solve a differential equation, we obtain arbitrary (undetermined) constants.
 If the problem is first order then there will be one unknown constant, since the solution to the problem is equivalent to performing a single integration.
 If the problem is second order then we will obtain two unknown constants.
@@ -463,15 +482,15 @@ which describes the vertical acceleration of an object at time <span class="math
 </div>
 <p>Integrating once with respect to <span class="math notranslate nohighlight">\(t\)</span> gives</p>
 <div class="math notranslate nohighlight" id="equation-firstintegral">
-<span class="eqno">()<a class="headerlink" href="#equation-firstintegral" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}t}=t^2+k\]</div>
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-firstintegral" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}t}=t^2+k\]</div>
 <p>where <span class="math notranslate nohighlight">\(k\)</span> is an unknown constant.</p>
 <p>Integrating again then gives</p>
 <div class="math notranslate nohighlight" id="equation-secondintegral">
-<span class="eqno">()<a class="headerlink" href="#equation-secondintegral" title="Permalink to this equation">¶</a></span>\[y=\frac{t^3}{3}+kt+c,\]</div>
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-secondintegral" title="Permalink to this equation">¶</a></span>\[y=\frac{t^3}{3}+kt+c,\]</div>
 <p>where we have introduced another unknown constant <span class="math notranslate nohighlight">\(c\)</span>.</p>
 <p>The constants can be uniquely determined by providing conditions.
 For example, we might specify initial conditions for the displacement and velocity in the manner <span class="math notranslate nohighlight">\(y(0)=1\)</span> and <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span>.</p>
-<p>Applying the condition <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span> to equation <a class="reference internal" href="#equation-firstintegral">()</a> gives <span class="math notranslate nohighlight">\(k=3\)</span>, and then applying the condition <span class="math notranslate nohighlight">\(y(0)=1\)</span> to equation <a class="reference internal" href="#equation-secondintegral">()</a> gives <span class="math notranslate nohighlight">\(c=1\)</span>.</p>
+<p>Applying the condition <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span> to equation <a class="reference internal" href="#equation-firstintegral">(8.2)</a> gives <span class="math notranslate nohighlight">\(k=3\)</span>, and then applying the condition <span class="math notranslate nohighlight">\(y(0)=1\)</span> to equation <a class="reference internal" href="#equation-secondintegral">(8.3)</a> gives <span class="math notranslate nohighlight">\(c=1\)</span>.</p>
 <p>The final result is <span class="math notranslate nohighlight">\(y=\frac{t^3}{3}+3t+1.\)</span></p>
 <p>In general, to obtain a fully determined solution to a given problem, we require the number of given conditions to match the degree of the problem.</p>
 <div class="notice admonition">
@@ -491,7 +510,7 @@ Then, applying <span class="math notranslate nohighlight">\(y(1)=0\)</span> give
 <p>So the final solution is <span class="math notranslate nohighlight">\(y(x)=(x-2)e^x+(e-3)x+3\)</span></p>
 </div>
 <div class="section" id="homogeneous-linear-odes">
-<h2>Homogeneous linear ODEs<a class="headerlink" href="#homogeneous-linear-odes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Homogeneous linear ODEs<a class="headerlink" href="#homogeneous-linear-odes" title="Permalink to this headline">¶</a></h2>
 <p>A linear ODE is said to be homogeneous if it has the form</p>
 <div class="math notranslate nohighlight">
 \[a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\dots +a_1(x)y^{\prime}+a_0(x)y=0\]</div>
@@ -539,7 +558,21 @@ Many of the fundamental laws of physics are stated in the form of differential e
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../sequences_and_series/taylor_series.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Taylor series</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="1st_order_ODEs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>First Order ODEs</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

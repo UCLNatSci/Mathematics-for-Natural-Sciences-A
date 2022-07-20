@@ -1,5 +1,5 @@
 {
-  "DynamicalSystems\\limit_cycles": {
+  "DynamicalSystems/limit_cycles": {
     "hf123": {
       "output_type": "display_data",
       "metadata": {
@@ -8,7 +8,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\limit_cycles_1_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/DynamicalSystems/limit_cycles_1_0.png"
         }
       },
       "data": {
@@ -17,20 +17,20 @@
       }
     }
   },
-  "DynamicalSystems\\linearclassify": {
-    "rayl_fig": {
+  "DynamicalSystems/linearclassify": {
+    "fig_stableinflected": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "rayl_fig",
+          "name": "fig_stableinflected",
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\linearclassify_19_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/DynamicalSystems/linearclassify_11_0.png"
         }
       },
       "data": {
-        "application/papermill.record/text/plain": "<Figure size 720x720 with 4 Axes>",
+        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
         "application/papermill.record/image/png": null
       }
     },
@@ -42,23 +42,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\linearclassify_17_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "fig_stableinflected": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "fig_stableinflected",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\linearclassify_11_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/DynamicalSystems/linearclassify_17_0.png"
         }
       },
       "data": {
@@ -67,23 +51,7 @@
       }
     }
   },
-  "DynamicalSystems\\phase_portrait": {
-    "allee_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "allee_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\phase_portrait_3_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x288 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
+  "DynamicalSystems/phase_portrait": {
     "simple_fig": {
       "output_type": "display_data",
       "metadata": {
@@ -92,7 +60,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\phase_portrait_1_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/DynamicalSystems/phase_portrait_1_0.png"
         }
       },
       "data": {
@@ -100,40 +68,24 @@
         "application/papermill.record/image/png": null
       }
     },
-    "glyco_fig": {
+    "allee_fig": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "glyco_fig",
+          "name": "allee_fig",
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\DynamicalSystems\\phase_portrait_21_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/DynamicalSystems/phase_portrait_3_0.png"
         }
       },
       "data": {
-        "application/papermill.record/text/plain": "<Figure size 720x432 with 2 Axes>",
+        "application/papermill.record/text/plain": "<Figure size 576x288 with 1 Axes>",
         "application/papermill.record/image/png": null
       }
     }
   },
-  "LinearAlgebra\\linear_systems_matrices\\linear_transformations": {
-    "la_fig_4": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_4",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_5_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
+  "LinearAlgebra/linear_systems_matrices/linear_transformations": {
     "la_fig_2": {
       "output_type": "display_data",
       "metadata": {
@@ -142,39 +94,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_3_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "la_fig_6": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_6",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_8_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 720x194.4 with 3 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "la_fig_3": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_3",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_4_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_3_0.png"
         }
       },
       "data": {
@@ -190,23 +110,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_2_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "la_fig_5": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_5",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_6_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_2_0.png"
         }
       },
       "data": {
@@ -222,7 +126,71 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Mathematics-for-Natural-Sciences-A\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_9_0.png"
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_9_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "la_fig_6": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_6",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_8_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 720x194.4 with 3 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "la_fig_5": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_5",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_6_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "la_fig_3": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_3",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_4_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "la_fig_4": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_4",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/cshenderson/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Teaching/NSCI0005_22-23/Mathematics-for-Natural-Sciences-A/_build/jupyter_execute/LinearAlgebra/linear_systems_matrices/linear_transformations_5_0.png"
         }
       },
       "data": {

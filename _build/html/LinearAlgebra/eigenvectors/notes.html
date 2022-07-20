@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>28. Eigenvalues and Eigenvectors &#8212; My sample book</title>
+    <title>31. Eigenvalues and Eigenvectors &#8212; My sample book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,28 +33,30 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="29. Matrix Diagonalisation" href="../linear_systems_matrices/diagonalisation.html" />
-    <link rel="prev" title="27. Determinants" href="../linear_systems_matrices/determinants.html" />
+    <link rel="next" title="32. Matrix Diagonalisation" href="../linear_systems_matrices/diagonalisation.html" />
+    <link rel="prev" title="30. Determinants" href="../linear_systems_matrices/determinants.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,138 +137,153 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/Intro_ODEs.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/1st_order_ODEs.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/2nd_order_ODEs.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
+   12. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
+   13. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
+   14. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
+   15. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
+   16. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
+   17. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
+   18. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
+   19. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
+   20. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
+   21. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/setsnotation.html">
-   19. Set Theory
+   22. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/functions.html">
-   20. Functions
+   23. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
+   24. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
+   25. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
+   26. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems_matrices/matrices.html">
-   24. Matrices
+   27. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
+   28. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems_matrices/inverses.html">
-   26. Inverses
+   29. Inverses
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems_matrices/determinants.html">
-   27. Determinants
+   30. Determinants
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   28. Eigenvalues and Eigenvectors
+   31. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
+   32. Matrix Diagonalisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
+   33. The phase portrait
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/linearclassify.html">
-   31. Linear systems
+   34. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
+   35. Bifurcation analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
+   36. Limit cycles
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/python_examples.html">
-   34. Python code
+   37. Python code
   </a>
  </li>
 </ul>
@@ -358,34 +375,34 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   28.1. Eigenvalues and Eigenvectors
+   31.1. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eigenspaces">
-   28.2. Eigenspaces
+   31.2. Eigenspaces
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calculating-eigenspaces">
-     28.2.1. Calculating Eigenspaces
+     31.2.1. Calculating Eigenspaces
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-characteristic-polynomial">
-   28.3. The Characteristic Polynomial
+   31.3. The Characteristic Polynomial
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-eigenvalues">
-   28.4. Calculating Eigenvalues
+   31.4. Calculating Eigenvalues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   28.5. Solutions to Exercises
+   31.5. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -410,34 +427,34 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   28.1. Eigenvalues and Eigenvectors
+   31.1. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eigenspaces">
-   28.2. Eigenspaces
+   31.2. Eigenspaces
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calculating-eigenspaces">
-     28.2.1. Calculating Eigenspaces
+     31.2.1. Calculating Eigenspaces
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-characteristic-polynomial">
-   28.3. The Characteristic Polynomial
+   31.3. The Characteristic Polynomial
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-eigenvalues">
-   28.4. Calculating Eigenvalues
+   31.4. Calculating Eigenvalues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   28.5. Solutions to Exercises
+   31.5. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -449,10 +466,10 @@
             
               <div>
                 
-  <div class="section" id="eigenvalues-and-eigenvectors">
-<h1><span class="section-number">28. </span>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="eigenvalues-and-eigenvectors">
+<h1><span class="section-number">31. </span>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">28.1. </span>Eigenvalues and Eigenvectors<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">31.1. </span>Eigenvalues and Eigenvectors<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>In this section we will study on of the most important concepts in linear algebra.</p>
 <div class="admonition-eigenvalues-and-eigenvectors admonition">
 <p class="admonition-title">Eigenvalues and Eigenvectors</p>
@@ -480,7 +497,7 @@
 </div>
 </div>
 <div class="section" id="eigenspaces">
-<h2><span class="section-number">28.2. </span>Eigenspaces<a class="headerlink" href="#eigenspaces" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">31.2. </span>Eigenspaces<a class="headerlink" href="#eigenspaces" title="Permalink to this headline">¶</a></h2>
 <p>If <span class="math notranslate nohighlight">\(v\)</span> is an eigenvector of <span class="math notranslate nohighlight">\(A\)</span>, it is easy to show that any scalar multiple <span class="math notranslate nohighlight">\(cv\)</span> is also an eigenvector:</p>
 <div class="math notranslate nohighlight">
 \[A(cv) = cAv = c\lambda v = \lambda(cv)\]</div>
@@ -499,12 +516,12 @@
 <p>Therefore <span class="math notranslate nohighlight">\(A\)</span> has a single eigenvalue <span class="math notranslate nohighlight">\(\lambda = 3\)</span> with eigenspace <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Note that this is true regardless of the value of <span class="math notranslate nohighlight">\(n\)</span>!</p>
 </div>
 <div class="section" id="calculating-eigenspaces">
-<h3><span class="section-number">28.2.1. </span>Calculating Eigenspaces<a class="headerlink" href="#calculating-eigenspaces" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">31.2.1. </span>Calculating Eigenspaces<a class="headerlink" href="#calculating-eigenspaces" title="Permalink to this headline">¶</a></h3>
 <p>We have seen how to check if a given vector is an eigenvector of a square matrix <span class="math notranslate nohighlight">\(A\)</span>. It is then easy to find its corresponding eigenvalue.</p>
 <p>Next we will learn how can to check whether a given real number is an eigenvalue of <span class="math notranslate nohighlight">\(A\)</span> and to find its corresponding eigenvector. This is slightly more complicated because there may be multiple eigenvectors corresponding to a single eigenvalue.</p>
 <p>Now suppose <span class="math notranslate nohighlight">\(A\)</span> is an (<span class="math notranslate nohighlight">\(n \times n\)</span>) square matrix and <span class="math notranslate nohighlight">\(\lambda\)</span> a real number. If <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue then there exists a non-zero vector <span class="math notranslate nohighlight">\(v\)</span> which solves the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-eqn-eigenvector">
-<span class="eqno">(28.1)<a class="headerlink" href="#equation-eqn-eigenvector" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(31.1)<a class="headerlink" href="#equation-eqn-eigenvector" title="Permalink to this equation">¶</a></span>\[
 Av = \lambda v.
 \]</div>
 <p>We would like to solve this for <span class="math notranslate nohighlight">\(v\)</span>. To see how this is possible, let’s first examine a concrete example.</p>
@@ -529,7 +546,7 @@ which is the same as the matrix equation</p>
 <div class="math notranslate nohighlight">
 \[\left(A-\lambda I\right)v = 0\]</div>
 </div>
-<p>Thus, introducing the identity matrix <span class="math notranslate nohighlight">\(I\)</span> allows us to rearrange <a class="reference internal" href="#equation-eqn-eigenvector">(28.1)</a>:</p>
+<p>Thus, introducing the identity matrix <span class="math notranslate nohighlight">\(I\)</span> allows us to rearrange <a class="reference internal" href="#equation-eqn-eigenvector">(31.1)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\left(A - \lambda I\right)v = 0.\]</div>
 <p>Remember that this is an equation of vectors so the <span class="math notranslate nohighlight">\(0\)</span> on the right hand side is a zero vector of length <span class="math notranslate nohighlight">\(n\)</span>.</p>
@@ -545,7 +562,7 @@ which is the same as the matrix equation</p>
 <p class="admonition-title">Example</p>
 <p>For each of the numbers <span class="math notranslate nohighlight">\(λ = 1, 3\)</span>, decide if <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of the matrix</p>
 <div class="math notranslate nohighlight" id="equation-eqn-eigenvector-example">
-<span class="eqno">(28.2)<a class="headerlink" href="#equation-eqn-eigenvector-example" title="Permalink to this equation">¶</a></span>\[\begin{split}A = \begin{pmatrix}2 &amp; -4 \\ -1 &amp; -1\end{pmatrix}\end{split}\]</div>
+<span class="eqno">(31.2)<a class="headerlink" href="#equation-eqn-eigenvector-example" title="Permalink to this equation">¶</a></span>\[\begin{split}A = \begin{pmatrix}2 &amp; -4 \\ -1 &amp; -1\end{pmatrix}\end{split}\]</div>
 <p>and calculate the corresponding eigenspace.</p>
 <p><strong>Answer</strong></p>
 <p><span class="math notranslate nohighlight">\(\lambda = 1\)</span> is an eigenvalue of <span class="math notranslate nohighlight">\(A\)</span> if the equation <span class="math notranslate nohighlight">\(\left(A - I\right)v = 0\)</span> has non-zero solutions.</p>
@@ -567,7 +584,7 @@ which is the same as the matrix equation</p>
 </div>
 </div>
 <div class="section" id="the-characteristic-polynomial">
-<h2><span class="section-number">28.3. </span>The Characteristic Polynomial<a class="headerlink" href="#the-characteristic-polynomial" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">31.3. </span>The Characteristic Polynomial<a class="headerlink" href="#the-characteristic-polynomial" title="Permalink to this headline">¶</a></h2>
 <p>In the previous section we discussed how to decide whether a given number
 <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of a matrix, and if so, how to find all of the associated eigenvectors. In this section, we will give a method for computing all of the eigenvalues of a matrix.</p>
 <p>We saw that <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of a matrix <span class="math notranslate nohighlight">\(A\)</span> if and only the equation <span class="math notranslate nohighlight">\(\left(A - \lambda I\right)=0\)</span> has non-zero solutions. But recall that this equation only has non-zero solutions if and only if the the matrix <span class="math notranslate nohighlight">\(A - \lambda I\)</span> is invertible, which is the case if and only if its determinant is zero. Therefore, we have the following important theorem.</p>
@@ -580,7 +597,7 @@ which is the same as the matrix equation</p>
 </div>
 </div>
 <div class="section" id="calculating-eigenvalues">
-<h2><span class="section-number">28.4. </span>Calculating Eigenvalues<a class="headerlink" href="#calculating-eigenvalues" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">31.4. </span>Calculating Eigenvalues<a class="headerlink" href="#calculating-eigenvalues" title="Permalink to this headline">¶</a></h2>
 <p>We now have the necessary tool to calculate the eigenvalues and eigenvectors of any square matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="admonition-calculating-eigenvalues admonition">
 <p class="admonition-title">Calculating Eigenvalues</p>
@@ -670,7 +687,7 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\
 </div>
 </div>
 <div class="section" id="solutions-to-exercises">
-<h2><span class="section-number">28.5. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">31.5. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -687,7 +704,7 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./LinearAlgebra\eigenvectors"
+            path: "./LinearAlgebra/eigenvectors"
         },
         predefinedOutput: true
     }
@@ -703,13 +720,13 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">27. </span>Determinants</p>
+            <p class="prev-next-title"><span class="section-number">30. </span>Determinants</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../linear_systems_matrices/diagonalisation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">29. </span>Matrix Diagonalisation</p>
+        <p class="prev-next-title"><span class="section-number">32. </span>Matrix Diagonalisation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

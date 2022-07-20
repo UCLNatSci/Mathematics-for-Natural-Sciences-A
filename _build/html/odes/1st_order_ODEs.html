@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>First Order ODEs &#8212; My sample book</title>
+    <title>9. First Order ODEs &#8212; My sample book</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,26 +33,30 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Second Order ODEs" href="2nd_order_ODEs.html" />
+    <link rel="prev" title="8. Ordinary Differential Equations" href="Intro_ODEs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +100,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/limits.html">
    1. Limits of Functions and Sequences
@@ -133,138 +137,153 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Intro_ODEs.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2nd_order_ODEs.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
+   12. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
+   13. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
+   14. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
+   15. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
+   16. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
+   17. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
+   18. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
+   19. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
+   20. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
+   21. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   19. Set Theory
+   22. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   20. Functions
+   23. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
+   24. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
+   25. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
+   26. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   24. Matrices
+   27. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
+   28. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   26. Inverses
+   29. Inverses
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   27. Determinants
+   30. Determinants
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
+   31. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
+   32. Matrix Diagonalisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
+   33. The phase portrait
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/linearclassify.html">
-   31. Linear systems
+   34. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
+   35. Bifurcation analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
+   36. Limit cycles
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../DynamicalSystems/python_examples.html">
-   34. Python code
+   37. Python code
   </a>
  </li>
 </ul>
@@ -356,22 +375,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#separation-of-variables-technique">
-   Separation of variables Technique
+   9.1. Separation of variables Technique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integrating-factor-technique">
-   Integrating Factor Technique
+   9.2. Integrating Factor Technique
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     Motivation
+     9.2.1. Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technique">
-     Technique
+     9.2.2. Technique
     </a>
    </li>
   </ul>
@@ -398,22 +417,22 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#separation-of-variables-technique">
-   Separation of variables Technique
+   9.1. Separation of variables Technique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integrating-factor-technique">
-   Integrating Factor Technique
+   9.2. Integrating Factor Technique
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     Motivation
+     9.2.1. Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technique">
-     Technique
+     9.2.2. Technique
     </a>
    </li>
   </ul>
@@ -427,11 +446,11 @@
             
               <div>
                 
-  <div class="section" id="first-order-odes">
-<h1>First Order ODEs<a class="headerlink" href="#first-order-odes" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="first-order-odes">
+<h1><span class="section-number">9. </span>First Order ODEs<a class="headerlink" href="#first-order-odes" title="Permalink to this headline">¶</a></h1>
 <p>In this section we will look at some strategies for solving first order ODEs</p>
 <div class="section" id="separation-of-variables-technique">
-<h2>Separation of variables Technique<a class="headerlink" href="#separation-of-variables-technique" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Separation of variables Technique<a class="headerlink" href="#separation-of-variables-technique" title="Permalink to this headline">¶</a></h2>
 <p>Of all the techniques for solving first order ODEs, separation of variables is the simplest to understand, being essentially a direct application of Fundamental Theorem of Calculus.
 The technique requires us to take a look at whether the variable dependence can be totally separated on different sides of the equation.</p>
 <p>For example, in the problem <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x} = x^2y\)</span> we can separate the <span class="math notranslate nohighlight">\(x\)</span> and the <span class="math notranslate nohighlight">\(y\)</span> dependence to give</p>
@@ -481,30 +500,30 @@ y=Ae^{\frac{1}{3}x^3}, \quad A \in \mathbb{R}.
 </div>
 </div>
 <div class="section" id="integrating-factor-technique">
-<h2>Integrating Factor Technique<a class="headerlink" href="#integrating-factor-technique" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Integrating Factor Technique<a class="headerlink" href="#integrating-factor-technique" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="motivation">
-<h3>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Consider the following differential equation:</p>
 <div class="math notranslate nohighlight" id="equation-intfexample">
-<span class="eqno">()<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-intfexample" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\frac{\cos(x)}{x}, \quad (x\neq 0)\]</div>
 <p>A quick check will show that this equation is not separable.
 If we try to integrate directly, then we obtain</p>
 <p>\begin{equation*}
 \displaystyle \int \mathrm{d}y+\int \frac{1}{x}y \mathrm{d}x = \int \frac{\cos(x)}{x}\mathrm{d}x.
 \end{equation*}</p>
 <p>We can deal with the integral on the right (in principle) but the term <span class="math notranslate nohighlight">\(\displaystyle \int \frac{y}{x}\mathrm{d}x\)</span> appearing on the left cannot be evaluated without knowing <span class="math notranslate nohighlight">\(y\)</span>. So, we reached a dead end.</p>
-<p>Now, observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">()</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain</p>
+<p>Now, observe that we can multiply equation <a class="reference internal" href="#equation-intfexample">(9.1)</a> throughout by <span class="math notranslate nohighlight">\(x\)</span>, to obtain</p>
 <div class="math notranslate nohighlight" id="equation-intfexample2">
-<span class="eqno">()<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-intfexample2" title="Permalink to this equation">¶</a></span>\[x\frac{\mathrm{d}y}{\mathrm{d}x}+y=\cos(x), \quad (x\neq 0)\]</div>
 <p>The expression on the left-hand side is an <em>exact derivative</em></p>
 <p>\begin{equation*}
 \frac{\mathrm{d}}{\mathrm{d}x}(yx)=x\frac{\mathrm{d}y}{\mathrm{d}x}+y
 \end{equation*}</p>
-<p>Neat! This means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">()</a> to obtain</p>
+<p>Neat! This means that we can integrate equation <a class="reference internal" href="#equation-intfexample2">(9.2)</a> to obtain</p>
 <p>\begin{equation*}
 xy=\int\cos(x)\mathrm{d}x
 \end{equation*}</p>
-<p>The final solution is <span class="math notranslate nohighlight">\(y=\frac{1}{x}(\sin(x)+k)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant. Verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">()</a> now.</p>
+<p>The final solution is <span class="math notranslate nohighlight">\(y=\frac{1}{x}(\sin(x)+k)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant. Verify that the solution satisfies equation <a class="reference internal" href="#equation-intfexample">(9.1)</a> now.</p>
 <p><strong>Solution</strong><br>
 We have <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}+\frac{1}{x}y=\left[-\frac{1}{x^2}(\sin(x)+k)+\frac{1}{x}\cos(x)\right]+\frac{1}{x^2}(\sin(x)+k)=\frac{\cos(x)}{x}\)</span> as required.</p>
 <div class="tip admonition">
@@ -522,7 +541,7 @@ We have <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm
 <p>It turns out that we can always find an integrating factor for problems of a special form that we will look at in the next section.</p>
 </div>
 <div class="section" id="technique">
-<h3>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.2. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
 <p>We will apply an integrating factor technique to solve problems of the special form</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + f(x)y = g(x)\]</div>
@@ -573,11 +592,11 @@ e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}\)</span></p>
 <p><strong>So how does it work?</strong></p>
 <p>Multiplying the LHS of the general form by <span class="math notranslate nohighlight">\(\mu(x)\)</span> gives</p>
 <div class="math notranslate nohighlight" id="equation-eq1compare">
-<span class="eqno">()<a class="headerlink" href="#equation-eq1compare" title="Permalink to this equation">¶</a></span>\[\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)\]</div>
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-eq1compare" title="Permalink to this equation">¶</a></span>\[\mu \frac{\mathrm{d}y}{\mathrm{d}x}+ y \mu f(x)\]</div>
 <p>Compare with</p>
 <div class="math notranslate nohighlight" id="equation-eq2compare">
-<span class="eqno">()<a class="headerlink" href="#equation-eq2compare" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
-<p>By equating <a class="reference internal" href="#equation-eq1compare">()</a> with <a class="reference internal" href="#equation-eq2compare">()</a> it can be seen that we can make the integrating factor work if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy</p>
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-eq2compare" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}x}\left(\mu y \right)=\mu \frac{\mathrm{d}y}{\mathrm{d}x}+y\frac{\mathrm{d}\mu}{\mathrm{d}x}\]</div>
+<p>By equating <a class="reference internal" href="#equation-eq1compare">(9.3)</a> with <a class="reference internal" href="#equation-eq2compare">(9.4)</a> it can be seen that we can make the integrating factor work if we choose <span class="math notranslate nohighlight">\(\mu\)</span> to satisfy</p>
 <p>\begin{equation*}
 \frac{\mathrm{d}\mu}{\mathrm{d}x}=\mu f(x)
 \end{equation*}</p>
@@ -611,7 +630,21 @@ e^{3x}\left(x-\frac{1}{3}\right) + \frac{K}{x^3}\)</span></p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Intro_ODEs.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Ordinary Differential Equations</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2nd_order_ODEs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Second Order ODEs</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

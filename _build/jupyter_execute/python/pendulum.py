@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt      #for plotting
 
 # ### Code for plotting the phase portrait and time series for the pendulum
 
-# In[2]:
+# In[ ]:
 
 
 def dXdt(X,t,p,q,k,w):
@@ -51,7 +51,7 @@ plt.plot(t,X[:,1])
 
 # ### Code for plotting the Lorenz attractor
 
-# In[3]:
+# In[40]:
 
 
 def dXdt(X,t,s,r,b):

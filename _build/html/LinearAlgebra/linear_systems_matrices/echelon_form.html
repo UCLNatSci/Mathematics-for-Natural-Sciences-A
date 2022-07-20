@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>23. Linear Systems of Equations &#8212; My sample book</title>
+    <title>26. Linear Systems of Equations &#8212; My sample book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,28 +33,30 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="24. Matrices" href="matrices.html" />
-    <link rel="prev" title="22. Techniques of Proof" href="../../ProofLogic/methodsofproof.html" />
+    <link rel="next" title="27. Matrices" href="matrices.html" />
+    <link rel="prev" title="25. Techniques of Proof" href="../../ProofLogic/methodsofproof.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,138 +137,153 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/Intro_ODEs.html">
+   8. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/1st_order_ODEs.html">
+   9. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../odes/2nd_order_ODEs.html">
+   10. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../python/ode_solver_demo.html">
-   8. ODEs with Python
+   11. ODEs with Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
+   12. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
+   13. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
+   14. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
+   15. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
+   16. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
+   17. Coordinate Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
+   18. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
+   19. Multidimensional Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
+   20. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
+   21. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/setsnotation.html">
-   19. Set Theory
+   22. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/functions.html">
-   20. Functions
+   23. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
+   24. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
+   25. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   23. Linear Systems of Equations
+   26. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="matrices.html">
-   24. Matrices
+   27. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="linear_maps.html">
-   25. Linear Transformations
+   28. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="inverses.html">
-   26. Inverses
+   29. Inverses
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="determinants.html">
-   27. Determinants
+   30. Determinants
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
+   31. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="diagonalisation.html">
-   29. Matrix Diagonalisation
+   32. Matrix Diagonalisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
+   33. The phase portrait
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/linearclassify.html">
-   31. Linear systems
+   34. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
+   35. Bifurcation analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
+   36. Limit cycles
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../DynamicalSystems/python_examples.html">
-   34. Python code
+   37. Python code
   </a>
  </li>
 </ul>
@@ -358,53 +375,53 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gaussian-elimination">
-   23.1. Gaussian Elimination
+   26.1. Gaussian Elimination
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     23.1.1. Motivation
+     26.1.1. Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-systematic-technique-for-solving-systems-of-equations">
-     23.1.2. A systematic technique for solving systems of equations
+     26.1.2. A systematic technique for solving systems of equations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generalisation">
-     23.1.3. Generalisation
+     26.1.3. Generalisation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#row-echelon-form">
-   23.2. Row Echelon Form
+   26.2. Row Echelon Form
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gaussian-elimination-for-reduction-to-echelon-form">
-     23.2.1. Gaussian Elimination for Reduction to Echelon Form
+     26.2.1. Gaussian Elimination for Reduction to Echelon Form
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-solutions-to-a-linear-system">
-   23.3. Parametric Solutions to a Linear System
+   26.3. Parametric Solutions to a Linear System
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-solution-set">
-     23.3.1. General Solution Set
+     26.3.1. General Solution Set
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   23.4. Solutions
+   26.4. Solutions
   </a>
  </li>
 </ul>
@@ -429,53 +446,53 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gaussian-elimination">
-   23.1. Gaussian Elimination
+   26.1. Gaussian Elimination
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     23.1.1. Motivation
+     26.1.1. Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-systematic-technique-for-solving-systems-of-equations">
-     23.1.2. A systematic technique for solving systems of equations
+     26.1.2. A systematic technique for solving systems of equations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generalisation">
-     23.1.3. Generalisation
+     26.1.3. Generalisation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#row-echelon-form">
-   23.2. Row Echelon Form
+   26.2. Row Echelon Form
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gaussian-elimination-for-reduction-to-echelon-form">
-     23.2.1. Gaussian Elimination for Reduction to Echelon Form
+     26.2.1. Gaussian Elimination for Reduction to Echelon Form
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-solutions-to-a-linear-system">
-   23.3. Parametric Solutions to a Linear System
+   26.3. Parametric Solutions to a Linear System
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-solution-set">
-     23.3.1. General Solution Set
+     26.3.1. General Solution Set
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   23.4. Solutions
+   26.4. Solutions
   </a>
  </li>
 </ul>
@@ -487,13 +504,13 @@
             
               <div>
                 
-  <div class="section" id="linear-systems-of-equations">
-<h1><span class="section-number">23. </span>Linear Systems of Equations<a class="headerlink" href="#linear-systems-of-equations" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="linear-systems-of-equations">
+<h1><span class="section-number">26. </span>Linear Systems of Equations<a class="headerlink" href="#linear-systems-of-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="gaussian-elimination">
-<h2><span class="section-number">23.1. </span>Gaussian Elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">26.1. </span>Gaussian Elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this headline">¶</a></h2>
 <p>The technique studied here makes solving large systems of equations (e.g. 200 equations in 200 unknowns) practical, and it can be implemented on a computer in a basic programming language. You might be surprised to learn that it is necessary to solve vast systems of linear equations as a matter of routine in many practical scientific applications.</p>
 <div class="section" id="motivation">
-<h3><span class="section-number">23.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">26.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
 <p>\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \</p>
@@ -514,7 +531,7 @@ Each equation here defines a line, and we are looking for a point which satisfie
 </div>
 </div>
 <div class="section" id="a-systematic-technique-for-solving-systems-of-equations">
-<span id="id1"></span><h3><span class="section-number">23.1.2. </span>A systematic technique for solving systems of equations<a class="headerlink" href="#a-systematic-technique-for-solving-systems-of-equations" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3><span class="section-number">26.1.2. </span>A systematic technique for solving systems of equations<a class="headerlink" href="#a-systematic-technique-for-solving-systems-of-equations" title="Permalink to this headline">¶</a></h3>
 <p>We will begin by finding a solution to the following system:</p>
 <p>\begin{alignat*}{5}
 (r_1) &amp;\qquad&amp;  x_1 &amp; {}+{} &amp;  x_2 &amp; {}+{} &amp; 2x_3 &amp; {}={} &amp;  2  \
@@ -598,7 +615,7 @@ Repeat from Step 2 until the matrix is in upper triangular form (containing all 
 </div>
 </div>
 <div class="section" id="generalisation">
-<h3><span class="section-number">23.1.3. </span>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">26.1.3. </span>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h3>
 <p>The naive algorithm introduced here can be generalised to include additional row operations. In general, the acceptable row operations that we can perform are:</p>
 <ul class="simple">
 <li><p>multiplication of any row by a constant (e.g. <span class="math notranslate nohighlight">\(\frac{1}{2}r_1 \rightarrow r_1\)</span>)</p></li>
@@ -656,7 +673,7 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 </div>
 </div>
 <div class="section" id="row-echelon-form">
-<h2><span class="section-number">23.2. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">26.2. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h2>
 <p>In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are zero, one or infinitely many solutions. It works by converting system of equations to <strong>reduced row echelon form</strong>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -687,7 +704,7 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <span class="math notranslate nohighlight">\(\star=\)</span> any number</p>
 </div>
 <div class="section" id="gaussian-elimination-for-reduction-to-echelon-form">
-<h3><span class="section-number">23.2.1. </span>Gaussian Elimination for Reduction to Echelon Form<a class="headerlink" href="#gaussian-elimination-for-reduction-to-echelon-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">26.2.1. </span>Gaussian Elimination for Reduction to Echelon Form<a class="headerlink" href="#gaussian-elimination-for-reduction-to-echelon-form" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-row-reduction-algorithm-gaussian-elimination admonition">
 <p class="admonition-title">Row Reduction Algorithm (Gaussian Elimination)</p>
 <p><strong>Step 1</strong> If necessary, swap the 1st row with a lower one so a leftmost nonzero entry is in the 1st row.</p>
@@ -798,7 +815,7 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 </div>
 </div>
 <div class="section" id="parametric-solutions-to-a-linear-system">
-<h2><span class="section-number">23.3. </span>Parametric Solutions to a Linear System<a class="headerlink" href="#parametric-solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">26.3. </span>Parametric Solutions to a Linear System<a class="headerlink" href="#parametric-solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
 <p>The reduced row echelon form of the augmented matrix allows us to determine the solutions to the system. There are three cases:</p>
 <p>1. <strong>Every column except the last column is a pivot column</strong>. In this case, the system of equations is consistent and there is a single unique solution. For example,</p>
 <div class="math notranslate nohighlight">
@@ -827,7 +844,7 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 \end{array}\right)\end{split}\]</div>
 <p>has infinitely many solutions since columns 2 and 4 are non-pivot columns. The variables corresponding to a non-pivot column of the matrix are termed <strong>free variables</strong>. In the next section will explore how these solutions can be determined.</p>
 <div class="section" id="general-solution-set">
-<h3><span class="section-number">23.3.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">26.3.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
 <p>The following system of equations,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -922,7 +939,7 @@ x_3 &amp; {}={} &amp;       &amp; {}-{} &amp; 2x_4 &amp; {}-{} &amp; 2
 </div>
 </div>
 <div class="section" id="solutions">
-<h2><span class="section-number">23.4. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">26.4. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -939,7 +956,7 @@ x_3 &amp; {}={} &amp;       &amp; {}-{} &amp; 2x_4 &amp; {}-{} &amp; 2
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./LinearAlgebra\linear_systems_matrices"
+            path: "./LinearAlgebra/linear_systems_matrices"
         },
         predefinedOutput: true
     }
@@ -955,13 +972,13 @@ x_3 &amp; {}={} &amp;       &amp; {}-{} &amp; 2x_4 &amp; {}-{} &amp; 2
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">22. </span>Techniques of Proof</p>
+            <p class="prev-next-title"><span class="section-number">25. </span>Techniques of Proof</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="matrices.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">24. </span>Matrices</p>
+        <p class="prev-next-title"><span class="section-number">27. </span>Matrices</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
