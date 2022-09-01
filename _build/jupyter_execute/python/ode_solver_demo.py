@@ -17,7 +17,12 @@ import matplotlib.pyplot as plt      #for plotting
 # 
 # $$\frac{\mathrm{d}X}{\mathrm{d}t}=f(X,t,c)$$
 # 
-# where $X$ is a list of dependent variables and c is a sequence of parameters. 
+# where $X$ is a list of dependent variables and c is a sequence of parameters.
+# ```{toggle}
+#     ```{code}
+#     this should be code
+#     ```
+# ```
 
 # ## Example 1: Exponential growth
 
@@ -27,7 +32,7 @@ import matplotlib.pyplot as plt      #for plotting
 # 
 # In the code below, notice that $t$ appears as the second input argument even though it doesn't feature explicitly on the RHS of the equation. This is because the odeint solver expects a function pattern $f(X,t,c)$. 
 
-# In[10]:
+# In[2]:
 
 
 # Model definition
@@ -37,7 +42,7 @@ def dIdt(I,t,mu,r0):
 
 # You can test the definition, by plugging in some values of $\mu,r_0,I$ and printing the result. You will have to supply a value for $t$ as well, but since there is no dependence on this variable it won't affect the result. I've taken $t=1$.
 
-# In[11]:
+# In[3]:
 
 
 # Taking I=2, t=1, mu=1/14, r0=3:
@@ -53,7 +58,7 @@ print(dIdt(2,1,1/14,3))
 # 
 # *Recall that the mathematical definition of the derivative actually requires bringing the points together, in the limit*
 
-# In[14]:
+# In[4]:
 
 
 I0 = 1                       # initial condition
@@ -88,7 +93,7 @@ plt.show()
 # This is because Python indexing starts from zero, so $X[0]$ is the first element obtained from the list $X=(x,y)$.
 # 
 
-# In[3]:
+# In[5]:
 
 
 # Model definition
@@ -103,7 +108,7 @@ def dXdt(X,t,k,m):
 # 
 # Taking the constants to be $k=m=1$ gives the following result for $\frac{\mathrm{d}X}{\mathrm{d}t}$ at time $t=0$:
 
-# In[4]:
+# In[6]:
 
 
 t0,X0 =0,[1,0] #initial conditions for t,x,y
@@ -118,7 +123,7 @@ print(X)
 # 
 # We can access the first column by using $X[:,0]$ and the second column by using $X[:,1]$
 
-# In[5]:
+# In[7]:
 
 
 tmax,n=50,1000
@@ -142,7 +147,7 @@ plt.show()
 # 
 # where $F=1$, and $\Omega=1.1$ :
 
-# In[12]:
+# In[8]:
 
 
 # Re-define the model to include the forcing term
@@ -181,7 +186,7 @@ plt.show()
 
 # We will solve the model between $t=0$ to $t=140$, taking $\mu=1/14$, $\beta=3/14$, $N=100$.
 
-# In[15]:
+# In[9]:
 
 
 # Model definition

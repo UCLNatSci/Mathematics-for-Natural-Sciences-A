@@ -19,10 +19,10 @@ chapters:
 - file: sequences_and_series/taylor_series.md
 
 - file: odes/Intro_ODEs.md
-- file: odes/1st_order_ODEs.md
-- file: odes/2nd_order_ODEs.md
-
-- file: python/ode_solver_demo.ipynb
+  sections:
+  - file: odes/1st_order_ODEs.md
+  - file: odes/2nd_order_ODEs.md
+  - file: python/ode_solver_demo.ipynb
 
 - file: VectorCalculus/partialdifferentiation
 - file: VectorCalculus/integrationprelim
