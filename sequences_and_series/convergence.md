@@ -1,7 +1,7 @@
 # Convergence of Series
 
-## Infinite series as limit of partial sums
-
+````{admonition} Definition
+:class: note
 The value of a infinite series can be defined as the value of the limit (if exists) of the sequence defined by it partial
 sums, that is:
 ```{math}
@@ -19,7 +19,7 @@ The infinite series of the geometric progression for $n \to \infty$ is thus:
 S_\infty = \lim_{n \to \infty} S_n =  a \lim_{n \to \infty} \frac{1 - r^n}{1-r} = \frac{a}{1-r} \ ,
 ```
 because $\displaystyle\lim_{n\to \infty} r^n = 0$ since $r<1$.
-
+````
 ## Fundamental concept
 
 We have already seen in the sections on geometric progression and method of differences that some series can approach
@@ -45,10 +45,9 @@ Hence, this series also diverges.
 
 ## Preliminary test for divergence
 
-### Definition
-
 The ideas of the previous section lead us to the following "preliminary test for divergence".
-```{admonition} Preliminary test for divergence
+```{admonition} Definition
+:class: note
 If the terms $u_n$ in a series do not approach zero as $n \to \infty$ then the series diverges.
 ```
 Note well that the preliminary test cannot conclusively identify a series as convergent, we require further tests in
@@ -90,37 +89,35 @@ One such test is D'Alembert's ratio test, outined below.
 
 ## D'Alembert's ratio test
 
-### Prelimaries
-
-
 [D'Alembert's ratio test](https://en.wikipedia.org/wiki/Ratio_test) (sometimes simply referred to as the "ratio test")
 looks at the **ratio** of each terms of an infinite sequence of numbers ($u_1,u_2,u_3,\dots$)
+to determine if the infinite series converges or diverges.
 ```{math}
 :label: DAratio
  \rho = \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert \ ,
 ```
-to determine if the infinite series converges or diverges.
 The notation |•| is used for the magnitude (otherwise known as the absolute value, e.g. $\lvert -2 \rvert = 2$) of the
 expression - the test thus only considers the relative size of the terms in the series.
 D'Alembert's ratio test is more powerful than the preliminary test, but is usually a bit harder to apply and so we should use the
 preliminary test first (the clue is in the name!).
 
 
-### Statement
+````{admonition} Definition
+:class: note
+To determine if an infinite series $\sum_{n=1}^\infty u_n$ diverges ($\sum_{n=1}^\infty u_n = \infty$) or converges
+($\sum_{n=1}^\infty u_n<\infty$) we look at the behaviour of the ratio in equation {eq}`DAratio` in the limit
+$n \to \infty$.
 
-To determine if an infinite series $\sum{n=1}^\infty u_n$ diverges ($\sum{n=1}^\infty u_n = \infty$) of converges
-($\sum{n=1}^\infty u_n<\infty$) we look at the behaviour of the ratio in equation {eq}`DAratio` in the limit
-$n \to \infty$, written as:
-```{admonition} D'Alembert's ratio test
 For the magnitude of the ratio of sucessive terms in a series,
 $\rho = \lim_{n \to \infty} \lvert \frac{u_{n+1}}{u_n} \rvert$, then if:
 * $\rho < 1$ then the series converges absolutely,
 * $\rho>1$ then the series diverges absolutely,
 * $\rho=1$ then the test is inconclusive.
-```
-Note well that the $n+1$ term is the numerator and the $n$ term is the denominator!
 
-Intuitively, D'Alembert's ratio test tells us that if the ratio of suquential terms is less than 1 then the
+Note well that the $n+1$ term is the numerator and the $n$ term is the denominator!
+````
+
+Intuitively, D'Alembert's ratio test tells us that if the ratio of sequential terms is less than 1 then the
 terms are **shrinking** and hence the series converges.
 If the converse is true the the terms are **growing** and hence the series diverges.
 
@@ -132,8 +129,8 @@ One of the most straightforward to use is the [sandwich theorem](https://en.wiki
 (also known as the "squeeze theorem"), which can be used not only to demonstrate that a series is convergent, but also
 to find upper and lower bounds for the value of the sum or even to find the value of the sum exactly.
 
-### Example
-
+````{admonition} Worked Example
+:class: seealso
 We will use D'Alembert's ratio test to determine whether $\sum_{k=1}^n \frac{k^2}{k!}$ converges.
 
 Letting $u_k = \frac{k^2}{k!}$, the ratio $\frac{u_{k+1}}{u_k}$ simplifies to:
@@ -148,19 +145,24 @@ By recalling the combination theorem, we have that:
 \rho = \lim_{k\to\infty} \Bigg\lvert \frac{u_{n+1}}{u_n} \Bigg\rvert = \lim_{k \to \infty} \frac{k+1}{k^2} = 0 \ ,
 ```
 and thus the series converges absolutely.
+````
 
-Note:
+````{admonition} Tip
+:class: tip
 1. It is very important to get the algebra correct in the division step. This is often done carelessly and can cost a lot of marks.
 2. The limit step is important! We are interested to know what happens to the terms in the series in the long run - i.e. as $n \to \infty$. The limit must be explicitly taken!
+````
 
-
-**Questions**<br>
+````{admonition} Practice Questions
+:class: seealso, dropdown
 
 Use D'Alembert's ratio test to determine if the following series converges:
 1. $\sum_{k=1}^n \frac{(2 k)!}{2^k k!}$,
 2. $\sum_{k=1}^n \frac{(-1)^k}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots$.
+````
 
-**Solutions**<br>
+````{admonition} Solutions
+:class: seealso, dropdown
 
 1. Let $u_k = \frac{(2k)!}{2^k k!}$.
 Then $\frac{u_{k+1}}{u_k}$
@@ -179,6 +181,7 @@ $ =  \frac{1}{1+1/k} $
 $ = 1$.
 Thus we conclude that the test is inconclusive!
 Further tests are required to determine convergence/divergence, which is beyond the scope of the course.
+````
 
 ## Comparison Test
 
@@ -190,7 +193,8 @@ This test aims to compare the terms in our unknown series with terms of a well u
 
 We argue that a series $S_1 = \sum_n a_n$ can be shown to converge if there exists a series $S_2 = \sum_n b_n$ such that for all terms $|b_n| \geq |a_n|$ where series $S_2$ is known to converge, therefore series $S_1$ must also converge.
 
-### Example
+````{admonition} Worked Example
+:class: seealso
 Show that the following series converges
 ```{math}
 S_1 = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \frac{1}{8^2} + \frac{1}{10^2} + \frac{1}{12^2} + \frac{1}{14^2} + \frac{1}{16^2} +\dots = \sum_n^\infty \frac{1}{(2n)^2}
@@ -228,6 +232,9 @@ S_3 = \frac{1}{2^2} + \frac{1/2^4}{1 - 1/2} = \frac{3}{8}
 ```
 and since $S_2 > S_1 > S_3$ we have $\frac{4}{8} > S_1 > \frac{3}{8}$.
 
+````
+
+
 ## Absolute v's Conditional Convergence
 
 See also Chapter 25 of "The Calculus Story: A Mathematical Adventure" by David Acheson.
@@ -246,7 +253,8 @@ explained in what follows.
 
 ### Explanation of conditional convergence
 
-```{admonition} Conditional convergence
+```{admonition} Definition
+:class: note
 If a series is **absolutely convergent** then it will converge to the same value for any rearrangement of the terms.
 If the series is not absolutely convergent, then it may be **conditionally convergent**, in which case it can be summed
 to an arbitrary value (finite or infinite) depending on the arrangement of the terms in the series.
@@ -259,8 +267,8 @@ looking at the relative size of the terms (as in D'Alembert's ratio test) were s
 convergence properties.
 But in the case where the signs in the series alternate, the behaviour is much more peculiar/subtle.
 
-### Example
-
+````{admonition} Worked Example
+:class: seealso
 Consider the [alternating harmonic series](https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Alternating_harmonic_series):
 ```{math}
 \sum_{k=1}^n \frac{(-1)^{k+1}}{k} = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \dots \ ,
@@ -284,5 +292,7 @@ arrangement of the terms.
 This is known as [Riemann's paradox](https://en.wikipedia.org/wiki/Riemann_series_theorem).
 
 [Here is a short video explanation](https://www.youtube.com/watch?embed=no&v=-EtHF5ND3_s).
+
+````
 
 In this course we will only look at absolute convergence.

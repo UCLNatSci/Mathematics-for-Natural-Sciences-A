@@ -3,10 +3,8 @@
 [Series](https://en.wikipedia.org/wiki/Series_(mathematics))
 play a central role in calculus and are the main reason why we introduce sequences in the section above.
 
-## Definition
-
-Series are simply defined by the sum of a sequence.
-```{admonition} Series
+````{admonition} Definition
+:class: note
 A **series** is the sum of a sequence of terms, written as follows:
 
 ```{math}
@@ -14,13 +12,17 @@ A **series** is the sum of a sequence of terms, written as follows:
 \sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,
 ```
 where $m \le n$, and usually $m=1$.
+````
 
+In short, a series is simply the sum of a sequence. 
 We can replace the upper value $n$ with $\infty$ for an [infinite series](https://www.mathsisfun.com/algebra/infinite-series.html).
-For example, the series of the infinite sequence $(u_1,u_2,u_3,\dots)$ is written as $\displaystyle\sum_{i=1}^\infty u_i$.
+To give an example, the series of the infinite sequence $(u_1,u_2,u_3,\dots)$ is written as $\displaystyle\sum_{i=1}^\infty u_i$.
 
 We say that $\displaystyle\sum_{i=m}^n u_i$ for $n < \infty$ is a partial sum because the series is partially added up to just the $n$-th term.
 
-**Python code for the series of the sequence with recurrence relation** $u_k = u_{k-1}+\frac{1}{2}$ with $u_1=0$:
+````{admonition} Python code
+:class: tip
+Here is some Python code for the series of the sequence with recurrence relation $u_k = u_{k-1}+\frac{1}{2}$ with $u_1=0$:
 ```python
 n = 10 # number of terms
 seq = 0 # first value of sequence
@@ -32,23 +34,24 @@ while count < n: # while loop
        ser = ser + seq # update series                   
        count += 1 # update counter
 ```
+````
 
 
 ### Summations
 
 Character $\Sigma$ is the Greek letter sigma, written in upper case, and denotes a [summation](https://en.wikipedia.org/wiki/Summation).
 
-We would read the expression above as "the sum of $u_i$ from $i=1$ to $i=n$".
+We would read $\sum_{i=1}^n u_i$ as "the sum of $u_i$ from $i=1$ to $i=n$".
 
 For example
-\begin{equation*}
+```{math}
 \sum_{i=1}^4 i = 1 + 2 + 3 + 4 = 10
-\end{equation*}
+```
 is the sum of $i$ from $i=1$ to $i=4$
 
-\begin{equation*}
+```{math}
 \sum_{i=1}^4 2 i = 2 + 4 + 6 + 8 = 20.
-\end{equation*}
+```
 is the sum of $2 i$ from $i=1$ to $i=4$
 
 From this example it should be clear that, in general:
@@ -58,21 +61,25 @@ From this example it should be clear that, in general:
 ```
 where $a$ is a constant.
 
-However, note that
-\begin{equation*}
+````{admonition} Warning!
+:class: warning
+Take note that
+```{math}
 \sum_{i=1}^n (a + u_i) \neq a + \sum_{i=1}^n u_i
-\end{equation*}
-
+```
 For example, $\displaystyle \sum_{i=1}^4 (1+i) = 2 + 3 + 4 + 5 = 14$.
-
-**Examples**<br>
+````
+````{admonition} Practice Questions
+:class: seealso, dropdown
 
 Write the following expressions using as a sum ($\Sigma$ notation) without evaluating the sum:
 1. $1 + 5 + 9 + 13 + 17 +21$
 2. $64-32+16-8+4-2+1$
 3. $\frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \dots + \frac{1}{99} $
+````
 
-**Solutions**<br>
+````{admonition} Solutions
+:class: seealso, dropdown
 
 1. $\displaystyle\sum_{i=1}^6 (4n - 3)$ or $\sum_{i=0}^5 (4n + 1)$.
 
@@ -80,6 +87,7 @@ Write the following expressions using as a sum ($\Sigma$ notation) without evalu
 
 3. $\displaystyle\sum_{i=3}^{99} \frac{1}{n}$ or $\sum_{i=1}^{97} \frac{1}{n+2}$.
 Note: other answers are possible!
+````
 
 ## Arithmetic and Geometric Progressions
 
@@ -92,9 +100,7 @@ These sequences have the nice property that their series can be solved.
 
 ### Arithmetic progression
 
-#### Definition
-
-```{admonition} Arithmetic Progression
+````{admonition} Definition
 An arithmetic progression (otherwise known as an arithmetic sequence) is a sequence of $n$ terms which all have a "common
 difference" $d$, written as follows:
 
@@ -102,9 +108,10 @@ difference" $d$, written as follows:
 :label: apdef
 a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d
 ```
-
 where $a$ is an arbitrary number.
-An example is the sequence $3,5,7,9,11,13$ in which the first term is $a=3$, the common difference is $d=2$ and the
+````
+
+An example of an arithmetic progression is the sequence $3,5,7,9,11,13$ in which the first term is $a=3$, the common difference is $d=2$ and the
 number of terms is $n=6$.
 An infinite arithmetic progression is given by the case where $n \to \infty$.
 
@@ -113,10 +120,10 @@ The $i$-th term of the arithmetic progression can be expressed as the following 
 : label : aprrdef
 u_i=a+(i-1)d
 ```
-for $i=1,2,\dots,n$.
 
 
-**Python code for arithmetic progression:**
+````{admonition} Python code for arithmetic progression
+:class: tip
 ```python
 n = 10 # number of terms
 a = 30 # first value
@@ -128,7 +135,8 @@ while count < n: # while loop
        seq = seq + d # update sequence                 
        count += 1 # update counter
 ```
-You can play around with the behaviouur of different arithmetic progessions by changing the values of $a$ and $d$.
+You can play around with the behaviour of different arithmetic progessions by changing the values of $a$ and $d$.
+````
 
 
 
@@ -142,15 +150,15 @@ The series (or the sum) $S_n$ of an arithmetic progression with recurrence relat
 ```
 where $L = a + (n-1) d$ is the last term in the series.
 
-Notice in equation {eq}`seriessol` that as $n$ (the number of terms) increases, the terms of arithmetic progessions grow without bound.
-That is, as $n$ approaches $\infty$, the arithmetic progession approaches $\infty$ if $d>0$ and approaches $-\infty$ if
+As $n$ approaches $\infty$, the arithmetic progession approaches $\infty$ if $d>0$ and approaches $-\infty$ if
 $d<0$.
 In these cases we say that the series diverges (more on this later!).
 Infinite arithmetic progressions always diverge, the proof of which can be found via
 [this link](https://math.stackexchange.com/questions/3334553/proof-that-arithmetic-series-diverges)
 (although further reading is required!).
 
-**Python code for the series of the arithmetic progression:**
+````{admonition} Python code for the series of the arithmetic progression
+:class: tip
 ```python
 nterms = 10 # number of terms
 a = 30 # first value
@@ -165,10 +173,12 @@ while count < nterms: # while loop
        count += 1 # update counter
 ```
 You can use this code to convince yourself that the series of arithmetic progressions grow without bound for large $n$.
+````
 
-**Proof of the solution of the series of arithmetic progressions**<br>
 
-From equation {eq}`seriessol` write down the reversed series below the original:
+
+````{admonition} Proof of the solution of the series of arithmetic progressions
+:class: note
 ```{math}
 S_n = a + (a+d) + (a+2d) + \dots + \Big( a + (n-3) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-1) d \Big) \\
 S_n = a + \Big( a + (n-1) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-3) d \Big) + \dots + (a+2d) + (a+d) + a \ .
@@ -184,18 +194,21 @@ S_n =  \frac{n}{2} \Big( 2 a + (n-1) d \Big)  \ .
 [There is a legend](https://www.americanscientist.org/article/gausss-day-of-reckoning),
 that Gauss (a famous mathematician) used a similar approach as a schoolboy back in the 1780s to find the answer to
 $1+2+\dots+99+100$.
+````
 
 
-**Examples**<br>
-
+````{admonition} Practice Questions
+:class: seealso, dropdown
 1. How many terms are in the sequence $54, 52, 50,\dots, 18$?
 2. Find the sum of the first 30 terms of the arithmetic progression with the first three terms $3,9,15$.
 3. Find the sum of the arithmetic progression with first term 2, last term 10 and common difference 2.
 4. Evaluate $\sum_{n=1}^{10} (5n-1)$ and $\sum_{n=100}^{1000} n$ .
 5. In an arithmetic progression the 3rd term is 26 and the 8th term is 46. Find the 1st term, the common difference and $S_{50}$.
 6. Find the sum of the integers between 1 and 100 which are divisible by 6.
+````
 
-**Solution**<br>
+````{admonition} Solution
+:class: seealso, dropdown
 
 1. This is an arithmetic progression (AP) with first term $a=54$, common difference $d=-2$, and last term $L=18$.
 Since $L = a + (n-1)d$, we have $n = \frac{18-54}{-2} = 19$ terms.
@@ -219,12 +232,13 @@ The sum of the first $50$ terms is given by $S_{50}=\frac{50}{2}(2a+49d)=5800$.
 6. The series is given by $S=6+12+18+...+96 = \sum_{n=1}^{16} 6 n$.
 This is the sum of an AP with first term $a=6$, last term $L=96$ and $n=16$ terms.
 The result is $S= \frac{16}{2}(6+96)=816$.
+````
+
 
 ### Geometric Progression
 
-#### Definition
-
-```{admonition} Geometric Progression
+````{admonition} Definition
+:class: note
 A geometric progression (otherwise known as an geometric sequence) is a sequence of $n$ terms which have "common ratio"
 $r$, written as follows:
 
@@ -233,6 +247,7 @@ $r$, written as follows:
 a, a r, a r^2, a r^3, \dots , a r^{n-1}
 ```
 where $a$ is an arbitrary number.
+````
 Using the notation for sequences in the previous section, the $i$-th term of the geometric progression is
 $u_i=a r^{i-1}$ for $i=1,2,\dots,n$.
 In other words, the next term in the geometric progression can be found by multiplying the previous term by the common
@@ -240,7 +255,9 @@ ratio $r$, given by the recurrence relation $u_i = r u_{i-1}$ where $u_1=a$.
 An example is the sequence $24,−12,6,−3,1.5$ in which the first term is $a=2$, the common ratio is $r=−\frac{1}{2}$ and
 the number of terms is $n=5$.
 
-**Python code for the geometric progression:**
+
+````{admonition} Python code for the geometric progression
+:class: tip
 ```python
 nterms = 10 # number of terms
 a = 24 # first value
@@ -252,6 +269,7 @@ while count < nterms: # while loop
        seq = seq * r # update sequence                  
        count += 1 # update counter
 ```
+````
 
 ### Solving the series of geometric progessions
 
@@ -262,7 +280,8 @@ The series (or the sum) $S_n$ of a geometric progression $u_i=a r^{i-1}$ is:
  S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r}
 ```
 
-**Python code for the series of the geometric progression:**
+````{admonition} Python code for the series of the geometric progression
+:class: tip
 ```python
 nterms = 10 # number of terms
 a = 24 # first value
@@ -276,24 +295,30 @@ while count < nterms: # while loop
        ser = ser + seq # update sequence               
        count += 1 # update counter
 ```
+````
 
-**Proof of the solution of the series of geometric progressions**
-
-Starting from equation {eq}`gpdef`, the definition of the geometric progression:
+````{admonition} Proof for the definition of a geometric series
+:class: note
 ```{math}
 S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} = a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} +
 r^{n-1} \big) \ ,
 ```
 we multiply by $r$:
 ```{math}
-r S_n = a \Big(r + r^2 + r^2 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .
+r S_n = a \big(r + r^2 + r^2 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .
 ```
 Subtracting $r S_n$ from $S_n$ and cancelling the terms provides:
 ```{math}
- S_n - r S_n = a \Big(1 - r^{n} \big) \ ,
+ S_n - r S_n = a \big(1 - r^{n} \big) \ 
 ```
-which can be rearranged to provide the result.
 
+And then dividing both sides by $1-r$:
+
+```{math}
+S_n = a \frac{1 - r^n}{1-r}
+```
+QED
+````
 
 ### A preliminary introduction to convergence and divergence
 
@@ -313,27 +338,28 @@ Thus we conclude that:
 * if $\lvert r \rvert < 1$ then $S_n$ converges and approaches $\frac{a}{1-r}$ as $n\to \infty$,
 * if $\lvert r \rvert > 1$ then $S_n$ diverges and approaches $\infty$ as $n\to \infty$.
 
-**Examples**<br>
+````{admonition} Practice Questions
+:class: seealso, dropdown
 1. Find the sum of the first five terms in a geometric progression with first term 27 and common ration is $\frac{2}{3}$?
 2. Evaluate $ \sum_{n=1}^\infty 729 \Big(\frac{1}{3} \Big)^{n-1}$.
 3. The first term of a geometric progression is $8$. Given that the sum of the first three terms is 38, find the two possible values of the common ratio.
 4. A geometric progression has first term $27$ and common ratio of $r=\frac{4}{3}$. Find the least number of terms that the sequence can have if its sum exceeds $550$.
 5. By writing the recurring decimal $0.123123123\dots$ as a geometric progression, show that it can be expressed as the fraction $\frac{41}{333}$.
+````
 
-**Solutions**<br>
-
+````{admonition} Solutions
+:class: seealso, dropdown
 1. $a=27$, $r=\frac{2}{3}$, $S_5 = a \frac{1 - r^5}{1-r} = 27 \frac{1 - (2/3)^5}{1 - 2/3} = \frac{211}{3}$,
 2. The given expression represents the sum of a geometric progression (GP) with first term $a=729$ and common ratio $r=\frac{1}{3}$.
 The sum over all integers n is given by $S_{\infty}=\frac{729}{1−1/3}=\frac{2187}{2}$.
 3. Let the first term of this GP be denoted by $a$ ($=8$), and the common ratio be denoted by $r$.
 We have the sum of the first 3 terms is $8(1+r+r^2)=38$.
-This equation is a quadratic with solutions $r=−\frac{5}{2},\frac{3}{2}$.
 4. The sum of the first $n$ terms in this GP is given by $S_n= 27 \frac{1−(4/3)^n}{1−4/3}$.
 We require that $S_n>550$. The problem could be tackled by trial and error, but we will solve it analytically.
 The problem rearranges to give $(\frac{4}{3})^n>\frac{631}{81}$ (take care with the direction of the inequality!).
 By taking the natural logarithm we obtain $n > \frac{\ln \big( \frac{631}{81} \big)}{ \ln \big( \frac{4}{3} \big)}=7.136$ (4sf).
 Since $n$ is an integer, the least number of terms required is $8$.
-
+````
 
 ## Method of Differences
 
@@ -346,8 +372,8 @@ This is best illustrated by example.
 [Link to a short video](https://www.youtube.com/watch?embed=no&v=AAxES-zFuxQ).
 
 
-### Illustrative example
-
+````{admonition} Worked Example
+:class: seealso
 Say we want to compute the partial sum:
 ```{math}
 \sum_{r=1}^N r \ .
@@ -369,7 +395,7 @@ Observing that $r (r+1) - r (r-1) = 2 r$ then gives us the following result:
 ```
 We note that this result could also have been found using the formula for an arithmetic progression with first term 1
 and common difference 1.
-
+````
 
 
 ### Rewriting the summation index
@@ -401,7 +427,9 @@ For example:
 \sum_{r=1}^N \frac{2^{r+5}}{ \sqrt{r+5}} = \sum_{r=6}^{N+5} \frac{2^{r}}{ \sqrt{r}} \ .
 ```
 
-#### Example
+````{admonition} Worked Example
+:class: seealso
+
 Consider the difference between the following two sums:
 ```{math}
 D = \sum_{r=1}^N \frac{e^r}{ (r+1) (r+2) } - \sum_{r=1}^N \frac{e^{r+2}}{(r+3) (r+4)} \ .
@@ -412,9 +440,7 @@ Thus we can rewrite the summation index of the right sum to provide:
 ```{math}
 D = \sum_{r=1}^N \frac{e^r}{ (r+1) (r+2) } - \sum_{r=3}^{N+2} \frac{e^r}{(r+1) (r+2)} \ .
  ```
-Now we have the same function of the index $r$ but with different values of the summation index.
-To solve the equation we simply "take out" the index values that are not common, i.e. $r=1,2$ on the left sumation
-and $r=N+1,N+2$ on the right summation:
+Now we have the same function of the index $r$ but with different values of the summation index. Both sequences cancel out except for $r=1,2$ on the left summation and $r=N+1,N+2$ on the right summation:
 ```{math}
 D & = \frac{e^1}{2\times 3} + \frac{e^2}{ 3 \times 4} + \sum_{r=3}^N \frac{e^r}{ (r+1) (r+2) } -
 \sum_{r=3}^N \frac{e^r}{ (r+1) (r+2) } - \frac{e^{N+1}}{(N+2)\times (N+3)}  - \frac{e^{N+2}}{(N+3)\times (N+4)} \\
@@ -422,17 +448,20 @@ D & = \frac{e^1}{2\times 3} + \frac{e^2}{ 3 \times 4} + \sum_{r=3}^N \frac{e^r}{
 ```
 Note: if you struggle with rewriting the summation index, it's ok to just write out the terms in the series and
 demonstrate the cross-cancellation.
+````
 
-**Questions**<br>
-
+````{admonition} Practice Questions
+:class: seealso, dropdown
 1. Use the result $r^2 (r+1)^2 - (r-1)^2 r^2 = 4 r^3$ to calculate $\sum_{r = 1}^{N} r^3$.
 2. By using [partial fractions](https://www.mathcentre.ac.uk/resources/uploaded/mc-ty-partialfractions-2009-1.pdf) to
 rewrite the summand, show the result:
 ```{math}
 \sum_{r = 1}^n \frac{2}{r (r+1) (r+2)} = \frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2} \ .
 ```
+````
 
-**Solutions**<br>
+````{admonition} Solutions
+:class: seealso, dropdown
 1. $4 \sum_{r=1}^N r^3 = \sum_{r=1}^N \big( r^2(r+1)^2 - (r-1)^2 r^2 \big)$
 $= \sum_{r=1}^N r^2(r+1)^2 - \sum{r=1}^N (r-1)^2 r^2  $
 $= 1^2 2^2 + 2^2 3^2 + \dots + (N-1)^2 N^2 + N^2 (N+1)^2$
@@ -450,3 +479,4 @@ $ = (1-2+1) \sum_{r=3}^n \frac{1}{r} + \big( \frac{1}{1} + \frac{1}{2} \big)
 -2 \big( \frac{1}{2} + \frac{1}{n+1} \big)
 +\big( \frac{1}{n+1} + \frac{1}{n+1} \big)$
 $=\frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2}$.
+````
