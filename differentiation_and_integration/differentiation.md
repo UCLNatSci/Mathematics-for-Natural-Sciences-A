@@ -10,8 +10,8 @@ For instance,
 * if $m$=−2 then 𝑦 decreases by 2 units for every unit of increase in $x$
 
 
-```{admonition} Example
-:class: tip
+```{admonition} Worked Example
+:class: seealso
 **Problem**: Find the slope of the straight line connecting the points (-3,2) and (5,7).
 
 **Solution**:
@@ -58,8 +58,6 @@ The slope of the secant line is given by:
 ```
 As we make $Δx$ smaller so that the two points are closer together, the secant line approaches the tangent.  We are therefore interested in what happens to {eq}`slope_secant` "as $Δx$ approaches zero"
 
-```{admonition} Example
-:class: tip
 
 Consider the function $f(x)=x^2$.
 Using the definition given in {eq}`slope_secant`, we have
@@ -96,15 +94,50 @@ The process of calculating the derivative is called "differentiation".
 As $Δx\rightarrow 0$, both the numerator and denominator of the fraction tend to zero, yet in most cases we will see that their ratio approaches a finite limit.
 What determines the limit is how quickly the numerator approaches zero, relative to the denominator.
 
-```{admonition} Questions
-
+````{admonition} Practice Questions
+:class: seealso, dropdown
 1. Calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{3x}{2+2𝑥})$ from first principles (i.e. using the definition of the derivative)
 
-2. Differentiate $𝑦=x^4−2x^2$ using first principles, and \emph{hence}
+2. Differentiate $𝑦=x^4−2x^2$ using first principles, and *hence*
 
 (i) Calculate the equation of the tangent to this curve at $x=3$
 
 (ii) Calculate the equation of the normal to the curve at $x=3$
+````
+
+```{admonition} Solutions
+:class: seealso, dropdown
+1. Let $f(x)=3x^2+2x$
+
+    Then, $\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}(f(x+Δx)−f(x)Δx)=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{(3(x+Δx)^2+2(x+Δx)−(3x^2+2x))}{Δx})$
+
+    $=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{(3x^2+6xΔx+3(Δx)^2+2x+2Δx)−(3x^2+2x)}{Δx})=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{6xΔx+3(Δx)^2+2Δx}{Δx}) $
+
+    $=\displaystyle \lim_{Δx \to 0}(6x+2+3Δx)=6x+2 $  
+
+2. For "small" $Δx$,
+
+    $y(x+Δx)=(x+Δx)^4−2(x+Δx)^2$
+
+    $=x^4+4x^3Δx+6x^2(Δx)^2+...[\text{smaller terms}]...)−2(x^2+2xΔx+(Δx)^2)$
+
+    $y(x+Δx)−y(x)=4x^3Δx+6x^2(Δx)^2−4xΔx−2(Δx)^2+...[\text{smaller terms}]...$
+
+    $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}y(xΔx)−y(x)Δx))=\displaystyle \lim_{Δx \to 0}(Δx(4x^3−4x)+(Δx)2(6x^2−2)+...[\text{smaller terms}]... Δx)$
+
+    $=\displaystyle \lim_{Δx \to 0}(4x^3−4x+Δx(6x^2−2)+...[\text{smaller terms}])=4x^3−4x$
+
+    (i) The slope at $x=3$ is given by putting $x=3$ into the result for $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$.
+
+    We write $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}(x=3) =4(3^3)−4(3)=96 $
+
+    The tangent line passing through the point (3,63) is given by the equation $\displaystyle\frac{y−63}{x−3}=96$.
+    That is, $y=96x−225$
+
+    (ii) The normal to the curve at the point satisfies
+    $\displaystyle\frac{y−63}{x−3}=−1/96$
+    That is, $y=−(1/96)x+192/96$
+
 ```
 
 ## Derivative as a "rate of change"
@@ -117,7 +150,7 @@ In many problems the independent variable is time. For example, consider the cas
 ---
 name: pendulum
 ---
-A pendulum swing "animation", the angle of inclination with the downward vertical is denoted by $\theta$ and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of $\theta$ with respect to time $t$.
+A pendulum swing diagram, the angle of inclination with the downward vertical is denoted by $\theta$ and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of $\theta$ with respect to time $t$.
 ```
 * At the maximum height of the swing (amplitude), the pendulum comes to an instantaneous standstill, and so $\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}=0$.
 * As the pendulum swings clockwise, $\theta$ is decreasing and so $\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}<0$.
@@ -128,17 +161,17 @@ A pendulum swing "animation", the angle of inclination with the downward vertica
 
 We can differentiate a function repeatedly.  For example, we might differentiate the function $3x^2+5x^3$ w.r.t. $x$ twice:   
 
-\begin{equation*}
+```{math}
 \displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(3x^2+5x^3))=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(6x+15x^2)=6+30x
-\end{equation*}
+```
 
 We call this result the "second derivative" w.r.t. $x$. and we write
 $\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}(3x^2+5x^3)=6+30x$.
 In general, the $n^{th}$ derivative is denoted by $\displaystyle\frac{\mathrm{d}^n}{\mathrm{d}x^n}$. We have already seen that the notation $f'(x)$ can be used to denote the first derivative $\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}$, and this notation can be extended to higher derivatives:
 
-\begin{equation*}
+```{math}
 f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f'''(x)=\displaystyle\frac{\mathrm{d}^3}{\mathrm{d}x^3},\quad \text{etc}
-\end{equation*}
+```
 
 The dash notation becomes a bit cumbersome for higher derivatives, so we write $f^{(n)}(x)=\displaystyle\frac{\mathrm{d}^nf}{\mathrm{d}x^n}$.
 
@@ -150,14 +183,49 @@ There are still more ways to write the derivative of a function, and we will int
 Note on differentiation with respect to time : "Dotty" notation is used for differentiation with respect to time : $ \dot{x}=\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}$ , $\ddot{x}=\displaystyle\frac{\mathrm{d}^2x}{\mathrm{d}t^2}$.   
 
 
-```{admonition} Questions
+```{admonition} Practice Questions
+:class: seealso, dropdown
 
 Questions (might need to read ahead in the notes to answer!):
-1. Given that $x(t)=2t$, calculate $\ddot{x}$
+1. Given that $x(t)=2^t$, calculate $\ddot{x}$
 
 2. Given that $y=e^2k\ln(k)$, calculate $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}k^2}$
 
 3. For the unit circle parameterisation $x=\cos(\theta), y=\sin(\theta)$, calculate $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}$ using parametric differentiation.
+
+```
+
+```{admonition} Solutions
+:class: seealso, dropdown
+1. Rearrange: $\ln(x)=t\ln(2)$
+
+    Differentiate the expression w.r.t. $t$
+
+    $\displaystyle\frac{1}{x}\dot{x}=\ln(2)$
+
+    You could write this all in terms of 𝑡 before continuing, but here I'll just go right ahead and differentiate again w.r.t. $t$
+
+    $−\displaystyle\frac{1}{x^2}\dot{x}\dot{x}+\displaystyle\frac{1}{x}\ddot{x}=0$
+
+    Rearrange and write in terms of $t$ :
+
+    $\ddot{x}=\displaystyle\frac{1}{x}\dot{x}\dot{x}=\ln(2)^22^t$
+2. $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}k^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(\ln(k))+\ln(k)\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}))=\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}(2\ln(k)+\displaystyle\frac{1}{k}))$
+
+    $=e^{2k}\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(2\ln(k)+\displaystyle\frac{1}{k})+(2\ln(k)+\displaystyle\frac{1}{k})\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(2^{2k})=e^{2k}(−\displaystyle\frac{1}{k^2}+\displaystyle\frac{4}{k}+4\ln(k))$
+3. $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=−\sin(t)$, $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\cos(t)$
+
+    So $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=−\cot(x)$
+
+    $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x})/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=\displaystyle\frac{\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}(−\cot(t))}{\sin(t)}=\displaystyle\frac{−\sin^2(t)−\cos^2(t)}{\sin(t)}\displaystyle\frac{1}{\sin(t)}=−\mathrm{cosec}^3(t)$
+
+    Or, written in terms of $x$ and $y$, $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=−\displaystyle\frac{1}{y^3}$
+
+    Check by implicit differentiation:
+
+    $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(−xy)=\displaystyle\frac{−1}{y}+\displaystyle\frac{x}{y^2}\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$
+
+    $=\displaystyle\frac{−1}{y}+\displaystyle\frac{x}{y^2}(−\displaystyle\frac{x}{y})=\displaystyle\frac{−1}{y^3}(y^2+x^2)=−\displaystyle\frac{1}{y^3}$
 
 ```
 
@@ -182,8 +250,8 @@ scale: 30%
 
 ### First Derivative Test
 
-```{admonition} Example
-:class: tip
+```{admonition} Worked Example
+:class: seealso
 Find and classify the stationary points of $f(x)=-x^3+9x^2−24x+20$
 
 **Solution**
@@ -226,6 +294,8 @@ A point of inflection is a point where the concavity of a function $f$ changes s
 
 ## Differentiation Rules
 
+````{admonition} Definition
+:class: note
 **Sum rule**
 
 $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(u+v)=\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}+\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}$
@@ -233,8 +303,6 @@ $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(u+v)=\displaystyle\frac{\mathrm{d}u
 This result says that the derivative of a sum is equal to the sum of the derivatives.
 
 For example, $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^5+x^3)=5x^4+3x^2$
-
-
 
 **Product rule**
 
@@ -245,9 +313,10 @@ A special case is when one of the functions is a constant $k$. Then, we have
 $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(kf(x))=k\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}+0.$
 
 For example, $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(3x^5)=15x^4.$
+````
 
-```{admonition} Example
-:class: tip
+```{admonition} Worked Example
+:class: seealso
 
 Calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))$
 
@@ -255,11 +324,16 @@ Calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))$
 
 $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))=x^3\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\sin(x))+\sin(x)\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}x^3=x^3\cos(x)+3x^2\sin(x)$
 ```
+
+````{admonition} Definition
+:class: note
+
 **Quotient rule**
 
 $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{u}{v})=\displaystyle\frac{v\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}−u\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}}{v^2}$
 
-*Proof* :
+Additionally, a proof is as follows:
+
 
 Let $f(x)=\displaystyle\frac{u(x)}{v(x)}$ and rearrange to give $u(x)=f(x)v(x)$. Then differentiate both sides w.r.t. $x$, applying the product rule to calculate the result on the right. Rearrange your answer to obtain $f'(x)$ entirely in terms of $u$, $v$ and their derivatives.
 
@@ -270,9 +344,10 @@ and rearranging gives $f'=\displaystyle\frac{u'−fv'}{v}$
 We can substitute $f=u/v$ to obtain the final result:
 
 $f'=\displaystyle\frac{u'−\displaystyle\frac{u}{v}v′}{v}=\displaystyle\frac{u'v-uv'}{v^2}$
+````
 
-```{admonition} Example
-:class: tip
+````{admonition} Worked Example
+:class: seealso
 
 Use the quotient rule to obtain the result for $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\tan(x)$
 
@@ -281,8 +356,8 @@ Use the quotient rule to obtain the result for $\displaystyle\frac{\mathrm{d}}{\
 Let $u=\sin(x)$, $v=\cos(x)$. Then, by the quotient rule,
 
 $\displaystyle\frac{\mathrm{d}}{\mathrm{d}}(\displaystyle\frac{𝑢}{𝑣})=\displaystyle\frac{v\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}−u\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}}{v^2}=\displaystyle\frac{cos^2(x)+\sin^2(x)}{cos^2(x)}=\displaystyle\frac{1}{cos^2(x)}=sec^2(x)$
-```
-4. **Chain rule**
+````
+**Chain rule**
 
 Suppose that we wish to differentiate the following function w.r.t. $x$ :
 
@@ -302,7 +377,10 @@ The result can be anticipate by noting that $\displaystyle\frac{Δf}{Δx}=\displ
 
 *You should take great care when treating derivatives like fractions involving finite quantities... the results do not always hold true, as we will see when we study partial differentiation. However, in this case our case can be proven to be correct. The anticipated result is shown in the box below.*
 
-```{admonition} The chain rule
+```{admonition} Definition
+:class: note
+
+The chain rule is defined as follows:
 
 If $f=f(g)$ and $g=g(x)$ are both differentiable then
 
@@ -323,9 +401,10 @@ Writing the expression fully in terms of 𝑥 provides the final answer :
 
 $\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=(2\sin(x)−\displaystyle\frac{1}{\sin^2(x)})\cos(x)$
 
-```{admonition} Questions
+```{admonition} Practice Questions
+:class: seealso, dropdown
 
-1. Use the chain rule with $f=e−x$, $g=−x$ to calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e−x)$
+1. Use the chain rule with $f=e^{−x}$, $g=−x$ to calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x})$
 
     Hence, calculate the derivatives of $\sinh(x)$ and $\cosh(x)$
 
@@ -353,6 +432,28 @@ $\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=(2\sin(x)−\displaystyle\frac{1}{
 
 ```
 
+```{admonition} Solutions
+:class: seealso, dropdown
+
+1. $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x}) =\displaystyle\frac{\mathrm{d}}{\mathrm{d}g}e^g$ where $g=−x$
+gives $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x})=−e^g=−e^{−x}$
+Therefore,
+$\displaystyle\frac{\mathrm{d}}{\mathrm{d}}\sinh(x)=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{1}{2}(e^x-e^{−x}))=\displaystyle\frac{1}{2}(e^x+e^{−x})=\cosh(x)$
+$\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{1}{2}(e^x+e^{−x}))=\frac{1}{2}(e^x−e^{−x})=\sinh(x)$
+2. Let $x=\ln(t)$
+Then $\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\sin(\ln(t))=\displaystyle\frac{\mathrm{d}(\sin(x))}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=\cos(x)\displaystyle\frac{1}{t}=\displaystyle\frac{\cos(\ln(t))}{t}$
+3. (a.) Put $u=2x−1$.
+Then $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=2\cos(u)=2\cos(2x−1)$
+(b.) Put $u=3−x^2$
+Then $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=(4u^3)(−2𝑥)=−8x(3−x^2)^3=8x(x^2−3)^3$
+(c.) Put $x=\sin(u)$
+Then $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=\displaystyle\frac{1}{x}\cos(u)=\displaystyle\frac{\cos(u)}{\sin(u)}=\cot(u)$
+<br><br>
+4.  (a) $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}\ln(\cos(2x−1))}{\mathrm{d}\cos(2x−1)}\displaystyle\frac{\mathrm{d}(2x−1)}{\mathrm{d}x}$
+$=−2\displaystyle\frac{\sin(2x−1)}{\cos(2x−1)}=−2\tan(2x−1)$
+(b) $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{1}{\ln(\ln(\ln(x)))}\displaystyle\frac{1}{\ln(\ln(x))}\displaystyle\frac{1}{\ln(x)}\displaystyle\frac{1}{x}$
+```
+
 ## Parametric Differentiation
 
 We can express the equation of a circle in the form $x=\cos(t)$, $y=\sin(t)$. This is known as a parametric representation. By varying the parameter $t$, the entire circle is mapped out.
@@ -368,8 +469,8 @@ According to the chain rule, we can write
 
 So, we obtain a result for $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$ in terms of the rate of change of each variable w.r.t. parameter $t$. This result is known as parametric differentiation. The result is obtained fully in terms of the parameter.
 
-```{admonition} Example
-:class: tip
+```{admonition} Worked Example
+:class: seealso
 
 For the unit circle parameterisation, calculate $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$ using parametric differentiation. Verify your answer by using implicit differentiation using the equation relating $y$ and $x$.
 
@@ -410,7 +511,8 @@ We need to rewrite in terms of the independent variable $x$.
 For some problems of this type, it can be quite difficult, but here is is easy since $e^y=x$.
 The final result is $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)=\displaystyle\frac{1}{x}$, and this is another result that you need to remember.
 
-```{admonition} Questions
+```{admonition} Practice Questions
+:class: seealso, dropdown
 
 1. Calculate $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)$
 
@@ -423,6 +525,34 @@ The final result is $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)=\displays
 
 ![arccosh](arccosh.png)
 
+```
+
+```{admonition} Solutions
+:class: seealso, dropdown
+1. Let $y=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)$. Then $x=\sin(y)$.
+
+    $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=1/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{1}{\cos(y)}=\displaystyle\frac{1}{\pm\sqrt{1-\sin^2(y)}}=\pm\displaystyle\frac{1}{\sqrt{1-x^2}}$
+
+    To choose the correct sign \pm we can look at the graph of $\arcsin(x)$ on the domain [−1,1].
+    The graph is monotonic increasing (always increasing) and so $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}>0$ ∀$x$∈[−1,1]
+    We therefore choose the positive root, which gives
+
+
+    $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)=\displaystyle\frac{1}{\sqrt{1−x^2}}$
+
+    Notice that at $x=\pm1$ the slope of the curve is infinite (the curve is parallel to the y-axis)
+    These points are stationary points w.r.t $y$, since $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=0$
+
+    There are no points where the curve is parallel to the $x$-axis.
+<br><br>
+2. Let $𝑦=\mathrm{arccosh(y)}$. Then $𝑡=\cosh(y)$
+
+    $\displaystyle\frac{\mathrm{d}t}{\mathrm{d}y}=1/\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\displaystyle\frac{1}{\sinh(y)}=\displaystyle\frac{1}{\pm \sqrt{cosh^2(y)−1}}=\pm \displaystyle\frac{1}{\sqrt{t^2−1}}$
+
+    Recall that for the function $\mathrm{arccosh}$ we select the positive branch. On this branch the function is monotonic increasing, so we again select the positive square root.
+
+   $ \displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)=\displaystyle\frac{1}{\sqrt{t^2−1}}$
+<br>
 ```
 
 ## Implicit Differentiation
@@ -452,7 +582,8 @@ and finally, rewriting all in terms of $x$ gives
 
 $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=n\displaystyle\frac{x^n}{x}=nx^{n-1}$
 
-```{admonition} Questions
+```{admonition} Practice Questions
+:class: seealso, dropdown
 
 1. Use implicit differentiation to calculate $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}$ where $e^y+e^x=ye^y$
 
@@ -472,173 +603,8 @@ $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=n\displaystyle\frac{x^n}{x}=nx^{n-
 
 ```
 
-## Solutions
-
-**Problems for Motivation and Principle Arguments**
-
-1. Let $f(x)=3x^2+2x$
-
-    Then, $\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}(f(x+Δx)−f(x)Δx)=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{(3(x+Δx)^2+2(x+Δx)−(3x^2+2x))}{Δx})$
-
-    $=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{(3x^2+6xΔx+3(Δx)^2+2x+2Δx)−(3x^2+2x)}{Δx})=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{6xΔx+3(Δx)^2+2Δx}{Δx}) $
-
-    $=\displaystyle \lim_{Δx \to 0}(6x+2+3Δx)=6x+2 $  
-<br>
-
-2. For "small" $Δx$,
-
-    $y(x+Δx)=(x+Δx)^4−2(x+Δx)^2$
-
-    $=x^4+4x^3Δx+6x^2(Δx)^2+...[\text{smaller terms}]...)−2(x^2+2xΔx+(Δx)^2)$
-
-    $y(x+Δx)−y(x)=4x^3Δx+6x^2(Δx)^2−4xΔx−2(Δx)^2+...[\text{smaller terms}]...$
-
-    $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}y(xΔx)−y(x)Δx))=\displaystyle \lim_{Δx \to 0}(Δx(4x^3−4x)+(Δx)2(6x^2−2)+...[\text{smaller terms}]... Δx)$
-
-    $=\displaystyle \lim_{Δx \to 0}(4x^3−4x+Δx(6x^2−2)+...[\text{smaller terms}])=4x^3−4x$
-<br><br>
-
-    (i) The slope at $x=3$ is given by putting $x=3$ into the result for $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$.
-
-    We write $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}(x=3) =4(3^3)−4(3)=96 $
-
-    The tangent line passing through the point (3,63) is given by the equation $\displaystyle\frac{y−63}{x−3}=96$.
-    That is, $y=96x−225$
-<br><br>
-
-    (ii) The normal to the curve at the point satisfies
-    $\displaystyle\frac{y−63}{x−3}=−1/96$
-    That is, $y=−(1/96)x+192/96$
-
-<br>
-
-**Problems for Second and Higher Derivatives**
-
-1. Rearrange: $\ln(x)=t\ln(2)$
-
-    Differentiate the expression w.r.t. $t$
-
-    $\displaystyle\frac{1}{x}\dot{x}=\ln(2)$
-
-    You could write this all in terms of 𝑡 before continuing, but here I'll just go right ahead and differentiate again w.r.t. $t$
-
-    $−\displaystyle\frac{1}{x^2}\dot{x}\dot{x}+\displaystyle\frac{1}{x}\ddot{x}=0$
-
-    Rearrange and write in terms of $t$ :
-
-    $\ddot{x}=\displaystyle\frac{1}{x}\dot{x}\dot{x}=\ln(2)^22^t$
-<br><br>
-2. $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}k^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(\ln(k))+\ln(k)\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}))=\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}(2\ln(k)+\displaystyle\frac{1}{k}))$
-
-    $=e^{2k}\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(2\ln(k)+\displaystyle\frac{1}{k})+(2\ln(k)+\displaystyle\frac{1}{k})\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(2^{2k})=e^{2k}(−\displaystyle\frac{1}{k^2}+\displaystyle\frac{4}{k}+4\ln(k))$
-<br><br>
-3. $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=−\sin(t)$, $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\cos(t)$
-
-    So $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=−\cot(x)$
-
-    $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x})/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=\displaystyle\frac{\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}(−\cot(t))}{\sin(t)}=\displaystyle\frac{−\sin^2(t)−\cos^2(t)}{\sin(t)}\displaystyle\frac{1}{\sin(t)}=−\mathrm{cosec}^3(t)$
-
-    Or, written in terms of $x$ and $y$, $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=−\displaystyle\frac{1}{y^3}$
-
-    Check by implicit differentiation:
-
-    $\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(−xy)=\displaystyle\frac{−1}{y}+\displaystyle\frac{x}{y^2}\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}$
-
-    $=\displaystyle\frac{−1}{y}+\displaystyle\frac{x}{y^2}(−\displaystyle\frac{x}{y})=\displaystyle\frac{−1}{y^3}(y^2+x^2)=−\displaystyle\frac{1}{y^3}$
-
-<br>
-
-**Problems for Stationary Points**
-
-1. Let $f(x)=x^3−9x^2+24x+1$
-    Then $f'(x)=3x^2−18x+24=3(x^2−6x+8)=3(x−2)(x−4)$
-
-
-    $f'(2)=f'(4)=0$ so the stationary points are (2,21) and (4,17)
-
-
-    To classify these points we calculate $f''(x)=6x−18=6(x−3)$
-
-
-    $f''(2)>0$ so this point is a local maximum
-
-    $f''(4)>0$ so this point is a local minimum
-<br><br>
-2. $f'(x)=4x^3−24x^2+48x−32$
-
-    $f'(2)=32−96+96−32=0$ so the function has a stationary point at $x=2$
-
-    $f''(x)=12x^2−48x+48$
-
-    $f''(2)=48−96+48=0$
-
-
-    This result doesn't tell us anything about the stationary point!
-    (it could be a local maximum/minimum or a point of inflection)
-
-    To classify the point, we could use the first derivative test for $f'(2−𝜖)$, $f'(2+𝜖)$
-
-    Alternatively, we could look at the concavity:
-    $f''(x)=12(x^2−4x+4)=12(x−2)2\geq0$ $∀x$
-
-    The function is concave upwards either side of the stationary point, so it is a minimum.
-
-<br>
-
-**Problems for Differentiation Rules**
-
-1. $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x}) =\displaystyle\frac{\mathrm{d}}{\mathrm{d}g}e^g$ where $g=−x$
-gives $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x})=−e^g=−e^{−x}$
-Therefore,
-$\displaystyle\frac{\mathrm{d}}{\mathrm{d}}\sinh(x)=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{1}{2}(e^x-e^{−x}))=\displaystyle\frac{1}{2}(e^x+e^{−x})=\cosh(x)$
-$\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{1}{2}(e^x+e^{−x}))=\frac{1}{2}(e^x−e^{−x})=\sinh(x)$
-<br><br>
-2. Let $x=\ln(t)$
-Then $\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\sin(\ln(t))=\displaystyle\frac{\mathrm{d}(\sin(x))}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=\cos(x)\displaystyle\frac{1}{t}=\displaystyle\frac{\cos(\ln(t))}{t}$
-<br><br>
-3. (a.) Put $u=2x−1$.
-Then $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=2\cos(u)=2\cos(2x−1)$
-<br>
-(b.) Put $u=3−x^2$
-Then $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=(4u^3)(−2𝑥)=−8x(3−x^2)^3=8x(x^2−3)^3$
-<br>
-(c.) Put $x=\sin(u)$
-Then $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=\displaystyle\frac{1}{x}\cos(u)=\displaystyle\frac{\cos(u)}{\sin(u)}=\cot(u)$
-<br><br>
-4.  (a) $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}\ln(\cos(2x−1))}{\mathrm{d}\cos(2x−1)}\displaystyle\frac{\mathrm{d}(2x−1)}{\mathrm{d}x}$
-$=−2\displaystyle\frac{\sin(2x−1)}{\cos(2x−1)}=−2\tan(2x−1)$
-<br>
-(b) $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{1}{\ln(\ln(\ln(x)))}\displaystyle\frac{1}{\ln(\ln(x))}\displaystyle\frac{1}{\ln(x)}\displaystyle\frac{1}{x}$
-<br>
-
-**Problems for Parametric Differentiation**
-1. Let $y=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)$. Then $x=\sin(y)$.
-
-    $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=1/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{1}{\cos(y)}=\displaystyle\frac{1}{\pm\sqrt{1-\sin^2(y)}}=\pm\displaystyle\frac{1}{\sqrt{1-x^2}}$
-
-    To choose the correct sign \pm we can look at the graph of $\arcsin(x)$ on the domain [−1,1].
-    The graph is monotonic increasing (always increasing) and so $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}>0$ ∀$x$∈[−1,1]
-    We therefore choose the positive root, which gives
-
-
-    $\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)=\displaystyle\frac{1}{\sqrt{1−x^2}}$
-
-    Notice that at $x=\pm1$ the slope of the curve is infinite (the curve is parallel to the y-axis)
-    These points are stationary points w.r.t $y$, since $\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=0$
-
-    There are no points where the curve is parallel to the $x$-axis.
-<br><br>
-2. Let $𝑦=\mathrm{arccosh(y)}$. Then $𝑡=\cosh(y)$
-
-    $\displaystyle\frac{\mathrm{d}t}{\mathrm{d}y}=1/\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\displaystyle\frac{1}{\sinh(y)}=\displaystyle\frac{1}{\pm \sqrt{cosh^2(y)−1}}=\pm \displaystyle\frac{1}{\sqrt{t^2−1}}$
-
-    Recall that for the function $\mathrm{arccosh}$ we select the positive branch. On this branch the function is monotonic increasing, so we again select the positive square root.
-
-   $ \displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)=\displaystyle\frac{1}{\sqrt{t^2−1}}$
-<br>
-
-**Problems for Inverse Function Derivatives**
-
+```{admonition} Solutions
+:class: seealso, dropdown
 1. Differentiate the whole expression w.r.t. $y$, using the product rule to differentiate the term $ye^y$:
 
     $e^y+e^x\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y+ye^y$
@@ -676,3 +642,4 @@ $=−2\displaystyle\frac{\sin(2x−1)}{\cos(2x−1)}=−2\tan(2x−1)$
     This gives $\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{1}{\cos(y)}=\displaystyle\frac{1}{\sqrt{1−x^2}}$
 
     which is the same result we obtained in the examples of section 6.2.6, where it was also explained why the positive square root is chosen for this example.
+```
