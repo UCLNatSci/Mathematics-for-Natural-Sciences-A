@@ -40,21 +40,22 @@ In later work we also will need the definition of the complex conjugate:
 ```{admonition} Definition
 The **complex conjugate** of $z=x+yi$ is given by negating the sign of the imaginary part.
 
-We write either $z^∗=x−yi$ or $\bar{z}=x−yi$. For example, for the number $z=\sqrt{3}+\pi i$, the complex conjugate is given by $z^*=\sqrt{3}-\pi i$.
+We write either $z^∗=x−yi$ or $\bar{z}=x−yi$. For example, for the number $z=\sqrt{3}+\pi i$, the complex conjugate is given by $z^*=\sqrt{3}-\pi i$. Alternatively, for the number $z=\sqrt{2}-2i$, the complex conjugate would be $z^*=\sqrt{2}+2i$.
 ```
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 Suppose that $z_1=2-3i$ and $z_2=2-ai$.
 1. state the imaginary part of $z_1$
 1. Write down the result of $z_1^*$
 1. What is the value of the constant $a$ if $z_1 = z_2$?
 ```
-**Solution**<br>
+```{admonition} Solution
+:class: seealso, dropdown
 1. $-3$
 2. $2 + 3i$
 3. $3$
-
+```
 ## Geometric Interpretation
 ### The complex plane
 
@@ -77,16 +78,17 @@ The representation $z=x+yi$ is known as the Cartesian form of a complex number. 
 
 An alternative way of describing the location of a complex number in the plane is by proving the following two pieces of information:
 
-```{admonition} Definition
+````{admonition} Definition
 The **modulus** or **absolute value** of $z$, denoted by $|z|$ or $\mathrm{abs}(z)$, measures the length of the line connecting the point to the origin. It is always a positive quantity.
 
 By inspecting Figure {numref}`principal_argument`, we can see that the modulus is just the length of the hypothenuse of a right-angled triangle. The base and height of the triangle are given by the real and imaginary parts, and so we have
-```
-
 ```{math}
 :label: xplusiy
 |x+iy| = \sqrt{x^2+y^2}.
 ```
+````
+
+
 
 
 
@@ -108,12 +110,12 @@ Generic illustration of a complex number in the plane. The length of the blue li
 
 ```{attention}
 1. You **must** work in radians when providing the argument of a complex number. We will see later that there are special mathematical relationships involving the argument of a complex number, that are only valid when working in radians.
-1. We will always give the argument in the range $(−\pi,\pi]$. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since $\mathrm{arg}(z^∗)=−\mathrm{arg}(z)$.
+1. We will always give the argument in the range $[−\pi,\pi]$. This convention is much more common in the literature and also used by most mathematical computer software. Notice that conjugation in polar form is neater with this convention, since $\mathrm{arg}(z^∗)=−\mathrm{arg}(z)$.
 1. Strictly speaking, the argument as defined here is called the **principal argument**, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument $−\pi/4$ could equally be given as $(2n−1/4)\pi$ for any integer value of $n$.
 ```
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 The interactive app below allows you to generate randomly selected complex numbers in each quadrant. Try to calculate the modulus and argument for the examples, and click the "Show/Hide" button to check your answers:
 
 https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf
@@ -121,7 +123,7 @@ https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf
 
 ## Polar Form of a Complex Number
 
-The relationship between the Cartesian representation $z = x + yi$ and the modulus & argument representation is illustrated in . We conclude that a complex number can be expressed in the form:
+The relationship between the Cartesian representation $z = x + yi$ and the modulus & argument representation is illustrated in {numref}`principal_argument`. We conclude that a complex number can be expressed in the form:
 
 ```{math}
 :label: polarcomplex
@@ -138,7 +140,7 @@ z = re^{i\theta} = r(\cos(\theta) + i \sin(\theta)), \textrm{where } r = |z|, \t
 We will understand (and prove!) this result later. For now, we just *find* the polar representation of given complex numbers, and *use* the polar form to deduce some further results.
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 *Note: It is usually best to draw a diagram showing the location of the complex numbers in the plane, especially when just starting out. This will help avoid mistakes!*
 1. Write down the polar form of the following complex numbers:  
 a. $1+i$ &emsp; b. $-1+i$  
@@ -150,7 +152,9 @@ a. $\sqrt{3}e^{-i\pi /3}$
 b. $e^{i\pi /2}$
 ```
 
-**Solution**<br>
+
+```{admonition} Solution
+:class: seealso, dropdown
 1. All of the numbers (a-d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:<br>
 a. $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$<br>
 b. $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$<br>
@@ -163,7 +167,7 @@ a. $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\textrm{cos}(\frac{\pi}{3} - i\textrm
 b. $e^{i\frac{\pi}{2}} = i$<br>
 
 Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis ($\textrm{arg}(z) = \frac{\pi}{2}$) and has a modulus of $1$.
-
+```
 ## Complex Arithmetic
 ### Addition and Subtraction
 
@@ -209,16 +213,17 @@ The product of two complex numbers is just an ordinary product of sums, and so f
 Note the use of $i^2=-1$ to simplify the result.
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 1. Let $z=1+2i$, and $q=2+1$. Calculate $zw*$.
 
 2. Show that the result $zz^* = |z|^2$ is true for any complex number z. *This result is useful, and should be remembered!*
 ```
-**Solutions**<br>
+```{admonition} Solutions
+:class: seealso, dropdown
 1. $zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i$
 
 2. Let $z=x+yi$. Then $zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2$
-
+```
 ### Division of Complex Numbers
 
 Suppose that $z_1 = x_1 + iy_1$, $z_2 = x_2 + iy_2$ and we want to express the result $z_3 = \frac{z_1}{z_2}$ in the form $z_3 = x_3 + iy_3$ where $x_3$ and $y_3$ are real numbers.
@@ -240,13 +245,14 @@ Let's see how this works for an example in which $z_1 = 2 + 3i$ and $z_2 = 1 - 2
 ```
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 1. Simplify the expression $\frac{7+i}{1+3i}$
 ```
 
-**Solution**<br>
+```{admonition} Solution
+:class: seealso, dropdown
 $\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i$
-
+```
 
 ### Multiplying and Dividing Complex Numbers in Polar Form
 
@@ -279,8 +285,15 @@ When $z_1$ is multiplied by $z_2$:
 * The position of $z_1z_2$ is rotated clockwise by an angle $\textrm{arg}(z_2)$ relative to $z_1$.
 ```
 
-```{admonition} Practice
+```{admonition} A helpful mnemonic
 :class: tip
+A good way to remember this rule is that **in polar form**, you can multiply two complex numbers by **multiplying** the magnitude and **adding** the angles. 
+
+Conversely, to divide two numbers **in polar form**, you **divide** the magnitude, and **subtract** the angles.
+```
+
+```{admonition} Practice
+:class: seealso, dropdown
 1. For each of the following pairs of numbers, state the results $|zw|$ and $\textrm{arg}(zw)$, taking care to ensure that you give the argument in the principal domain.
 
 (a) $z = -1+i$, $w=\sqrt{3}+i$,
@@ -290,7 +303,9 @@ When $z_1$ is multiplied by $z_2$:
 2. By writing $z_1 = r_1e^{i\theta_1}$, $z_2 = r_2e^{i\theta_2}$, prove the result $(\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}$
 ```
 
-**Solution**<br>
+````{admonition} Solution
+:class: seealso, dropdown
+
 1. (a) $|z| = \sqrt{2}$, $|w| = 2$, so $|zw| = 2\sqrt{2}$<br>
 $\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)$<br>
 (b) $|zw| = 2\sqrt{2}$<br>
@@ -301,13 +316,14 @@ The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.<br>
 ```{math}
 \left(\frac{z_1}{z_2}\right)^* = \left(\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}\right)^* = \frac{r_1}{r_2} e^{-i(\theta_1 - \theta_2)} = \frac{r_1 e^{-i\theta_1}}{r_2 e^{-i\theta_2}} = \frac{z_1^* }{z_2^* }
 ```
+````
 
 ## Complex Roots
 ### Periodicity of $e^{i\theta}$
 
 Earlier we deduced that multiplication by $e^{i\theta}$ corresponds to a **rotation** of a complex number by an angle $\theta$.
 
-For the special case of a complete rotation, $\theta = 3\pi$, multiplication returns the complex number to its original location in the plane, and so we have the result $e^{2\pi i} = 1$. In a general form, $e^{2k\pi i} = 1$ for any whole number of rotations $k$, with the sign of the exponent determining the direction of rotation.
+For the special case of a complete rotation, $\theta = 2\pi$, multiplication returns the complex number to its original location in the plane, and so we have the result $e^{2\pi i} = 1$. In a general form, $e^{2k\pi i} = 1$ for any whole number of rotations $k$, with the sign of the exponent determining the direction of rotation.
 
 Another way of viewing this result is in terms of the periodicity of the complex exponential. Euler's formula tells us that the complex exponential $e^{i\theta}$ is the linear sum of two $2\pi$-periodic functions, and so we can deduce that it also has a period of $2\pi$. That is:
 
@@ -321,19 +337,21 @@ Geometrically, the expression is merely a statement of the fact that if we conti
 This was also the principal by which we were able to define (at least) two different possible conventions for the principal argument.
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 Write the following complex numbers in polar form where the argument is given in the principal range ($-\pi$, $\pi$):
 1. $\sqrt{2}e^{\frac{7\pi i}{3}}$
 2. $3e^{-\frac{13\pi i}{12}}$
 ```
 
-**Solution**<br>
+```{admonition} Solution
+:class: seealso, dropdown
 1. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.
 
 2. $-\frac{13\pi}{12}$ lies in the second quadrant at an angle of $\frac{\pi}{12}$ away from the real axis, so the equivalent to an argument of $\pi - \frac{\pi}{12}$. The result can be written as $3e^\frac{11\pi}{12}$.
+```
 
 ### Roots of Unity
-In this subsection, we will deduce the roots of the problem $z^m = 1$, where $m$ is a natural number (1, 2, 3, ...). We call these results the $m^{th}$ "roots of unity".
+In this subsection, we will deduce the roots of the problem $z^m = 1$, where $m$ is a natural number {1, 2, 3, ...}. We call these results the $m^{th}$ "roots of unity".
 
 From the basic laws of exponents, we can observe that taking:
 
@@ -358,8 +376,15 @@ An illustration showing the location of the roots of $z^m=1$, which are of the f
 ```
 
 ```{admonition} Practice
-:class: tip
+:class: seealso, dropdown
 Have a go at finding all the roots of the problem $z^3=1$ in Cartesian form.
+```
+
+```{admonition} Solution
+:class: seealso, dropdown
+The 3 roots of unity can be found at $z=e^{i\frac{2k\pi}{3}}$ for K in {0,1,2}
+
+The 3 roots of unity are therefore 1, $-\frac{1}{2}+\frac{\sqrt{3}}{2}i$ and $-\frac{1}{2}-\frac{\sqrt{3}}{2}i$
 ```
 
 ### Roots of Other Values
@@ -373,6 +398,7 @@ z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}
 ```
 
 ```{admonition} Worked Example
+:class: seealso
 Find all roots of the problem $z^4 = \sqrt{3} - i$ in Cartesian form, $z = x + iy$.
 
 *Solution*
@@ -456,18 +482,19 @@ $$
 $$
 
 ```{admonition} Practice
-:class: Tip
+:class: seealso, dropdown
 Here is a nasty one for you to try:
 
 Show that $\textrm{cos}^7(\theta) = \frac{1}{64} [35\textrm{cos}(\theta) + 21\textrm{cos}(3\theta) + 7\textrm{cos}(5\theta) + \textrm{cos}(7\theta)$
 ```
 
-**Solution**<br>
+```{admonition} Solution
+:class: seealso, dropdown
 The roots are given by:
 * $z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$
 * $z = e^0 = 1$
 * $z = e^{\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} + i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$
-
+```
 
 ### De Moivre's Theorem
 Starting with Euler's Identity $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ and raising both sides to the $n^{th}$ power gives:
@@ -488,6 +515,6 @@ This result (for integer values of $n$) is known as De Moivre's theorem. Histori
 The fact that De Moivre's theorem is *consistent* with Euler's identity is reassuring, although we have still not proved that Euler's identity is correct.
 
 ```{admonition} Non-integer Values
-:class: note
+:class: tip
 For non-integer values $(\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
 ```
