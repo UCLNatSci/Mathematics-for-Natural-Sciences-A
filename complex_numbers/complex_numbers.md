@@ -43,7 +43,7 @@ The **complex conjugate** of $z=x+yi$ is given by negating the sign of the imagi
 We write either $z^∗=x−yi$ or $\bar{z}=x−yi$. For example, for the number $z=\sqrt{3}+\pi i$, the complex conjugate is given by $z^*=\sqrt{3}-\pi i$. Alternatively, for the number $z=\sqrt{2}-2i$, the complex conjugate would be $z^*=\sqrt{2}+2i$.
 ```
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 Suppose that $z_1=2-3i$ and $z_2=2-ai$.
 1. state the imaginary part of $z_1$
@@ -114,7 +114,7 @@ Generic illustration of a complex number in the plane. The length of the blue li
 1. Strictly speaking, the argument as defined here is called the **principal argument**, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument $−\pi/4$ could equally be given as $(2n−1/4)\pi$ for any integer value of $n$.
 ```
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 The interactive app below allows you to generate randomly selected complex numbers in each quadrant. Try to calculate the modulus and argument for the examples, and click the "Show/Hide" button to check your answers:
 
@@ -139,7 +139,7 @@ z = re^{i\theta} = r(\cos(\theta) + i \sin(\theta)), \textrm{where } r = |z|, \t
 
 We will understand (and prove!) this result later. For now, we just *find* the polar representation of given complex numbers, and *use* the polar form to deduce some further results.
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 *Note: It is usually best to draw a diagram showing the location of the complex numbers in the plane, especially when just starting out. This will help avoid mistakes!*
 1. Write down the polar form of the following complex numbers:  
@@ -212,7 +212,7 @@ The product of two complex numbers is just an ordinary product of sums, and so f
 
 Note the use of $i^2=-1$ to simplify the result.
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 1. Let $z=1+2i$, and $q=2+1$. Calculate $zw*$.
 
@@ -244,7 +244,7 @@ Let's see how this works for an example in which $z_1 = 2 + 3i$ and $z_2 = 1 - 2
 \frac{2+3i}{1-2i} = \frac{2+3i}{1-2i} \frac{1+2i}{1+2i} = \frac{2+3i+4i-6}{1+4} = -\frac{4}{5} + \frac{7}{5}i
 ```
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 1. Simplify the expression $\frac{7+i}{1+3i}$
 ```
@@ -266,7 +266,7 @@ z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)} = \frac{r_1}{r_2} e^{i(\theta_1 - \
 These results highlight very clearly the geometry of multiplication and division in the complex plane. Notice in particular that multiplication by $e^{i\theta}$ just rotates a complex number in the plane by and angle $\theta$. What result would multiplication by $e^{2\pi i}$ give?
 
 ```{admonition} The geometry of multiplication
-:class: note
+:class: tip
 * $|z_1z_2| = |z_1||z_2|$
 * $\textrm{arg}(z_1z_2) = \textrm{arg}(z_1) + \textrm{arg}(z_2)$
 
@@ -276,7 +276,7 @@ When $z_1$ is multiplied by $z_2$:
 ```
 
 ```{admonition} The geometry of division
-:class: note
+:class: tip
 * $|z_1/z_2| = |z_1|/|z_2|$
 * $\textrm{arg}(z_1/z_2) = \textrm{arg}(z_1) - \textrm{arg}(z_2)$
 
@@ -292,7 +292,7 @@ A good way to remember this rule is that **in polar form**, you can multiply two
 Conversely, to divide two numbers **in polar form**, you **divide** the magnitude, and **subtract** the angles.
 ```
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 1. For each of the following pairs of numbers, state the results $|zw|$ and $\textrm{arg}(zw)$, taking care to ensure that you give the argument in the principal domain.
 
@@ -336,7 +336,7 @@ Geometrically, the expression is merely a statement of the fact that if we conti
 
 This was also the principal by which we were able to define (at least) two different possible conventions for the principal argument.
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 Write the following complex numbers in polar form where the argument is given in the principal range ($-\pi$, $\pi$):
 1. $\sqrt{2}e^{\frac{7\pi i}{3}}$
@@ -375,7 +375,7 @@ name: rootsofunity
 An illustration showing the location of the roots of $z^m=1$, which are of the form $z=e^{\frac{2k\pi i}{m}}$.
 ```
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 Have a go at finding all the roots of the problem $z^3=1$ in Cartesian form.
 ```
@@ -481,7 +481,7 @@ $$
 = \left(\frac{1}{2}\right)^4 [\textrm{sin}(5\theta) - 5\textrm{sin}(3\theta) + 10\textrm{sin}(\theta)]
 $$
 
-```{admonition} Practice
+```{admonition} Practice Questions
 :class: seealso, dropdown
 Here is a nasty one for you to try:
 

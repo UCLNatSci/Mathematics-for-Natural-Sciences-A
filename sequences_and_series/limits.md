@@ -5,7 +5,7 @@ function or sequence that is not *at* a point, but approaching it.
 
 The [limits of a function](https://en.wikipedia.org/wiki/Limit_of_a_function) are best illustrated by example.
 
-````{admonition} Example: $f(x) = x^2$
+````{admonition} Worked Example
 :class: seealso
 
 We start with a trivial example, by considering the function $f(x) = x^2$ near to the point (2,4).
@@ -39,7 +39,7 @@ For instance, we can make $x^2$ larger than $10^{998}$ by making $x$ larger than
 We would read the expression by saying: "the limit of $x^2$ as $x$ tends to infinity is infinity", though it does not
 actually reach infinity.
 
-````{admonition} Example: $f(x) = \frac{1}{x}$
+````{admonition} Worked Example
 :class: seealso
 Whilst the limit of $x^2$ for large $x$ is non-finite, there are other functions which approach a finite value as
 $x \to \infty$, and also functions which approach a non-finite value whilst $x$ remains finite.
@@ -112,14 +112,14 @@ and $\displaystyle\lim_{x \to c} g(x)$ are finite or infinite.
 First consider the case where the limit of all the functions are finite.
 **If and only if** the limits of the individual functions are *finite* then we can use the combination theorem to solve the combination
 of functions.
-```{admonition} The combination theorem for limits
+```{admonition} Definition
 If the limits $\displaystyle\lim_{x \to c} f(x)$ and $\displaystyle\lim_{x \to c} g(x)$  are **finite** then,
 ```{math}
  &\lim_{x \to c} \Big( \alpha f(x) + \beta g(x) \Big) = \alpha \lim_{x \to c} f(x) + \beta \lim_{x \to c} g(x) \ ,\\
 &\lim_{x \to c} f(x) g(x) = \lim_{x \to c} f(x) \lim_{x \to c} g(x) \ ,  \\
 &\lim_{x \to c} \frac{f(x)}{g(x)} \ =  \frac{\lim_{x \to c} f(x)} {\lim_{x \to c} g(x)} \,
 ```
-where $\alpha$ and $\beta$ are constants.
+where $\alpha$ and $\beta$ are constants. This is known as the combination theorem for limits
 To stress the point again, the combination theorem for limits can only be used if the limit of every function is finite.
 
 ````{admonition} Worked Example
@@ -133,7 +133,8 @@ Since the limits of each of the individual functions are finite: $\displaystyle\
 and $\displaystyle\lim_{x \to 0} (x-1)^3 = -1$, we can use first and third statment of the combination theorem to rewrite and solve
 the equation as:
 ```{math}
- \lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} &= \frac{\displaystyle\lim_{x \to 0} x^2}{\displaystyle\lim_{x \to 0} \Big((x+1)^3 - (x-1)^3\big)}\\
+ \lim_{x \to 0} \frac{x^2}{(x+1)^3 - (x-1)^3} &= \frac{\displaystyle\lim_{x \to 0} x^2}{\displaystyle\lim_{x \to 0} \Bi
+ g((x+1)^3 - (x-1)^3\big)}\\
  &= \frac{\displaystyle\lim_{x \to 0} x^2}{\displaystyle\lim_{x \to 0} (x+1)^3 - \displaystyle\lim_{x \to 0}(x-1)^3}\\
  & = \frac{0}{1 - (-1)}
 ```
@@ -147,7 +148,7 @@ $\displaystyle\lim_{x\to \infty} x^2 = \infty$ and $\displaystyle\lim_{x\to 0^-}
 
 The approach we take can be illustrated by the following two examples:
 
-````{admonition} Example 1
+````{admonition} Worked Example
 :class: seealso
 
 
@@ -167,7 +168,7 @@ Another way to approach this problem is to factorise $(x^2 - x) = x (x-1)$; both
 as $x\to\infty$.
 ````
 
-````{admonition} Example 2
+````{admonition} Worked Example
 :class: seealso
 
 
@@ -207,7 +208,7 @@ is larger than the degree of the numerator therefore the denominator "dominates"
 That is to say, the denomiator "blows up faster" than the numerator.
 
 
-````{admonition} Questions
+````{admonition} Practice Questions
 :class: seealso, dropdown
 
 Find the following limits:
@@ -248,7 +249,7 @@ Each sequence has a specific ordering of terms.
 For example, the sequence $1,2,3,4$ is different from the sequence $4,3,2,1$ much in the same way that the telephone number
 $18001234$ will reach a different person to the phone number $18004321$.
 
-````{admonition} Sequence
+````{admonition} Definition
 :class: note
 A **sequence** is a set of terms where order matters, written as follows:
 
@@ -281,7 +282,7 @@ Notice that the size of the terms in this sequence grows without bound as the nu
 It is sometimes possible to express a sequence as a formula that relates the $n$th term of the sequence as some combination of the previous terms. This is known as a
 [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation).
 
-````{admonition} The Fibonacci Sequence
+````{admonition} Definition
 :class: note
 A well-know example that arises in many natural systems is the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number):
 
@@ -321,7 +322,7 @@ Note that the Fibonnaci recurrence relation will generate a different sequence t
 starting terms are different (e.g. $u_1=10$ and $u_2=11$).
 ````
 
-````{admonition} Exercise
+````{admonition} Practice Question
 :class: seealso, dropdown
 Convince yourself that the formula $u_i = 2 + u_{i-1}$ provides the sequence of even numbers when
 $u_1=2$ and the sequence of odd numbers when $u_1=1$.
@@ -367,8 +368,8 @@ We may distinguish the cases where:
 
 The [limit of a sequence](https://en.wikipedia.org/wiki/Limit_of_a_sequence) is the value that the terms of a sequence
 approaches (or tends to) as the number of terms approaches infinity, written as $k \to \infty$ if $k$ were the index variable.
-```{admonition} The limit of a sequence
-For a sequence $(u_1, u_2, u_3, \dots)$, the limit of a sequence is written as
+```{admonition} Definition
+For a sequence $(u_1, u_2, u_3, \dots)$, **the limit of a sequence** is written as
 ```{math}
  \lim_{k \to \infty} u_k \ .
 ```
