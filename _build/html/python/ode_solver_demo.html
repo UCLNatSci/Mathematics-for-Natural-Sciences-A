@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8.6. ODEs with Python &#8212; My sample book</title>
+    <title>ODEs with Python &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,30 +33,26 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Multivariable Calculus" href="../VectorCalculus/partialdifferentiation.html" />
-    <link rel="prev" title="8.5. Second Order ODEs" href="../odes/2nd_order_ODEs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -82,10 +78,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,201 +92,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Mathematics for Natural Scientists
+   Welcome to Mathematics for Natural Sciences A
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/limits.html">
-   1. Limits of Functions and Sequences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/series.html">
-   2. Introduction to Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/convergence.html">
-   3. Convergence of Series
+  <a class="reference internal" href="../Prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   4. Complex Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   5. Differentiation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   6. Integration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
-   7. Taylor series
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../odes/Intro_ODEs.html">
-   8. Ordinary Differential Equations
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../odes/1st_order_ODEs.html">
-     8.4. First Order ODEs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-     8.5. Second Order ODEs
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     8.6. ODEs with Python
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   19. Set Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/functions.html">
-   20. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   24. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   26. Inverses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   27. Determinants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/linearclassify.html">
-   31. Linear systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/python_examples.html">
-   34. Python code
+   2. Complex Numbers
   </a>
  </li>
 </ul>
@@ -399,22 +213,22 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-1-exponential-growth">
-   8.6.1. Example 1: Exponential growth
+   Example 1: Exponential growth
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-2-simple-harmonic-motion">
-   8.6.2. Example 2: Simple Harmonic Motion
+   Example 2: Simple Harmonic Motion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-3-shm-with-forcing">
-   8.6.3. Example 3: SHM with forcing
+   Example 3: SHM with forcing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-4-the-sir-model-of-infection">
-   8.6.4. Example 4 : The SIR model of infection
+   Example 4 : The SIR model of infection
   </a>
  </li>
 </ul>
@@ -439,22 +253,22 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-1-exponential-growth">
-   8.6.1. Example 1: Exponential growth
+   Example 1: Exponential growth
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-2-simple-harmonic-motion">
-   8.6.2. Example 2: Simple Harmonic Motion
+   Example 2: Simple Harmonic Motion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-3-shm-with-forcing">
-   8.6.3. Example 3: SHM with forcing
+   Example 3: SHM with forcing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-4-the-sir-model-of-infection">
-   8.6.4. Example 4 : The SIR model of infection
+   Example 4 : The SIR model of infection
   </a>
  </li>
 </ul>
@@ -466,8 +280,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="odes-with-python">
-<h1><span class="section-number">8.6. </span>ODEs with Python<a class="headerlink" href="#odes-with-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="odes-with-python">
+<h1>ODEs with Python<a class="headerlink" href="#odes-with-python" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## preamble : This part loads the packages that we will use</span>
@@ -483,15 +297,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}X}{\mathrm{d}t}=f(X,t,c)\]</div>
 <p>where <span class="math notranslate nohighlight">\(X\)</span> is a list of dependent variables and c is a sequence of parameters.</p>
-<div class="toggle docutils container">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{code}
-this should be code
-```
-</pre></div>
-</div>
-</div>
 <div class="section" id="example-1-exponential-growth">
-<h2><span class="section-number">8.6.1. </span>Example 1: Exponential growth<a class="headerlink" href="#example-1-exponential-growth" title="Permalink to this headline">¶</a></h2>
+<h2>Example 1: Exponential growth<a class="headerlink" href="#example-1-exponential-growth" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}I}{\mathrm{d}t}=\mu(r_0-1)I\]</div>
 <p>The first step requires us to set up a function that returns the derivative for a given value of <span class="math notranslate nohighlight">\(I\)</span>, and parameters <span class="math notranslate nohighlight">\(\mu,r_0\)</span>.</p>
@@ -547,7 +354,7 @@ this should be code
 </div>
 </div>
 <div class="section" id="example-2-simple-harmonic-motion">
-<h2><span class="section-number">8.6.2. </span>Example 2: Simple Harmonic Motion<a class="headerlink" href="#example-2-simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
+<h2>Example 2: Simple Harmonic Motion<a class="headerlink" href="#example-2-simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
 <p>The SHM equation is</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}=-\frac{k}{m}x,\]</div>
@@ -610,7 +417,7 @@ this should be code
 </div>
 </div>
 <div class="section" id="example-3-shm-with-forcing">
-<h2><span class="section-number">8.6.3. </span>Example 3: SHM with forcing<a class="headerlink" href="#example-3-shm-with-forcing" title="Permalink to this headline">¶</a></h2>
+<h2>Example 3: SHM with forcing<a class="headerlink" href="#example-3-shm-with-forcing" title="Permalink to this headline">¶</a></h2>
 <p>Now let’s see what happens if we add in a forcing term</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}-\frac{k}{m}x=F\sin(\Omega t),\]</div>
@@ -647,7 +454,7 @@ this should be code
 <p>Experiment with making <span class="math notranslate nohighlight">\(\Omega\)</span> closer to <span class="math notranslate nohighlight">\(1\)</span>. What happens?</p>
 </div>
 <div class="section" id="example-4-the-sir-model-of-infection">
-<h2><span class="section-number">8.6.4. </span>Example 4 : The SIR model of infection<a class="headerlink" href="#example-4-the-sir-model-of-infection" title="Permalink to this headline">¶</a></h2>
+<h2>Example 4 : The SIR model of infection<a class="headerlink" href="#example-4-the-sir-model-of-infection" title="Permalink to this headline">¶</a></h2>
 <p>In this model, <span class="math notranslate nohighlight">\(S\)</span> represents people who are susceptible to catching an infection, <span class="math notranslate nohighlight">\(I\)</span> represents people who already have the infection, and <span class="math notranslate nohighlight">\(R\)</span> represents people who have recovered.</p>
 <p>\begin{align*}
 \frac{\mathrm{d}S}{\mathrm{d}t}&amp;=-\beta \frac{S I}{N}\
@@ -714,21 +521,7 @@ this should be code
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../odes/2nd_order_ODEs.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8.5. </span>Second Order ODEs</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../VectorCalculus/partialdifferentiation.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Multivariable Calculus</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -736,7 +529,7 @@ this should be code
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Natural Sciences<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

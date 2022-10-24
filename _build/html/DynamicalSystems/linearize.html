@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>35. Bifurcation analysis &#8212; My sample book</title>
+    <title>Bifurcation analysis &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,30 +33,26 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="36. Limit cycles" href="limit_cycles.html" />
-    <link rel="prev" title="34. Linear systems" href="linearclassify.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -82,10 +78,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,194 +92,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Mathematics for Natural Scientists
+   Welcome to Mathematics for Natural Sciences A
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/limits.html">
-   1. Limits of Functions and Sequences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/series.html">
-   2. Introduction to Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/convergence.html">
-   3. Convergence of Series
-  </a>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   4. Complex Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   5. Differentiation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   6. Integration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
-   7. Taylor series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/Intro_ODEs.html">
-   8. Ordinary Differential Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/1st_order_ODEs.html">
-   9. First Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-   10. Second Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/ode_solver_demo.html">
-   11. ODEs with Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   12. Multivariable Calculus
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   13. Integration Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   14. Vectors and Vector Algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   15. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   16. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   17. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   18. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   19. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   20. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   21. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   22. Set Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/functions.html">
-   23. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   24. Propositional Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   25. Techniques of Proof
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   26. Linear Systems of Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   27. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   28. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   29. Inverses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   30. Determinants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   31. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   32. Matrix Diagonalisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="phase_portrait.html">
-   33. The phase portrait
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linearclassify.html">
-   34. Linear systems
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   35. Bifurcation analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="limit_cycles.html">
-   36. Limit cycles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_examples.html">
-   37. Python code
+   1. Complex Numbers
   </a>
  </li>
 </ul>
@@ -375,46 +191,46 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linearisation">
-   35.1. Linearisation
+   Linearisation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-nonlinear-pendulum">
-     35.1.1. Example: Nonlinear pendulum
+     Example: Nonlinear pendulum
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differential-equations-with-a-parameter">
-   35.2. Differential equations with a parameter
+   Differential equations with a parameter
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-a-pitchfork-bifurcation">
-     35.2.1. Example: A pitchfork bifurcation
+     Example: A pitchfork bifurcation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classifying-bifurcations">
-   35.3. Classifying bifurcations
+   Classifying bifurcations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pitchfork-bifurcation">
-     35.3.1. Pitchfork bifurcation
+     Pitchfork bifurcation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#saddle-node-bifurcation">
-     35.3.2. Saddle node bifurcation
+     Saddle node bifurcation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#transcritical-bifurcation">
-     35.3.3. Transcritical bifurcation
+     Transcritical bifurcation
     </a>
    </li>
   </ul>
@@ -441,46 +257,46 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linearisation">
-   35.1. Linearisation
+   Linearisation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-nonlinear-pendulum">
-     35.1.1. Example: Nonlinear pendulum
+     Example: Nonlinear pendulum
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differential-equations-with-a-parameter">
-   35.2. Differential equations with a parameter
+   Differential equations with a parameter
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-a-pitchfork-bifurcation">
-     35.2.1. Example: A pitchfork bifurcation
+     Example: A pitchfork bifurcation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classifying-bifurcations">
-   35.3. Classifying bifurcations
+   Classifying bifurcations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pitchfork-bifurcation">
-     35.3.1. Pitchfork bifurcation
+     Pitchfork bifurcation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#saddle-node-bifurcation">
-     35.3.2. Saddle node bifurcation
+     Saddle node bifurcation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#transcritical-bifurcation">
-     35.3.3. Transcritical bifurcation
+     Transcritical bifurcation
     </a>
    </li>
   </ul>
@@ -494,12 +310,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="bifurcation-analysis">
-<h1><span class="section-number">35. </span>Bifurcation analysis<a class="headerlink" href="#bifurcation-analysis" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bifurcation-analysis">
+<h1>Bifurcation analysis<a class="headerlink" href="#bifurcation-analysis" title="Permalink to this headline">¶</a></h1>
 <p>In this section we will start to examine systems with more than one equilibrium point. We will also allow that the systems may contain parameters and we will consider how the number of equilibrium points and their stability changes as parameter values are varied.</p>
 <p>To assist our analysis we will introduce an analytic method for classifying equilibrium points of nonlinear systems (linearisation). We will also introduce the idea of a <em>bifurcation diagram</em> as a way of representing our findings.</p>
 <div class="section" id="linearisation">
-<h2><span class="section-number">35.1. </span>Linearisation<a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h2>
+<h2>Linearisation<a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h2>
 <p>We now consider a general first order coupled autonomous system involving two dependent variables. The problem may be written in the following form, in which the arbitrary functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> may be nonlinear:</p>
 <p>\begin{align}
 \dot{x} &amp; = f(x,y)\
@@ -529,8 +345,8 @@ g(x,y) &amp; = g(x_0,y_0) +(x-x_0)\frac{\partial g}{\partial x}\biggr|<em>{(x_0,
 \end{equation}</p>
 <p>The coefficient matrix <span class="math notranslate nohighlight">\(J(x,y)\)</span> is called the Jacobian. Finding the eigenvalues and eigenvectors of the Jacobian at the stationary point tells us its stability and allows us to plot the shape of the solution trajectories.</p>
 <div class="section" id="example-nonlinear-pendulum">
-<h3><span class="section-number">35.1.1. </span>Example: Nonlinear pendulum<a class="headerlink" href="#example-nonlinear-pendulum" title="Permalink to this headline">¶</a></h3>
-<p>Recall the equation for the undamped pendulum that was given in the <a class="reference internal" href="phase_portrait.html#undamp-pend"><span class="std std-numref">Section 33.2</span></a> :</p>
+<h3>Example: Nonlinear pendulum<a class="headerlink" href="#example-nonlinear-pendulum" title="Permalink to this headline">¶</a></h3>
+<p>Recall the equation for the undamped pendulum that was given in the <code class="xref std std-numref docutils literal notranslate"><span class="pre">undamp-pend</span></code> :</p>
 <p>\begin{align}
 \dot{x} &amp; = y &amp;&amp; =f(x,y)\
 \dot{y} &amp; = -\omega^2 \sin(x) &amp;&amp; =g(x,y)
@@ -585,7 +401,7 @@ J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\p
 </div>
 </div>
 <div class="section" id="differential-equations-with-a-parameter">
-<h2><span class="section-number">35.2. </span>Differential equations with a parameter<a class="headerlink" href="#differential-equations-with-a-parameter" title="Permalink to this headline">¶</a></h2>
+<h2>Differential equations with a parameter<a class="headerlink" href="#differential-equations-with-a-parameter" title="Permalink to this headline">¶</a></h2>
 <p>The exercise above involved a parameter <span class="math notranslate nohighlight">\(k\)</span>. Other sections of the notes have also featured examples that involved parameters. For example,</p>
 <ul class="simple">
 <li><p><code class="xref std std-numref docutils literal notranslate"><span class="pre">ex-222</span></code> featured parameters <span class="math notranslate nohighlight">\(c,k\)</span></p></li>
@@ -594,7 +410,7 @@ J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\p
 <p>We have seen that it is possible for the behaviour of the system change as the parameter is varied. In some cases changing one parameter can result in a transition from having a stable equilibrium to an unstable one, or vice-versa. We saw this in the glycolysis example. In other cases there may also be equilibrium states that exist only within certain parameter regimes.</p>
 <p>We will now attempt to systematically study how the location and stability of any equilibria vary for different parameter values.</p>
 <div class="section" id="example-a-pitchfork-bifurcation">
-<h3><span class="section-number">35.2.1. </span>Example: A pitchfork bifurcation<a class="headerlink" href="#example-a-pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
+<h3>Example: A pitchfork bifurcation<a class="headerlink" href="#example-a-pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>To illustrate the approach, let us consider the following system that features parameter <span class="math notranslate nohighlight">\(\mu\)</span> :</p>
 <p>\begin{align}
 \dot{x} &amp;=y &amp;&amp;=f(x,y)\
@@ -657,10 +473,10 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 </div>
 <div class="section" id="classifying-bifurcations">
-<h2><span class="section-number">35.3. </span>Classifying bifurcations<a class="headerlink" href="#classifying-bifurcations" title="Permalink to this headline">¶</a></h2>
-<p>In this subsection we will look at some of the most commonly encountered types of bifurcation. The example systems used to illustrate feature only a single dependent variable, so we do not need to use the Jacobian to classify. We can simply consider the direction of the change vectors either side of any equilibrium points, as we did in <a class="reference internal" href="phase_portrait.html#motv-exam"><span class="std std-numref">Section 33.1</span></a>.</p>
+<h2>Classifying bifurcations<a class="headerlink" href="#classifying-bifurcations" title="Permalink to this headline">¶</a></h2>
+<p>In this subsection we will look at some of the most commonly encountered types of bifurcation. The example systems used to illustrate feature only a single dependent variable, so we do not need to use the Jacobian to classify. We can simply consider the direction of the change vectors either side of any equilibrium points, as we did in <code class="xref std std-numref docutils literal notranslate"><span class="pre">motv-exam</span></code>.</p>
 <div class="section" id="pitchfork-bifurcation">
-<h3><span class="section-number">35.3.1. </span>Pitchfork bifurcation<a class="headerlink" href="#pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
+<h3>Pitchfork bifurcation<a class="headerlink" href="#pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>A pitchfork bifurcation occurs when a system transitions from one equilibrium point to three.</p>
 <ul class="simple">
 <li><p>In a supercritical pitchfork bifurcation a stable equilibrium turns unstable and two stable equilibria emerge either side</p></li>
@@ -743,7 +559,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 </div>
 <div class="section" id="saddle-node-bifurcation">
-<h3><span class="section-number">35.3.2. </span>Saddle node bifurcation<a class="headerlink" href="#saddle-node-bifurcation" title="Permalink to this headline">¶</a></h3>
+<h3>Saddle node bifurcation<a class="headerlink" href="#saddle-node-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>A saddle node bifurcation or fold bifurcation occurs when two equilibrium points coalesce and annihilate each other. The supercritical and subcritical cases are shown below.</p>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -800,7 +616,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 </div>
 <div class="section" id="transcritical-bifurcation">
-<h3><span class="section-number">35.3.3. </span>Transcritical bifurcation<a class="headerlink" href="#transcritical-bifurcation" title="Permalink to this headline">¶</a></h3>
+<h3>Transcritical bifurcation<a class="headerlink" href="#transcritical-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide. An example of a transcritical bifurcation is illustrated below.</p>
 <p>\begin{equation}
 \dot{x}=\mu x - x^2
@@ -841,21 +657,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">34. </span>Linear systems</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="limit_cycles.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">36. </span>Limit cycles</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -863,7 +665,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Natural Sciences<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

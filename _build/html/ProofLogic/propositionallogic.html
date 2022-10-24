@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24. Propositional Logic &#8212; My sample book</title>
+    <title>Propositional Logic &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,30 +33,26 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="25. Techniques of Proof" href="methodsofproof.html" />
-    <link rel="prev" title="23. Functions" href="functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -82,10 +78,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,194 +92,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Mathematics for Natural Scientists
+   Welcome to Mathematics for Natural Sciences A
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/limits.html">
-   1. Limits of Functions and Sequences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/series.html">
-   2. Introduction to Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/convergence.html">
-   3. Convergence of Series
-  </a>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   4. Complex Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   5. Differentiation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   6. Integration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sequences_and_series/taylor_series.html">
-   7. Taylor series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/Intro_ODEs.html">
-   8. Ordinary Differential Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/1st_order_ODEs.html">
-   9. First Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
-   10. Second Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/ode_solver_demo.html">
-   11. ODEs with Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   12. Multivariable Calculus
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   13. Integration Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   14. Vectors and Vector Algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   15. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   16. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   17. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   18. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   19. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   20. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   21. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="setsnotation.html">
-   22. Set Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   23. Functions
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   24. Propositional Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="methodsofproof.html">
-   25. Techniques of Proof
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   26. Linear Systems of Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   27. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   28. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   29. Inverses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   30. Determinants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   31. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   32. Matrix Diagonalisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/phase_portrait.html">
-   33. The phase portrait
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/linearclassify.html">
-   34. Linear systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/linearize.html">
-   35. Bifurcation analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/limit_cycles.html">
-   36. Limit cycles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/python_examples.html">
-   37. Python code
+   1. Complex Numbers
   </a>
  </li>
 </ul>
@@ -375,22 +191,22 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#laws-of-the-algebra-of-propositions">
-   24.1. Laws of the Algebra of Propositions
+   Laws of the Algebra of Propositions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-and-biconditional-statements">
-   24.2. Conditional and Biconditional Statements
+   Conditional and Biconditional Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arguments-and-fallacies">
-   24.3. Arguments and Fallacies
+   Arguments and Fallacies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#logical-implications">
-   24.4. Logical Implications
+   Logical Implications
   </a>
  </li>
 </ul>
@@ -415,22 +231,22 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#laws-of-the-algebra-of-propositions">
-   24.1. Laws of the Algebra of Propositions
+   Laws of the Algebra of Propositions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-and-biconditional-statements">
-   24.2. Conditional and Biconditional Statements
+   Conditional and Biconditional Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arguments-and-fallacies">
-   24.3. Arguments and Fallacies
+   Arguments and Fallacies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#logical-implications">
-   24.4. Logical Implications
+   Logical Implications
   </a>
  </li>
 </ul>
@@ -442,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="propositional-logic">
-<h1><span class="section-number">24. </span>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="propositional-logic">
+<h1>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline">¶</a></h1>
 <p>We can turn out statements about set theory into statements about propositions, in the classical logic sense of TRUE and FALSE - so called
 <b>Propositional Logic</b>.  If you’re interested in areas of logic where some of these ideas are challened, have a look at
 <a class="reference external" href="https://doi.org/10.2307/1968621"><b>The Logic of Quantum Mechanics, by Birkhoff &amp; Von Neumann</b></a>.</p>
@@ -614,7 +430,7 @@ e.g. it is raining or isn’t raining, we can see this as a truth table that end
 </tbody>
 </table>
 <div class="section" id="laws-of-the-algebra-of-propositions">
-<h2><span class="section-number">24.1. </span>Laws of the Algebra of Propositions<a class="headerlink" href="#laws-of-the-algebra-of-propositions" title="Permalink to this headline">¶</a></h2>
+<h2>Laws of the Algebra of Propositions<a class="headerlink" href="#laws-of-the-algebra-of-propositions" title="Permalink to this headline">¶</a></h2>
 <p>There are identity laws, i.e. using AND or OR like multiplying or adding on 1 or 0:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}p \vee F &amp;= p \\
@@ -653,7 +469,7 @@ p \wedge \neg p &amp;= F \\
 <p>which we see mirrors the algebra of sets.</p>
 </div>
 <div class="section" id="conditional-and-biconditional-statements">
-<h2><span class="section-number">24.2. </span>Conditional and Biconditional Statements<a class="headerlink" href="#conditional-and-biconditional-statements" title="Permalink to this headline">¶</a></h2>
+<h2>Conditional and Biconditional Statements<a class="headerlink" href="#conditional-and-biconditional-statements" title="Permalink to this headline">¶</a></h2>
 <p>Many statements in mathematics and elsewhere are of the form if a proposition <span class="math notranslate nohighlight">\(p\)</span> (called the antecedent) applies then a proposition
 <span class="math notranslate nohighlight">\(q\)</span> (called the consequent) follows, these are known as <b>Conditional</b> statements and are denoted:</p>
 <div class="math notranslate nohighlight">
@@ -760,7 +576,7 @@ and are denoted:</p>
 \[p \rightarrow q \equiv \neg p \vee q\]</div>
 </div>
 <div class="section" id="arguments-and-fallacies">
-<h2><span class="section-number">24.3. </span>Arguments and Fallacies<a class="headerlink" href="#arguments-and-fallacies" title="Permalink to this headline">¶</a></h2>
+<h2>Arguments and Fallacies<a class="headerlink" href="#arguments-and-fallacies" title="Permalink to this headline">¶</a></h2>
 <p>A logical argument is a situation where there are given set of propositions <span class="math notranslate nohighlight">\(\{P_1,\,P_2,\,\dots P_n\}\)</span> called <b>Premises</b> have that as a consequence
 (or yield) a proposition <span class="math notranslate nohighlight">\(Q\)</span> known as a <b>Conclusion</b>, we denote this:</p>
 <div class="math notranslate nohighlight">
@@ -864,7 +680,7 @@ true results in <span class="math notranslate nohighlight">\(p\)</span> being fa
 <p>Thus from line 1, all the premises are true results in <span class="math notranslate nohighlight">\(p\)</span> true and there are no other times when all the premises are true, thus this argument is true.</p>
 </div>
 <div class="section" id="logical-implications">
-<h2><span class="section-number">24.4. </span>Logical Implications<a class="headerlink" href="#logical-implications" title="Permalink to this headline">¶</a></h2>
+<h2>Logical Implications<a class="headerlink" href="#logical-implications" title="Permalink to this headline">¶</a></h2>
 <p>A proposition <span class="math notranslate nohighlight">\(P(p,\,q,\,\dots)\)</span> is said to <b>Logically Imply</b> a proposition <span class="math notranslate nohighlight">\(Q(p,\,q,\,\dots)\)</span> if <span class="math notranslate nohighlight">\(Q(p,\,q,\,\dots)\)</span> is true whenever <span class="math notranslate nohighlight">\(P(p,\,q,\,\dots)\)</span> is
 true.  We denote this as:</p>
 <div class="math notranslate nohighlight">
@@ -1003,21 +819,7 @@ true.  We denote this as:</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">23. </span>Functions</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="methodsofproof.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">25. </span>Techniques of Proof</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -1025,7 +827,7 @@ true.  We denote this as:</p>
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Natural Sciences<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

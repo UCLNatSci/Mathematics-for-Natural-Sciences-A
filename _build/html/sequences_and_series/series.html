@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Introduction to Series &#8212; My sample book</title>
+    <title>Introduction to Series &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,30 +33,26 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Convergence of Series" href="convergence.html" />
-    <link rel="prev" title="1. Limits of Functions and Sequences" href="limits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -82,10 +78,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,179 +92,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to Mathematics for Natural Scientists
+   Welcome to Mathematics for Natural Sciences A
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="limits.html">
-   1. Limits of Functions and Sequences
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Introduction to Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="convergence.html">
-   3. Convergence of Series
+  <a class="reference internal" href="../Prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   4. Complex Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
-   5. Differentiation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../differentiation_and_integration/integration.html">
-   6. Integration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="taylor_series.html">
-   7. Taylor series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/ode_solver_demo.html">
-   8. ODEs with Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   9. Multivariable Calculus
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   10. Integration Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   11. Vectors and Vector Algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   12. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
-   13. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
-   14. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
-   15. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
-   16. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   17. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   18. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   19. Set Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/functions.html">
-   20. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   21. Propositional Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   22. Techniques of Proof
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   23. Linear Systems of Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   24. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   25. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
-   26. Inverses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
-   27. Determinants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   28. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   29. Matrix Diagonalisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/phase_portrait.html">
-   30. The phase portrait
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/linearclassify.html">
-   31. Linear systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/linearize.html">
-   32. Bifurcation analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/limit_cycles.html">
-   33. Limit cycles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../DynamicalSystems/python_examples.html">
-   34. Python code
+   2. Complex Numbers
   </a>
  </li>
 </ul>
@@ -360,90 +196,90 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition">
-   2.1. Definition
+   Definition
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#summations">
-     2.1.1. Summations
+     Summations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
-   2.2. Arithmetic and Geometric Progressions
+   Arithmetic and Geometric Progressions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#arithmetic-progression">
-     2.2.1. Arithmetic progression
+     Arithmetic progression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       2.2.1.1. Definition
+       Definition
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
-       2.2.1.2. Solving the series of arithmetic progessions
+       Solving the series of arithmetic progessions
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geometric-progression">
-     2.2.2. Geometric Progression
+     Geometric Progression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       2.2.2.1. Definition
+       Definition
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-the-series-of-geometric-progessions">
-     2.2.3. Solving the series of geometric progessions
+     Solving the series of geometric progessions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-preliminary-introduction-to-convergence-and-divergence">
-     2.2.4. A preliminary introduction to convergence and divergence
+     A preliminary introduction to convergence and divergence
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-of-differences">
-   2.3. Method of Differences
+   Method of Differences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#illustrative-example">
-     2.3.1. Illustrative example
+     Illustrative example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rewriting-the-summation-index">
-     2.3.2. Rewriting the summation index
+     Rewriting the summation index
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#demonstration-of-utility">
-       2.3.2.1. Demonstration of utility
+       Demonstration of utility
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#generalisation">
-       2.3.2.2. Generalisation
+       Generalisation
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example">
-       2.3.2.3. Example
+       Example
       </a>
      </li>
     </ul>
@@ -472,90 +308,90 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition">
-   2.1. Definition
+   Definition
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#summations">
-     2.1.1. Summations
+     Summations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arithmetic-and-geometric-progressions">
-   2.2. Arithmetic and Geometric Progressions
+   Arithmetic and Geometric Progressions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#arithmetic-progression">
-     2.2.1. Arithmetic progression
+     Arithmetic progression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       2.2.1.1. Definition
+       Definition
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solving-the-series-of-arithmetic-progessions">
-       2.2.1.2. Solving the series of arithmetic progessions
+       Solving the series of arithmetic progessions
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geometric-progression">
-     2.2.2. Geometric Progression
+     Geometric Progression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       2.2.2.1. Definition
+       Definition
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-the-series-of-geometric-progessions">
-     2.2.3. Solving the series of geometric progessions
+     Solving the series of geometric progessions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-preliminary-introduction-to-convergence-and-divergence">
-     2.2.4. A preliminary introduction to convergence and divergence
+     A preliminary introduction to convergence and divergence
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-of-differences">
-   2.3. Method of Differences
+   Method of Differences
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#illustrative-example">
-     2.3.1. Illustrative example
+     Illustrative example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rewriting-the-summation-index">
-     2.3.2. Rewriting the summation index
+     Rewriting the summation index
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#demonstration-of-utility">
-       2.3.2.1. Demonstration of utility
+       Demonstration of utility
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#generalisation">
-       2.3.2.2. Generalisation
+       Generalisation
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example">
-       2.3.2.3. Example
+       Example
       </a>
      </li>
     </ul>
@@ -571,18 +407,18 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-series">
-<h1><span class="section-number">2. </span>Introduction to Series<a class="headerlink" href="#introduction-to-series" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="introduction-to-series">
+<h1>Introduction to Series<a class="headerlink" href="#introduction-to-series" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Series_(mathematics)">Series</a>
 play a central role in calculus and are the main reason why we introduce sequences in the section above.</p>
 <div class="section" id="definition">
-<h2><span class="section-number">2.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
 <p>Series are simply defined by the sum of a sequence.</p>
 <div class="admonition-series admonition">
 <p class="admonition-title">Series</p>
 <p>A <strong>series</strong> is the sum of a sequence of terms, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-seriesdef">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-seriesdef" title="Permalink to this equation">¶</a></span>\[\sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-seriesdef" title="Permalink to this equation">¶</a></span>\[\sum_{i=m}^n u_i = u_1 + u_2 + \ldots + u_n \,\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(m \le n\)</span>, and usually <span class="math notranslate nohighlight">\(m=1\)</span>.</p>
 <p>We can replace the upper value <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(\infty\)</span> for an <a class="reference external" href="https://www.mathsisfun.com/algebra/infinite-series.html">infinite series</a>.
@@ -601,7 +437,7 @@ For example, the series of the infinite sequence <span class="math notranslate n
 </pre></div>
 </div>
 <div class="section" id="summations">
-<h3><span class="section-number">2.1.1. </span>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h3>
+<h3>Summations<a class="headerlink" href="#summations" title="Permalink to this headline">¶</a></h3>
 <p>Character <span class="math notranslate nohighlight">\(\Sigma\)</span> is the Greek letter sigma, written in upper case, and denotes a <a class="reference external" href="https://en.wikipedia.org/wiki/Summation">summation</a>.</p>
 <p>We would read the expression above as “the sum of <span class="math notranslate nohighlight">\(u_i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=n\)</span>”.</p>
 <p>For example
@@ -615,7 +451,7 @@ is the sum of <span class="math notranslate nohighlight">\(i\)</span> from <span
 is the sum of <span class="math notranslate nohighlight">\(2 i\)</span> from <span class="math notranslate nohighlight">\(i=1\)</span> to <span class="math notranslate nohighlight">\(i=4\)</span></p>
 <p>From this example it should be clear that, in general:</p>
 <div class="math notranslate nohighlight" id="equation-summationrule">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-summationrule" title="Permalink to this equation">¶</a></span>\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-summationrule" title="Permalink to this equation">¶</a></span>\[\sum_{i=1}^n a u_i = a \sum_{i=1}^n u_i\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant.</p>
 <p>However, note that
 \begin{equation*}
@@ -639,22 +475,22 @@ Note: other answers are possible!</p></li>
 </div>
 </div>
 <div class="section" id="arithmetic-and-geometric-progressions">
-<h2><span class="section-number">2.2. </span>Arithmetic and Geometric Progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
+<h2>Arithmetic and Geometric Progressions<a class="headerlink" href="#arithmetic-and-geometric-progressions" title="Permalink to this headline">¶</a></h2>
 <p>We now introduce the <a class="reference external" href="https://en.wikipedia.org/wiki/Arithmetic_progression">arithmetic progression</a> (otherwise known as
 the arithmetic sequence) and the <a class="reference external" href="https://en.wikipedia.org/wiki/Geometric_progression">geometric progression</a>
 (otherwise known as the geometric sequence).
 These sequences have the nice property that their series can be solved.</p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=Tj89FA-d0f8">Link to a short video on arithmetic and geometric progressions</a>.</p>
 <div class="section" id="arithmetic-progression">
-<h3><span class="section-number">2.2.1. </span>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
+<h3>Arithmetic progression<a class="headerlink" href="#arithmetic-progression" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id1">
-<h4><span class="section-number">2.2.1.1. </span>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <div class="admonition-arithmetic-progression admonition">
 <p class="admonition-title">Arithmetic Progression</p>
 <p>An arithmetic progression (otherwise known as an arithmetic sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which all have a “common
 difference” <span class="math notranslate nohighlight">\(d\)</span>, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-apdef">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-apdef" title="Permalink to this equation">¶</a></span>\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-apdef" title="Permalink to this equation">¶</a></span>\[a, a + d, a + 2d, a + 3d, \dots, a + (n-1) d\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.
 An example is the sequence <span class="math notranslate nohighlight">\(3,5,7,9,11,13\)</span> in which the first term is <span class="math notranslate nohighlight">\(a=3\)</span>, the common difference is <span class="math notranslate nohighlight">\(d=2\)</span> and the
@@ -662,7 +498,7 @@ number of terms is <span class="math notranslate nohighlight">\(n=6\)</span>.
 An infinite arithmetic progression is given by the case where <span class="math notranslate nohighlight">\(n \to \infty\)</span>.</p>
 <p>The <span class="math notranslate nohighlight">\(i\)</span>-th term of the arithmetic progression can be expressed as the following recurrence relation:</p>
 <div class="math notranslate nohighlight" id="equation-aprrdef">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-aprrdef" title="Permalink to this equation">¶</a></span>\[u_i=a+(i-1)d\]</div>
 <p>for <span class="math notranslate nohighlight">\(i=1,2,\dots,n\)</span>.</p>
 <p><strong>Python code for arithmetic progression:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
@@ -679,13 +515,13 @@ An infinite arithmetic progression is given by the case where <span class="math 
 <p>You can play around with the behaviouur of different arithmetic progessions by changing the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(d\)</span>.</p>
 </div>
 <div class="section" id="solving-the-series-of-arithmetic-progessions">
-<h4><span class="section-number">2.2.1.2. </span>Solving the series of arithmetic progessions<a class="headerlink" href="#solving-the-series-of-arithmetic-progessions" title="Permalink to this headline">¶</a></h4>
+<h4>Solving the series of arithmetic progessions<a class="headerlink" href="#solving-the-series-of-arithmetic-progessions" title="Permalink to this headline">¶</a></h4>
 <p>Series of arithmetic progessions can be solved (i.e. reduced to a number).
 The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of an arithmetic progression with recurrence relation <span class="math notranslate nohighlight">\(u_i=a+(i-1)d\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-seriessol">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-seriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i = \sum_{i=1}^n a + (i -1 ) d = \frac{n}{2} \big( 2 a + (n - 1) d \big) = \frac{n}{2} (a + L)\]</div>
 <p>where <span class="math notranslate nohighlight">\(L = a + (n-1) d\)</span> is the last term in the series.</p>
-<p>Notice in equation <a class="reference internal" href="#equation-seriessol">(2.5)</a> that as <span class="math notranslate nohighlight">\(n\)</span> (the number of terms) increases, the terms of arithmetic progessions grow without bound.
+<p>Notice in equation <a class="reference internal" href="#equation-seriessol">()</a> that as <span class="math notranslate nohighlight">\(n\)</span> (the number of terms) increases, the terms of arithmetic progessions grow without bound.
 That is, as <span class="math notranslate nohighlight">\(n\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>, the arithmetic progession approaches <span class="math notranslate nohighlight">\(\infty\)</span> if <span class="math notranslate nohighlight">\(d&gt;0\)</span> and approaches <span class="math notranslate nohighlight">\(-\infty\)</span> if
 <span class="math notranslate nohighlight">\(d&lt;0\)</span>.
 In these cases we say that the series diverges (more on this later!).
@@ -708,7 +544,7 @@ Infinite arithmetic progressions always diverge, the proof of which can be found
 </div>
 <p>You can use this code to convince yourself that the series of arithmetic progressions grow without bound for large <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p><strong>Proof of the solution of the series of arithmetic progressions</strong><br></p>
-<p>From equation <a class="reference internal" href="#equation-seriessol">(2.5)</a> write down the reversed series below the original:</p>
+<p>From equation <a class="reference internal" href="#equation-seriessol">()</a> write down the reversed series below the original:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}S_n = a + (a+d) + (a+2d) + \dots + \Big( a + (n-3) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-1) d \Big) \\
 S_n = a + \Big( a + (n-1) d \Big) + \Big( a + (n-2) d \Big) + \Big( a + (n-3) d \Big) + \dots + (a+2d) + (a+d) + a \ .\end{split}\]</div>
@@ -753,15 +589,15 @@ The result is <span class="math notranslate nohighlight">\(S= \frac{16}{2}(6+96)
 </div>
 </div>
 <div class="section" id="geometric-progression">
-<h3><span class="section-number">2.2.2. </span>Geometric Progression<a class="headerlink" href="#geometric-progression" title="Permalink to this headline">¶</a></h3>
+<h3>Geometric Progression<a class="headerlink" href="#geometric-progression" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id2">
-<h4><span class="section-number">2.2.2.1. </span>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4>Definition<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <div class="admonition-geometric-progression admonition">
 <p class="admonition-title">Geometric Progression</p>
 <p>A geometric progression (otherwise known as an geometric sequence) is a sequence of <span class="math notranslate nohighlight">\(n\)</span> terms which have “common ratio”
 <span class="math notranslate nohighlight">\(r\)</span>, written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-gpdef">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-gpdef" title="Permalink to this equation">¶</a></span>\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-gpdef" title="Permalink to this equation">¶</a></span>\[a, a r, a r^2, a r^3, \dots , a r^{n-1}\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is an arbitrary number.
 Using the notation for sequences in the previous section, the <span class="math notranslate nohighlight">\(i\)</span>-th term of the geometric progression is
@@ -785,11 +621,11 @@ the number of terms is <span class="math notranslate nohighlight">\(n=5\)</span>
 </div>
 </div>
 <div class="section" id="solving-the-series-of-geometric-progessions">
-<h3><span class="section-number">2.2.3. </span>Solving the series of geometric progessions<a class="headerlink" href="#solving-the-series-of-geometric-progessions" title="Permalink to this headline">¶</a></h3>
+<h3>Solving the series of geometric progessions<a class="headerlink" href="#solving-the-series-of-geometric-progessions" title="Permalink to this headline">¶</a></h3>
 <p>Like arithmetic progessions, the series of geometric progressions can be solved (i.e. reduced to a number).
 The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span> of a geometric progression <span class="math notranslate nohighlight">\(u_i=a r^{i-1}\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-gpseriessol">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-gpseriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-gpseriessol" title="Permalink to this equation">¶</a></span>\[ S_n = \sum_{i=1}^n u_i =  \sum_{i=1}^n a r^{i -1} = a \frac{1 - r^n}{1-r}\]</div>
 <p><strong>Python code for the series of the geometric progression:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nterms</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number of terms</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># first value</span>
@@ -805,7 +641,7 @@ The series (or the sum) <span class="math notranslate nohighlight">\(S_n\)</span
 </pre></div>
 </div>
 <p><strong>Proof of the solution of the series of geometric progressions</strong></p>
-<p>Starting from equation <a class="reference internal" href="#equation-gpdef">(2.6)</a>, the definition of the geometric progression:</p>
+<p>Starting from equation <a class="reference internal" href="#equation-gpdef">()</a>, the definition of the geometric progression:</p>
 <div class="math notranslate nohighlight">
 \[S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} = a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} +
 r^{n-1} \big) \ ,\]</div>
@@ -818,7 +654,7 @@ r^{n-1} \big) \ ,\]</div>
 <p>which can be rearranged to provide the result.</p>
 </div>
 <div class="section" id="a-preliminary-introduction-to-convergence-and-divergence">
-<h3><span class="section-number">2.2.4. </span>A preliminary introduction to convergence and divergence<a class="headerlink" href="#a-preliminary-introduction-to-convergence-and-divergence" title="Permalink to this headline">¶</a></h3>
+<h3>A preliminary introduction to convergence and divergence<a class="headerlink" href="#a-preliminary-introduction-to-convergence-and-divergence" title="Permalink to this headline">¶</a></h3>
 <p>The behaviour of a geometric progression for “large” numbers of terms <span class="math notranslate nohighlight">\(n\)</span> depends on the value of the common ratio <span class="math notranslate nohighlight">\(r\)</span>.
 This can be deduced by the following reasoning.</p>
 <p>If <span class="math notranslate nohighlight">\(r &gt; 1\)</span> or <span class="math notranslate nohighlight">\(r &lt; -1\)</span> (which is to say that the absolute value <span class="math notranslate nohighlight">\(\lvert r \rvert &lt; 1\)</span>) then the <span class="math notranslate nohighlight">\(i\)</span>-th term of the
@@ -857,14 +693,14 @@ Since <span class="math notranslate nohighlight">\(n\)</span> is an integer, the
 </div>
 </div>
 <div class="section" id="method-of-differences">
-<h2><span class="section-number">2.3. </span>Method of Differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
+<h2>Method of Differences<a class="headerlink" href="#method-of-differences" title="Permalink to this headline">¶</a></h2>
 <p>The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
 to compute the desired result.
 This is a handy trick to find the value of partial (finite) sums.</p>
 <p>This is best illustrated by example.</p>
 <p><a class="reference external" href="https://www.youtube.com/watch?embed=no&amp;v=AAxES-zFuxQ">Link to a short video</a>.</p>
 <div class="section" id="illustrative-example">
-<h3><span class="section-number">2.3.1. </span>Illustrative example<a class="headerlink" href="#illustrative-example" title="Permalink to this headline">¶</a></h3>
+<h3>Illustrative example<a class="headerlink" href="#illustrative-example" title="Permalink to this headline">¶</a></h3>
 <p>Say we want to compute the partial sum:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N r \ .\]</div>
@@ -884,9 +720,9 @@ Therefore, if we calculate the difference between the two sums, almost all of th
 and common difference 1.</p>
 </div>
 <div class="section" id="rewriting-the-summation-index">
-<h3><span class="section-number">2.3.2. </span>Rewriting the summation index<a class="headerlink" href="#rewriting-the-summation-index" title="Permalink to this headline">¶</a></h3>
+<h3>Rewriting the summation index<a class="headerlink" href="#rewriting-the-summation-index" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="demonstration-of-utility">
-<h4><span class="section-number">2.3.2.1. </span>Demonstration of utility<a class="headerlink" href="#demonstration-of-utility" title="Permalink to this headline">¶</a></h4>
+<h4>Demonstration of utility<a class="headerlink" href="#demonstration-of-utility" title="Permalink to this headline">¶</a></h4>
 <p>It is possible to demonstrate the cancellation of terms without writing out the terms in the series.
 Using the example above, we could rewrite:</p>
 <div class="math notranslate nohighlight">
@@ -896,7 +732,7 @@ Using the example above, we could rewrite:</p>
 \[\sum_{r=1}^N \Big( r (r+1) - r (r-1) \Big) = \sum_{r=1}^N  r (r+1) - \sum_{r=1}^N  r (r+1)  + N(N+1)  = N(N+1) \ .\]</div>
 </div>
 <div class="section" id="generalisation">
-<h4><span class="section-number">2.3.2.2. </span>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h4>
+<h4>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h4>
 <p>In general, rewriting the summation index provides:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{r=1}^N f(r+c) = \sum_{r=1+c}^{N+c} f(r) \ ,\]</div>
@@ -910,7 +746,7 @@ For example:</p>
 \[\sum_{r=1}^N \frac{2^{r+5}}{ \sqrt{r+5}} = \sum_{r=6}^{N+5} \frac{2^{r}}{ \sqrt{r}} \ .\]</div>
 </div>
 <div class="section" id="example">
-<h4><span class="section-number">2.3.2.3. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <p>Consider the difference between the following two sums:</p>
 <div class="math notranslate nohighlight">
 \[D = \sum_{r=1}^N \frac{e^r}{ (r+1) (r+2) } - \sum_{r=1}^N \frac{e^{r+2}}{(r+3) (r+4)} \ .\]</div>
@@ -985,21 +821,7 @@ Then
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="limits.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Limits of Functions and Sequences</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="convergence.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Convergence of Series</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -1007,7 +829,7 @@ Then
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Natural Sciences<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

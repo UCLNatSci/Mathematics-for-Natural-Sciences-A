@@ -28,7 +28,7 @@ from scipy.integrate import odeint
 # 
 # The function `linspace(start,end,n)` is used to generate a list of $n$ equally spaced values between the specified start and end values.
 
-# In[ ]:
+# In[2]:
 
 
 x=np.linspace(0,1,1000)
@@ -57,7 +57,7 @@ plt.show()
 # 
 # Since `X` is supposed to be a state $X=[x,y]$, writing `X[0]` refers to the $x$ value and writing `X[1]` refers to the $y$ value.
 
-# In[ ]:
+# In[3]:
 
 
 def pend(X,t,w,k):
@@ -68,7 +68,7 @@ def pend(X,t,w,k):
 
 # To solve the ode we have to provide initial conditions and parameter values. We also have to define the list of time points that we want to find the solution for.
 
-# In[ ]:
+# In[4]:
 
 
 t0=0; X0=[1,0] #initial conditions for t,x,y
@@ -110,7 +110,7 @@ X = odeint(pend,X0,t,args=(w,k))
 # 
 # In this example we will create a grid covering $x,y\in[-2,2]$, with 20 grid points in each direction.
 
-# In[ ]:
+# In[5]:
 
 
 x = np.linspace(-2,2,20)
@@ -129,7 +129,7 @@ y = np.linspace(-2,2,20)
 # 
 # The code we need is shown below. We must take care to use the grid values `X,Y` to create the vector field, not the axis values `x,y`.
 
-# In[ ]:
+# In[6]:
 
 
 (U,V)=(4*X+Y,2*X+3*Y)
@@ -137,14 +137,14 @@ y = np.linspace(-2,2,20)
 
 # Finally, we can plot the vector field using `quiver` or we can (attempt) to create the paths tangent to the vector field by using `streamplot`.
 
-# In[ ]:
+# In[7]:
 
 
 plt.quiver(X,Y,U,V)
 plt.show()
 
 
-# In[ ]:
+# In[8]:
 
 
 plt.streamplot(X,Y,U,V)

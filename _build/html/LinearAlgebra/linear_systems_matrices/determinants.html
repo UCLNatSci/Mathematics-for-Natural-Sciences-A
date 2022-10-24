@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30. Determinants &#8212; My sample book</title>
+    <title>Determinants &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,30 +33,26 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="31. Eigenvalues and Eigenvectors" href="../eigenvectors/notes.html" />
-    <link rel="prev" title="29. Inverses" href="inverses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -82,10 +78,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="../../_static/logo.png" class="logo" alt="logo">
+      <img src="../../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences A</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -96,194 +92,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Welcome to Mathematics for Natural Scientists
+   Welcome to Mathematics for Natural Sciences A
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../sequences_and_series/limits.html">
-   1. Limits of Functions and Sequences
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../sequences_and_series/series.html">
-   2. Introduction to Series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../sequences_and_series/convergence.html">
-   3. Convergence of Series
+  <a class="reference internal" href="../../Prelim/notationfunctions.html">
+   1. Mathematical Prelimaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../complex_numbers/complex_numbers.html">
-   4. Complex Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../differentiation_and_integration/differentiation.html">
-   5. Differentiation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../differentiation_and_integration/integration.html">
-   6. Integration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../sequences_and_series/taylor_series.html">
-   7. Taylor series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../odes/Intro_ODEs.html">
-   8. Ordinary Differential Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../odes/1st_order_ODEs.html">
-   9. First Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../odes/2nd_order_ODEs.html">
-   10. Second Order ODEs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../python/ode_solver_demo.html">
-   11. ODEs with Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/partialdifferentiation.html">
-   12. Multivariable Calculus
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/integrationprelim.html">
-   13. Integration Preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   14. Vectors and Vector Algebra
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   15. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   16. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
-   17. Coordinate Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   18. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/volumeintegrals.html">
-   19. Multidimensional Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/surfaceintegrals.html">
-   20. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
-   21. Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ProofLogic/setsnotation.html">
-   22. Set Theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ProofLogic/functions.html">
-   23. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
-   24. Propositional Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
-   25. Techniques of Proof
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="echelon_form.html">
-   26. Linear Systems of Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="matrices.html">
-   27. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linear_maps.html">
-   28. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="inverses.html">
-   29. Inverses
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   30. Determinants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../eigenvectors/notes.html">
-   31. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="diagonalisation.html">
-   32. Matrix Diagonalisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../DynamicalSystems/phase_portrait.html">
-   33. The phase portrait
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../DynamicalSystems/linearclassify.html">
-   34. Linear systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../DynamicalSystems/linearize.html">
-   35. Bifurcation analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../DynamicalSystems/limit_cycles.html">
-   36. Limit cycles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../DynamicalSystems/python_examples.html">
-   37. Python code
+   2. Complex Numbers
   </a>
  </li>
 </ul>
@@ -375,12 +196,12 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-determinants">
-   30.1. Properties of Determinants
+   Properties of Determinants
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix">
-   30.2. Cofactor Formula for the Determinant of an
+   Cofactor Formula for the Determinant of an
    <span class="math notranslate nohighlight">
     \(n \times n\)
    </span>
@@ -389,17 +210,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#areas-and-volumes">
-   30.3. Areas and Volumes
+   Areas and Volumes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vector-and-triple-products">
-   30.4. The Vector and Triple Products
+   The Vector and Triple Products
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   30.5. Solutions to Exercises
+   Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -424,12 +245,12 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-determinants">
-   30.1. Properties of Determinants
+   Properties of Determinants
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix">
-   30.2. Cofactor Formula for the Determinant of an
+   Cofactor Formula for the Determinant of an
    <span class="math notranslate nohighlight">
     \(n \times n\)
    </span>
@@ -438,17 +259,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#areas-and-volumes">
-   30.3. Areas and Volumes
+   Areas and Volumes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vector-and-triple-products">
-   30.4. The Vector and Triple Products
+   The Vector and Triple Products
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   30.5. Solutions to Exercises
+   Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -460,12 +281,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="determinants">
-<h1><span class="section-number">30. </span>Determinants<a class="headerlink" href="#determinants" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="determinants">
+<h1>Determinants<a class="headerlink" href="#determinants" title="Permalink to this headline">¶</a></h1>
 <p>The determinant is a single number calculated from a square matrix. The determinant tells us whether the matrix is invertible, as well as a lot of other useful information about the matrix.</p>
 <p>We have already seen methods for calculating <span class="math notranslate nohighlight">\(\det(A)\)</span> for <span class="math notranslate nohighlight">\(2\times 2\)</span> and <span class="math notranslate nohighlight">\(3 \times 3\)</span> matrices. In this section we will study properties of the determinant and methods for calculating it for any <span class="math notranslate nohighlight">\(n \times n\)</span> matrix.</p>
 <div class="section" id="properties-of-determinants">
-<h2><span class="section-number">30.1. </span>Properties of Determinants<a class="headerlink" href="#properties-of-determinants" title="Permalink to this headline">¶</a></h2>
+<h2>Properties of Determinants<a class="headerlink" href="#properties-of-determinants" title="Permalink to this headline">¶</a></h2>
 <p>The following three properties can be used to calculate the determinant of <em>any</em> square matrix. We therefore describe them as the ‘defining’ properties of the determinant.</p>
 <div class="admonition-defining-properties-of-the-determinant admonition">
 <p class="admonition-title">Defining Properties of the Determinant</p>
@@ -520,7 +341,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Note that every property for the rows can equally be applied to the columns (by transposing, since by property 10 <span class="math notranslate nohighlight">\(|A| = |A^T|\)</span>).</p>
 </div>
 <div class="section" id="cofactor-formula-for-the-determinant-of-an-n-times-n-matrix">
-<h2><span class="section-number">30.2. </span>Cofactor Formula for the Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> Matrix<a class="headerlink" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix" title="Permalink to this headline">¶</a></h2>
+<h2>Cofactor Formula for the Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> Matrix<a class="headerlink" href="#cofactor-formula-for-the-determinant-of-an-n-times-n-matrix" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-the-n-times-n-determinant admonition">
 <p class="admonition-title">The <span class="math notranslate nohighlight">\((n \times n)\)</span> Determinant</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix with entries <span class="math notranslate nohighlight">\(a_{ij}\)</span> and <span class="math notranslate nohighlight">\(i\)</span> any row of <span class="math notranslate nohighlight">\(A\)</span>. Then</p>
@@ -562,13 +383,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="areas-and-volumes">
-<h2><span class="section-number">30.3. </span>Areas and Volumes<a class="headerlink" href="#areas-and-volumes" title="Permalink to this headline">¶</a></h2>
+<h2>Areas and Volumes<a class="headerlink" href="#areas-and-volumes" title="Permalink to this headline">¶</a></h2>
 <p>The determinant has a useful and intuitive geometrical interpretation as an area or volume. Consider the parallelogram formed by the image of the unit square under a matrix transformation.</p>
 <div class="figure align-default" id="la-fig-7" style="width: 400px">
 <div class="cell_output docutils container">
 <img alt="../../_images/linear_transformations_9_0.png" src="../../_images/linear_transformations_9_0.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 30.1 </span><span class="caption-text">The matrix <span class="math notranslate nohighlight">\(A\)</span> transforms the unit square to a parallelogram with area <span class="math notranslate nohighlight">\(\det(A)\)</span>.</span><a class="headerlink" href="#la-fig-7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The matrix <span class="math notranslate nohighlight">\(A\)</span> transforms the unit square to a parallelogram with area <span class="math notranslate nohighlight">\(\det(A)\)</span>.</span><a class="headerlink" href="#la-fig-7" title="Permalink to this image">¶</a></p>
 </div>
 <p>It can be shown that the area of this parallelogram is exactly <span class="math notranslate nohighlight">\(\det(A)\)</span>. We will not prove this here, but it should be clear that this interpretation of the determinant is consistent with some of its properties. For example:</p>
 <ul class="simple">
@@ -583,7 +404,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can think of the determinant as the factor by which volumes are stretched by the matrix. If the sign is negative then the matrix reverses orientation.</p>
 </div>
 <div class="section" id="the-vector-and-triple-products">
-<h2><span class="section-number">30.4. </span>The Vector and Triple Products<a class="headerlink" href="#the-vector-and-triple-products" title="Permalink to this headline">¶</a></h2>
+<h2>The Vector and Triple Products<a class="headerlink" href="#the-vector-and-triple-products" title="Permalink to this headline">¶</a></h2>
 <p>The vector product is a special construction which is only valid in three dimensions. The vector product of two three-dimensional vectors is a vector perpendicular to both of them.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -631,7 +452,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="solutions-to-exercises">
-<h2><span class="section-number">30.5. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
+<h2>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -648,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./LinearAlgebra/linear_systems_matrices"
+            path: "./LinearAlgebra\linear_systems_matrices"
         },
         predefinedOutput: true
     }
@@ -659,21 +480,7 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="inverses.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">29. </span>Inverses</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../eigenvectors/notes.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">31. </span>Eigenvalues and Eigenvectors</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -681,7 +488,7 @@ const thebe_selector_output = ".output, .cell_output"
     <footer class="footer">
   <p>
     
-      By The Jupyter Book Community<br/>
+      By Natural Sciences<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

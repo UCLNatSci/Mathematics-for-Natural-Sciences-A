@@ -1,67 +1,44 @@
-# Welcome to Mathematics for Natural Scientists
+# Welcome to Mathematics for Natural Sciences A
 
-These notes are designed for you to follow the content in both NSCI0005 and NSCI0027!
+These notes are designed for you to follow the content in NSCI0005.
 
-In it we will cover:
-
-- Statistics
+In these notes we will cover:
 
 - Complex numbers
-	- Definitions and extending the reals
-	- Cartesian and Polar Form
-	- Exponential Form and Euler Formula
+	- Definitions and extending the real numbers
+	- Cartesian and polar form
+	- Exponential form and Euler formula
 	- Finding complex roots
 	- de Moivre's theorem
+	- Relationship between trignometric functions and Hyperbolic functions
 
 
 - Sequences, series and convergences
 	- Sequences and recurrence relations
 	- Series as summing a sequence
 	- Limits of series and infinities
-	- Series Convergence Tests - Preliminary, Ratio, Comparison
+	- Series convergence tests - Preliminary, Ratio, Comparison
+
 
 - Vectors and Matrices
 	- Vector notation
 	- Vector equation of a line
-	- Scalar and Vector equations of a plane
+	- Scalar and vector equations of a plane
 	- Matrices as a link to solutions of linear simultaneous system
 
+
 - Differentiation and Integration
-	- Intergration by parts
-	- Integration by substitution
-	- Stationary Points
-	- Parametric differentiation
 	- Arc length
-	- Solids of revolution
+	- Solids of revolution - surface area and volume
+	- Reduction formulae
+	- Partial differentiation
+	- Multi-variable chain rule
+	- Stationary points and saddles
+	
 
 - 1st and 2nd order differential equations (ODEs)
 	- Seperable 1st order systems of ODEs
 	- Integrating factor method for 1st order systems
+	- Seperable partial differential equations (PDEs)
 	- Homogeneous 2nd order systems
 	- Inhomogeneous 2nd order systems
-
-- Partial differentiation and multi-variable calculus
-	- Multi-variable chain rule
-	- Stationary points
-	- Seperable partial differential equations (PDEs)
-
-- Multi-dimensional integrals
-	- Area integrals
-	- Volume integrals 
-	- Line integrals
-	- Surface integrals 
-		
-- Vector calculus methods 
-	- Gradient operator
-	- Divergence and Curl operator
-	- Divergence and Stoke's theorems 
-
-- Set theory, logic and methods of proof
-	- Mathematical notation and defining a set
-	- Proposional Logic
-	- Methods of proof 
-	- Functions as sets
-
-- Linear Transformations, vector spaces and linear algebra
-
-- Dynamical systems theory and stability

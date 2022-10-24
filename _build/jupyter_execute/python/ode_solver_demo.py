@@ -17,12 +17,7 @@ import matplotlib.pyplot as plt      #for plotting
 # 
 # $$\frac{\mathrm{d}X}{\mathrm{d}t}=f(X,t,c)$$
 # 
-# where $X$ is a list of dependent variables and c is a sequence of parameters.
-# ```{toggle}
-#     ```{code}
-#     this should be code
-#     ```
-# ```
+# where $X$ is a list of dependent variables and c is a sequence of parameters. 
 
 # ## Example 1: Exponential growth
 
