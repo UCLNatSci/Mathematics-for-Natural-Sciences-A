@@ -1,5 +1,25 @@
 # Convergence of Series
 
+
+### A preliminary introduction to convergence and divergence
+
+The behaviour of a geometric progression for "large" numbers of terms $n$ depends on the value of the common ratio $r$.
+This can be deduced by the following reasoning.
+
+If $r > 1$ or $r < -1$ (which is to say that the absolute value $\lvert r \rvert < 1$) then the $i$-th term of the
+geometric progression $u_i=a r^{i-1}$ becomes a very large positive or negative number.
+In this case we say that the series **diverges**.
+
+Conversely, if $\lvert r \rvert < 1$  then $u_i=a r^{i-1}$ becomes a very small positive or negative number.
+In this case we say that the series **converges**.
+
+The topics of divergence and convergence are explored in detail later in the course.
+
+Thus we conclude that:
+* if $\lvert r \rvert < 1$ then $S_n$ converges and approaches $\frac{a}{1-r}$ as $n\to \infty$,
+* if $\lvert r \rvert > 1$ then $S_n$ diverges and approaches $\infty$ as $n\to \infty$.
+
+
 ## Infinite series as limit of partial sums
 
 The value of a infinite series can be defined as the value of the limit (if exists) of the sequence defined by it partial
