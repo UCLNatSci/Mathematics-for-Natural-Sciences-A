@@ -7,11 +7,23 @@ options:
   numbered: True
 
 chapters:
-- file: Prelim/notationfunctions
+- file: prelim/notationfunctions
+- file: prelim/binexpans
 
 - file: complex_numbers/complex_numbers.md
 
+- file: sequences_and_series/limits.md
 - file: sequences_and_series/series.md
+- file: sequences_and_series/convergence.md
 
+- file: matrices_vectors/matrices.md
+- file: matrices_vectors/vectoralgebra.md
 
+- file: differentiation_and_integration/differentiation.md
+- file: differentiation_and_integration/integration.md
+- file: differentiation_and_integration/partialdifferentiation.md
 
+- file: odes/Intro_ODEs.md
+- file: odes/1st_order_ODEs.md
+- file: odes/2nd_order_ODEs.md
+- file: python/ode_solver_demo.ipynb

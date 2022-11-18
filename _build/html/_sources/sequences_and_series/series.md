@@ -32,10 +32,12 @@ Sequences can have finite $n<\infty$ (e.g. telephone numbers) or infinite sizes
 $n \to \infty$ (e.g. the prime numbers).
 ````
 
-The sequences that we will examine in this course are numerical patterns.  Much of mathematics is concerned with patterns in both mathematical constructs and nature, and the study of sequences
+The sequences that we will examine in this course are numerical patterns.  Much of mathematics is concerned with patterns in both mathematical constructs and nature, 
+and the study of sequences
 provides a firm grounding for this endeavour.
 
-Mathematical patterns can generally be expressed as formula for the $i$th term. For instance, the formula below generates the sequence $-1, 2, 5, 8, 11, 14, 17, 20$ by taking $i=1,\dots 8$ :
+Mathematical patterns can generally be expressed as formula for the $i$th term. For instance, the formula below generates the sequence $-1, 2, 5, 8, 11, 14, 17, 20$ by 
+taking $i=1,\dots 8$ :
 
 ```{math}
 u_i = 2 + 3 (i-2)
@@ -206,7 +208,7 @@ For example, $\displaystyle \sum_{i=1}^4 (1+i) = 2 + 3 + 4 + 5 = 14$.
 
 The correct way to read this is:
 ```{math}
-\sum_{i=1}^n (a + u_i) \neq \sum_{i=1}^n a + \sum_{i=1}^n u_i = na  + \sum_{i=1}^n u_i
+\sum_{i=1}^n (a + u_i) = na  + \sum_{i=1}^n u_i
 ```
 
 ````
@@ -237,7 +239,7 @@ or equivalently $\displaystyle\sum_{i=1}^{97} \frac{1}{n+2}$.
 other answers are also possible!
 ````
 
-## Arithmetic and Geometric Progressions
+## Arithmetic and geometric progressions
 
 We now introduce the arithmetic progression (or the arithmetic sequence) and the geometric progression (or geometric sequence).
 These sequences have the nice property that their series can be found straightforwardly.
@@ -268,7 +270,7 @@ u_i=a+(i-1)d
 
 ````{admonition} Python code for arithmetic progression
 :class: tip
-You can play around with the behaviour of different arithmetic progessions by changing the values of $a$ and $d$:
+You can play around with the behaviour of different arithmetic progressions by changing the values of $a$ and $d$:
 ````
 
 ```{code-cell}
@@ -292,9 +294,9 @@ while count < n: # while loop
 
 
 
-#### Solving the series of arithmetic progessions
+#### Solving the series of arithmetic progressions
 
-Series of arithmetic progessions can be solved (i.e. reduced to a number).
+Series of arithmetic progressions can be solved (i.e. reduced to a number).
 The series (or the sum) $S_n$ of an arithmetic progression with recurrence relation $u_i=a+(i-1)d$ is:
 ```{math}
 :label: seriessol
@@ -411,7 +413,7 @@ The result is $S= \frac{16}{2}(6+96)=816$.
 ````
 
 
-### Geometric Progression
+### Geometric progression
 
 ````{admonition} Definition
 :class: note
@@ -499,11 +501,11 @@ while count < nterms: # while loop
 :class: note
 ```{math}
 S_n = a + a r + a r^2 + \dots + a r^{n-3} + a r^{n-2} + a r^{n-1} \\
-= a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + r^{n-1} \big) \ ,
+= a \Big(1 + r + r^2 + \dots + r^{n-3} + r^{n-2} + r^{n-1} \Big) \ ,
 ```
 we multiply by $r$:
 ```{math}
-r S_n = a \big(r + r^2 + r^2 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .
+r S_n = a \big(r + r^2 + r^3 + \dots + r^{n-2} + r^{n-1} + r^{n} \big) \ .
 ```
 Subtracting $r S_n$ from $S_n$ and cancelling the terms provides:
 ```{math}
@@ -513,10 +515,48 @@ Subtracting $r S_n$ from $S_n$ and cancelling the terms provides:
 And then dividing both sides by $1-r$:
 
 ```{math}
-S_n = a \frac{1 - r^n}{1-r}
+S_n = a \Big(\frac{1 - r^n}{1-r}\Big)
 ```
 QED
 ````
+
+If we have to deal with infinite geometric series, we argue that as $n \rightarrow \infty$, $S_n$ can either blow up or approach a finite value, this will depending whether $r$ is large or small, 
+but how to we define these more mathematically here?  
+
+One way to see this is to think about the proof for a geometric series:
+
+```{math}
+S_n = a \Big(1 + r + r^2 + \dots + \Big) \\
+r S_n = a \Big(r + r^2 + r^3 + \dots \Big)
+```
+Subtracting $r S_n$ from $S_n$ and cancelling the terms here means that almost **all** the terms cancel (this is only really true if the terms being cancelled add up to something finite):
+```{math}
+ S_n - r S_n = a 
+```
+And then dividing both sides by $1-r$:
+
+```{math}
+S_n = a \Big(\frac{1}{1-r}\Big)
+
+```
+Another perspective is to think about the real number line, any numbers that are in the range $0 < x < 1$, which are raised to an integer power, will definitely stay within this range.  The 
+same is also true if we extend this range out to positive and negative 1, i.e. formally:
+```{math}
+\forall \, r \in \big[ -1, \, 1 \big],\, \forall \,n \in \mathbb{Z}, \,r^n \in \big[ -1,\, 1 \big]
+```
+(if we take any positive real power, then at least the real part will remain within this range).  
+
+This means that small and large here are determined by:
+
+* if $\lvert r \rvert < 1$ then $S_n$ converges as $n\to \infty$,
+* if $\lvert r \rvert > 1$ then $S_n$ diverges as $n\to \infty$.
+
+If $|r|<1$ then $|r^n|<1$ and in the limit of $n \rightarrow \infty$, $|r|^n \rightarrow 0$, this makes the sum of an infinite geometric series:
+
+```{math}
+S_\infty = a \Big(\frac{1}{1-r}\Big), \, |r|< 1
+```
+We will make this more explicit when we discuss limits and convergence.
 
 
 ````{admonition} Practice Questions
@@ -577,31 +617,37 @@ S = \frac{a}{1-r} = \frac{\frac{123}{1000}}{1 - \frac{1}{1000}} = \frac{\frac{12
 ```
 ````
 
-## Method of Differences
-
-The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
-to compute the desired result.  This is a handy trick to find the value of partial (finite) sums.
-
-### Partial Fractions
+## Partial fractions
 
 Consider the problem of adding different fractions, for example: 
 ```{math} 
 \frac{1}{2} + \frac{1}{3} = \frac{?}{??}
 ``` 
-the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.  
-To find the common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM$(2,3) = 6$ and hence:
+the easiest way to write this as one single fraction is to rewrite each fraction in terms of a common denominator and then just add the numerators.  To find the 
+common denominator, we need to find the lowest common multiple (LCM) of the denominators, here LCM$(2,3) = 6$ and hence:
 ```{math} 
 \frac{1}{2} = \frac{3}{6},   \quad\frac{1}{3} = \frac{2}{6} \Rightarrow \frac{1}{2} + \frac{1}{3} = \frac{2 + 3}{6} = \frac{5}{6}
 ```
-If we have two algebraic fractions, we can follow a similar process.  
+If we have two algebraic fractions, we can follow a similar process:
 
-An example: 
-```{math} 
-\frac{2}{n+1} + \frac{3}{n+2} = \frac{2(n+2) + 3(n+1)}{(n+1)(n+2)} = \frac{5n + 7}{(n+1)(n+2)} 
+```{math}
+\frac{A}{x+a} + \frac{B}{x+b} = \frac{(A+B)x + (Ab+Ba)}{(x+a)(x+b)}
 ```
-The idea behind partial fractions is to reverse this process, breaking up a composite fraction into its smaller fractional parts.
 
-An example: 
+````{admonition} An algorithm for finding partial fractions
+:class: tip
+
+1\. If the degree of the numerator $m$ is greater than (or equal to) the degree of the denominator $n$, split off the leading terms in the form of a polynomial of degree $m-n$.
+
+2\. Split up the remaining fraction so that the degree of each numerator is one less than the degree of the denominator.
+
+3\. To find the unknown constants, combine the fractions on the right hand side and equate the coefficients in the numerators on the left and right.
+
+````
+
+````{admonition} Worked Examples
+:class: seealso, dropdown
+1\. 
 ```{math} \frac{3}{(n-1)(n+2)}
 ``` 
 first split this up into:
@@ -614,14 +660,14 @@ and then recombine to set up equations to find the unknown coefficients:
 ``` 
 There are two (equally valid) methods to use at this point to find $A,\, B$: 
 
-1. We can substitute in $n=1, \,-2$ into the equation, in each case: 
+a\. We can substitute in $n=1, \,-2$ into the equation, in each case: 
 ```{math}
 \begin{array}{rlcl}
     n = 1: & 3  = 3A &\Rightarrow & A = 1 \\ 
     n = -2: & 3 = -3B & \Rightarrow& B  = -1
 \end{array}
 ``` 
-2. We can compare coefficients of $n^0$ and $n^1$ (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations: 
+b\. We can compare coefficients of $n^0$ and $n^1$ (which by the fundamental theorem of algebra are independent), producing a set of simultaneous equations: 
 ```{math} 
 \begin{array}{rlcl}
     n^1: & A + B = 0 &\Rightarrow& B = -A\\ 
@@ -632,7 +678,7 @@ There are two (equally valid) methods to use at this point to find $A,\, B$:
 
 If we have repeated roots in the denominator,  the decomposition now has terms for each of the roots and an additional one for the repeated root.  
 
-An example: 
+2\. 
 ```{math} 
 g(n) = \frac{9}{(n+2)(n+5)^2} = \frac{A}{n+2} + \frac{B}{n+5} + \frac{C}{(n+5)^2} 
 ``` 
@@ -649,10 +695,79 @@ n=0: & 25A + 10B + 2C = 9 & \Rightarrow & B=-1
 \end{array}\\
 &&\Rightarrow g(n) = \frac{1}{n+2} - \frac{1}{n+5} - \frac{3}{(n+5)^2} 
 ```
+
+3\. Lets try to decompose $\displaystyle \frac{11x+3}{x^2 + 3x + 2}$ into partial fractions:
+
+```{math}
+\frac{11x+3}{x^2 + 3x + 2} = \frac{A}{x+1}+\frac{B}{x+2}=\frac{A(x+2)+B(x+1)}{(x+1)(x+2)}=\frac{(A+B)x+(2A+B)}{x^2+3x+2}
+```
+
+To obtain the required fraction, we need $(A+B)x+(2A+B)=11x+3$, which by comparing coefficients of $x$ we find two simultaneous equations:
+
+```{math}
+A+B &= 11 \\
+2A + B &= 3
+```
+
+We can solve these by choosing $A=-8,\ B=19$, hence the result is:
+
+```{math}
+\frac{11x+3}{x^2+3x+2}=\frac{-8}{x+1}+\frac{19}{x+2}
+```
+
+This technique allows us to easily integrate:
+
+```{math}
+\int\frac{11x+3}{x^2+3x+2}\mathrm{d}x= \int\left(\frac{-8}{x+1}+\frac{19}{x+2}\right)\mathrm{d}x=-\ln|x+1|+19\ln|x+2|+c
+```
+
+4\. Consider the function:
+
+```{math}
+f(x) = \frac{2}{(x^2-1)(x+2)}
+```
+
+It can be decomposed as follows:
+
+```{math}
+\frac{2}{(x^2-1)(x+2)}=\frac{Ax+B}{x^2-1}+\frac{C}{x+2}
+```
+
+This gives:
+```{math}
+(Ax+B)(x+2)+C(x^2-1)=2
+``` 
+and by expanding out:
+```{math}
+(A+C)x^2 + (2A+B)x + 2B - C = 2 
+```
+Equating coefficients on the left and right sides we obtain simultaneous equations:
+
+```{math}
+A + C  &= 0\\
+2A + B &= 0\\
+2B - C &= 2
+```
+which is solved by $A = -2/3,\, B = 4/3,\, C = 2/3$.  This means that:
+
+```{math}
+\frac{2}{(x^2-1)(x+2)}=\frac{2(2-x)}{3(x^2-1)}+\frac{2}{3(x+2)}
+```
+
+However, we can decompose this fraction further by noting that $(x^2-1)=(x+1)(x-1)$, therefore the full decomposition is:
+
+```{math}
+\frac{2}{(x^2-1)(x+2)}=\frac{1}{3(x-1)}+\frac{1}{1+x}+\frac{2}{3(x+2)}
+```
+
+````
+
+
 ````{admonition} An Application with Prime Factors
 :class: seealso, dropdown
 
-For a fraction like $ \frac{1}{18}$, can we decompose this into fractions of the prime factors $ 18 = 2\cdot 3^2$ ? The full partial fraction decomposition would have the form: 
+For a fraction like $ \frac{1}{18}$, can we decompose this into fractions of the prime factors $ 18 = 2\cdot 3^2$ ? The full partial fraction 
+decomposition would have the form: 
 ```{math} 
 \frac{1}{18} = \frac{A}{2} + \frac{B}{3} + \frac{C}{3^2}
 ``` 
@@ -678,6 +793,98 @@ f(n) = \frac{1}{n+2} - \frac{1}{n+3} - \frac{1}{(n+3)^2} \Rightarrow
 f(0) = \frac{1}{18} = \frac{1}{2} - \frac{1}{3} - \frac{1}{3^2}
 ```
 ````
+
+````{admonition} Practice Questions
+:class: seealso, dropdown
+Decompose the following into partial fractions:
+
+1\. 
+```{math}
+\frac{2}{x^2-1}
+```
+
+2\. 
+```{math}
+\frac{x^2+3x+4}{x^2 + 4x + 3}
+```
+
+3\. 
+```{math}
+\frac{3x^3+3}{x^2 + 4x + 3} 
+```
+
+4\.
+```{math}
+\frac{2x+3}{(x+1)^2}
+```
+
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+1\. 
+```{math}
+\frac{2}{x^2-1} &= \frac{A}{x-1} + \frac{B}{x+1} \\
+&= \frac{A(x+1) + B(x-1)}{x^2-1}
+```
+Therefore by equating numerators:
+```{math}
+2= A(x+1) + B(x-1) \Rightarrow A = 1,\ B = -1
+```
+so we find:
+```{math}
+\frac{2}{x^2-1} = \frac{1}{x-1} - \frac{1}{x+1}
+```
+
+2\. 
+```{math}
+\frac{x^2+3x+4}{x^2 + 4x + 3} &= A + \frac{B}{x+1} + \frac{C}{x+3} \\
+&= \frac{x^2+4x+3 - x + 1}{x^2 + 4x + 3} = 1 + \frac{1-x}{(x+1)(x+3)} 
+```
+Which means that:
+```{math}
+\frac{B}{x+1} + \frac{C}{x+3} = \frac{B(x+3) + C(x+1)}{(x+1)(x+3)} =  \frac{(B+C)x + 3B + C}{(x+1)(x+3)}
+```
+and therefore by equating numerators:
+```{math}
+1 - x = B(x+3) + C(x+1) \Rightarrow B = 1,\ C = -2
+```
+so we find:
+```{math}
+\frac{x^2+3x+4}{x^2 + 4x + 3} = 1 + \frac{1}{x+1} - \frac{2}{x+3}
+```
+
+3\. 
+```{math}
+\frac{3x^3+3}{x^2 + 4x + 3} &= (Ax +B) + \frac{C}{x+1}+ \frac{D}{x+3} \\
+&= \frac{3x^3 + 12x^2 + 9x - 12x^2 - 9x + 3}{x^2 + 4x + 3} = 3x - \frac{12x^2 + 9x - 3}{x^2 + 4x + 3} \\
+&= 3x - \frac{12x^2 + 48x + 36 - 39x - 39}{x^2 + 4x + 3} = 3x - 12 + 39\frac{x + 1}{(x+1)(x+3)}\\
+&= 3x - 12 + \frac{39}{x+3}
+```
+
+
+4\.
+```{math}
+\frac{2x+3}{(x+1)^2} &= \frac{A}{(x+1)^2}+\frac{B}{x+1}\\
+&= \frac{A + B(x+1)}{(x+1)^2} = \frac{Bx + A+B}{(x+1)^2}
+```
+and therefore by equating numerators:
+```{math}
+2x+3 = Bx + A+B
+```
+which means that $A = 1,\, B = 2$ and so:
+```{math}
+\frac{2x+3}{(x+1)^2} = \frac{1}{(x+1)^2}+\frac{2}{x+1}
+```
+
+````
+
+
+
+## Method of differences
+
+The method of differences provides a way to find a finite series (sum of a sequence) by using the difference of similar sums
+to compute the desired result.  This is a handy trick to find the value of partial (finite) sums .
 
 ### Writing out the series method
 
@@ -746,7 +953,7 @@ In general, rewriting the summation index provides:
 ```{math}
 \sum_{r=1}^N f(r+c) = \sum_{r=1+c}^{N+c} f(r) \ ,
 ```
-where $f(r)$ is an arbitrary function of summation index $r$ and $c$ is a postive integer number.
+where $f(r)$ is an arbitrary function of summation index $r$ and $c$ is a positive integer number.
 
 This can be also used for negative integer values:
 ```{math}
@@ -807,3 +1014,170 @@ We can use either method to find the method of differences, using the rewriting 
 &&=\frac{1}{n+2} - \frac{1}{n+1} + \frac{1}{2}
 ```
 ````
+
+
+## Taylor and Maclaurin series
+
+Lets consider more complicated functions like $\sin(x)$ or $\ln(x)$, a question that we could ask is can we find simpler representation of these, albeit one that might not 
+be valid in all intervals of $x$ - an expansion around a point for instance.  We call such Polynomial series Taylor series in general.
+
+````{admonition} Definition of a Taylor series
+:class: notice
+
+We can write a formula for sum of polynomials about $x=a$, in which we seek to express $f(x)$ in the form:
+```{math}
+p(x;\,a)=\sum_{n=0}^{\infty}c_n(x-a)^n = c_0 +c_1(x-a)+c_2(x-a)^2+\dots +c_n(c-a)^n+\dots
+```
+We choose the coefficients $c_n$ to ensure that the $n^{\text{th}}$ derivative of the polynomial is equal to the $n^{\text{th}}$ derivative of the function at the 
+point $x=a$. In this sense, the Taylor series gives the best possible local polynomial approximation to $f(x)$ of specified degree.
+
+By repeatedly differentiating and evaluating the polynomial, we obtain
+```{math}
+c_n=\frac{f^{(n)}(a)}{n!}
+```
+
+Therefore our definition looks like:
+
+```{math}
+p(x;\,a) = \sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n
+```
+
+The special case when $a=0$ is known as the **Maclaurin** series for historical reasons.
+````
+We can see how the Taylor series can be seen as a polynomial approximation of a function by looking at higher and higher order series for $\sin(x)$:
+```{figure} macplot.png
+---
+name: macplot
+---
+A plot of the curve $\sin(x)$ together with Maclaurin series expansion retaining successively greater numbers of terms, $p_1,p_3,p_5,p_7,p_{13},p_{21}$.
+```
+
+As we can see. the degree 21 Maclaurin expansion represents $\sin(x)$ rather faithfully in the range $[-2\pi,2\pi]$, but it is less accurate further away 
+from the expansion point.
+
+````{admonition} Worked example
+:class: seealso
+
+Lets find the Taylor expansion of $f(x)=e^x$ about $x=0$ i.e. the Maclaurin series.  We first need to find the derivatives, which here is easy:
+```{math}
+f'(x)  &= e^x \\
+f''(x) &= e^x \\
+f^{(3)} &= e^x \dots
+```
+
+Therefore the series looks like:
+
+```{math}
+p(x;\,a)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+...
+```
+Notice that this series satisfies $\displaystyle \frac{\mathrm{d}p}{\mathrm{d}x}=p$, which we would expect for $p = e^x$.
+````
+
+````{admonition} An alternative derivation
+:class: tip, dropdown
+A different way to derive the Taylor series of a function can be found by thinking about integration, if we apply the fundamental theorem of calculus:
+```{math}
+\int_0^x f'(x-t)\,\text{d}t = -f(0) + f(x) \Longrightarrow f(x) = f(0) + \int_0^x f'(x-t) \,\text{d}t 
+```
+Integrating by parts, we find:
+```{math}
+&\begin{array}{cc}
+u'(t) = 1, & v(t) = f'(x-t) \\
+u(t) = t, &\,\, v'(t) = -f''(x-t)
+\end{array} \\
+\Rightarrow \int_0^x f'(x-t)\,\text{d}t &= \bigg[t\,f'(x-t) \bigg]^x_0 + \int_0^x t\,f''(x-t)\,\text{d}t \\
+\Rightarrow f(x) &= f(0) + x\,f'(0) + \int_0^x t\,f''(x-t)\,\text{d}t
+```
+We can then apply integration by parts repeatedly we find an infinite series for $f(x)$ around $x = 0$:
+```{math}
+f(x) = f(0) + x\,f'(0) + \frac{1}{2!}\,x^2\,f''(0) + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}x^n f^{(n)}(0)
+```
+
+If we want to generalise this to *any* point $x=a$, then we start with $\displaystyle \int_0^{x-a} f'(x-t)\,\text{d}t$ :
+```{math}
+f(x) = f(a) + (x-a)\,f'(a) + \frac{1}{2!}\,(x-a)^2\,f''(a) + \dots = \sum_{n=0}^{\infty} \frac{1}{n!}(x-a)^n f^{(n)}(a)
+```
+````
+
+The Maclaurin expansions of $\sin$, $\cos$,  $e^x$, and $\ln(1+x)$ are particularly important:
+
+```{math}
+\sin(x) &= x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n)!} \\
+\cos(x) &= 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!} \\
+e^x &= 1+x+\frac{x^2}{2!}+\dots = \sum_{n=0}^{\infty}\frac{x^n}{n!} \\
+\ln(1+x) &= x-\frac{x^2}{2}+\frac{x^3}{3}-\dots = \sum_{n=0}^{\infty}\frac{(-1)^n x^{n+1}}{n+1}
+```
+
+You should also be able to calculate the first few terms in the expansion of an arbitrary function $f(x)$.
+
+
+````{admonition} Pratice Question
+:class: seealso, dropdown
+By regrouping the terms in the Maclaurin series for $e^{i\theta}$, derive Euler's formula.
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+```{math}
+e^{i\theta}&=1+(i\theta)+\frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!}+\dots\\
+&=(1-\frac{\theta^2}{2}+\frac{\theta^4}{4!}-\dots) + i(\theta - \frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\dots)
+```
+
+We can write this out rigorously as follows:
+
+```{math}
+ e^{i\theta}&=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!} = \sum_{n=0,2,4,...}\frac{(i\theta)^n}{n!} + \sum_{n=1,3,5,...}\frac{(i\theta)^n}{n!} 
+ =\sum_{n=0}^{\infty}\frac{(i\theta)^{2n}}{(2n)!} + \sum_{n=0}^{\infty}\frac{(i\theta)^{2n+1}}{(2n+1)!}\\
+ &= \sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n}}{(2n)!} + i\sum_{n=0}^{\infty}\frac{(-1)^n(\theta)^{2n+1}}{(2n+1)!} = \cos(\theta)+i\sin(\theta).
+```
+````
+
+```{admonition} A disclaimer!
+:class: danger
+Not all functions are faithfully represented by their Taylor Series. We have only guaranteed that the polynomial has the "correct" behaviour in the 
+immediate vicinity of the point $x=a$. Two things should be checked:
+
+1\.	*Does the series converge to a finite value for all $x$?* - If not then it is important to find the radius of convergence. This can be achieved 
+by using the ratio test
+
+2\.	*Does it converge to $f(x)$?* - Even if the series converges, there is no guarantee that it converges to $f(x)$.  We would need to show that 
+$\displaystyle \lim_{k\rightarrow \infty}|f(x)-p_k(x;a)|=0$, which may only be true for some values of $x$.  (This can be done by making use of the 
+Lagrange remainder theorem.)
+```
+Functions which converge to their Taylor series for a range of values are called *analytic*, and functions which converge to their Taylor series everywhere 
+are called *entire*. The Taylor series for functions like sine, cosine exponential are entire, but the Maclaurin series for $\ln(1+x)$ is analytic for $|x|<1$.
+
+The Taylor series nearly always contains an infinite number of terms. To be of practical use in applications, we typically need to "truncate" the expansion, 
+meaning that we retain only the terms up to a specified $n^{\text{th}}$ power of $x$.
+
+````{admonition} Example: The two-term expansion
+:class: note
+
+Let us examine what happens if we retain just the first two terms in the Taylor series:
+
+```{math}
+p(x;a)=f(a)+f'(a)(x-a)
+```
+
+This defines a straight line - $y = f'(a)x + (f(a) - af'(a))$.  Since the line passes through the point $(a, \,f(a))$ it touches the curve f(x) at the point 
+$x = a$.  The line has slope $f^{\prime}(a)$, which is the gradient of the curve at $x = a$, therefore, the two-term Taylor series is just the tangent to the curve at 
+$x = a$.  The tangent is the best possible approximation that we can obtain for the curve near the point $x = a$ using only two terms.
+````
+
+As well as considering the validity of the infinite series, it is important to be able to determine how many terms in the series are needed for practical 
+use. If the series converges very slowly, then it may not be much good!
+
+
+### Composite function expansion
+
+Let $P(x)$, $Q(x)$, be two power series that converge to $f(x)$ and $g(x)$ respectively
+
+Then:
+* $aP(x) + bQ(x)$ converges to $af(x)+ bg(x)$
+* $ P(x)Q(x)$ converges to $f(x)g(x)$
+* $ P(Q(x))$ converges to $f(g(x))$
+
+It means that we can construct the Taylor series for a composite function by using known results for elementary functions
+(although we need to take care to check the region of validity)
+

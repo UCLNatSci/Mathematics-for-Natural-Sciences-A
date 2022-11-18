@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Differentiation &#8212; Mathematics for Natural Sciences A</title>
+    <title>9. Differentiation &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Integration" href="integration.html" />
+    <link rel="prev" title="8. Vectors and Vector Algebra" href="../matrices_vectors/vectoralgebra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,20 +98,80 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Prelim/notationfunctions.html">
+  <a class="reference internal" href="../prelim/notationfunctions.html">
    1. Mathematical Prelimaries
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   3. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   3. Sequences and Series
+   5. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   6. Convergence of Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices_vectors/matrices.html">
+   7. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
+   8. Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integration.html">
+   10. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="partialdifferentiation.html">
+   11. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/Intro_ODEs.html">
+   12. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/1st_order_ODEs.html">
+   13. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../odes/2nd_order_ODEs.html">
+   14. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/ode_solver_demo.html">
+   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -201,59 +263,76 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivations-and-first-principle-arguments">
-   Motivations and First Principle Arguments
+   9.1. Motivations and First Principle Arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivative-as-a-rate-of-change">
-   Derivative as a “rate of change”
+   9.2. Derivative as a “rate of change”
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#second-and-higher-derivatives">
-   Second and Higher Derivatives
+   9.3. Second and Higher Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationary-points">
-   Stationary Points
+   9.4. Stationary Points
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-derivative-test">
-     First Derivative Test
+     9.4.1. First Derivative Test
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#second-derivative-test">
-     Second derivative test
+     9.4.2. Second derivative test
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-rules">
-   Differentiation Rules
+   9.5. Differentiation Rules
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sum-rule">
+     9.5.1. Sum rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#product-rule">
+     9.5.2. Product rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quotient-rule">
+     9.5.3. Quotient rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chain-rule">
+     9.5.4. Chain rule
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-differentiation">
-   Parametric Differentiation
+   9.6. Parametric Differentiation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives-of-inverse-functions">
-   Derivatives of Inverse Functions
+   9.7. Derivatives of Inverse Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implicit-differentiation">
-   Implicit Differentiation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   9.8. Implicit Differentiation
   </a>
  </li>
 </ul>
@@ -278,59 +357,76 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#motivations-and-first-principle-arguments">
-   Motivations and First Principle Arguments
+   9.1. Motivations and First Principle Arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivative-as-a-rate-of-change">
-   Derivative as a “rate of change”
+   9.2. Derivative as a “rate of change”
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#second-and-higher-derivatives">
-   Second and Higher Derivatives
+   9.3. Second and Higher Derivatives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationary-points">
-   Stationary Points
+   9.4. Stationary Points
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-derivative-test">
-     First Derivative Test
+     9.4.1. First Derivative Test
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#second-derivative-test">
-     Second derivative test
+     9.4.2. Second derivative test
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#differentiation-rules">
-   Differentiation Rules
+   9.5. Differentiation Rules
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sum-rule">
+     9.5.1. Sum rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#product-rule">
+     9.5.2. Product rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quotient-rule">
+     9.5.3. Quotient rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chain-rule">
+     9.5.4. Chain rule
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parametric-differentiation">
-   Parametric Differentiation
+   9.6. Parametric Differentiation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivatives-of-inverse-functions">
-   Derivatives of Inverse Functions
+   9.7. Derivatives of Inverse Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implicit-differentiation">
-   Implicit Differentiation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solutions">
-   Solutions
+   9.8. Implicit Differentiation
   </a>
  </li>
 </ul>
@@ -343,9 +439,9 @@
               <div>
                 
   <div class="section" id="differentiation">
-<h1>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="motivations-and-first-principle-arguments">
-<h2>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Motivations and First Principle Arguments<a class="headerlink" href="#motivations-and-first-principle-arguments" title="Permalink to this headline">¶</a></h2>
 <p>The equation <span class="math notranslate nohighlight">\(y=mx+c\)</span> represents a straight line. In this expression, the constant <span class="math notranslate nohighlight">\(m\)</span> tells us how quickly the slope <span class="math notranslate nohighlight">\(y\)</span> changes with <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>For instance,</p>
 <ul class="simple">
@@ -353,74 +449,102 @@
 <li><p>if <span class="math notranslate nohighlight">\(m\)</span>=2 then 𝑦 increases by 2 units for every unit of increase in <span class="math notranslate nohighlight">\(x\)</span></p></li>
 <li><p>if <span class="math notranslate nohighlight">\(m\)</span>=−2 then 𝑦 decreases by 2 units for every unit of increase in <span class="math notranslate nohighlight">\(x\)</span></p></li>
 </ul>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
-<p><strong>Problem</strong>: Find the slope of the straight line connecting the points (-3,2) and (5,7).</p>
-<p><strong>Solution</strong>:</p>
-<p><img alt="Calculating the slope of a straight line" src="../_images/solution_1.png" /></p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Find the slope of the straight line connecting the points (-3,2) and (5,7).</p>
+<div class="figure align-default" id="solution">
+<img alt="../_images/solution_1.png" src="../_images/solution_1.png" />
+<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Calculating the slope of a straight line</span><a class="headerlink" href="#solution" title="Permalink to this image">¶</a></p>
+</div>
 <p>The straight line that can be drawn through the points (-3,2) and (5,7).</p>
 <ul class="simple">
-<li><p>the change in <span class="math notranslate nohighlight">\(x\)</span> is given by <span class="math notranslate nohighlight">\(Δx\)</span>=(5+3)=8</p></li>
+<li><p>the change in <span class="math notranslate nohighlight">\(x\)</span> is given by <span class="math notranslate nohighlight">\(\Delta x\)</span>=(5+3)=8</p></li>
 <li><p>the change in <span class="math notranslate nohighlight">\(y\)</span> is given by <span class="math notranslate nohighlight">\(Δy\)</span>=(7−2)=5</p></li>
 </ul>
 <p>So <span class="math notranslate nohighlight">\(y\)</span> increases by 5 units for every 8 units of increase in <span class="math notranslate nohighlight">\(x\)</span></p>
-<p>The rate of change of <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(x\)</span> (the slope) is <span class="math notranslate nohighlight">\(\displaystyle\frac{Δy}{Δx}\)</span> = <span class="math notranslate nohighlight">\(\displaystyle\frac{5}{8}\)</span> (This is the constant <span class="math notranslate nohighlight">\(m\)</span> in the equation of the line <span class="math notranslate nohighlight">\(y=mx+c\)</span>)</p>
+<p>The rate of change of <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(x\)</span> (the slope) is <span class="math notranslate nohighlight">\(\displaystyle\frac{Δy}{\Delta x}\)</span> = <span class="math notranslate nohighlight">\(\displaystyle\frac{5}{8}\)</span> (This is the constant <span class="math notranslate nohighlight">\(m\)</span> in the equation of the line <span class="math notranslate nohighlight">\(y=mx+c\)</span>)</p>
 <p>Triangles drawn under the line have the same slope. By considering a triangle connecting the point (5,7) to (<span class="math notranslate nohighlight">\(x\)</span>,<span class="math notranslate nohighlight">\(y\)</span>), we could write
 <span class="math notranslate nohighlight">\(\displaystyle\frac{y−7}{x−5}\)</span> = <span class="math notranslate nohighlight">\(\displaystyle\frac{5}{8}\)</span>, which rearranges to <span class="math notranslate nohighlight">\(y\)</span>=<span class="math notranslate nohighlight">\(\displaystyle\frac{5}{8}x\)</span> + <span class="math notranslate nohighlight">\(\displaystyle\frac{31}{8}\)</span>.</p>
 </div>
 <p>In a curve, the slope is not constant, but we can identify the slope at any point by drawing the tangent to the curve at that point. The tangent is the line that “just touches” the curve, and the normal is the line that is at right angles to the tangent.</p>
 <div class="figure align-default" id="tangent-and-normal">
 <img alt="../_images/slope.png" src="../_images/slope.png" />
-<p class="caption"><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">The tangent at the point is indicated in blue and the normal is indicated in red.  If the tangent has slope <span class="math notranslate nohighlight">\(m\)</span> then the normal has slope −1/<span class="math notranslate nohighlight">\(m\)</span>.</span><a class="headerlink" href="#tangent-and-normal" title="Permalink to this image">¶</a></p>
 </div>
-<p>In <code class="xref std std-numref docutils literal notranslate"><span class="pre">Tangent_and_Normal</span></code> we can see that if we moved the point along the curve, both the slope of the tangent line and the normal line change.  We are interested in finding a mathematical expression for the slope of a curve at any given point <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In <a class="reference internal" href="#tangent-and-normal"><span class="std std-numref">Fig. 9.2</span></a> we can see that if we moved the point along the curve, both the slope of the tangent line and the normal line change.  We are interested in finding a mathematical expression for the slope of a curve at any given point <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="figure align-default" id="height-base">
 <img alt="../_images/height-base.png" src="../_images/height-base.png" />
-<p class="caption"><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.3 </span><span class="caption-text">The curve shows a hypothetical function <span class="math notranslate nohighlight">\(f\)</span>, and the black dashed line shows the tangent at the arbitrary point <span class="math notranslate nohighlight">\((x,f(x))\)</span>. The slope of this line is the <strong>height:base</strong> ratio in the gray shaded triangle</span><a class="headerlink" href="#height-base" title="Permalink to this image">¶</a></p>
 </div>
-<p>As a first approximation, we construct a secant on the curve by joining <span class="math notranslate nohighlight">\(x\)</span> to a nearby point <span class="math notranslate nohighlight">\(x+Δx\)</span>. Here, <span class="math notranslate nohighlight">\(Δx\)</span> means a small change in the parameter <span class="math notranslate nohighlight">\(x\)</span>. This result is shown graphically in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Height_Base</span></code>, we consider the secant line joining <span class="math notranslate nohighlight">\((x,f(x))\)</span> to a nearby point <span class="math notranslate nohighlight">\((x+Δx,f(x+Δx))\)</span></p>
+<p>As a first approximation, we construct a secant on the curve by joining <span class="math notranslate nohighlight">\(x\)</span> to a nearby point <span class="math notranslate nohighlight">\(x+\Delta x\)</span>. Here, <span class="math notranslate nohighlight">\(\Delta x\)</span> means a small change in the parameter <span class="math notranslate nohighlight">\(x\)</span>. This result is shown graphically in <a class="reference internal" href="#height-base"><span class="std std-numref">Fig. 9.3</span></a>, we consider the secant line joining <span class="math notranslate nohighlight">\((x,f(x))\)</span> to a nearby point <span class="math notranslate nohighlight">\((x+\Delta x,f(x+\Delta x))\)</span></p>
 <p>The slope of the secant line is given by:</p>
 <div class="math notranslate nohighlight" id="equation-slope-secant">
-<span class="eqno">()<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
-<p>As we make <span class="math notranslate nohighlight">\(Δx\)</span> smaller so that the two points are closer together, the secant line approaches the tangent.  We are therefore interested in what happens to <a class="reference internal" href="#equation-slope-secant">()</a> “as <span class="math notranslate nohighlight">\(Δx\)</span> approaches zero”</p>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-slope-secant" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{Δf}{\Delta x}=\displaystyle\frac{f(x+\Delta x)−f(x)}{\Delta x}\]</div>
+<p>As we make <span class="math notranslate nohighlight">\(\Delta x\)</span> smaller so that the two points are closer together, the secant line approaches the tangent.  We are therefore interested in what happens to <a class="reference internal" href="#equation-slope-secant">(9.1)</a> “as <span class="math notranslate nohighlight">\(\Delta x\)</span> approaches zero”</p>
 <p>Consider the function <span class="math notranslate nohighlight">\(f(x)=x^2\)</span>.
-Using the definition given in <a class="reference internal" href="#equation-slope-secant">()</a>, we have</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{f(x+Δx)−f(x)}{Δx}=\displaystyle\frac{(x+Δx)^2−x^2}{Δ𝑥}=\displaystyle\frac{x^2+2Δx+(Δx)^2−x^2}{Δ𝑥}=2x+Δx\)</span></p>
-<p>As <span class="math notranslate nohighlight">\(Δx\)</span> approaches zero the result approaches <span class="math notranslate nohighlight">\(2x\)</span>, which we can write as <span class="math notranslate nohighlight">\(\displaystyle\frac{Δ𝑓}{Δ𝑥}→2x\)</span>  because <span class="math notranslate nohighlight">\(Δx→0\)</span>.</p>
+Using the definition given in <a class="reference internal" href="#equation-slope-secant">(9.1)</a>, we have</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\frac{Δf}{\Delta x}=\displaystyle\frac{f(x+\Delta x)−f(x)}{\Delta x}=\displaystyle\frac{(x+\Delta x)^2−x^2}{Δ𝑥}=\displaystyle\frac{x^2+2\Delta x+(\Delta x)^2−x^2}{Δ𝑥}=2x+\Delta x\)</span></p>
+<p>As <span class="math notranslate nohighlight">\(\Delta x\)</span> approaches zero the result approaches <span class="math notranslate nohighlight">\(2x\)</span>, which we can write as <span class="math notranslate nohighlight">\(\displaystyle\frac{Δ𝑓}{Δ𝑥}→2x\)</span>  because <span class="math notranslate nohighlight">\(\Delta x→0\)</span>.</p>
 <p>More formally, the result is written as</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle \lim_{Δx \to 0} \displaystyle\frac{f(x+Δx)-f(x)}{Δx}=2x\)</span></p>
-<p>and we say that “the limit <span class="math notranslate nohighlight">\(Δx\)</span>→0”, the result is <span class="math notranslate nohighlight">\(2x\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \lim_{\Delta x \to 0} \displaystyle\frac{f(x+\Delta x)-f(x)}{\Delta x}=2x\)</span></p>
+<p>and we say that “the limit <span class="math notranslate nohighlight">\(\Delta x\)</span>→0”, the result is <span class="math notranslate nohighlight">\(2x\)</span>.</p>
 <div class="figure align-default" id="x2">
 <img alt="../_images/x2.png" src="../_images/x2.png" />
-<p class="caption"><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(y=x^2\)</span>, together with the tangent.  The tangent has slope <span class="math notranslate nohighlight">\(2x\)</span>.</span><a class="headerlink" href="#x2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.4 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(y=x^2\)</span>, together with the tangent.  The tangent has slope <span class="math notranslate nohighlight">\(2x\)</span>.</span><a class="headerlink" href="#x2" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<p>Note that in this example, a factor of <span class="math notranslate nohighlight">\(Δx\)</span> was cancelled from the numerator and denominator.  The limit is not evaluated at <span class="math notranslate nohighlight">\(Δx=0\)</span>, but as <span class="math notranslate nohighlight">\(Δx\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span>. The derivative of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> is given by the result</p>
+<p>Note that in this example, a factor of <span class="math notranslate nohighlight">\(\Delta x\)</span> was cancelled from the numerator and denominator.  The limit is not evaluated at <span class="math notranslate nohighlight">\(\Delta x=0\)</span>, but as <span class="math notranslate nohighlight">\(\Delta x\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span>. The derivative of a function <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> is given by the result</p>
 <div class="math notranslate nohighlight" id="equation-derivative">
-<span class="eqno">()<a class="headerlink" href="#equation-derivative" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}𝑓}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}\displaystyle\frac{f(x+Δx)−f(x)}{Δx}\]</div>
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-derivative" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}𝑓}{\mathrm{d}x}=\displaystyle \lim_{\Delta x \to 0}\displaystyle\frac{f(x+\Delta x)−f(x)}{\Delta x}\]</div>
 <p>The derivative <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}\)</span> is also written <span class="math notranslate nohighlight">\(f'(x)\)</span>. The two different notations are known as Newton and Leibniz notation.</p>
 <p>The process of calculating the derivative is called “differentiation”.</p>
-<p>As <span class="math notranslate nohighlight">\(Δx\rightarrow 0\)</span>, both the numerator and denominator of the fraction tend to zero, yet in most cases we will see that their ratio approaches a finite limit.
+<p>As <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span>, both the numerator and denominator of the fraction tend to zero, yet in most cases we will see that their ratio approaches a finite limit.
 What determines the limit is how quickly the numerator approaches zero, relative to the denominator.</p>
-<div class="admonition-questions admonition">
-<p class="admonition-title">Questions</p>
-<ol class="simple">
-<li><p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{3x}{2+2𝑥})\)</span> from first principles (i.e. using the definition of the derivative)</p></li>
-<li><p>Differentiate <span class="math notranslate nohighlight">\(𝑦=x^4−2x^2\)</span> using first principles, and \emph{hence}</p></li>
-</ol>
-<p>(i) Calculate the equation of the tangent to this curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
-<p>(ii) Calculate the equation of the normal to the curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>1.
+Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\Big(\displaystyle\frac{3x}{2+2𝑥}\Big)\)</span> using the limit definition of the derivative.</p>
+<p>2. Differentiate <span class="math notranslate nohighlight">\(𝑦=x^4−2x^2\)</span> using first principles, and hence:</p>
+<p>a. Calculate the equation of the tangent to this curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
+<p>b. Calculate the equation of the normal to the curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Let <span class="math notranslate nohighlight">\(f(x)=3x^2+2x\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}f}{\mathrm{d}x} &amp;= \lim_{\Delta x \to 0}\frac{f(x+ \Delta x)−f(x)}{\Delta x}\\
+&amp;= \lim_{\Delta x \to 0}\frac{(3(x+\Delta x)^2+2(x+\Delta x)−(3x^2+2x))}{\Delta x}\\
+&amp;= \lim_{\Delta x \to 0} \frac{(3x^2+6x\Delta x+3(\Delta x)^2+2x+2\Delta x)−(3x^2+2x)}{\Delta x}\\
+&amp;=\lim_{\Delta x \to 0}(\frac{6x\Delta x+3(\Delta x)^2+2\Delta x}{\Delta x})\\
+&amp;= \lim_{\Delta x \to 0}(6x+2+3\Delta x)=6x+2 \end{split}\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y(x+\Delta x) &amp;=(x+\Delta x)^4−2(x+\Delta x)^2\\
+&amp;= x^4+4x^3\Delta x+6x^2(\Delta x)^2+...[\text{smaller terms}]...)−2(x^2+2x\Delta x+(\Delta x)^2)\\
+y(x+\Delta x)−y(x) &amp;= 4x^3\Delta x+6x^2(\Delta x)^2−4x\Delta x−2(\Delta x)^2+...[\text{smaller terms}]...\\
+\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \lim_{\Delta x \to 0}y(x\Delta x)−y(x)\Delta x))\\
+&amp;= \lim_{\Delta x \to 0}(\Delta x(4x^3−4x)+(\Delta x)2(6x^2−2)+...[\text{smaller terms}]... \Delta x)\\
+&amp;= \lim_{\Delta x \to 0}(4x^3−4x+\Delta x(6x^2−2)+...[\text{smaller terms}])\\
+&amp;=4x^3−4x\end{split}\]</div>
+<p>a. The slope at <span class="math notranslate nohighlight">\(x=3\)</span> is given by putting <span class="math notranslate nohighlight">\(x=3\)</span> into the result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span>.</p>
+<p>We write <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}(x=3) =4(3^3)−4(3)=96 \)</span></p>
+<p>The tangent line passing through the point (3,63) is given by:</p>
+<div class="math notranslate nohighlight">
+\[\frac{y−63}{x−3}=96\]</div>
+<p>hence <span class="math notranslate nohighlight">\(y=96x−225\)</span>.</p>
+<p>b. The normal to the curve at the point satisfies</p>
+<div class="math notranslate nohighlight">
+\[\frac{y−63}{x−3}=−1/96\]</div>
+<p>hence <span class="math notranslate nohighlight">\(y=−(1/96)x+192/96\)</span>.</p>
 </div>
 </div>
 <div class="section" id="derivative-as-a-rate-of-change">
-<h2>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Derivative as a “rate of change”<a class="headerlink" href="#derivative-as-a-rate-of-change" title="Permalink to this headline">¶</a></h2>
 <p>Differentiation can be thought of as a measure of the rate of change of one variable with respect to another. For instance, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> is a measure of how quickly <span class="math notranslate nohighlight">\(y\)</span> changes (instantaneously) as <span class="math notranslate nohighlight">\(x\)</span> changes. Here, we call <span class="math notranslate nohighlight">\(y\)</span> the dependent variable, and we call <span class="math notranslate nohighlight">\(x\)</span> the independent variable.</p>
-<p>In many problems the independent variable is time. For example, consider the case of a simple pendulum shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">pendulum</span></code>, where <span class="math notranslate nohighlight">\(\theta(t)\)</span> measures the anticlockwise angle of the pendulum from the downward vertical as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The pendulum is initially released from rest at a positive angle.</p>
+<p>In many problems the independent variable is time. For example, consider the case of a simple pendulum shown in <a class="reference internal" href="#pendulum"><span class="std std-numref">Fig. 9.5</span></a>, where <span class="math notranslate nohighlight">\(\theta(t)\)</span> measures the anticlockwise angle of the pendulum from the downward vertical as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The pendulum is initially released from rest at a positive angle.</p>
 <div class="figure align-default" id="pendulum">
 <img alt="../_images/pendulum.png" src="../_images/pendulum.png" />
-<p class="caption"><span class="caption-text">A pendulum swing “animation”, the angle of inclination with the downward vertical is denoted by <span class="math notranslate nohighlight">\(\theta\)</span> and is measured in the anti-clockwise direction.  The graph on the right shows the rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</span><a class="headerlink" href="#pendulum" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">A pendulum swing diagram, the angle of inclination with the downward vertical is denoted by <span class="math notranslate nohighlight">\(\theta\)</span> and is measured in the anti-clockwise direction.  The graph on the
+right shows the rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</span><a class="headerlink" href="#pendulum" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>At the maximum height of the swing (amplitude), the pendulum comes to an instantaneous standstill, and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}\theta}{\mathrm{d}t}=0\)</span>.</p></li>
@@ -430,48 +554,41 @@ What determines the limit is how quickly the numerator approaches zero, relative
 </ul>
 </div>
 <div class="section" id="second-and-higher-derivatives">
-<h2>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Second and Higher Derivatives<a class="headerlink" href="#second-and-higher-derivatives" title="Permalink to this headline">¶</a></h2>
 <p>We can differentiate a function repeatedly.  For example, we might differentiate the function <span class="math notranslate nohighlight">\(3x^2+5x^3\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span> twice:</p>
-<p>\begin{equation*}
-\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(3x^2+5x^3))=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(6x+15x^2)=6+30x
-\end{equation*}</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\Big(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(3x^2+5x^3)\Big)=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(6x+15x^2)=6+30x\]</div>
 <p>We call this result the “second derivative” w.r.t. <span class="math notranslate nohighlight">\(x\)</span>. and we write
 <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}(3x^2+5x^3)=6+30x\)</span>.
 In general, the <span class="math notranslate nohighlight">\(n^{th}\)</span> derivative is denoted by <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^n}{\mathrm{d}x^n}\)</span>. We have already seen that the notation <span class="math notranslate nohighlight">\(f'(x)\)</span> can be used to denote the first derivative <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}\)</span>, and this notation can be extended to higher derivatives:</p>
-<p>\begin{equation*}
-f’’(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f’’’(x)=\displaystyle\frac{\mathrm{d}^3}{\mathrm{d}x^3},\quad \text{etc}
-\end{equation*}</p>
+<div class="math notranslate nohighlight">
+\[f''(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}, \quad f'''(x)=\displaystyle\frac{\mathrm{d}^3}{\mathrm{d}x^3},\quad \text{etc}\]</div>
 <p>The dash notation becomes a bit cumbersome for higher derivatives, so we write <span class="math notranslate nohighlight">\(f^{(n)}(x)=\displaystyle\frac{\mathrm{d}^nf}{\mathrm{d}x^n}\)</span>.</p>
 <p>For example, <span class="math notranslate nohighlight">\(f^{(4)}(x)=f''''(x)=\displaystyle\frac{\mathrm{d}^4f}{\mathrm{d}x^4}\)</span></p>
 <p>There are still more ways to write the derivative of a function, and we will introduce some of them in the chapter of the notes about partial derivatives.</p>
-<p>Note on differentiation with respect to time : “Dotty” notation is used for differentiation with respect to time : <span class="math notranslate nohighlight">\( \dot{x}=\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}\)</span> , <span class="math notranslate nohighlight">\(\ddot{x}=\displaystyle\frac{\mathrm{d}^2x}{\mathrm{d}t^2}\)</span>.</p>
-<div class="admonition-questions admonition">
-<p class="admonition-title">Questions</p>
-<p>Questions (might need to read ahead in the notes to answer!):</p>
-<ol class="simple">
-<li><p>Given that <span class="math notranslate nohighlight">\(x(t)=2t\)</span>, calculate <span class="math notranslate nohighlight">\(\ddot{x}\)</span></p></li>
-<li><p>Given that <span class="math notranslate nohighlight">\(y=e^2k\ln(k)\)</span>, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}k^2}\)</span></p></li>
-<li><p>For the unit circle parameterisation <span class="math notranslate nohighlight">\(x=\cos(\theta), y=\sin(\theta)\)</span>, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\)</span> using parametric differentiation.</p></li>
-</ol>
-</div>
+<p><em>Dotty</em> notation is used for differentiation with respect to time:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x}=\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}, \quad \ddot{x}=\displaystyle\frac{\mathrm{d}^2x}{\mathrm{d}t^2}\]</div>
 </div>
 <div class="section" id="stationary-points">
-<h2>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The point (<span class="math notranslate nohighlight">\(x_0,f(x_0))\)</span> is a stationary point of <span class="math notranslate nohighlight">\(f(x)\)</span> if <span class="math notranslate nohighlight">\(f′(x_0)=0\)</span>.</p>
 </div>
-<p>To classify the stationary points, we can look at the slope of the curve either side of them, as illustrated in the table below:</p>
-<br>
+<p>To classify the stationary points, we can look at the slope of the curve at a smaller distance <span class="math notranslate nohighlight">\(\epsilon\)</span> either side of them, as illustrated in the table below:</p>
 <a class="reference internal image-reference" href="../_images/table-1.png" id="table-for-stat-points"><img alt="alternative description" class="align-center" id="table-for-stat-points" src="../_images/table-1.png" style="width: 462.59999999999997px; height: 141.6px;" /></a>
-<br>
+<p>Which we can see graphically:</p>
+<div class="figure align-default" id="stationarypoints">
+<img alt="../_images/StationaryPoints2.png" src="../_images/StationaryPoints2.png" />
+</div>
 <div class="section" id="first-derivative-test">
-<h3>First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permalink to this headline">¶</a></h3>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
-<p>Find and classify the stationary points of <span class="math notranslate nohighlight">\(f(x)=-x^3+9x^2−24x+20\)</span></p>
-<p><strong>Solution</strong>
-<span class="math notranslate nohighlight">\(f'(x)=−3x^2+18x−24=−3(x−2)(x−4)\)</span></p>
+<h3><span class="section-number">9.4.1. </span>First Derivative Test<a class="headerlink" href="#first-derivative-test" title="Permalink to this headline">¶</a></h3>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Find and classify the stationary points of <span class="math notranslate nohighlight">\(f(x)=-x^3+9x^2−24x+20\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f'(x)=−3x^2+18x−24=−3(x−2)(x−4)\]</div>
 <p>The stationary points are at <span class="math notranslate nohighlight">\(x=2,4\)</span></p>
 <p>Check the sign of the gradient:</p>
 <table class="colwidths-auto table">
@@ -497,319 +614,349 @@ f’’(x)=\displaystyle\frac{\mathrm{d}^2}{\mathrm{d}x^2}$, \quad f’’’(x)
 </div>
 </div>
 <div class="section" id="second-derivative-test">
-<h3>Second derivative test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.4.2. </span>Second derivative test<a class="headerlink" href="#second-derivative-test" title="Permalink to this headline">¶</a></h3>
 <p>The second derivative measures the rate of change of the slope, since</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}s}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(s\)</span> measures the slope.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}^2f}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}s}{\mathrm{d}x}\]</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> measures the slope.</p>
 <p>Thus, the second derivative is a measure of concavity.</p>
 <ul class="simple">
-<li><p>When <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}&gt;0\)</span> the slope is increasing : we say that the function is concave upwards. For example, the function <span class="math notranslate nohighlight">\(x^2\)</span> is concave upwards on its entire domain. It’s slope is always increasing: <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2x^2}{\mathrm{d}x^2}=2&gt;0\)</span> <span class="math notranslate nohighlight">\(∀x\)</span></p></li>
-<li><p>When <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}&lt;0\)</span> the slope is decreasing : we say that the function is concave downwards. For example, the function <span class="math notranslate nohighlight">\(−x^2\)</span> is concave downwards on its entire domain. It’s slope is always decreasing.</p></li>
+<li><p>When <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}&gt;0\)</span> the slope is increasing : we say that the function is concave upwards. For example, the
+function <span class="math notranslate nohighlight">\(x^2\)</span> is concave upwards on its entire domain. It’s slope is always increasing: <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2x^2}{\mathrm{d}x^2}=2&gt;0\)</span> <span class="math notranslate nohighlight">\(\forall\, x\)</span></p></li>
+<li><p>When <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}&lt;0\)</span> the slope is decreasing : we say that the function is concave downwards. For example, the
+function <span class="math notranslate nohighlight">\(−x^2\)</span> is concave downwards on its entire domain. It’s slope is always decreasing.</p></li>
 <li><p>When <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2f}{\mathrm{d}x^2}=0\)</span> the slope of the function is not changing (it remains constant)</p></li>
 </ul>
 <p>We can therefore use the second derivative to classify local maxima/minima:</p>
 <p>If the function is concave upwards at a stationary point, it is a local minimum
 If the function is concave downward at a stationary point, it is a local maximum</p>
-<p>A point of inflection is a point where the concavity of a function <span class="math notranslate nohighlight">\(f\)</span> changes sign. Therefore, at a point of inflection, <span class="math notranslate nohighlight">\(f''(x)=0\)</span>. However, it is important to note that <span class="math notranslate nohighlight">\(f''(c)=0\)</span> does guarantee that a point is an inflection, as some concave up/down functions also satisfy this criterion (<span class="math notranslate nohighlight">\(f(x)=\\cosh(x)\)</span> is an example). In this case, further testing using the first derivative test is needed.</p>
+<p>A point of inflection is a point where the concavity of a function <span class="math notranslate nohighlight">\(f\)</span> changes sign. Therefore, at a point of inflection, <span class="math notranslate nohighlight">\(f''(x)=0\)</span>. However, it is important to
+note that <span class="math notranslate nohighlight">\(f''(c)=0\)</span> does guarantee that a point is an inflection, as some concave up/down functions also satisfy this criterion (<span class="math notranslate nohighlight">\(f(x)=\cosh(x)\)</span> is an example). In this
+case, further testing using the first derivative test is needed.</p>
 </div>
 </div>
 <div class="section" id="differentiation-rules">
-<h2>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">¶</a></h2>
-<p><strong>Sum rule</strong></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(u+v)=\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}+\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}\)</span></p>
+<h2><span class="section-number">9.5. </span>Differentiation Rules<a class="headerlink" href="#differentiation-rules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sum-rule">
+<h3><span class="section-number">9.5.1. </span>Sum rule<a class="headerlink" href="#sum-rule" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(u+v)=\frac{\mathrm{d}u}{\mathrm{d}x}+\frac{\mathrm{d}v}{\mathrm{d}x}\]</div>
 <p>This result says that the derivative of a sum is equal to the sum of the derivatives.</p>
 <p>For example, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^5+x^3)=5x^4+3x^2\)</span></p>
-<p><strong>Product rule</strong></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(uv)=u\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}+v\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}\)</span></p>
+</div>
+</div>
+<div class="section" id="product-rule">
+<h3><span class="section-number">9.5.2. </span>Product rule<a class="headerlink" href="#product-rule" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(uv)=u\frac{\mathrm{d}v}{\mathrm{d}x}+v\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
 <p>A special case is when one of the functions is a constant <span class="math notranslate nohighlight">\(k\)</span>. Then, we have</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(kf(x))=k\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}+0.\)</span></p>
 <p>For example, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(3x^5)=15x^4.\)</span></p>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
-<p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))\)</span></p>
-<p><strong>Solution</strong></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))=x^3\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\sin(x))+\sin(x)\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}x^3=x^3\cos(x)+3x^2\sin(x)\)</span></p>
 </div>
-<p><strong>Quotient rule</strong></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{u}{v})=\displaystyle\frac{v\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}−u\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}}{v^2}\)</span></p>
-<p><em>Proof</em> :</p>
-<p>Let <span class="math notranslate nohighlight">\(f(x)=\displaystyle\frac{u(x)}{v(x)}\)</span> and rearrange to give <span class="math notranslate nohighlight">\(u(x)=f(x)v(x)\)</span>. Then differentiate both sides w.r.t. <span class="math notranslate nohighlight">\(x\)</span>, applying the product rule to calculate the result on the right. Rearrange your answer to obtain <span class="math notranslate nohighlight">\(f'(x)\)</span> entirely in terms of <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> and their derivatives.</p>
-<p><span class="math notranslate nohighlight">\(u=fv\)</span> gives <span class="math notranslate nohighlight">\(u'=fv'+vf'\)</span></p>
-<p>and rearranging gives <span class="math notranslate nohighlight">\(f'=\displaystyle\frac{u'−fv'}{v}\)</span></p>
-<p>We can substitute <span class="math notranslate nohighlight">\(f=u/v\)</span> to obtain the final result:</p>
-<p><span class="math notranslate nohighlight">\(f'=\displaystyle\frac{u'−\displaystyle\frac{u}{v}v′}{v}=\displaystyle\frac{u'v-uv'}{v^2}\)</span></p>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(x^3\sin(x))=x^3\frac{\mathrm{d}}{\mathrm{d}x}(\sin(x))+\sin(x)\frac{\mathrm{d}}{\mathrm{d}x}x^3=x^3\cos(x)+3x^2\sin(x)\]</div>
+</div>
+</div>
+<div class="section" id="quotient-rule">
+<h3><span class="section-number">9.5.3. </span>Quotient rule<a class="headerlink" href="#quotient-rule" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(\frac{u}{v})=\frac{v\frac{\mathrm{d}u}{\mathrm{d}x}−u\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}}{v^2}\]</div>
+<p>To prove this, let <span class="math notranslate nohighlight">\(f(x)=\displaystyle\frac{u(x)}{v(x)}\)</span> and rearrange to give <span class="math notranslate nohighlight">\(u(x)=f(x)v(x)\)</span>.</p>
+<p>Then differentiate both sides w.r.t. <span class="math notranslate nohighlight">\(x\)</span>, applying the product rule to calculate the result on the right.</p>
+<p>Rearrange your answer to obtain <span class="math notranslate nohighlight">\(f'(x)\)</span> entirely in terms of <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> and their derivatives, <span class="math notranslate nohighlight">\(u=fv\)</span> gives <span class="math notranslate nohighlight">\(u'=fv'+vf'\)</span></p>
+<p>and rearranging gives <span class="math notranslate nohighlight">\(f'=\displaystyle\frac{u'−fv'}{v}\)</span>.</p>
+<p>We can substitute in <span class="math notranslate nohighlight">\(f=u/v\)</span> to obtain the final result:</p>
+<div class="math notranslate nohighlight">
+\[f'=\frac{u'−\displaystyle\frac{u}{v}v′}{v}=\frac{u'v-uv'}{v^2}\]</div>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
 <p>Use the quotient rule to obtain the result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\tan(x)\)</span></p>
-<p><strong>Solution</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(u=\sin(x)\)</span>, <span class="math notranslate nohighlight">\(v=\cos(x)\)</span>. Then, by the quotient rule,</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}}(\displaystyle\frac{𝑢}{𝑣})=\displaystyle\frac{v\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}−u\displaystyle\frac{\mathrm{d}v}{\mathrm{d}x}}{v^2}=\displaystyle\frac{cos^2(x)+\sin^2(x)}{cos^2(x)}=\displaystyle\frac{1}{cos^2(x)}=sec^2(x)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}}(\frac{𝑢}{𝑣})=\frac{v\frac{\mathrm{d}u}{\mathrm{d}x}−u\frac{\mathrm{d}v}{\mathrm{d}x}}{v^2}
+=\frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)}=\frac{1}{\cos^2(x)}=\sec^2(x)\]</div>
 </div>
-<ol class="simple">
-<li><p><strong>Chain rule</strong></p></li>
-</ol>
+</div>
+<div class="section" id="chain-rule">
+<h3><span class="section-number">9.5.4. </span>Chain rule<a class="headerlink" href="#chain-rule" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition</p>
+<p>The chain rule is defined if two functions <span class="math notranslate nohighlight">\(f=f(g)\)</span> and <span class="math notranslate nohighlight">\(g=g(x)\)</span> are both differentiable then&#64;</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}f}{\mathrm{d}x}=\frac{\mathrm{d}f}{\mathrm{d}g}\displaystyle\frac{\mathrm{d}g}{\mathrm{d}x}\]</div>
+<p>An important special case can be deduced by noting that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}f}=1\)</span>, which gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}f}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}f}=1\]</div>
+<p>This result can be motivated by noting that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{\Delta x \rightarrow 0}\frac{\Delta f}{\Delta x} = \lim_{\Delta x \rightarrow 0}\frac{\Delta f}{\Delta g}\frac{\Delta g}{\Delta x}\]</div>
+<p>We have to take great care when treating derivatives like fractions involving finite quantities - the anticipated results do not always hold true, as we will see
+when we study partial differentiation.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
 <p>Suppose that we wish to differentiate the following function w.r.t. <span class="math notranslate nohighlight">\(x\)</span> :</p>
-<p><span class="math notranslate nohighlight">\(f=\sin^2(x)+\displaystyle\frac{1}{\sin(x)}\)</span>
-We know how to differentiate <span class="math notranslate nohighlight">\(\sin(x)\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span> and we know how to differentiate <span class="math notranslate nohighlight">\(g^2+\displaystyle\frac{1}{g}\)</span> w.r.t. <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[f=\sin^2(x)+\displaystyle\frac{1}{\sin(x)}\]</div>
+<p>We know how to differentiate <span class="math notranslate nohighlight">\(\sin(x)\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span> and we know how to differentiate <span class="math notranslate nohighlight">\(g^2+\displaystyle\frac{1}{g}\)</span> w.r.t. <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <p>This motivates us to introduce the change of variables <span class="math notranslate nohighlight">\(g=\sin(x)\)</span> so that we may write <span class="math notranslate nohighlight">\(f=g^2+\displaystyle\frac{1}{g}\)</span>.</p>
-<p>Then, we have the results :</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}g}=2g−1g\)</span>	(rate of change of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(g\)</span>)</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}g}{\mathrm{d}x}=\cos(x)\)</span>	(rate of change of <span class="math notranslate nohighlight">\(g\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span>)
-Intuitively, we hope to combine these two results to find the rate of change of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>The result can be anticipate by noting that <span class="math notranslate nohighlight">\(\displaystyle\frac{Δf}{Δx}=\displaystyle\frac{Δf}{Δg}\displaystyle\frac{Δg}{Δx}\)</span></p>
-<p><em>You should take great care when treating derivatives like fractions involving finite quantities… the results do not always hold true, as we will see when we study partial differentiation. However, in this case our case can be proven to be correct. The anticipated result is shown in the box below.</em></p>
-<div class="admonition-the-chain-rule admonition">
-<p class="admonition-title">The chain rule</p>
-<p>If <span class="math notranslate nohighlight">\(f=f(g)\)</span> and <span class="math notranslate nohighlight">\(g=g(x)\)</span> are both differentiable then</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}f}{\mathrm{d}g}\displaystyle\frac{\mathrm{d}g}{\mathrm{d}x}\)</span></p>
+<p>Then, we have the results:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}f}{\mathrm{d}g} &amp;= 2g−1g \\
+\frac{\mathrm{d}g}{\mathrm{d}x} &amp;= \cos(x)\end{split}\]</div>
+<p>Intuitively, we hope to combine these two results to find the rate of change of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>The chain rules gives</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}f}{\mathrm{d}g} = \Big(2g − \frac{1}{g^2}\Big) \cos(x)\]</div>
+<p>where <span class="math notranslate nohighlight">\(g = \sin(x)\)</span>. Writing the expression fully in terms of <span class="math notranslate nohighlight">\(x\)</span> provides the answer:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}f}{\mathrm{d}g} = \Bigg(2\sin(x) − \frac{1}{\sin^2(x)}\Bigg) \cos(x)\]</div>
 </div>
-<p>An important special case can be deduced by noting that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}f}=1\)</span></p>
-<p>This gives</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}x}{\mathrm{d}f}=1\)</span></p>
-<p>For example, the chain rules gives <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=(2g−\displaystyle\frac{1}{g^2})\cos(x)\)</span></p>
-<p>where <span class="math notranslate nohighlight">\(g=\sin(x)\)</span></p>
-<p>Writing the expression fully in terms of 𝑥 provides the final answer :</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=(2\sin(x)−\displaystyle\frac{1}{\sin^2(x)})\cos(x)\)</span></p>
-<div class="admonition-questions admonition">
-<p class="admonition-title">Questions</p>
-<ol>
-<li><p>Use the chain rule with <span class="math notranslate nohighlight">\(f=e−x\)</span>, <span class="math notranslate nohighlight">\(g=−x\)</span> to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e−x)\)</span></p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<p>1. Use the chain rule with <span class="math notranslate nohighlight">\(f=e^{−x}\)</span>, <span class="math notranslate nohighlight">\(g=−x\)</span> to calculate:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x})\]</div>
 <p>Hence, calculate the derivatives of <span class="math notranslate nohighlight">\(\sinh(x)\)</span> and <span class="math notranslate nohighlight">\(\cosh(x)\)</span></p>
-</li>
-<li><p>Given that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\ln(t)=\displaystyle\frac{1}{t}\)</span>, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\sin(\ln(t))\)</span></p></li>
-<li><p>Decide what substitution could be used to differentiate the following functions:</p>
-<p>(a) <span class="math notranslate nohighlight">\(y=\sin(2x−1)\)</span> w.r.t <span class="math notranslate nohighlight">\(x\)</span></p>
-<p>(b) <span class="math notranslate nohighlight">\(y=(3−x^2)^4\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span></p>
-</li>
-<li><p>The chain rule can be applied repeatedly. Differentiate the following complicated functions w.r.t. <span class="math notranslate nohighlight">\(x\)</span></p>
-<p>(a.) <span class="math notranslate nohighlight">\(y=\ln(\cos(2x−1))\)</span></p>
-<p>(b.) <span class="math notranslate nohighlight">\(y=\ln(\ln(\ln(\ln(x))))\)</span></p>
-<p>(c.) <span class="math notranslate nohighlight">\(y=\ln(\sin(u))\)</span> w.r.t. <span class="math notranslate nohighlight">\(u\)</span></p>
-</li>
-</ol>
+<p>2. Given that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\ln(t)=\displaystyle\frac{1}{t}\)</span>, calculate:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}t}\sin(\ln(t))\]</div>
+<p>3. Decide what substitution could be used to differentiate the following functions:</p>
+<p>a. <span class="math notranslate nohighlight">\(y=\sin(2x−1)\)</span> w.r.t <span class="math notranslate nohighlight">\(x\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(y=(3−x^2)^4\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span></p>
+<p>4. The chain rule can be applied repeatedly - use it to differentiate the following complicated functions w.r.t. <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<p>a. <span class="math notranslate nohighlight">\(y=\ln(\cos(2x−1))\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(y=\ln(\ln(\ln(\ln(x))))\)</span></p>
+<p>c. <span class="math notranslate nohighlight">\(y=\ln(\sin(x^2))\)</span></p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x}) = \frac{\mathrm{d}}{\mathrm{d}g}e^g\]</div>
+<p>where <span class="math notranslate nohighlight">\(g=−x\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x})=−e^g=−e^{−x}\]</div>
+<p>Therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\sinh(x) &amp;= \frac{\mathrm{d}}{\mathrm{d}x}(\frac{1}{2}(e^x-e^{−x}))=\frac{1}{2}(e^x+e^{−x})=\cosh(x)\\
+\frac{\mathrm{d}}{\mathrm{d}x}\cosh(x) &amp;= \frac{\mathrm{d}}{\mathrm{d}x}(\frac{1}{2}(e^x+e^{−x}))=\frac{1}{2}(e^x-e^{−x})=\sinh(x)\end{split}\]</div>
+<p>2.
+Let <span class="math notranslate nohighlight">\(x=\ln(t)\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}t}\sin(\ln(t))=\frac{\mathrm{d}(\sin(x))}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}t}
+=\cos(x)\displaystyle\frac{1}{t}=\frac{\cos(\ln(t))}{t}\]</div>
+<p>3.
+a. Put <span class="math notranslate nohighlight">\(u=2x−1\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\frac{\mathrm{d}u}{\mathrm{d}x}=2\cos(u)=2\cos(2x−1)\]</div>
+<p>b. Put <span class="math notranslate nohighlight">\(u=3−x^2\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\frac{\mathrm{d}u}{\mathrm{d}x}=(4u^3)(−2𝑥)=−8x(3−x^2)^3=8x(x^2−3)^3\]</div>
+<p>c. Put <span class="math notranslate nohighlight">\(x=\sin(u)\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\frac{\mathrm{d}u}{\mathrm{d}x}=\frac{1}{x}\cos(u)=\frac{\cos(u)}{\sin(u)}=\cot(u)\]</div>
+<p>4.<br />
+a.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x}&amp;=\frac{\mathrm{d}\ln(\cos(2x−1))}{\mathrm{d}\cos(2x−1)}\frac{\mathrm{d}(2x−1)}{\mathrm{d}x}\\
+&amp;=−2\frac{\sin(2x−1)}{\cos(2x−1)}=−2\tan(2x−1)\end{split}\]</div>
+<p>b.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{1}{\ln(\ln(\ln(x)))}\frac{1}{\ln(\ln(x))}\frac{1}{\ln(x)}\frac{1}{x}\]</div>
+<p>c.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2x\,\cos(x^2)}{\sin(x^2)}\]</div>
+</div>
 </div>
 </div>
 <div class="section" id="parametric-differentiation">
-<h2>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">¶</a></h2>
-<p>We can express the equation of a circle in the form <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>. This is known as a parametric representation. By varying the parameter <span class="math notranslate nohighlight">\(t\)</span>, the entire circle is mapped out.</p>
-<p>In principle, any curve can be parameterised in terms of a single parameter, regardless of the number of coordinates. To describe a surface, two parameters are required. For example, the surface of a sphere can be described by varying two parameters such as the latitude and longitude.</p>
-<p>According to the chain rule, we can write</p>
+<h2><span class="section-number">9.6. </span>Parametric Differentiation<a class="headerlink" href="#parametric-differentiation" title="Permalink to this headline">¶</a></h2>
+<p>We can express the equation of a circle in the form <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>. This is known as a parametric representation. By varying the parameter <span class="math notranslate nohighlight">\(t\)</span>, the
+entire circle is mapped out.  In principle, any curve can be parameterised in terms of a single parameter, regardless of the number of coordinates. To describe a
+surface, two parameters are required. For example, the surface of a sphere can be described by varying two parameters such as the latitude and longitude.</p>
+<p>According to the chain rule, we can write:</p>
 <div class="math notranslate nohighlight" id="equation-parametric">
-<span class="eqno">()<a class="headerlink" href="#equation-parametric" title="Permalink to this equation">¶</a></span>\[\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}\displaystyle\frac{\mathrm{d}t}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}\]</div>
-<p>So, we obtain a result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> in terms of the rate of change of each variable w.r.t. parameter <span class="math notranslate nohighlight">\(t\)</span>. This result is known as parametric differentiation. The result is obtained fully in terms of the parameter.</p>
-<div class="tip admonition">
-<p class="admonition-title">Example</p>
-<p>For the unit circle parameterisation, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> using parametric differentiation. Verify your answer by using implicit differentiation using the equation relating <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p><strong>Solution</strong></p>
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-parametric" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}t}\displaystyle\frac{\mathrm{d}t}{\mathrm{d}x}=
+\frac{\mathrm{d}y}{\mathrm{d}t}\Bigg/ \frac{\mathrm{d}x}{\mathrm{d}t}\]</div>
+<p>So, we obtain a result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> in terms of the rate of change of each variable w.r.t. parameter <span class="math notranslate nohighlight">\(t\)</span>. This result is known as
+parametric differentiation. The result is obtained fully in terms of the parameter.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>For the unit circle parameterisation, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> using parametric differentiation.</p>
+<p>Verify your answer by using implicit differentiation using the equation relating <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>For <span class="math notranslate nohighlight">\(x=\cos(t)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(t)\)</span>,</p>
 <p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=−\sin(t)\)</span>, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\cos(t)\)</span></p>
 <p>So, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=−\cot(t)\)</span></p>
 <p>In this case it is straightforward to write the result in terms of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=−\displaystyle\frac{x}{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=−\frac{x}{y}\]</div>
 <p>The equation relating <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> is <span class="math notranslate nohighlight">\(x^2+y^2=1\)</span></p>
-<p>Differentiating throughout w.r.t. <span class="math notranslate nohighlight">\(x\)</span> we obtain</p>
-<p><span class="math notranslate nohighlight">\(2x+2y\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=0\)</span></p>
+<p>Differentiating throughout w.r.t. <span class="math notranslate nohighlight">\(x\)</span> we obtain:</p>
+<div class="math notranslate nohighlight">
+\[2x+2y\frac{\mathrm{d}y}{\mathrm{d}x}=0\]</div>
 <p>and rearranging provides again the result <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=-\displaystyle\frac{x}{y}\)</span></p>
 </div>
 </div>
 <div class="section" id="derivatives-of-inverse-functions">
-<h2>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
-<p>In this scenario we wish to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(f^{-1}(x)\)</span> and we know how to differentiate function <span class="math notranslate nohighlight">\(f\)</span>.</p>
-<p>For example, to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)\)</span> we let <span class="math notranslate nohighlight">\(y=\ln(x)\)</span> so that <span class="math notranslate nohighlight">\(x=e^y\)</span></p>
-<p>We know that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y\)</span> and then by using the special case of the chain rule we obtain the result :</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=1/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{1}{e^y}\)</span></p>
-<p>This is not an acceptable result because the derivative has been given in terms of the dependent variable.
-We need to rewrite in terms of the independent variable <span class="math notranslate nohighlight">\(x\)</span>.
-For some problems of this type, it can be quite difficult, but here is is easy since <span class="math notranslate nohighlight">\(e^y=x\)</span>.
-The final result is <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)=\displaystyle\frac{1}{x}\)</span>, and this is another result that you need to remember.</p>
-<div class="admonition-questions admonition">
-<p class="admonition-title">Questions</p>
-<ol>
-<li><p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)\)</span></p>
+<h2><span class="section-number">9.7. </span>Derivatives of Inverse Functions<a class="headerlink" href="#derivatives-of-inverse-functions" title="Permalink to this headline">¶</a></h2>
+<p>In this scenario we wish to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span> where <span class="math notranslate nohighlight">\(y = f^{-1}(x)\)</span> and we know how to differentiate function <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(x)\)</span></p>
+<p>We let <span class="math notranslate nohighlight">\(y=\ln(x)\)</span> such that <span class="math notranslate nohighlight">\(x=e^y\)</span>, this means that <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y\)</span> and by the chain rule:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=1\Big/\frac{\mathrm{d}x}{\mathrm{d}y}=\frac{1}{e^y} = e^{-y}\]</div>
+<p>This is not an acceptable result because the derivative has been given in terms of the dependent variable - we need to rewrite in terms of the independent variable <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>For some problems of this type, it can be quite difficult, but here is is easy since <span class="math notranslate nohighlight">\(e^y=x\)</span>.</p>
+<p>Thus the final result is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\Big(\ln(x)\Big)=\frac{1}{x}\]</div>
+<p>another important (and familar) result.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice Questions</p>
+<ol class="simple">
+<li><p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)\)</span>, given the function looks like:</p></li>
+</ol>
 <p><img alt="arcsin" src="../_images/arcsin.png" /></p>
-</li>
-<li><p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)\)</span></p></li>
+<ol class="simple">
+<li><p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)\)</span>, given the function looks like:</p></li>
 </ol>
 <p><img alt="arccosh" src="../_images/arccosh.png" /></p>
 </div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Let <span class="math notranslate nohighlight">\(y=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)\)</span>. Then <span class="math notranslate nohighlight">\(x=\sin(y)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=1\Big/\frac{\mathrm{d}x}{\mathrm{d}y}=\frac{1}{\cos(y)}=\frac{1}{\pm\sqrt{1-\sin^2(y)}}
+=\pm\frac{1}{\sqrt{1-x^2}}\]</div>
+<p>To choose the correct sign <span class="math notranslate nohighlight">\(\pm\)</span> we can look at the graph of <span class="math notranslate nohighlight">\(\arcsin(x)\)</span> on the domain <span class="math notranslate nohighlight">\([−1,\,1]\)</span>.  The graph is monotonic increasing (always increasing)
+and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}&gt;0 \forall\, x \in [−1,\, 1]\)</span>.    We therefore choose the positive root, which gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)=\frac{1}{\sqrt{1−x^2}}\]</div>
+<p>Notice that at <span class="math notranslate nohighlight">\(x = \pm 1\)</span> the slope of the curve is infinite (the curve is parallel to the y-axis).  These points are stationary points w.r.t <span class="math notranslate nohighlight">\(y\)</span>,
+since <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=0\)</span>.  There are no points where the curve is parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
+<p>2. Let <span class="math notranslate nohighlight">\(𝑦=\mathrm{arccosh(y)}\)</span>. Then <span class="math notranslate nohighlight">\(𝑡=\cosh(y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}t}{\mathrm{d}y}=1\Big/\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{1}{\sinh(y)}=\frac{1}{\pm \sqrt{\cosh^2(y)−1}}
+=\pm \frac{1}{\sqrt{t^2−1}}\]</div>
+<p>Recall that for the function <span class="math notranslate nohighlight">\(\mathrm{arccosh}\)</span> we select the positive branch. On this branch the function is monotonic increasing, so we again select the
+positive square root.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{\arccosh}(t)=\frac{1}{\sqrt{t^2−1}}\]</div>
+</div>
 </div>
 <div class="section" id="implicit-differentiation">
-<h2>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.8. </span>Implicit Differentiation<a class="headerlink" href="#implicit-differentiation" title="Permalink to this headline">¶</a></h2>
 <p>Up to now, we have been calculating the derivatives of functions given explicitly in terms of the dependent variable in the manner <span class="math notranslate nohighlight">\(y=y(x)\)</span>.
 However, there are many occasions where we want to calculate the derivative of a function <span class="math notranslate nohighlight">\(y\)</span> that is implicitly related to the dependent variable <span class="math notranslate nohighlight">\(x\)</span> in the manner <span class="math notranslate nohighlight">\(f(x,y)=0\)</span>.</p>
 <p>In that case, we differentiate the entire expression with respect to the independent variable and apply the chain rule to differentiate terms involving the dependent variable.</p>
-<p>By way of example, we will calculate the result <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}xn\)</span> for <span class="math notranslate nohighlight">\(n∈\mathbf{R}\)</span>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked Example</p>
+<p>Lets calculate the result <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\Big(x^n\Big)\)</span> for <span class="math notranslate nohighlight">\(n \in \mathbb{R}\)</span>.</p>
 <p>As usual, we let <span class="math notranslate nohighlight">\(y=x^n\)</span> and then we rearrange to a convenient form.</p>
-<p>In this case we take the natural logarithm of both sides: <span class="math notranslate nohighlight">\(\ln(y)=n\ln(x)\)</span></p>
-<p>The, we differentiate the whole expression w.r.t. <span class="math notranslate nohighlight">\(x\)</span></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(y)=\displaystyle\frac{n}{x}\)</span></p>
-<p>We apply the chain rule to the left-hand-side: <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\ln(y)=\displaystyle\frac{\mathrm{d}}{\mathrm{d}y}\ln(y)\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{1}{y}\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span></p>
-<p>Combining the two results and rearranging gives</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=n\displaystyle\frac{y}{x}\)</span></p>
-<p>and finally, rewriting all in terms of <span class="math notranslate nohighlight">\(x\)</span> gives</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=n\displaystyle\frac{x^n}{x}=nx^{n-1}\)</span></p>
-<div class="admonition-questions admonition">
-<p class="admonition-title">Questions</p>
-<ol>
-<li><p>Use implicit differentiation to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}\)</span> where <span class="math notranslate nohighlight">\(e^y+e^x=ye^y\)</span></p>
-<p>Give your answer in terms of the dependent variable <span class="math notranslate nohighlight">\(y\)</span></p>
-</li>
-<li><p>Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}a}{\mathrm{d}b}\)</span> where <span class="math notranslate nohighlight">\(a=4^b\)</span> and <span class="math notranslate nohighlight">\(a&gt;0\)</span>, giving your answer in terms of <span class="math notranslate nohighlight">\(b\)</span></p></li>
-<li><p>Find the equation of the tangent ot the curve <span class="math notranslate nohighlight">\(x^2+(y-x)^3=9\)</span> passing through (1,3).</p></li>
-<li><p>Use implicit differentiation to find the derivative of <span class="math notranslate nohighlight">\(y=\arcsin(x)\)</span></p></li>
-</ol>
+<p>In this case we take the natural logarithm of both sides, <span class="math notranslate nohighlight">\(\ln(y)=n\ln(x)\)</span></p>
+<p>Then we differentiate the whole expression w.r.t. <span class="math notranslate nohighlight">\(x\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}}{\mathrm{d}x}\ln(y)=\frac{n}{x}\]</div>
+<p>We apply the chain rule to the left-hand-side:</p>
+<p>Combining the two results and rearranging gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=n\frac{y}{x}\]</div>
+<p>and finally, rewriting all in terms of <span class="math notranslate nohighlight">\(x\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=n\frac{x^n}{x}=nx^{n-1}\]</div>
 </div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Use implicit differentiation to calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}\)</span> where <span class="math notranslate nohighlight">\(e^y+e^x=ye^y\)</span>, giving your answer in terms of the dependent variable <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>2. Calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}a}{\mathrm{d}b}\)</span> where <span class="math notranslate nohighlight">\(a=4^b\)</span> and <span class="math notranslate nohighlight">\(a&gt;0\)</span>, giving your answer in terms of <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p>3. Find the equation of the tangent to the curve <span class="math notranslate nohighlight">\(x^2+(y-x)^3=9\)</span> passing through (1,3).</p>
+<p>4. Use implicit differentiation to find the derivative of <span class="math notranslate nohighlight">\(y=\arcsin(x)\)</span>.</p>
 </div>
-<div class="section" id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
-<p><strong>Problems for Motivation and Principle Arguments</strong></p>
-<ol>
-<li><p>Let <span class="math notranslate nohighlight">\(f(x)=3x^2+2x\)</span></p>
-<p>Then, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}f}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}(f(x+Δx)−f(x)Δx)=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{(3(x+Δx)^2+2(x+Δx)−(3x^2+2x))}{Δx})\)</span></p>
-<p><span class="math notranslate nohighlight">\(=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{(3x^2+6xΔx+3(Δx)^2+2x+2Δx)−(3x^2+2x)}{Δx})=\displaystyle \lim_{Δx \to 0}(\displaystyle\frac{6xΔx+3(Δx)^2+2Δx}{Δx}) \)</span></p>
-<p><span class="math notranslate nohighlight">\(=\displaystyle \lim_{Δx \to 0}(6x+2+3Δx)=6x+2 \)</span><br />
-<br></p>
-</li>
-<li><p>For “small” <span class="math notranslate nohighlight">\(Δx\)</span>,</p>
-<p><span class="math notranslate nohighlight">\(y(x+Δx)=(x+Δx)^4−2(x+Δx)^2\)</span></p>
-<p><span class="math notranslate nohighlight">\(=x^4+4x^3Δx+6x^2(Δx)^2+...[\text{smaller terms}]...)−2(x^2+2xΔx+(Δx)^2)\)</span></p>
-<p><span class="math notranslate nohighlight">\(y(x+Δx)−y(x)=4x^3Δx+6x^2(Δx)^2−4xΔx−2(Δx)^2+...[\text{smaller terms}]...\)</span></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle \lim_{Δx \to 0}y(xΔx)−y(x)Δx))=\displaystyle \lim_{Δx \to 0}(Δx(4x^3−4x)+(Δx)2(6x^2−2)+...[\text{smaller terms}]... Δx)\)</span></p>
-<p><span class="math notranslate nohighlight">\(=\displaystyle \lim_{Δx \to 0}(4x^3−4x+Δx(6x^2−2)+...[\text{smaller terms}])=4x^3−4x\)</span>
-<br><br></p>
-<p>(i) The slope at <span class="math notranslate nohighlight">\(x=3\)</span> is given by putting <span class="math notranslate nohighlight">\(x=3\)</span> into the result for <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span>.</p>
-<p>We write <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}(x=3) =4(3^3)−4(3)=96 \)</span></p>
-<p>The tangent line passing through the point (3,63) is given by the equation <span class="math notranslate nohighlight">\(\displaystyle\frac{y−63}{x−3}=96\)</span>.
-That is, <span class="math notranslate nohighlight">\(y=96x−225\)</span>
-<br><br></p>
-<p>(ii) The normal to the curve at the point satisfies
-<span class="math notranslate nohighlight">\(\displaystyle\frac{y−63}{x−3}=−1/96\)</span>
-That is, <span class="math notranslate nohighlight">\(y=−(1/96)x+192/96\)</span></p>
-</li>
-</ol>
-<br>
-<p><strong>Problems for Second and Higher Derivatives</strong></p>
-<ol>
-<li><p>Rearrange: <span class="math notranslate nohighlight">\(\ln(x)=t\ln(2)\)</span></p>
-<p>Differentiate the expression w.r.t. <span class="math notranslate nohighlight">\(t\)</span></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{1}{x}\dot{x}=\ln(2)\)</span></p>
-<p>You could write this all in terms of 𝑡 before continuing, but here I’ll just go right ahead and differentiate again w.r.t. <span class="math notranslate nohighlight">\(t\)</span></p>
-<p><span class="math notranslate nohighlight">\(−\displaystyle\frac{1}{x^2}\dot{x}\dot{x}+\displaystyle\frac{1}{x}\ddot{x}=0\)</span></p>
-<p>Rearrange and write in terms of <span class="math notranslate nohighlight">\(t\)</span> :</p>
-<p><span class="math notranslate nohighlight">\(\ddot{x}=\displaystyle\frac{1}{x}\dot{x}\dot{x}=\ln(2)^22^t\)</span>
-<br><br></p>
-</li>
-<li><p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}k^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(\ln(k))+\ln(k)\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}))=\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}(2\ln(k)+\displaystyle\frac{1}{k}))\)</span></p>
-<p><span class="math notranslate nohighlight">\(=e^{2k}\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(2\ln(k)+\displaystyle\frac{1}{k})+(2\ln(k)+\displaystyle\frac{1}{k})\displaystyle\frac{\mathrm{d}}{\mathrm{d}k}(2^{2k})=e^{2k}(−\displaystyle\frac{1}{k^2}+\displaystyle\frac{4}{k}+4\ln(k))\)</span>
-<br><br></p>
-</li>
-<li><p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=−\sin(t)\)</span>, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\cos(t)\)</span></p>
-<p>So <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=−\cot(x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x})/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=\displaystyle\frac{\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}(−\cot(t))}{\sin(t)}=\displaystyle\frac{−\sin^2(t)−\cos^2(t)}{\sin(t)}\displaystyle\frac{1}{\sin(t)}=−\mathrm{cosec}^3(t)\)</span></p>
-<p>Or, written in terms of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=−\displaystyle\frac{1}{y^3}\)</span></p>
-<p>Check by implicit differentiation:</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(−xy)=\displaystyle\frac{−1}{y}+\displaystyle\frac{x}{y^2}\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span></p>
-<p><span class="math notranslate nohighlight">\(=\displaystyle\frac{−1}{y}+\displaystyle\frac{x}{y^2}(−\displaystyle\frac{x}{y})=\displaystyle\frac{−1}{y^3}(y^2+x^2)=−\displaystyle\frac{1}{y^3}\)</span></p>
-</li>
-</ol>
-<br>
-<p><strong>Problems for Stationary Points</strong></p>
-<ol>
-<li><p>Let <span class="math notranslate nohighlight">\(f(x)=x^3−9x^2+24x+1\)</span>
-Then <span class="math notranslate nohighlight">\(f'(x)=3x^2−18x+24=3(x^2−6x+8)=3(x−2)(x−4)\)</span></p>
-<p><span class="math notranslate nohighlight">\(f'(2)=f'(4)=0\)</span> so the stationary points are (2,21) and (4,17)</p>
-<p>To classify these points we calculate <span class="math notranslate nohighlight">\(f''(x)=6x−18=6(x−3)\)</span></p>
-<p><span class="math notranslate nohighlight">\(f''(2)&gt;0\)</span> so this point is a local maximum</p>
-<p><span class="math notranslate nohighlight">\(f''(4)&gt;0\)</span> so this point is a local minimum
-<br><br></p>
-</li>
-<li><p><span class="math notranslate nohighlight">\(f'(x)=4x^3−24x^2+48x−32\)</span></p>
-<p><span class="math notranslate nohighlight">\(f'(2)=32−96+96−32=0\)</span> so the function has a stationary point at <span class="math notranslate nohighlight">\(x=2\)</span></p>
-<p><span class="math notranslate nohighlight">\(f''(x)=12x^2−48x+48\)</span></p>
-<p><span class="math notranslate nohighlight">\(f''(2)=48−96+48=0\)</span></p>
-<p>This result doesn’t tell us anything about the stationary point!
-(it could be a local maximum/minimum or a point of inflection)</p>
-<p>To classify the point, we could use the first derivative test for <span class="math notranslate nohighlight">\(f'(2−𝜖)\)</span>, <span class="math notranslate nohighlight">\(f'(2+𝜖)\)</span></p>
-<p>Alternatively, we could look at the concavity:
-<span class="math notranslate nohighlight">\(f''(x)=12(x^2−4x+4)=12(x−2)2\geq0\)</span> <span class="math notranslate nohighlight">\(∀x\)</span></p>
-<p>The function is concave upwards either side of the stationary point, so it is a minimum.</p>
-</li>
-</ol>
-<br>
-<p><strong>Problems for Differentiation Rules</strong></p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x}) =\displaystyle\frac{\mathrm{d}}{\mathrm{d}g}e^g\)</span> where <span class="math notranslate nohighlight">\(g=−x\)</span>
-gives <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(e^{−x})=−e^g=−e^{−x}\)</span>
-Therefore,
-<span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}}\sinh(x)=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{1}{2}(e^x-e^{−x}))=\displaystyle\frac{1}{2}(e^x+e^{−x})=\cosh(x)\)</span>
-<span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}(\displaystyle\frac{1}{2}(e^x+e^{−x}))=\frac{1}{2}(e^x−e^{−x})=\sinh(x)\)</span>
-<br><br></p></li>
-<li><p>Let <span class="math notranslate nohighlight">\(x=\ln(t)\)</span>
-Then <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\sin(\ln(t))=\displaystyle\frac{\mathrm{d}(\sin(x))}{\mathrm{d}x}\displaystyle\frac{\mathrm{d}x}{\mathrm{d}t}=\cos(x)\displaystyle\frac{1}{t}=\displaystyle\frac{\cos(\ln(t))}{t}\)</span>
-<br><br></p></li>
-<li><p>(a.) Put <span class="math notranslate nohighlight">\(u=2x−1\)</span>.
-Then <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=2\cos(u)=2\cos(2x−1)\)</span>
-<br>
-(b.) Put <span class="math notranslate nohighlight">\(u=3−x^2\)</span>
-Then <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=(4u^3)(−2𝑥)=−8x(3−x^2)^3=8x(x^2−3)^3\)</span>
-<br>
-(c.) Put <span class="math notranslate nohighlight">\(x=\sin(u)\)</span>
-Then <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}y}{\mathrm{d}u}\displaystyle\frac{\mathrm{d}u}{\mathrm{d}x}=\displaystyle\frac{1}{x}\cos(u)=\displaystyle\frac{\cos(u)}{\sin(u)}=\cot(u)\)</span>
-<br><br></p></li>
-<li><p>(a) <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{\mathrm{d}\ln(\cos(2x−1))}{\mathrm{d}\cos(2x−1)}\displaystyle\frac{\mathrm{d}(2x−1)}{\mathrm{d}x}\)</span>
-<span class="math notranslate nohighlight">\(=−2\displaystyle\frac{\sin(2x−1)}{\cos(2x−1)}=−2\tan(2x−1)\)</span>
-<br>
-(b) <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{1}{\ln(\ln(\ln(x)))}\displaystyle\frac{1}{\ln(\ln(x))}\displaystyle\frac{1}{\ln(x)}\displaystyle\frac{1}{x}\)</span>
-<br></p></li>
-</ol>
-<p><strong>Problems for Parametric Differentiation</strong></p>
-<ol>
-<li><p>Let <span class="math notranslate nohighlight">\(y=\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)\)</span>. Then <span class="math notranslate nohighlight">\(x=\sin(y)\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=1/\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{1}{\cos(y)}=\displaystyle\frac{1}{\pm\sqrt{1-\sin^2(y)}}=\pm\displaystyle\frac{1}{\sqrt{1-x^2}}\)</span></p>
-<p>To choose the correct sign \pm we can look at the graph of <span class="math notranslate nohighlight">\(\arcsin(x)\)</span> on the domain [−1,1].
-The graph is monotonic increasing (always increasing) and so <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}&gt;0\)</span> ∀<span class="math notranslate nohighlight">\(x\)</span>∈[−1,1]
-We therefore choose the positive root, which gives</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)=\displaystyle\frac{1}{\sqrt{1−x^2}}\)</span></p>
-<p>Notice that at <span class="math notranslate nohighlight">\(x=\pm1\)</span> the slope of the curve is infinite (the curve is parallel to the y-axis)
-These points are stationary points w.r.t <span class="math notranslate nohighlight">\(y\)</span>, since <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=0\)</span></p>
-<p>There are no points where the curve is parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis.
-<br><br></p>
-</li>
-<li><p>Let <span class="math notranslate nohighlight">\(𝑦=\mathrm{arccosh(y)}\)</span>. Then <span class="math notranslate nohighlight">\(𝑡=\cosh(y)\)</span></p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}t}{\mathrm{d}y}=1/\displaystyle\frac{\mathrm{d}y}{\mathrm{d}t}=\displaystyle\frac{1}{\sinh(y)}=\displaystyle\frac{1}{\pm \sqrt{cosh^2(y)−1}}=\pm \displaystyle\frac{1}{\sqrt{t^2−1}}\)</span></p>
-<p>Recall that for the function <span class="math notranslate nohighlight">\(\mathrm{arccosh}\)</span> we select the positive branch. On this branch the function is monotonic increasing, so we again select the positive square root.</p>
-<p><span class="math notranslate nohighlight">\( \displaystyle\frac{\mathrm{d}}{\mathrm{d}t}\mathrm{arccosh}(t)=\displaystyle\frac{1}{\sqrt{t^2−1}}\)</span>
-<br></p>
-</li>
-</ol>
-<p><strong>Problems for Inverse Function Derivatives</strong></p>
-<ol>
-<li><p>Differentiate the whole expression w.r.t. <span class="math notranslate nohighlight">\(y\)</span>, using the product rule to differentiate the term <span class="math notranslate nohighlight">\(ye^y\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(e^y+e^x\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=e^y+ye^y\)</span></p>
-<p>Rearrange:</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}x}{\mathrm{d}y}=\displaystyle\frac{ye^y}{e^x}=\displaystyle\frac{ye^y}{(y−1)e^y}=\displaystyle\frac{y}{y−1}\)</span>
-<br><br></p>
-</li>
-<li><p>Since <span class="math notranslate nohighlight">\(a&gt;0\)</span> we can take the natural log of both sides: <span class="math notranslate nohighlight">\(\ln(a)=b\ln(4)\)</span> and then differentiate w.r.r. <span class="math notranslate nohighlight">\(b\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{1}{a}\displaystyle\frac{\mathrm{d}a}{\mathrm{d}b}=\ln(4)\)</span></p>
-<p>which gives</p>
-<p><span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}a}{\mathrm{d}b}=\ln(4)a=4^b\ln(4)\)</span>
-<br><br></p>
-</li>
-<li><p>Differentiate the whole expression w.r.t. <span class="math notranslate nohighlight">\(x\)</span>, using the chain rule to differentiate the second term:</p>
-<p><span class="math notranslate nohighlight">\(2x+3(y−x)^2(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}−1)=0\)</span></p>
-<p>At the point (1,3) we have</p>
-<p><span class="math notranslate nohighlight">\( 2+12(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}−1)=0\)</span>, so</p>
-<p><span class="math notranslate nohighlight">\(m=(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x})x-1=\displaystyle\frac{5}{6}\)</span></p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Differentiate the whole expression w.r.t. <span class="math notranslate nohighlight">\(y\)</span>, using the product rule to differentiate the term <span class="math notranslate nohighlight">\(ye^y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[e^y + e^x \frac{\mathrm{d}x}{\mathrm{d}y}=e^y+ye^y\]</div>
+<p>Rearranging:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}x}{\mathrm{d}y}=\frac{ye^y}{e^x}=\frac{ye^y}{(y−1)e^y}=\frac{y}{y−1}\]</div>
+<p>2. Since <span class="math notranslate nohighlight">\(a&gt;0\)</span> we can take the natural log of both sides: <span class="math notranslate nohighlight">\(\ln(a)=b\ln(4)\)</span> and then differentiate w.r.t. <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{a}\displaystyle\frac{\mathrm{d}a}{\mathrm{d}b}=\ln(4)\]</div>
+<p>which gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}a}{\mathrm{d}b}=\ln(4)a=4^b\ln(4)\]</div>
+<p>3. Differentiate the whole expression w.r.t. <span class="math notranslate nohighlight">\(x\)</span>, using the chain rule to differentiate the second term:</p>
+<div class="math notranslate nohighlight">
+\[2x+3(y−x)^2(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}−1)=0\]</div>
+<p>At the point (1,3) we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; 2+12\Big(\frac{\mathrm{d}y}{\mathrm{d}x}−1\Big)=0\\
+&amp; m = \Big(\frac{\mathrm{d}y}{\mathrm{d}x}\Big)x-1=\frac{5}{6}\end{split}\]</div>
 <p>The tangent has equation <span class="math notranslate nohighlight">\(\displaystyle\frac{y−3}{x−1}=\displaystyle\frac{5}{6}\)</span>, which rearranges to</p>
-<p><span class="math notranslate nohighlight">\(𝑦=\displaystyle\frac{5}{6}x+\displaystyle\frac{13}{6}\)</span>
-<br><br></p>
-</li>
-<li><p>Put <span class="math notranslate nohighlight">\(x=\sin(y)\)</span> and then differentiate w.r.t. <span class="math notranslate nohighlight">\(x\)</span> :</p>
-<p><span class="math notranslate nohighlight">\(1=\cos(y)\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}\)</span></p>
-<p>This gives <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}y}{\mathrm{d}x}=\displaystyle\frac{1}{\cos(y)}=\displaystyle\frac{1}{\sqrt{1−x^2}}\)</span></p>
-<p>which is the same result we obtained in the examples of section 6.2.6, where it was also explained why the positive square root is chosen for this example.</p>
-</li>
-</ol>
+<div class="math notranslate nohighlight">
+\[y = \frac{5}{6}x+\frac{13}{6}\]</div>
+<p>4.  Put <span class="math notranslate nohighlight">\(x=\sin(y)\)</span> and then differentiate w.r.t. <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1=\cos(y)\frac{\mathrm{d}y}{\mathrm{d}x}\]</div>
+<p>This gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{1}{\cos(y)}=\frac{1}{\sqrt{1−x^2}}\]</div>
+<p>which is the same result we obtained in the examples earlier, where it was also explained why the positive square root is chosen here.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Further practice questions</p>
+<p>1. Given that <span class="math notranslate nohighlight">\(x(t)=2^t\)</span>, calculate <span class="math notranslate nohighlight">\(\ddot{x}\)</span>.</p>
+<p>2. Given that <span class="math notranslate nohighlight">\(y=e^2k\ln(k)\)</span>, calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}k^2}\)</span>.</p>
+<p>3. Given the unit circle parameterisation</p>
+<div class="math notranslate nohighlight">
+\[x=\cos(\theta), \quad y=\sin(\theta)\]</div>
+<p>calculate <span class="math notranslate nohighlight">\(\displaystyle\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\)</span> using parametric differentiation.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Rearrange: <span class="math notranslate nohighlight">\(\ln(x)=t\ln(2)\)</span></p>
+<p>Differentiate the expression w.r.t. <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{x}\dot{x}=\ln(2)\]</div>
+<p>You could write this all in terms of 𝑡 before continuing, but here I’ll just go right ahead and differentiate again w.r.t. <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[−\displaystyle\frac{1}{x^2}\dot{x}\dot{x}+\frac{1}{x}\ddot{x}=0\]</div>
+<p>Rearrange and write in terms of <span class="math notranslate nohighlight">\(t\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\ddot{x}=\frac{1}{x}\dot{x}\dot{x}=\ln(2)^22^t\]</div>
+<p>2.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}^2y}{\mathrm{d}k^2} &amp;= \frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}\frac{\mathrm{d}}{\mathrm{d}k}(\ln(k))+\ln(k)\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}))\\
+&amp;=\frac{\mathrm{d}}{\mathrm{d}k}(e^{2k}(2\ln(k)+\frac{1}{k}))\\
+&amp;=e^{2k}\frac{\mathrm{d}}{\mathrm{d}k}(2\ln(k)+\frac{1}{k})+(2\ln(k)+\frac{1}{k})\frac{\mathrm{d}}{\mathrm{d}k}(2^{2k})\\
+&amp;=e^{2k}(−\frac{1}{k^2}+\frac{4}{k}+4\ln(k))\end{split}\]</div>
+<p>3.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}x}{\mathrm{d}t}&amp;=−\sin(t), \quad \frac{\mathrm{d}y}{\mathrm{d}t}=\cos(t) \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x}= −\cot(x)\\
+\frac{\mathrm{d}^2y}{\mathrm{d}x^2} &amp;= \frac{\mathrm{d}}{\mathrm{d}t}\Big(\frac{\mathrm{d}y}{\mathrm{d}x}\Big)\Big/\frac{\mathrm{d}x}{\mathrm{d}t}\\
+&amp;=\frac{\frac{\mathrm{d}}{\mathrm{d}t}(−\cot(t))}{\sin(t)}=\frac{−\sin^2(t)−\cos^2(t)}{\sin(t)}\frac{1}{\sin(t)}=−\mathrm{cosec}^3(t)\end{split}\]</div>
+<p>Or, written in terms of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}^2y}{\mathrm{d}x^2}=−\frac{1}{y^3}\]</div>
+<p>We can check this answer with implicit differentiation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}^2y}{\mathrm{d}x^2}&amp;=\frac{\mathrm{d}}{\mathrm{d}x}(−xy)=\frac{−1}{y}+\frac{x}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}\\
+&amp;=\frac{−1}{y}+e\frac{x}{y^2}(−\frac{x}{y})=\frac{−1}{y^3}\Big(y^2+x^2\Big)=−\frac{1}{y^3}\end{split}\]</div>
+</div>
 </div>
 </div>
 
@@ -837,7 +984,21 @@ These points are stationary points w.r.t <span class="math notranslate nohighlig
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../matrices_vectors/vectoralgebra.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Vectors and Vector Algebra</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="integration.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Integration</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

@@ -114,12 +114,6 @@ Generic illustration of a complex number in the plane. The length of the blue li
 1. Strictly speaking, the argument as defined here is called the **principal argument**, since we could also locate the complex number by wrapping multiple times around the plane. For example, the argument $−\pi/4$ could equally be given as $(2n−1/4)\pi$ for any integer value of $n$.
 ```
 
-```{admonition} Practice Questions
-:class: seealso, dropdown
-The interactive app below allows you to generate randomly selected complex numbers in each quadrant. Try to calculate the modulus and argument for the examples, and click the "Show/Hide" button to check your answers:
-
-https://www.wolframcloud.com/obj/ucqssjm/Published/argand.cdf
-```
 
 ## Polar Form of a Complex Number
 
@@ -127,7 +121,7 @@ The relationship between the Cartesian representation $z = x + yi$ and the modul
 
 ```{math}
 :label: polarcomplex
-z = r(cos(\theta) + i sin(\theta)).
+z = r(\cos(\theta) + i \sin(\theta)).
 ```
 
 An alternative way of writing this result is the celebrated *polar form* of a complex number, using the exponential function:
@@ -142,31 +136,49 @@ We will understand (and prove!) this result later. For now, we just *find* the p
 ```{admonition} Practice Questions
 :class: seealso, dropdown
 *Note: It is usually best to draw a diagram showing the location of the complex numbers in the plane, especially when just starting out. This will help avoid mistakes!*
-1. Write down the polar form of the following complex numbers:  
-a. $1+i$ &emsp; b. $-1+i$  
-c. $-1-i$ &emsp; d. $1-i$  
-e. $-1$
 
-2. Express the following complex numbers in Cartesian form:  
-a. $\sqrt{3}e^{-i\pi /3}$  
-b. $e^{i\pi /2}$
+1\. Write down the polar form of the following complex numbers:  
+
+a\. $1+i$ 
+
+b\. $-1+i$  
+
+c\. $-1-i$
+
+d\. $1-i$  
+
+e\. $-1$
+
+2\. Express the following complex numbers in Cartesian form:  
+
+a\. $\sqrt{3}e^{-i\pi /3}$  
+
+b\. $e^{i\pi /2}$
 ```
 
 
 ```{admonition} Solution
 :class: seealso, dropdown
-1. All of the numbers (a-d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:<br>
-a. $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$<br>
-b. $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$<br>
-c. $-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}$<br>
-d. $1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}$<br>
-e. Since $-1$ lies on the negative real axis, it has an argument of $\pi$. It has a modulus $1$. Hence, we can write the famous result $e^{i\pi} + 1 = 0$.<br>
 
-2. Using the result that $e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ gives:<br>
-a. $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\textrm{cos}(\frac{\pi}{3} - i\textrm{sin}(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}$<br>
-b. $e^{i\frac{\pi}{2}} = i$<br>
+1\. All of the problems in 1(a)-1(d) have a modulus of $\sqrt{2}$ and subtend an angle of $\frac{\pi}{4}$ with the real axis. Thus, we have:
 
-Both results could also be derived by sketching the numbers in the plane. Result (b) is particularly easy. It lies on the positive imaginary axis ($\textrm{arg}(z) = \frac{\pi}{2}$) and has a modulus of $1$.
+a\. $1+i \equiv \sqrt{2}e^{\frac{i\pi}{4}}$
+
+b\. $-1+i \equiv \sqrt{2}e^{\frac{3i\pi}{4}}$
+
+c\. $-1-i \equiv \sqrt{2}e^{\frac{-3i\pi}{4}}$
+
+d\. $1-i \equiv \sqrt{2}e^{\frac{-i\pi}{4}}$
+
+e\. Since $-1$ lies on the negative real axis, it has an argument of $\pi$ and modulus $1$, so $e^{i\pi} = -1$ and hence, we can write the famous result $e^{i\pi} + 1 = 0$.
+
+2\. Using the result that $e^{i\theta} = \cos(\theta) + i\sin(\theta)$ gives:
+
+a\. $\sqrt{3}e^{-i\frac{\pi}{3}} = \sqrt{3}(\cos(\frac{\pi}{3} - i\sin(\frac{\pi}{3})) = \sqrt{3}(\frac{1}{2} - i\frac{\sqrt3}{2}) = \frac{\sqrt3}{2} - i\frac{3}{2}$
+
+b\. $e^{i\frac{\pi}{2}} = i$
+
+Both results could also be derived by sketching the numbers in the plane. 
 ```
 ## Complex Arithmetic
 ### Addition and Subtraction
@@ -192,7 +204,8 @@ name: complexnumberaddition
 Parallelogram rule for addition of complex numbers, $z_3 = z_1+z_2$
 ```
 
-A graphical representation of the result for subtraction is shown in {numref}`complexnumbersubtraction`. notice that $z_3 = z_2-z_1$ rearranges to give $z_2 = z_1-z_3$, so now $z_2$ is lies on the diagonal of the parallelogram.
+A graphical representation of the result for subtraction is shown in {numref}`complexnumbersubtraction`. notice that $z_3 = z_2-z_1$ 
+rearranges to give $z_2 = z_1-z_3$, so now $z_2$ is lies on the diagonal of the parallelogram.
 
 ```{figure} ComplexNumberSubtraction.png
 ---
@@ -207,23 +220,26 @@ The product of two complex numbers is just an ordinary product of sums, and so f
 
 ```{math}
 :label: complexmultiplication
-(x_1+y_1i)(x_2+y_2i) = x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 = (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)
+(x_1+y_1i)(x_2+y_2i) &= x_1x_2 + ix_1y_2 + ix_2y_1 + i^2y_1y_2 \\
+&= (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1)
 ```
 
 Note the use of $i^2=-1$ to simplify the result.
 
-```{admonition} Practice Questions
+````{admonition} Practice Questions
 :class: seealso, dropdown
-1. Let $z=1+2i$, and $q=2+1$. Calculate $zw*$.
+1. Let $z=1+2i$, and $w=2-i$. Calculate $z\,w^*$.
 
-2. Show that the result $zz^* = |z|^2$ is true for any complex number z. *This result is useful, and should be remembered!*
-```
-```{admonition} Solutions
+2. Show that the result $zz^* = |z|^2$ is true for any complex number z. (This result is useful, and should be remembered.)
+````
+````{admonition} Solutions
 :class: seealso, dropdown
-1. $zw^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i$
+1. $z\,w^* = (1+2i)(2-i) = 2-i+4i+2 = 3+3i$
 
-2. Let $z=x+yi$. Then $zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2$
-```
+2. Let $z=x+yi$,
+
+then $zz^* = (x+yi)(x-yi) = x^2 + yi - yi + i^2y = x^2 + y^2 = |z|^2$
+````
 ### Division of Complex Numbers
 
 Suppose that $z_1 = x_1 + iy_1$, $z_2 = x_2 + iy_2$ and we want to express the result $z_3 = \frac{z_1}{z_2}$ in the form $z_3 = x_3 + iy_3$ where $x_3$ and $y_3$ are real numbers.
@@ -244,15 +260,35 @@ Let's see how this works for an example in which $z_1 = 2 + 3i$ and $z_2 = 1 - 2
 \frac{2+3i}{1-2i} = \frac{2+3i}{1-2i} \frac{1+2i}{1+2i} = \frac{2+3i+4i-6}{1+4} = -\frac{4}{5} + \frac{7}{5}i
 ```
 
-```{admonition} Practice Questions
+````{admonition} Practice Questions
 :class: seealso, dropdown
-1. Simplify the expression $\frac{7+i}{1+3i}$
+1\. Simplify the expression :
+```{math}
+\frac{7+i}{1+3i}
 ```
 
-```{admonition} Solution
-:class: seealso, dropdown
-$\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i$
+2\. Write the following expression in the form of $z = x + iy\, x,\,y\in \mathcal{R}$:
+```{math}
+z = \frac{1}{1-3i} + \frac{1}{1+3i} + 1+3i
 ```
+````
+
+````{admonition} Solution
+:class: seealso, dropdown
+1\. 
+```{math}
+\frac{7+i}{1+3i} = \frac{7+i}{1+3i}\frac{1-3i}{1-3i} = \frac{7-21i+i+3}{1+9} = 1-2i
+```
+
+2\. 
+```{math}
+\frac{1}{1-3i} + \frac{1}{1+3i} = \frac{1+3i}{1+3^2} + \frac{1-3i}{1+3^2} = \frac{2}{10} = \frac{1}{5}
+```
+and hence:
+```{math}
+z = \frac{1}{5} + 1 + 3i = \frac{6}{5} + 3i
+```
+````
 
 ### Multiplying and Dividing Complex Numbers in Polar Form
 
@@ -265,57 +301,58 @@ z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)} = \frac{r_1}{r_2} e^{i(\theta_1 - \
 
 These results highlight very clearly the geometry of multiplication and division in the complex plane. Notice in particular that multiplication by $e^{i\theta}$ just rotates a complex number in the plane by and angle $\theta$. What result would multiplication by $e^{2\pi i}$ give?
 
-```{admonition} The geometry of multiplication
-:class: tip
+````{admonition} The geometry of multiplication and division of complex numbers
+:class: notice
 * $|z_1z_2| = |z_1||z_2|$
 * $\textrm{arg}(z_1z_2) = \textrm{arg}(z_1) + \textrm{arg}(z_2)$
 
 When $z_1$ is multiplied by $z_2$:
 * The distance of $z_1z_2$ to the origin is increased by a factor of $|z_2|$,
 * The position of $z_1z_2$ is rotated counter clockwise by an angle $\textrm{arg}(z_2)$ relative to $z_1$.
-```
 
-```{admonition} The geometry of division
-:class: tip
 * $|z_1/z_2| = |z_1|/|z_2|$
 * $\textrm{arg}(z_1/z_2) = \textrm{arg}(z_1) - \textrm{arg}(z_2)$
 
 When $z_1$ is multiplied by $z_2$:
 * The distance of $z_1z_2$ to the origin is reduced by a factor of $|z_2|$,
 * The position of $z_1z_2$ is rotated clockwise by an angle $\textrm{arg}(z_2)$ relative to $z_1$.
-```
 
-```{admonition} A helpful mnemonic
-:class: tip
-A good way to remember this rule is that **in polar form**, you can multiply two complex numbers by **multiplying** the magnitude and **adding** the angles. 
+A good way to remember these rules is that **in polar form**, you can multiply two complex numbers by **multiplying** the magnitude and **adding** the angles. 
 
 Conversely, to divide two numbers **in polar form**, you **divide** the magnitude, and **subtract** the angles.
-```
+````
 
-```{admonition} Practice Questions
+````{admonition} Practice Questions
 :class: seealso, dropdown
-1. For each of the following pairs of numbers, state the results $|zw|$ and $\textrm{arg}(zw)$, taking care to ensure that you give the argument in the principal domain.
+1\. For each of the following pairs of numbers, state the results $|zw|$ and $\textrm{arg}(zw)$, taking care to ensure that you give the argument in the principal domain.
 
-(a) $z = -1+i$, $w=\sqrt{3}+i$,
+a\. $z = -1+i$, $w=\sqrt{3}+i$,
 
-(b) $z = -1+i$, $w = -\sqrt{3} + i$.
+b\. $z = -1+i$, $w = -\sqrt{3} + i$.
 
-2. By writing $z_1 = r_1e^{i\theta_1}$, $z_2 = r_2e^{i\theta_2}$, prove the result $(\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*}$
+2\. By writing $z_1 = r_1e^{i\theta_1}$, $z_2 = r_2e^{i\theta_2}$, prove the result: 
+```{math}
+\Big(\frac{z_1}{z_2}\Big)^* = \frac{z_1^*}{z_2^*}
 ```
+````
 
 ````{admonition} Solution
 :class: seealso, dropdown
 
-1. (a) $|z| = \sqrt{2}$, $|w| = 2$, so $|zw| = 2\sqrt{2}$<br>
-$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)$<br>
-(b) $|zw| = 2\sqrt{2}$<br>
-$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi$, which lies in the fourth quadrant.<br>
-The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.<br>
+1\. 
 
-2.
+a\. $|z| = \sqrt{2}$, $|w| = 2$, so $|zw| = 2\sqrt{2}$
+$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{\pi}{6} = \frac{11}{12}\pi = \textrm{arg}(zw)$
+
+b\. $|zw| = 2\sqrt{2}$
+$\textrm{arg}(z) + \textrm{arg}(w) = \frac{3}{4}\pi + \frac{5}{6}\pi = \frac{19}{12}\pi$, which lies in the fourth quadrant.
+The principal argument is given by $\textrm{arg}(zw) = -\frac{5}{12}\pi$.
+
+2\.
 ```{math}
 \left(\frac{z_1}{z_2}\right)^* = \left(\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}\right)^* = \frac{r_1}{r_2} e^{-i(\theta_1 - \theta_2)} = \frac{r_1 e^{-i\theta_1}}{r_2 e^{-i\theta_2}} = \frac{z_1^* }{z_2^* }
 ```
+
 ````
 
 ## Complex Roots
@@ -339,15 +376,17 @@ This was also the principal by which we were able to define (at least) two diffe
 ```{admonition} Practice Questions
 :class: seealso, dropdown
 Write the following complex numbers in polar form where the argument is given in the principal range ($-\pi$, $\pi$):
-1. $\sqrt{2}e^{\frac{7\pi i}{3}}$
-2. $3e^{-\frac{13\pi i}{12}}$
+
+1\. $\sqrt{2}e^{\frac{7\pi i}{3}}$
+
+2\. $3e^{-\frac{13\pi i}{12}}$
 ```
 
 ```{admonition} Solution
 :class: seealso, dropdown
-1. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.
+1\. $\frac{7\pi}{3} = 2\pi + \frac{\pi}{3}$ so the result lies in the first quadrant at an angle of $\frac{\pi}{3}$ away from the real axis. The result can be written as $\sqrt{2}e^{\frac{\pi i}{3}}$.
 
-2. $-\frac{13\pi}{12}$ lies in the second quadrant at an angle of $\frac{\pi}{12}$ away from the real axis, so the equivalent to an argument of $\pi - \frac{\pi}{12}$. The result can be written as $3e^\frac{11\pi}{12}$.
+2\. $-\frac{13\pi}{12}$ lies in the second quadrant at an angle of $\frac{\pi}{12}$ away from the real axis, so the equivalent to an argument of $\pi - \frac{\pi}{12}$. The result can be written as $3e^\frac{11\pi}{12}$.
 ```
 
 ### Roots of Unity
@@ -375,17 +414,18 @@ name: rootsofunity
 An illustration showing the location of the roots of $z^m=1$, which are of the form $z=e^{\frac{2k\pi i}{m}}$.
 ```
 
-```{admonition} Practice Questions
+````{admonition} Practice Questions
 :class: seealso, dropdown
-Have a go at finding all the roots of the problem $z^3=1$ in Cartesian form.
-```
+1\. Have a go at finding all the roots of the problem $z^3=1$ in Cartesian form.
+````
 
-```{admonition} Solution
+````{admonition} Solution
 :class: seealso, dropdown
-The 3 roots of unity can be found at $z=e^{i\frac{2k\pi}{3}}$ for K in {0,1,2}
-
-The 3 roots of unity are therefore 1, $-\frac{1}{2}+\frac{\sqrt{3}}{2}i$ and $-\frac{1}{2}-\frac{\sqrt{3}}{2}i$
+1\. The 3 roots of unity can be found at $z=e^{i\frac{2n\pi}{3}}$ for $n \in {0,1,2}$ and so the roots are 
+```{math}
+z = 1, \quad -\frac{1}{2}+\frac{\sqrt{3}}{2}i, \quad -\frac{1}{2}-\frac{\sqrt{3}}{2}i
 ```
+````
 
 ### Roots of Other Values
 Now that we have solved the roots of unity, finding the complex roots of other values $z^m = c$ is relatively straightforward, even in cases where $c$ is complex value.
@@ -394,127 +434,348 @@ We simply express $c$ in polar form, $c=re^{i\theta}$, and then use the result:
 
 ```{math}
 :label: rootsofothervalues
-z_m = r^{1/m}e^{i\frac{\theta}{m}}e^{i\frac{2\pi k}{m}}
+z_m = r^{1/m}e^{i \theta/m}e^{i 2\pi k/m},\, k \in \mathbb{Z}
 ```
 
-```{admonition} Worked Example
+````{admonition} Worked Example
 :class: seealso
 Find all roots of the problem $z^4 = \sqrt{3} - i$ in Cartesian form, $z = x + iy$.
 
-*Solution*
-We begin by writing the right hand side in polar form: $\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}$
+We begin by writing the right hand side in polar form: $\sqrt{3} - i = 2e^{-i\pi/6}$
 
-Here, $m=4$, and so we use Equation {eq}`rootsofothervalues` to find our roots.
-
-One solution is given simply by $z = (2e^{-i\frac{\pi}{6}})^{\frac{1}{4}} = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}}$
-
-The others are found by multiplying by $e^{-\frac{\pi}{2}}$, $e^{\frac{\pi}{2}}$, $e^{\pi}$
-
-Following through, we then obtain:
-* $z_{-1} = 2^{\frac{1}{4}}e^{-i\frac{13\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{13\pi}{24}) - i\textrm{sin}(\frac{13\pi}{24})) \approx -0.155 - 1.179i$
-* $z_0 = 2^{\frac{1}{4}}e^{-i\frac{\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{\pi}{24}) - i\textrm{sin}(\frac{\pi}{24})) \approx 1.179-0.155i$
-* $z_1 = 2^{\frac{1}{4}}e^{-i\frac{11\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{11\pi}{24}) + i\textrm{sin}(\frac{11\pi}{24})) \approx 0.155 + 1.179i$
-* $z_2 = 2^{\frac{1}{4}}e^{-i\frac{23\pi}{24}} = 2^{\frac{1}{4}}(\textrm{cos}(\frac{23\pi}{24}) + i\textrm{sin}(\frac{23\pi}{24})) \approx -1.190 + 0.155i$
-```
-
-We didn't really need to fiddle about combining the angles ($\frac{-i\pi}{24} + \frac{2k\pi}{4}$) in this case, since the $\frac{\pi}{2}$ spacing between the roots corresponds to a simple multiplication by $i$, but it was done here to illustrate the principal of finding the argument for each root in exact form.
-
-
-## Trigonometric and Hyperbolic Relationships
-In this section, we make use of Euler's identity, $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$, to prove several results involving trigonometric and hyperbolic functions. We haven't yet proven Euler's identity yet, but we will be able to do so later in the course).
-
-### Relationship Between Trigonometric and Hyperbolic Functions
-Starting from Euler's identity, we observe that:
+Here, $m=4$, and so we use Equation {eq}`rootsofothervalues` to find our roots:
 
 ```{math}
-:label: trigEuler
-e^{i\theta} = \textrm{cos}(\theta) + i\textrm{sin}(\theta)
-
-e^{-i\theta} = \textrm{cos}(\theta) - i\textrm{sin}(\theta)
+z_m = 2^{1/4}\,e^{i(-\pi/6 + 2\pi k)/3},\, k \in \mathbb{Z}
 ```
 
-By adding and subtracting these two results, we obtain expressions for cosine and sine in terms of complex exponentials, which are strikingly similar to the hyperbolic cosine and sine functions:
+One solution is given simply by $z_0 = (2e^{-i\pi/6})^{1/4} = 2^{1/4}e^{-i\pi/24}$
 
+Following through different values of $m$, we obtain:
 ```{math}
-:label: complexhyperbolic
-\textrm{cos}(\theta) = \frac{1}{2}(e^{i\theta}+e^{-i\theta}) = \textrm{cosh}(i\theta)
-
-\textrm{sin}(\theta) = \frac{1}{2i}(e^{i\theta}-e^{-i\theta}) = -i\textrm{sinh}(i\theta)
+z_{-1} &= 2^{1/4}e^{-i 13\pi/24} \\
+z_0 &= 2^{1/4}e^{-i \pi/24} \\
+z_1 &= 2^{1/4}e^{i 11\pi/24} \\
+z_2 &= 2^{1/4}e^{i 23\pi/24} 
 ```
 
-The results may be used to obtain similar results for **tan**, **cosec**, **sec** and **cot**. For example, $\textrm{tan}(\theta) = \textrm{sin}(\theta) / \textrm{cos}(\theta) = \frac{-i\textrm{sinh}(i\theta)}{\textrm{cosh}(i\theta)} = -i\textrm{tanh}(i\theta)$.
+We see that the other roots are found by multiplying by $e^{-i\pi/2},\, e^{i\pi/2},\ e^{i\pi}$
 
-### Compound Angle Formulae
-The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:
+````
 
+### Polynomial roots
+
+We can treat complex roots to polynomial just like any other real roots, which for an $n^{th}$ order polynomial we can write as:
 ```{math}
-:label: compoundangle1
-e^{i(A+B)} = e^{iA}e^{iB} \textrm{ therefore...}
-
-\textrm{cos}(A+B) + i\textrm{sin}(A+B) = (\textrm{cos}(A) + i\textrm{sin}(A))(\textrm{cos}(B) + i\textrm{sin}(B))
+f(z) = az^n + bz^{n-1} + \dots =(z-z_1)(z-z_2)\dots(z-z_n) = 0
 ```
+where here $z_n \in \mathbb{C}$ in general.  
 
-Expanding out the right hand side and comparing the real and imaginary parts provides us with the **compound angle formula** for $\textrm{cos}(A+B)$ and $\textrm{sin}(A+B)$. We obtain the familiar results:
+We find by the *conjugate root* theorem, i.e. that if $z_n$ is a *complex* root of $f(z)$ then ${z_n}^*$ is also a root - this is not true in general if $z_n$ is a real root.  
+It also follows from this that if $n$ is odd, then the polynomial must have at least one real root.
 
-```{math}
-:label: compoundangle2
-\textrm{cos}(A+B) = \textrm{cos}(A)\textrm{cos}(B) - \textrm{sin}(A)\textrm{sin}(B)
-
-\textrm{sin}(A+B) = \textrm{sin}(A)\textrm{cos}(B) + \textrm{cos}(A)\textrm{sin}(B)
-```
-
-In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles (e.g. $\textrm{cos}^2(\theta) = \frac{1}{2}(\textrm{cos}(2\theta)+1)$).
-
-For higher powers we make use of the complex exponential form:
-
-$$
-\textrm{sin}^5(\theta) = (\frac{1}{2i}^5(e^{i\theta}-e^{-i\theta})^5
-$$
-
-Expanding out the right hand side using Binomial expansion, and collecting together powers of $\theta$ gives:
-
-$$
-\textrm{sin}^5(\theta) = \left(\frac{1}{2}\right)^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]
-
-= \left(\frac{1}{2}\right)^5 (-i) [2i\textrm{sin}(5\theta) - 5(2i)\textrm{sin}(3\theta) + 10(2i)\textrm{sin}(\theta)]
-
-= \left(\frac{1}{2}\right)^4 [\textrm{sin}(5\theta) - 5\textrm{sin}(3\theta) + 10\textrm{sin}(\theta)]
-$$
-
-```{admonition} Practice Questions
+````{admonition} Practice questions
 :class: seealso, dropdown
-Here is a nasty one for you to try:
 
-Show that $\textrm{cos}^7(\theta) = \frac{1}{64} [35\textrm{cos}(\theta) + 21\textrm{cos}(3\theta) + 7\textrm{cos}(5\theta) + \textrm{cos}(7\theta)$
-```
+1\. The polynomial $z^3 - 7z^2 + 41z - 87$ has a root $z = 2 + 5i$, find all the other roots.
 
-```{admonition} Solution
+2\. Find all the roots of $z^4 - z^3 - z^2 - z - 2$, given that they are all integer points in the complex plane.
+
+````
+
+````{admonition} Solutions
 :class: seealso, dropdown
-The roots are given by:
-* $z = e^{-\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} - i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$
-* $z = e^0 = 1$
-* $z = e^{\frac{2\pi i}{3}} = \textrm{cos}(\frac{2\pi}{3} + i\textrm{sin}(\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$
+
+1\. If $z_1 = 2 + 5i$, then $z_2 = {z_1}^* = 2 - 5i$, hence we can factorise this polynomial as:
+```{math}
+(z - 2 - 5i)(z - 2 + 5i)(z-a) = 0
+```
+where $a$ here *must* be a real root.  Expanding this out, we find:
+```{math}
+(z^2 - 4z + 29)(z-a) = z^3 - (a + 4)z^2 + 25z - 29a = 0
+```
+which suggests that $a=3$, hence the three roots are:
+```{math}
+z = 3,\, 2+5i,\, 2-5i
 ```
 
-### De Moivre's Theorem
-Starting with Euler's Identity $e^{i\theta} \equiv \textrm{cos}(\theta) + i\textrm{sin}(\theta)$ and raising both sides to the $n^{th}$ power gives:
+
+2\. If $z^4 - z^3 - z^2 - z - 2$, we can spot that $z = 2$ is a root, hence:
+
+```{math}
+z^4 - z^3 - z^2 - z - 2 = (z-2)(z^3 + z^2 + z + 1) = 0
+```
+we can then spot that $z = -1$ is also a root:
+```{math}
+(z-2)(z^3 + z^2 + z + 1) =  (z-2)(z+1)(z^2 + 1) = 0
+```
+and given that $z^2 + 1 = (z-i)(z+i)$, we have our final two roots:
+```{math}
+z^4 - z^3 - z^2 - z - 2 = (z-2)(z+1)(z + i)(z-i)
+```
+````
+
+
+
+
+
+
+## Trigonometric and hyperbolic relationships
+In this section, we make use of Euler's identity, $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$, to prove several results involving trigonometric and hyperbolic functions. 
+
+
+
+### de Moivre's theorem
+Starting with Euler's Identity $e^{i\theta} \equiv \cos(\theta) + i\sin(\theta)$ and raising both sides to the $n^{th}$ power gives:
 
 ```{math}
 :label: eulerton
-e^{in\theta} = (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^2
+e^{in\theta} = (\cos(\theta) + i\sin(\theta))^n
 ```
 
 We can then use Euler's identity again (replacing $\theta$ with $n\theta$) to re-write the left had side:
 
 ```{math}
 :label: demoivre
-\textrm{cos}(n\theta) + i\textrm{sin}(n\theta) \equiv (\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n
+\cos(n\theta) + i\sin(n\theta) \equiv (\cos(\theta) + i\sin(\theta))^n
 ```
-This result (for integer values of $n$) is known as De Moivre's theorem. Historically, it was proved before Euler's identity. A possible technique for proving it without Euler's identity is by *induction*. Proof by induction is not a technique that we study in this module, but the argument is given in the section on further reading for any interested students.
-
-The fact that De Moivre's theorem is *consistent* with Euler's identity is reassuring, although we have still not proved that Euler's identity is correct.
+This result (for integer values of $n$) is known as **de Moivre's theorem**. 
 
 ```{admonition} Non-integer Values
 :class: tip
-For non-integer values $(\textrm{cos}(\theta) + i\textrm{sin}(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest positive argument, or that gives a real number. The result $\textrm{cos}(n\theta) + i\textrm{sin}(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
+For non-integer values $(\cos(\theta) + i\sin(\theta))^n$ is multiple-valued. The principal root is normally taken as the one that has the smallest 
+positive argument, or that gives a real number. The result $\cos(n\theta) + i\sin(n\theta)$ gives a single root to the problem, but not necessarily the principal root.
+```
+
+
+### Compound angle formulae
+The derivation of trigonometric identities is tremendously simplified using complex exponentials. For example:
+
+```{math}
+:label: compoundangle1
+e^{i(A+B)} &= e^{iA}e^{iB}\\
+\cos(A+B) + i\sin(A+B) &= (\cos(A) + i\sin(A))(\cos(B) + i\sin(B))
+```
+
+Expanding out the right hand side and comparing the real and imaginary parts provides us with the 
+**compound angle formula** for $\cos(A+B)$ and $\sin(A+B)$. We obtain the familiar results:
+
+```{math}
+:label: compoundangle2
+\cos(A+B) &= \cos(A)\cos(B) - \sin(A)\sin(B) \\
+\sin(A+B) &= \sin(A)\cos(B) + \cos(A)\sin(B)
+```
+
+In some applications (e.g. integration), we will occasionally need to express trigonometric powers in terms of multiple angles , a common one being 
+$\cos^2(\theta) = \frac{1}{2}(\cos(2\theta)+1)$.
+
+For higher powers we make use of the complex exponential form:
+```{math}
+\cos(\theta) &= \frac{1}{2}\Big(e^{i\theta} + e^{-i\theta} \Big) \\
+\sin(\theta) &= \frac{1}{2i}\Big(e^{i\theta} - e^{-i\theta} \Big) 
+```
+and therefore:
+```{math}
+\cos^n(\theta) &= \frac{1}{2^n}\Big(e^{i \theta} + e^{-i\theta} \Big)^n \\
+&= \frac{1}{2^n}\Big(e^{ni\theta} + e^{-ni\theta} + ne^{(n-2)i\theta} + ne^{-(n-2)i\theta} + \dots \Big)\\
+&= \frac{1}{2^{n-1}}\Big(\cos(n\theta) + n\cos((n-2)\theta) + \dots \Big)\\
+\sin^n(\theta) &= \frac{1}{(2i)^n}\Big(e^{i \theta} - e^{-i\theta} \Big)^n \\
+&= \frac{1}{(2i)^n}\Big(e^{ni\theta} - e^{-ni\theta} + ne^{(n-2)i\theta} - ne^{-(n-2)i\theta} + \dots \Big)\\
+&= \frac{1}{(2i)^{n-1}}\Big(\sin(n\theta) + n\sin((n-2)\theta) + \dots \Big)
+```
+where we can expand out using binomial theorem.  We note that for  $n$ odd that will be $(n+1)/2$ trigonometic terms in the expansion and for $n$ even there will be 
+$n/2$ trigonometric terms in the expansion as well as a constant term.
+
+````{admonition} Practice Questions
+:class: seealso, dropdown
+1\. Show that:
+```{math}
+\cos^7(\theta) = \frac{1}{64} \Big[35\cos(\theta) + 21\cos(3\theta) + 7\cos(5\theta) + \cos(7\theta)\Big]
+```
+2\. Find an expressions for $\cos(7 \theta),\, \sin(7\theta)$ in terms of $\cos(\theta),\, \sin(\theta)$.
+
+3\. Find an expression for $\sin^5(\theta)$ in terms of $\sin(n\theta),\, n \in \mathbb{N}$.
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+1\.
+Given that $\cos(\theta) = \frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)$, then we can find $\cos^7(\theta)$ as:
+```{math}
+\cos^7(\theta) &= \Big[\frac{1}{2}\Big(e^{i \theta} + e^{-i \theta}\Big)\Big]^7 \\
+&= \frac{1}{2^7}\Big( e^{7 i \theta} + 7e^{6 i \theta}\,e^{-i \theta}  + 21e^{5 i \theta}\,e^{-2i \theta} + 35e^{4 i \theta}\,e^{-3i \theta} 
++ 35e^{3 i \theta}\,e^{-4i \theta}  + 21e^{2i \theta}\,e^{-5i \theta} + 7e^{i \theta}\,e^{-6i \theta}  + e^{-7i \theta} \Big)\\
+&= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7e^{6 i \theta}\,e^{-i \theta}  + 7e^{i \theta}\,e^{-6i \theta}  
++ 21e^{5 i \theta}\,e^{-2i \theta}  + 21e^{2i \theta}\,e^{-5i \theta}  + 35e^{4 i \theta}\,e^{-3i \theta} 
++ 35e^{3 i \theta}\,e^{-4i \theta}  \Big)\\
+&= \frac{1}{2^7}\Big( e^{7 i \theta} + e^{-7i \theta} + 7\,e^{5i \theta}  + 7\,e^{-5i \theta}  
++ 21z,e^{3 i \theta}  + 21\,e^{-3i \theta}  + 35e^\,e^{-i \theta} 
++ 35\,e^{-i \theta}  \Big)\\
+&= \frac{1}{128}\Big[2\cos(7 \theta) +  7(2\cos(5 \theta)) + 21(2\cos(3 \theta)) + 35(2\cos(\theta))\Big]\\
+\Rightarrow \cos^7(\theta)&= \frac{1}{64}\Big[\cos(7 \theta) +  7\cos(5 \theta) + 21\cos(3 \theta) + 35\cos(\theta)\Big]\\
+```
+2\. 
+Starting with:
+```{math}
+\Big(e^{i\theta}\Big)^7 = \Big(\cos(\theta) + i \sin(\theta)\Big)^7 = e^{7i\theta}= \cos(7\theta) + i \sin(7\theta)
+```
+then by expanding out the terms in the binomial and collecting the real and imaginary parts we find:
+```{math}
+\Big(\cos(\theta) + i \sin(\theta)\Big)^7 &= \cos^7(\theta) + 7i \cos^6(\theta)\,\sin(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) \\
+& - 35i \cos^4(\theta)\,\sin^3(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta) \\
+&+ 21i \cos^2(\theta)\,\sin^5(\theta) - 7 \cos(\theta)\,\sin^6(\theta) - i \sin^7(\theta) 
+```
+and hence:
+```{math}
+\cos(7\theta) &= \cos^7(\theta) - 21 \cos^5(\theta)\,\sin^2(\theta) + 35 \cos^3(\theta)\,\sin^4(\theta)  7 \cos(\theta)\,\sin^6(\theta)  \\
+\sin(7\theta) &= 7 \cos^6(\theta)\,\sin(\theta) - 35 \cos^4(\theta)\,\sin^3(\theta) + 21 \cos^2(\theta)\,\sin^5(\theta) -  \sin^7(\theta) 
+```
+
+3\. 
+Given that:
+```{math}
+\sin^5(\theta) = \Big(\frac{1}{2i}\Big)^5\Big(e^{i\theta}-e^{-i\theta}\Big)^5
+```
+
+Expanding out the right hand side using binomial expansion, and collecting together powers of $\theta$ gives:
+
+```{math}
+\sin^5(\theta) &= \left(\frac{1}{2}\right)^5 (-i) [(e^{5i\theta} - e^{-5i\theta}) - 5(e^{3i\theta} - e^{-3i\theta}) + 10(e^{i\theta} - e^{-i\theta})]\\
+&= \left(\frac{1}{2}\right)^5 (-i) [2i\sin(5\theta) - 5(2i)\sin(3\theta) + 10(2i)\sin(\theta)]\\
+&= \frac{1}{16} [\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)]\\
+
+```
+````
+
+### Hyperbolic functions
+Hyperbolic functions can be thought of as a way to take the exponential function $e^{x}$ which is neither odd nor even and generate odd or even functions from it.  To 
+do so, think about the graphs of $e^{x},\, e^{-x}$ which are mirror images in the $y$ axis:
+```{figure} ../figures/expfun.png
+---
+name: expfun
+---
+Graphs of $e^{x},\, e^{-x}$.
+```
+
+If we add up these functions, $e^{x} + e^{-x}$, we find a function which looks like:
+```{figure} ../figures/expfun2.png
+---
+name: expfun
+---
+Graph of $e^{x}+e^{-x}$.
+```
+which clearly now has the property that $f(-x) = f(x)$, i.e. it is even.  Likewise if we subtract one function from another $e^{x} - e^{-x}$, it looks like:
+```{figure} ../figures/expfun3.png
+---
+name: expfun
+---
+Graph of $e^{x}-e^{-x}$.
+```
+and again this now has the property that $f(-x) = -f(x)$, i.e. is is odd.  
+
+Therefore from a function that is neither, we can construct odd and even functions, by convention we will halve the resultign functions so that $\cosh(\theta)$ has a minima of 
+unity at the $y$ axis.
+
+````{admonition} Defintions of hyperbolic functions
+```{math}
+\cosh(\theta) &= \frac{1}{2}\Big(e^{x} + e^{-x} \Big) \\
+\sinh(\theta) &= \frac{1}{2}\Big(e^{x} - e^{-x} \Big)
+```
+We can then also define the hyperbolic tangent $\tanh(\theta)$ as:
+```{math}
+\tanh(\theta) = \frac{\sinh(\theta)}{\cosh(\theta)} = \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} = \frac{e^{2x}+1}{e^{2x}-1}
+```
+and finally, essentially define a *hyperbolic form* of any trigonometric function:
+```{math}
+\textrm{sech} &= \frac{1}{\cosh(\theta)} = \frac{2}{e^x + e^{-x}} = \frac{2e^x}{e^{2x} + 1} \\
+\textrm{cosech}(\theta) &= \frac{1}{\sinh(\theta)} = \frac{2}{e^x - e^{-x}} = \frac{2e^x}{e^{2x} - 1} \\
+\coth(\theta) &= \frac{1}{\tanh(\theta)} = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}= \frac{e^{2x}-1}{e^{2x}+1}
+```
+````
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+
+1\. Find real solutions to the problem $\cosh(x) = 2$
+
+2\. Find all the real solutions to the problem:
+```{math}
+2 \sinh(x) = \cosh(x)
+```
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. 
+```{math}
+\cosh(x) = \frac{1}{2}\Big(e^x + e^{-x} \Big) = 2
+```
+which is a disguised quadratic in $e^x$:
+```{math}
+e^{2x} + 1 = 4e^{x} \Rightarrow e^{2x} - 4e^{x} + 1 = 0
+```
+which has roots of:
+```{math}
+e^{x} = 2 \pm \sqrt{3} \Rightarrow x_\pm = \ln \Big( 2 \pm \sqrt{3}\Big)
+```
+
+
+2\. 
+```{math}
+2\Big(e^{x} - e^{-x}\Big) = e^{x} + e^{-x}
+```
+which is a disguised quadratic in $e^x$:
+```{math}
+2\Big(e^{2x} - 1\Big) &= e^{2x} + 1 \\
+e^{2x} &= 3 \\
+x &= \frac{1}{2}\ln(3)
+```
+
+````
+
+### Relationship between trigonometric and hyperbolic functions
+Starting from Euler's identity, we observe that:
+
+```{math}
+:label: trigEuler
+e^{i\theta} &= \cos(\theta) + i\sin(\theta) \\
+e^{-i\theta} &= \cos(\theta) - i\sin(\theta)
+```
+
+By adding and subtracting these two results, we obtain expressions for cosine and sine in terms of complex exponentials, which are strikingly 
+similar to the hyperbolic cosine and sine functions:
+
+```{math}
+:label: complexhyperbolic
+\cos(\theta) = \frac{1}{2}(e^{i\theta}+e^{-i\theta}) &= \cosh(i\theta)\\
+\sin(\theta) = \frac{1}{2i}(e^{i\theta}-e^{-i\theta}) &= -i\sinh(i\theta)
+```
+and likewise if we redefine $\theta = ix$:
+```{math}
+\cosh(x) & = \cos(ix) \\
+\sinh(x) &= -i\sin(ix)
+```
+
+The results may be used to obtain similar results for functions like $\tan(\theta)$ etc:
+```{math}
+\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{-i\sinh(i\theta)}{\cosh(i\theta)} = -i\tanh(i\theta)
+```
+
+
+
+
+### Compound hyperbolic identities
+
+We can see from the relationships between trigonometric and hyperbolic functions in {eq}`complexhyperbolic` that if we raise trignomietric 
+functions to power (e.g. squaring them), there are related hyperbolic identities:
+```{math}
+\cos^2(\theta) &= \cosh^2(i \theta) \\
+\sin^2(\theta) &= -\sinh^2(i \theta)
+```
+therefore trigonmetric identities can be modified to become hyperbolic identities:
+```{math}
+\cos^2 (\theta) + \sin^2(\theta) = 1 &\Longleftrightarrow \cosh^2(x) - \sinh^2(x) = 1\\
+\sin(2\theta) = 2\sin(\theta)\,\cos(\theta) &\Longleftrightarrow \sinh(2\theta) = 2\sinh(\theta)\,\cosh(\theta) \\
+\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta) &\Longleftrightarrow \cosh(2\theta) = \cosh^2(\theta) + \sinh^2(\theta) 
 ```

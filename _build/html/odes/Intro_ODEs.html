@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ordinary Differential Equations &#8212; Mathematics for Natural Sciences A</title>
+    <title>12. Ordinary Differential Equations &#8212; Mathematics for Natural Sciences A</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,6 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13. First Order ODEs" href="1st_order_ODEs.html" />
+    <link rel="prev" title="11. Multivariable Calculus" href="../differentiation_and_integration/partialdifferentiation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,20 +98,80 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Prelim/notationfunctions.html">
+  <a class="reference internal" href="../prelim/notationfunctions.html">
    1. Mathematical Prelimaries
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../prelim/binexpans.html">
+   2. Binomial Expansion and Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../complex_numbers/complex_numbers.html">
-   2. Complex Numbers
+   3. Complex Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/limits.html">
+   4. Limits of Functions and Sequences
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sequences_and_series/series.html">
-   3. Sequences and Series
+   5. Sequences and Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sequences_and_series/convergence.html">
+   6. Convergence of Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices_vectors/matrices.html">
+   7. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matrices_vectors/vectoralgebra.html">
+   8. Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/differentiation.html">
+   9. Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/integration.html">
+   10. Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../differentiation_and_integration/partialdifferentiation.html">
+   11. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1st_order_ODEs.html">
+   13. First Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2nd_order_ODEs.html">
+   14. Second Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/ode_solver_demo.html">
+   15. ODEs with Python
   </a>
  </li>
 </ul>
@@ -201,17 +263,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-terminology">
-   Introduction and terminology
+   12.1. Introduction and terminology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-boundary-conditions">
-   Initial/boundary conditions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homogeneous-linear-odes">
-   Homogeneous linear ODEs
+  <a class="reference internal nav-link" href="#initial-and-boundary-conditions">
+   12.2. Initial and boundary conditions
   </a>
  </li>
 </ul>
@@ -236,17 +293,12 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-and-terminology">
-   Introduction and terminology
+   12.1. Introduction and terminology
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-boundary-conditions">
-   Initial/boundary conditions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homogeneous-linear-odes">
-   Homogeneous linear ODEs
+  <a class="reference internal nav-link" href="#initial-and-boundary-conditions">
+   12.2. Initial and boundary conditions
   </a>
  </li>
 </ul>
@@ -259,104 +311,120 @@
               <div>
                 
   <div class="section" id="ordinary-differential-equations">
-<h1>Ordinary Differential Equations<a class="headerlink" href="#ordinary-differential-equations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">12. </span>Ordinary Differential Equations<a class="headerlink" href="#ordinary-differential-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction-and-terminology">
-<h2>Introduction and terminology<a class="headerlink" href="#introduction-and-terminology" title="Permalink to this headline">¶</a></h2>
-<p>Any equation that contains derivatives is called a “differential equation”. If the equation contains only a single dependent variable then it is known as an “ordinary differential equation” (ODE).</p>
-<p>An example of an ODE that appears very commonly in physical sciences is the Airy equation, which is given by</p>
-<div class="math notranslate nohighlight" id="equation-airyode">
-<span class="eqno">()<a class="headerlink" href="#equation-airyode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy\]</div>
-<p>The Airy equation is a <em>second order</em> differential equation because the highest derivative in the equation is a second order derivative.
-It is a linear ODE because it does not contain any products of terms involving the dependent variable <span class="math notranslate nohighlight">\(y\)</span>, such as <span class="math notranslate nohighlight">\(y^2\)</span> or <span class="math notranslate nohighlight">\(y \frac{\mathrm{d}y}{\mathrm{d}x}\)</span> or <span class="math notranslate nohighlight">\(\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2\)</span>. Linear ODEs are normally much easier to solve than nonlinear ones.</p>
+<h2><span class="section-number">12.1. </span>Introduction and terminology<a class="headerlink" href="#introduction-and-terminology" title="Permalink to this headline">¶</a></h2>
+<p>Any equation that contains derivatives is called a <em>differential equation</em>. If the equation contains only one single dependent variable then it is
+known as an <strong>ordinary differential equation</strong> (ODE), otherwise it is called a <strong>partial differential equation</strong> (PDE).</p>
 <div class="important admonition">
-<p class="admonition-title">Definitions</p>
-<p>ODEs are classified according to the following:</p>
+<p class="admonition-title">Classifying ODEs</p>
+<p>ODEs can be classified according to the following:</p>
 <ul class="simple">
-<li><p>Order: determined by the highest order derivative</p></li>
-<li><p>Degree: the power of the highest order derivative after fractional powers are removed.</p></li>
-<li><p>linear/nonlinear refers to linearity/nonlinearity in the dependent variable and its derivatives</p></li>
+<li><p><em>Order:</em> determined by the highest order derivative, e.g. <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}\)</span> is a first order term,
+<span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}^2y}{\mathrm{d}x^2}\)</span> is a second order term.</p></li>
+<li><p><em>Degree:</em> the power of the highest order derivative after fractional powers are removed, e.g. <span class="math notranslate nohighlight">\(\displaystyle \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2\)</span> is a second
+degree term, whilst <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}^2y}{\mathrm{d}x^2}\)</span> is a first degree term.</p></li>
+<li><p><em>Linearity:</em> linear or non-linear refers to highest power that the dependent variable and its derivatives are raised to.  An ODE is said to be linear if it has the form:</p></li>
 </ul>
-<p>Check: <span class="math notranslate nohighlight">\(\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2\)</span> is a second degree term, <span class="math notranslate nohighlight">\(\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\)</span> is a first degree term</p>
-</div>
-<p>The simplest type differential equation imaginable is a linear first order ODE of the form</p>
-<p>\begin{equation*}
-\frac{\mathrm{d}y}{\mathrm{d}x}=f(x).
-\end{equation*}</p>
-<p>Examples of this type can be solved by direct integration. For example, the problem <span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}x}=3x^2\)</span> may be integrated to give <span class="math notranslate nohighlight">\(y=x^3+\text{const}\)</span>.</p>
-<p>However, the majority of differential equations that we encounter in real world problems are not directly integrable.
-The second order ODE in equation <a class="reference internal" href="#equation-airyode">()</a>, for example, cannot be solved by this method, and in fact its relatively innocent appearance hides a wealth of interesting mathematics.</p>
-<p>The strategy for solving differential equations involves classifying different types of problem that we know how to solve, and building up an armoury of techniques.
-In this chapter we will look at methods for solving some important types of first- and second order ODE.</p>
-</div>
-<div class="section" id="initial-boundary-conditions">
-<h2>Initial/boundary conditions<a class="headerlink" href="#initial-boundary-conditions" title="Permalink to this headline">¶</a></h2>
-<p>When we integrate or otherwise solve a differential equation, we obtain arbitrary (undetermined) constants.
-If the problem is first order then there will be one unknown constant, since the solution to the problem is equivalent to performing a single integration.
-If the problem is second order then we will obtain two unknown constants.
-For example, suppose that we are given the problem</p>
-<p>\begin{equation*}
-\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=2t
-\end{equation*}
-which describes the vertical acceleration of an object at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
-<div class="notice admonition">
-<p class="admonition-title">Displacement, velocity, acceleration</p>
-<p>If <span class="math notranslate nohighlight">\(y\)</span> measures displacement Then</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{\mathrm{d}y}{\mathrm{d}t}\)</span> measures velocity (rate of change of displacement)</p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{\mathrm{d}^2y}{\mathrm{d}t^2}\)</span> measures acceleration (rate of change of velocity).</p></li>
-</ul>
-</div>
-<p>Integrating once with respect to <span class="math notranslate nohighlight">\(t\)</span> gives</p>
-<div class="math notranslate nohighlight" id="equation-firstintegral">
-<span class="eqno">()<a class="headerlink" href="#equation-firstintegral" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}t}=t^2+k\]</div>
-<p>where <span class="math notranslate nohighlight">\(k\)</span> is an unknown constant.</p>
-<p>Integrating again then gives</p>
-<div class="math notranslate nohighlight" id="equation-secondintegral">
-<span class="eqno">()<a class="headerlink" href="#equation-secondintegral" title="Permalink to this equation">¶</a></span>\[y=\frac{t^3}{3}+kt+c,\]</div>
-<p>where we have introduced another unknown constant <span class="math notranslate nohighlight">\(c\)</span>.</p>
-<p>The constants can be uniquely determined by providing conditions.
-For example, we might specify initial conditions for the displacement and velocity in the manner <span class="math notranslate nohighlight">\(y(0)=1\)</span> and <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span>.</p>
-<p>Applying the condition <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span> to equation <a class="reference internal" href="#equation-firstintegral">()</a> gives <span class="math notranslate nohighlight">\(k=3\)</span>, and then applying the condition <span class="math notranslate nohighlight">\(y(0)=1\)</span> to equation <a class="reference internal" href="#equation-secondintegral">()</a> gives <span class="math notranslate nohighlight">\(c=1\)</span>.</p>
-<p>The final result is <span class="math notranslate nohighlight">\(y=\frac{t^3}{3}+3t+1.\)</span></p>
-<p>In general, to obtain a fully determined solution to a given problem, we require the number of given conditions to match the degree of the problem.</p>
-<div class="notice admonition">
-<p class="admonition-title">More terminology</p>
-<p>Conditions given when <span class="math notranslate nohighlight">\(t=0\)</span> (where <span class="math notranslate nohighlight">\(t\)</span> denotes time) are called <em>initial conditions</em></p>
-<p>More generally, we use the term <em>boundary conditions</em>.
-Boundary conditions provide the value of the dependent variable or its derivatives at some specified value(s) of the independent variable.</p>
-<p>For example, in the Airy ODE we might specify the boundary conditions <span class="math notranslate nohighlight">\(y(0)=1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\rightarrow\infty}y(x)=0\)</span></p>
-</div>
-<p><strong>Example</strong></p>
-<p>Solve the second order problem <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)=xe^x\)</span> subject to <span class="math notranslate nohighlight">\(y(0)=1\)</span>, <span class="math notranslate nohighlight">\(y(1)=0\)</span> by direct integration. <br></p>
-<p><strong>Solution:</strong></p>
-<p>Integrating once with respect to <span class="math notranslate nohighlight">\(t\)</span> gives <span class="math notranslate nohighlight">\(y^{\prime}(x)=(x-1)e^x+k\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is an arbitrary constant</p>
-<p>Integrating again w.r.t. <span class="math notranslate nohighlight">\(x\)</span> gives <span class="math notranslate nohighlight">\(y(x)=(x-2)e^x+kx+c\)</span>, where <span class="math notranslate nohighlight">\(c\)</span> is an arbitrary constant.</p>
-<p>Applying <span class="math notranslate nohighlight">\(y(0)=1\)</span> gives <span class="math notranslate nohighlight">\(c=3\)</span>
-Then, applying <span class="math notranslate nohighlight">\(y(1)=0\)</span> gives <span class="math notranslate nohighlight">\(k=e-3\)</span></p>
-<p>So the final solution is <span class="math notranslate nohighlight">\(y(x)=(x-2)e^x+(e-3)x+3\)</span></p>
-</div>
-<div class="section" id="homogeneous-linear-odes">
-<h2>Homogeneous linear ODEs<a class="headerlink" href="#homogeneous-linear-odes" title="Permalink to this headline">¶</a></h2>
-<p>A linear ODE is said to be homogeneous if it has the form</p>
 <div class="math notranslate nohighlight">
-\[a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\dots +a_1(x)y^{\prime}+a_0(x)y=0\]</div>
-<p>where a bracketed superscript <span class="math notranslate nohighlight">\(y^{(n)}\)</span> denotes the <span class="math notranslate nohighlight">\(n\)</span>th derivative of <span class="math notranslate nohighlight">\(y\)</span>.</p>
-<p>That is, a linear ODE is homogeneous if there is no term that is a function of the dependent variable alone. For example,</p>
+\[a_n(x)\,y^{(n)}+a_{n-1}(x)\,y^{(n-1)} + \dots + a_1(x)\,y^{\prime} + a_0(x)\,y = f(x)\]</div>
+<p>where a bracketed superscript <span class="math notranslate nohighlight">\(y^{(n)}\)</span> denotes the <span class="math notranslate nohighlight">\(n^{th}\)</span> derivative of function <span class="math notranslate nohighlight">\(y(x)\)</span>.</p>
+</div>
+<p>The simplest type differential equation imaginable is a linear first order ODE of the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)\]</div>
+<p>ODEs of this type can be solved by direct integration, for example the ODE:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=3x^2\]</div>
+<p>may be integrated to give:</p>
+<div class="math notranslate nohighlight">
+\[y=x^3 + C\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.  However, the majority of differential equations that we encounter in real world problems are not <em>directly</em> integrable, for
+example the Airy equation is an ODE that appears very commonly in physical sciences, which is given by:</p>
+<div class="math notranslate nohighlight" id="equation-airyode">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-airyode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}^2 y}{\mathrm{d} x^2}=xy\]</div>
+<p>We note that the Airy equation is a <em>second order</em> differential equation (because the highest derivative in the equation is a second order derivative) as well a first
+degree equation.  However we find that <a class="reference internal" href="#equation-airyode">(12.1)</a> cannot be solved by direct integration, and in fact its relatively innocent appearance hides a wealth of interesting
+mathematics.  The strategy for solving differential equations involves classifying different types of problem that we know how to solve, and building up an
+armoury of techniques.</p>
+</div>
+<div class="section" id="initial-and-boundary-conditions">
+<h2><span class="section-number">12.2. </span>Initial and boundary conditions<a class="headerlink" href="#initial-and-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<p>When we solve a differential equation, we obtain arbitrary (undetermined) constants, this because we are in effect integrating the problem.  If the problem is at first
+order then there will be <strong>one</strong> unknown constant, since the solution to the problem is equivalent to performing a single integration, whilst for a second order
+problem we will obtain <strong>two</strong> unknown constants.  In general, to obtain a fully determined solution to a given problem, we require the number of given
+conditions to match the <em>degree</em> of the problem.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>For example, suppose that we are given the problem:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=2t\]</div>
+<p>which describes the vertical acceleration of an object at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Recall that if <span class="math notranslate nohighlight">\(y\)</span> measures displacement then <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}t}\)</span> measures velocity (i.e. rate of change of displacement) and
+<span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}^2y}{\mathrm{d}t^2}\)</span> measures acceleration (i.e. rate of change of velocity).</p>
+<p>Integrating once with respect to <span class="math notranslate nohighlight">\(t\)</span> gives:</p>
+<div class="math notranslate nohighlight" id="equation-firstintegral">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-firstintegral" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}t}=t^2+k\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is an unknown constant.  Integrating again then gives:</p>
+<div class="math notranslate nohighlight" id="equation-secondintegral">
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-secondintegral" title="Permalink to this equation">¶</a></span>\[y=\frac{t^3}{3}+kt+c,\]</div>
+<p>where we have introduced another unknown constant <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>The constants can be uniquely determined by providing conditions.  For example, we might specify initial conditions for the displacement and velocity in the
+manner</p>
+<div class="math notranslate nohighlight">
+\[y(0)=1, \quad y^{\prime}(0)=3\]</div>
+<p>Applying the condition <span class="math notranslate nohighlight">\(y^{\prime}(0)=3\)</span> to equation <a class="reference internal" href="#equation-firstintegral">(12.2)</a> gives <span class="math notranslate nohighlight">\(k=3\)</span>, and then applying the condition <span class="math notranslate nohighlight">\(y(0)=1\)</span> to equation <a class="reference internal" href="#equation-secondintegral">(12.3)</a>
+gives <span class="math notranslate nohighlight">\(c=1\)</span>, hence the final result is</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{t^3}{3} + 3t + 1\]</div>
+</div>
+<p>Conditions given when <span class="math notranslate nohighlight">\(t=0\)</span> (where <span class="math notranslate nohighlight">\(t\)</span> denotes time) are called <em>initial conditions</em></p>
+<p>More generally, we use the term <em>boundary conditions</em>.  Boundary conditions provide the value of the dependent variable or its derivatives at some
+specified value(s) of the independent variable.</p>
+<p>For example, in the Airy ODE we might specify the boundary conditions <span class="math notranslate nohighlight">\(y(0)=1\)</span>, with a limit such as:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\rightarrow\infty}y(x)=0\]</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Solve the second order problem <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)=xe^x\)</span> subject to <span class="math notranslate nohighlight">\(y(0)=1,\, y(1)=0\)</span> by direct integration.</p>
+<p>2. Solve the third order problem <span class="math notranslate nohighlight">\(y^{\prime\prime\prime}(x)=e^{x/2}\)</span> subject to <span class="math notranslate nohighlight">\(y(0)=1, \,y'(0)=1, \, y''(0) = 1\)</span> by direct integration.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>1. Integrating once with respect to <span class="math notranslate nohighlight">\(x\)</span> (using integration by parts) gives:</p>
+<div class="math notranslate nohighlight">
+\[y^{\prime}(x)=(x-1)e^x+C_1\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1\)</span> is an arbitrary constant.  Integrating again w.r.t. <span class="math notranslate nohighlight">\(x\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[y(x)=(x-2)e^x+kx+C_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_2\)</span> is an arbitrary constant.  Applying <span class="math notranslate nohighlight">\(y(0)=1\)</span> gives <span class="math notranslate nohighlight">\(C_2=3\)</span> and applying <span class="math notranslate nohighlight">\(y(1)=0\)</span> gives <span class="math notranslate nohighlight">\(C_1=e-3\)</span>, so the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = (x-2)e^x+(e-3)x+3\]</div>
+<p>2. Integrating once with respect to <span class="math notranslate nohighlight">\(x\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[y^{\prime\prime}(x) = 2e^{x/2} + C_1\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1\)</span> is an arbitrary constant.  Integrating again w.r.t. <span class="math notranslate nohighlight">\(x\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[y^{\prime}(x) = 4e^{x/2} + C_1 x + C_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_2\)</span> is an arbitrary constant and integrating once more gives:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = 8e^{x/2} + \frac{C_1 x^2}{2} + C_2x + C_3\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_3\)</span> is an arbitrary constant.</p>
+<p>Applying <span class="math notranslate nohighlight">\(y(0)=1\)</span> gives <span class="math notranslate nohighlight">\(C_3 = -7\)</span>, applying <span class="math notranslate nohighlight">\(y'(0)=1\)</span> gives <span class="math notranslate nohighlight">\(C_2=-3\)</span> and applying <span class="math notranslate nohighlight">\(y''(0)=1\)</span> gives <span class="math notranslate nohighlight">\(C_1=-1\)</span>, so the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = 8e^{x/2} - \frac{ x^2}{2} - 3x - 7\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Real Life Examples</p>
+<p>Many of the fundamental laws of physics are stated in the form of differential equations, some examples include:</p>
 <ul class="simple">
-<li><p>the ODE <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)+3x^2 y^{\prime}(x)-2y(x)=0\)</span> is homogeneous</p></li>
-<li><p>the ODE <span class="math notranslate nohighlight">\(y^{\prime}(x)-3y(x)+x^2=0\)</span> is inhomogeneous.</p></li>
+<li><p>Simple (and higher order) Harmonic Oscillators</p></li>
+<li><p>Newton’s Second Law of Motion</p></li>
+<li><p>The Schrödinger Equation</p></li>
+<li><p>Circuit Equations in Electronics</p></li>
+<li><p>Rate Equations in Chemistry</p></li>
 </ul>
-<p>The corresponding homogeneous problem for the inomogeneous example above is <span class="math notranslate nohighlight">\(y^{\prime}(x)=3y(x)=0\)</span></p>
-<!-- ```{admonition} Real Life Examples
-:class: notice
-Many of the fundamental laws of physics are stated in the form of differential equations. Examples:
-
-* Simple Harmonic Oscillator
-* Newton's Second Law of Motion
-* Shrödinger's Equation
-* Circuit Equations in Electronics
-* Rate Equations in Chemistry
-```` -->
+</div>
 </div>
 </div>
 
@@ -384,7 +452,21 @@ Many of the fundamental laws of physics are stated in the form of differential e
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../differentiation_and_integration/partialdifferentiation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Multivariable Calculus</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="1st_order_ODEs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>First Order ODEs</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
