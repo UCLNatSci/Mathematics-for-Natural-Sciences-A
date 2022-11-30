@@ -477,7 +477,7 @@ We can combine together our facts about partial fractions into:
 |$ax+b$			|$\displaystyle \frac{A}{ax+b}$		 		|
 |$(ax+b)^n$		|$\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{(ax+b)2} + \dots \frac{A_n}{(ax+b)^n}, \quad n \in \mathbb{N}$		 |
 |$ax^2+bx+c$	|$\displaystyle \frac{Ax+B}{ax^2+bx+c}$		|
-|$(ax^2+bx+c)^n$|$\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{(ax^2+bx+c)^2} + \dots \frac{A_n}{(ax^2+bx+c)^n}, \quad n \in \mathbb{N}$		 |
+|$(ax^2+bx+c)^n$|$\displaystyle \frac{A_1}{ax^2+bx+c} + \frac{A_2}{(ax^2+bx+c)^2} + \dots \frac{A_n}{(ax^2+bx+c)^n}, \quad n \in \mathbb{N}$		 |
 
 
 ````{admonition} Worked example
@@ -804,7 +804,7 @@ I_0 &= \int_0^1\mathrm{d} x = 1 \\
 ```
 
 4\. 
-Firstly break up the integrand into $\sin(x) \sin^{n-1}(x) \,\mathrm{d} x$ and then integrate by parts:
+Firstly break up the integrand into $\sin(x) \sin^{n-1}(x)$ and then integrate by parts:
 ```{math} 
 \begin{array}{lcl}
 u(x) = \sin^{n-1}(x) && v'(x) = \sin(x) \\
@@ -928,22 +928,25 @@ and therefore to find the path length:
 ```{math}
 L = \int_{x=a}^{x=b} \mathrm{d}s = \int_a^b \sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x
 ```
+
+We might also have a function which is parameterised $y = y(t),\, x=x(t)$, it is also possible to find an 
+expression for the path length for $t \in [t_a,\, t_b]$, taking the limit of $\Delta t \rightarrow 0$:
+```{math}
+\Delta s &=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
+\Rightarrow \mathrm{d}s &=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\\
+L &= \int_{t_a}^{t_b}  \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t
+```
+
+
 ````{admonition} Worked examples
 :class: seealso
 
-1\.  lets look at $y = \cosh(x)$ over the range $x \in [0,\,1]$, so we find $\mathrm{d}y/\mathrm{d}x = \sinh(x)$, and therefore:
+1\.  Looking at $y = \cosh(x)$ over the range $x \in [0,\,1]$, so we find $\mathrm{d}y/\mathrm{d}x = \sinh(x)$, and therefore:
 ```{math}
 L = \int_0^1 \sqrt{1 + \sinh^2(x)}\,\mathrm{d}x = \int_0^1 \cosh(x)\,\mathrm{d}x = \Big[ \sinh(x) \Big]_0^1 = \sinh(1) \simeq 1.175\dots
 ```
-We might also have a function which is parameterised $y = y(t),\, x=x(t)$, it is also possible to find an expression for the path length, taking the limit of 
-$\Delta t \rightarrow 0$:
-```{math}
-\Delta s &=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
-\Rightarrow \mathrm{d}s &=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}
-```
 
-2\. 
-Consider a circle, parameterised by $x = R\cos(t),\, y = R\sin(t)$, over the range $t \in [0,\, 2\pi)$, giving 
+2\. Consider a circle, parameterised by $x = R\cos(t),\, y = R\sin(t)$, over the range $t \in [0,\, 2\pi)$, giving 
 $\mathrm{d}x/\mathrm{d}t = -R\sin(t),\, \mathrm{d}y/\mathrm{d}t = R\cos(t)$ and therefore:
 ```{math}
 L = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)}\,\mathrm{d}t = \int_0^{2\pi} R\,\mathrm{d}x = \Big[ Rt \Big]_0^{2\pi} = 2\pi\,R
@@ -1040,7 +1043,7 @@ Instead of using cylindrical slices, we could use "frustrums" (sections of cones
 Similarly, when calculating the area under the curve, we used rectangles, but we could have used parallelograms.
 ```
 
-We can also find the surface area of this solid of revolution, if we rotate over the $x$ acis then this surface area is the circumference of each 
+We can also find the surface area of this solid of revolution, if we rotate over the $x$ xcis then this surface area is the circumference of each 
 slice $2\pi\,y$ multiplied by the path length $\mathrm{d} s$ along the surface, so we find:
 
 ```{math}
@@ -1102,22 +1105,26 @@ $-2 \leq x \leq 2$ about the $x$-axis.
 3\. Determine the surface area of the solid obtained by rotating the function $y=x^{1/3}$, for 
 $1 \leq y \leq 2$ about the $y$-axis.
 
+4\. Find the surface area spherical section obtained by revolving the function $r = \cos(\theta)$ around the $x$ 
+axis over $\theta \in \left[0\,\frac{\pi}{4}\right]$.
+
+5\. Find the volume of revolutio for the section obtained by reolving the function $y = x^2$ around the $x$ axis over $x \in [-2,\,3]$.
+
+6\. Find the volume of the solid obtained by rotating the region bounded by $y=2x^2$ and $y=x^3$ about the $x$ axis, from the origin up to where the functions meet.
+
 ````
 
 ````{admonition} Solution
 :class: seealso, dropdown
 1\. 
 ```{math}
-y = x^2\Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = 2x
-```
-Fixing the limits we find 
-```{math}
-y = 0 &\rightarrow x = 0\\
-y = 4 &\rightarrow x = 2
+y = x^2\Rightarrow x = y^{1/2}\\
+\frac{\mathrm{d}x}{\mathrm{d}y} = \frac{1}{2}y^{-1/2}\\
+1 + (x')^2 = 1 + \frac{1}{4}y^{-1} = \frac{1+4y}{4y}
 ```
 so integral is:
 ```{math}
-A &= \int_0^2 2\pi\,x\sqrt{1+4x^2}\,\mathrm{d}x = \frac{\pi}{4}\int_0^2 8x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
+A &= \int_{y=0}^{y=4} 2\pi\,x\,\mathrm{d}s = 1\pi\int_0^4 x\,(1+4x^2)^{1/2}\,\mathrm{d}x \\ 
 &= \frac{\pi}{4}\bigg[\frac{2}{3} (1+4x^2)^{3/2} \bigg]_0^2 = \frac{\pi}{6}\left(17^{3/2}-1\right) \approx 36.2\dots
 ```
 
@@ -1135,17 +1142,64 @@ so integral is:
 
 3\. 
 ```{math}
-y &= x^{1/3}\\
-\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{1}{3}x^{-2/3}  \\
-1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2 &= 1 \frac{1}{9}x^{-4/3} = \frac{9x^{4/3} + 1}{9x^{4/3}}
+y &= x^{1/3} \Rightarrow x = y^3\\
+\frac{\mathrm{d}x}{\mathrm{d}y} &= 3y^2  \\
+1 + \left( \frac{\mathrm{d}x}{\mathrm{d}y}\right)^2 &= 1+ 9y^4 
 ```
-the limits as $y \in [1,\, 2]$ in $x$ are $x \in [1,\, 8]$, so integral is:
+the limits as $y \in [1,\, 2]$, so integral is:
 ```{math}
-2\pi\,\int_{1}^8  y\sqrt{1 + \left( \frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}x = \frac{2\pi}{3}\int_{1}^8 x^{1/3}\left(9x^{4/3}+1\right)^{1/2}\, \mathrm{d}x
+2\pi\,\int_{1}^2  x\sqrt{1 + \left( \frac{\mathrm{d}x}{\mathrm{d}y}\right)^2}\,\mathrm{d}x = 2\pi\int_{1}^2 y^3\left(1+9y^4\right)^{1/2}\, \mathrm{d}x
 ```
-which we can solve by inspection (or reverse chain rule), where $\int f^n\,f'\,\mathrm{d}x = \frac{1}{n+1}f^{n+1}$, here $f = 9x^{4/3} + 1$, so $f' = 12x^{1/3}$
+which we can solve by inspection (or reverse chain rule), where $\int f^n\,f'\,\mathrm{d}y = \frac{1}{n+1}f^{n+1}$, here $f = 1+9y^4 $, so $f' = 36y^3$
 ```{math}
-S = \frac{2\pi}{3}\frac{1}{12}\Big[\frac{2}{3}\left(9x^{4/3}+1 \right)^{3/2}\Big]_1^8 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots
+S = 2\pi\frac{1}{36}\Big[\frac{2}{3}\left(9y^4+1 \right)^{3/2}\Big]_1^2 = \frac{\pi}{27}\left(145^{3/2} - 10^{3/2} \right) \simeq 199.48\dots
+```
+
+4\. Given that the surface for a rotated solid around the $x$ axis is $\int_a^b 2\pi y\,\mathrm{d}s$ and we have $x = r \cos(\theta),\, y = r \sin(\theta)$, 
+then this is just a parametric problem, where:
+```{math}
+\mathrm{d}s &= \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}\theta}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}\theta}\right)^2}\,\mathrm{d}\theta\\
+\mathrm{d}x &= \cos(\theta)\,\mathrm{d}r - r \sin(\theta)\,\mathrm{d}\theta \Rightarrow \frac{\mathrm{d}x}{\mathrm{d}\theta} = \cos(\theta)\,\frac{\mathrm{d}r}{\mathrm{d}\theta} - r \sin(\theta)\\
+\mathrm{d}y &= \sin(\theta)\,\mathrm{d}r + r \cos(\theta)\,\mathrm{d}\theta \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}\theta} = \sin(\theta)\,\frac{\mathrm{d}r}{\mathrm{d}\theta} + r \cos(\theta)\\
+\mathrm{d}s &= \sqrt{r^2 + \left(\frac{\mathrm{d}r}{\mathrm{d}\theta}\right)^2}\,\mathrm{d}\theta 
+```
+Given that $r = \cos(\theta)$ then:
+```{math}
+\frac{\mathrm{d}r}{\mathrm{d}\theta} = -\sin(\theta)
+```
+so the problem looks like:
+```{math}
+A &= \int_0^{\pi/4} 2\pi r\,\sin(\theta)\,\sqrt{\cos^2(\theta) + \sin^2(\theta)}\,\mathrm{d}\theta \\
+ &= \int_0^{\pi/4} 2\pi \cos(\theta)\,\sin(\theta)\,\mathrm{d}\theta = \Bigg[\pi \sin^2(\theta) \Bigg]_0^{\pi/4} = \frac{\pi}{2}
+```
+
+5\.
+
+Using $V = \int_{-2}^3 \pi y^2\,\mathrm{d}x $, we find:
+```{math}
+V = \int_{-2}^3 \pi x^4\,\mathrm{d}x = \Bigg[ \frac{1}{5}x^5\Bigg]_{-2}^3 = \pi\left[ \frac{243}{5} - \left(-\frac{32}{5}\right)\right] = 55\pi
+```
+
+
+6\. 
+
+Firstly lets find the intersection points:
+```{math}
+x^3 &= 2x^2 \\
+x^2(x-2) &= 0 \\
+\Rightarrow x = 0,\qquad & x = 2
+```
+which we can also see graphically:
+```{figure} ../figures/regions.png
+---
+name: regionsIntVol
+---
+```
+To find the volume of the bounded shape, we need to subtract the two volumes we would find:
+
+```{math}
+V_{tot} &= V_{outer} - V_{inner} = \int_0^2 \pi (2x^2)^2 \,\mathrm{d}x - \int_0^2 \pi (x^3)^2 \,\mathrm{d}x \\
+&=\int_0^2 \pi \left(4x^4 -x^6\right)\, \mathrm{d}x = \Bigg[ \frac{4}{5}x^5 - \frac{1}{7}x^7\Bigg]_0^2 = \frac{256}{35}\pi
 ```
 
 ````

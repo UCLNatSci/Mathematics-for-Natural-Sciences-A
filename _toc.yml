@@ -7,8 +7,8 @@ options:
   numbered: True
 
 chapters:
-- file: prelim/notationfunctions
-- file: prelim/binexpans
+- file: Prelim/notationfunctions
+- file: Prelim/binexpans
 
 - file: complex_numbers/complex_numbers.md
 
