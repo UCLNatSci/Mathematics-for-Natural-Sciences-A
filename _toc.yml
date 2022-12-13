@@ -26,4 +26,3 @@ chapters:
 - file: odes/Intro_ODEs.md
 - file: odes/1st_order_ODEs.md
 - file: odes/2nd_order_ODEs.md
-- file: python/ode_solver_demo.ipynb

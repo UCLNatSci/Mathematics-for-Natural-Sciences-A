@@ -547,8 +547,9 @@ this condition is met and so to detemine $f(x,\, y)$:
 ```{math}
 \frac{\partial f}{\partial x} = 3y^3\,e^{3xy} - 1\Rightarrow f(x,\,y) = \int \Big(3y^3\,e^{3xy} - 1\Big)\,\mathrm{d}x = y^2\,e^{3xy} - x + g(y)
 ```
-We could attempt the same process on $f_y$ however this will involve multiple integration by parts calculations (we could simplify this with a reduce formulae $\int y^n\,e^{axy}\,mathrm{d}y$, but 
-we could instead by differentiate this preliminary expression for $f(x,\,y)$ and then compare $f_y$ with what is left to figure out the anti-derivative:
+We could attempt the same process on $f_y$ however this will involve multiple integration by parts calculations (we could simplify this with a 
+reduction formula $\int y^n\,e^{axy}\,\mathrm{d}y$), but here we will instead differentiate this preliminary expression for $f(x,\,y)$ and then 
+compare $f_y$ with what is left to figure out the anti-derivative:
 ```{math}
 f   &= y^2\,e^{3xy} - x + g(y) \\
 f_y &= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy} + g'(y) \\
@@ -570,6 +571,96 @@ y^2\,e^{3xy} - x  = 1
 ```
 Which we have to leave in this form as no simple elementary function solution exists.
 ````
+### Fixing the perfect form
+
+This method relies on the differential given being perfect, if it is not, then we cannot find the function $f(x,\, y)$.  However there is an analagous method for finding 
+a multivariable integrating factor, allowing us to *potentially* convert imperfect differentials into a perfect form .
+
+````{admonition} Multivariable integrating factor
+Consider an imperfect differential:
+```{math}
+P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0\qquad \frac{\partial P}{\partial y} \neq \frac{\partial Q}{\partial x}
+```
+
+Lets introduce an integrating factor $M(x,\,y)$, which means now that:
+```{math}
+M(x,\,y)\,P(x,\,y)\,\mathrm{d}x + M(x,\,y)\,Q(x,\,y)\,\mathrm{d}y = 0 \qquad \frac{\partial (M P)}{\partial y} = \frac{\partial (M Q)}{\partial x}
+```
+
+and we can write the form of $M(x,\,y)$ as:
+```{math}
+M(x,\,y) = e^{\int G(x)\,\mathrm{d}x}\,e^{\int H(y)\,\mathrm{d}y}
+```
+````
+
+The form of the multivariable integrating factor means that:
+```{math}
+M_x &= G(x)\,M \\
+M_y &= H(y)\,M
+```
+Solving the key requirement for a perfect differential:
+```{math}
+\frac{\partial (M P)}{\partial y} &= M_y\,P + M\,P_y = M(H\,P + P_y)\\
+\frac{\partial (M Q)}{\partial x} &= M_x\,Q + M\,Q_x = M(G\,Q + Q_x)\\
+&\Rightarrow H(y)\,P + P_y = G(x)\,Q + Q_x
+```
+our aim here is separate out variables.  If each of $P(x,\,y),\, Q(x,\,y)$ are in a separable form:
+```{math}
+P(x,\,y) &= p_1(x)\,p_2(y) \\
+Q(x,\,y) &= q_1(x)\,q_2(y)
+``` 
+which means therefore:
+```{math}
+H(y)\,p_1(x)\,p_2(y) + p_1(x)\,{p_2}'(y) &= G(x)\,q_1(x)\,q_2(y) + {q_1}'(x)\,q_2(y) \\
+\Rightarrow p_1(x)\Big(H(y)\,p_2(y) + {p_2}'(y)\Big) &= q_2(y)\Big(G(x)\,q_1(x) + {q_1}'(x)\Big) \\
+\frac{H(y)\,p_2(y) + {p_2}'(y)}{q_2(y)} &= \frac{G(x)\,q_1(x) + {q_1}'(x)}{p_1(x)} = C
+```
+where $C$ is a constant.  We find that this expression is a constant, because although the LHS depends *only* on $y$, the RHS does not, hence the LHS is overall a 
+constant in $y$.  A similar argument holds for $x$ and the RHS, meaning that overall the two expressions are constant.  This mean therefore:
+
+```{math}
+H(y)\,p_2(y) + {p_2}'(y) &= C\,q_2(y) \Rightarrow H(y) = \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} \\
+G(x)\,q_1(x) + {q_1}'(x) &= C\,p_1(x) \Rightarrow G(x) = \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)}
+```
+
+````{admonition} Worked example
+:class: seealso
+Consider the differential:
+```{math}
+2x\sin(y)\,\mathrm{d}x + x^3\,\cos(y)\,\mathrm{d}y = 0
+```
+Looking at the derivatives:
+```{math}
+P_y &= 2x\,\cos(y) \\
+Q_x &= 3x^2\,\cos(y)
+```
+hence this is not an exact differential.  
+
+However since here the functions $P(x,\,y),\, Q(x,\,y)$ are separable, we can find:
+```{math}
+p_1(x) &= 2x \qquad p_2(y) = \sin(y) \\
+q_1(x) &= x^3 \qquad q_2(y) = \cos(y)\\
+H(y) &= \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} = \frac{C\,\cos(y) - \cos(y)}{\sin(y)} = (C-1)\,\cot(y) \\
+G(x) &= \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)} = \frac{2Cx - 3x^2}{x^3} = \frac{2C - 3x}{x^2}\\
+\ln(M) &= \int G(x)\,\mathrm{d}x + \int H(y)\,\mathrm{d}y = (C-1)\ln|\sin(x)| - \frac{2C}{x} - 3 \ln|x|\\
+\Rightarrow M(x,\,y) &= \frac{\sin^{C-1}(y)\,e^{-2C/x}}{x^3}
+```
+This means that our differential function is satisfied by:
+```{math}
+f_x &= \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2} \\
+\Rightarrow f &= \int \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2}\,\mathrm{d}x = \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_1(y)\\
+f_y &= \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x} \\
+\Rightarrow f &= \int \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x}\,\mathrm{d}y =  \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_2(x)
+```
+and so $K_1 = K_2$ are constants here, which we can absorb into the constant for $f(x,\,y)$:
+```{math}
+\sin^{C}(y)= K\,e^{2C/x}
+```
+where $K$ will be fixed by initial conditions, however $C$ is a system parameter - it shows that this systems integrating factor is not unique! We could simplify this down to:
+```{math}
+\sin(y)= K\,e^{2/x}
+```
+````
 
 ## Substitution methods
 
@@ -577,22 +668,235 @@ We sometimes find that we can reduce more complicated (even non-linear) first or
 
 ### $y' = f(y/x)$ form
 
+````{admonition} Definition
+A **homogeneous** first order differential equation is one of the form:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = f\left(\frac{y}{x}\right)
+```
+and this is typically one that, through a substitution, can be solved using separation of variables.  Let our substitution here be $u = \displaystyle\frac{y}{x}$:
+```{math}
+y &= ux\\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \frac{\mathrm{d}u}{\mathrm{d}x}x + u \\
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &= f(u) \\
+\Rightarrow \int\frac{\mathrm{d}u}{f(u) - u} &= \int\frac{\mathrm{d}x}{x}
+```
+and depending on the complexity of this LHS integral, this problem is solvable!
+````
+
+````{admonition} Worked example
+:class: seealso
+Solve the ODE $\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{x^2 + y^2}{xy}$.
+
+Rewriting this to be in the form $y' = f(y/x) = f(u)$, means:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}u}{\mathrm{d}x}x + u &= \frac{x}{y} + \frac{y}{x} = u + \frac{1}{u}\\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}x &=  \frac{1}{u}
+```
+This is now in a form for separation of variables and integrating:
+```{math}
+\int u\,\mathrm{d}u &= \int \frac{\mathrm{d}x}{x} \\
+\frac{1}{2}u^2 &= \ln|x| + C \\
+u &= \sqrt{2 \ln|x| + C}
+```
+Remember that before finishing the question, we must convert this back into $y(x)$:
+```{math}
+y = x\sqrt{2 \ln|x| + C}
+```
+````
+
 ````{admonition} Practice questions
 :class: seealso, dropdown
-1\. Solve the following ODEs
-a\. 
+
+1\. Solve the following ODEs:
+
+a\.
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x} + \cos\left(\frac{y}{x^2}\right)
+\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y(x-y)}{x^2}
 ```
+with condition $y(1) = 1$.
+
+b\. 
+```{math}
+x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)
+```
+with condition $y(1) =\displaystyle  \frac{\pi}{4}$.
 
 ````
 
 ````{admonition} Solutions
 :class: seealso, dropdown
 
+1\. Solve the following ODEs
+
+a\.
+Rearrange to get into the form $y' = f(y/x) = f(u)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y}{x} - \left(\frac{y}{x}\right)^2 = u - u^2
+```
+and then use the result $y' = xu' + u$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &= u - u^2 \\
+\Rightarrow -\int \frac{\mathrm{d}u}{u^2} &= \int\frac{\mathrm{d}x}{x} \\
+\frac{1}{u} &= \ln|x| + C \\
+y &= \frac{x}{\ln|x| + C}
+```
+Using the condition $y(1) = 1$:
+```{math}
+1 = \frac{1}{0 + C} \Rightarrow C = 1
+```
+gives the final solution:
+```{math}
+y = \frac{x}{\ln|x| + 1}
+```
+
+b\. 
+Rearrange to get into the form $y' = f(y/x) = f(u)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{y}{x} - \sin^2\left(\frac{y}{x}\right) = u - \sin^2(u)
+```
+and then use the result $y' = xu' + u$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &= u - \sin^2(u) \\
+\Rightarrow -\int \frac{\mathrm{d}u}{\sin^2(u)} &= \int\frac{\mathrm{d}x}{x} \\
+\int (-\text{cosec}^2(u))\,\mathrm{d}u &= \ln|x| + C
+```
+using the fact that $(\cot(u))' = -\text{cosec}^2(u)$, this means:
+
+```{math}
+\cot(u) = \ln|x| + C \Rightarrow \cot\left( \frac{y}{x}\right) = \ln|x| + C 
+```
+Using condition $y(1) = \displaystyle  \frac{\pi}{4}$:
+
+```{math}
+\cot\left(\frac{\pi}{4}\right) = 1 = 0 + C \Rightarrow C = 1
+```
+gives a  solution:
+```{math}
+\cot\left( \frac{y}{x}\right) = \ln|x| + 1 
+```
+and we could simplify further even:
+
+```{math}
+\tan\left( \frac{y}{x}\right) &= \frac{1}{\ln|x| + 1}\\
+y = x\arctan&\left( \frac{1}{\ln|x| + 1}\right)
+```
 ````
 
 ### $y' = f(ax+by)$ form
+
+
+````{admonition} Definition
+A first order differential equation of the form:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = f(ax+by)
+```
+can also be solved through a substitution which leads to separation of variables.  Let our substitution here be $u = ax+by$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = a + b\frac{\mathrm{d}y}{\mathrm{d}x} &= a + b\,f(u)\\
+\Rightarrow \int\frac{\mathrm{d}u}{a + b f(u) } &= \int\,\mathrm{d}x
+```
+and depending on the complexity of this LHS integral, this problem is solvable!
+````
+
+
+````{admonition} Practice questions
+:class: seealso, dropdown
+
+1\. Solve the following ODEs:
+
+a\.
+```{math}
+\frac{1}{2}\frac{\mathrm{d}y}{\mathrm{d}x} - \left(x + \frac{1-y}{4}\right)^2 = 0
+```
+with condition $y(0) = 2$.
+
+b\. 
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}
+```
+with condition $y(0) = 0$.
+
+````
+
+````{admonition} Solutions
+:class: seealso, dropdown
+
+1\. Solve the following ODEs
+
+a\.
+Writing this in the form $y' = f(ax+by) = f(u)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = \left(4x -y + 1\right)^2
+```
+
+means we can pick our substitution to be $u = 4x - y$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} &= 4 - \frac{\mathrm{d}y}{\mathrm{d}x}= 4 - \left(u + 1\right)^2\\
+\Rightarrow \int \frac{\mathrm{d}u}{4 - \left(u + 1\right)^2} &= \int \mathrm{d}x \\
+\int \frac{\mathrm{d}u}{u^2 + 2u -3} &= -x + C_1 \\
+
+```
+
+This integrand can be represented in terms of partial fractions:
+```{math}
+\frac{1}{u^2 + 2u -3} = \frac{1}{(u-1)(u+3)} &= \frac{A}{v-1} + \frac{B}{v+3} \\
+&= \frac{A(u+3) + B(u-1)}{(u-1)(u+3)} \\
+\Rightarrow  1 &= A(u+3) + B(u-1) 
+```
+For $u = 1$, $4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}$ and for $u = -3$, $-4B = 1 \Rightarrow B = \displaystyle -\frac{1}{4}$, hence:
+
+```{math}
+\frac{1}{u^2 + 2u -3} &= \frac{1}{4}\left( \frac{1}{u-1} - \frac{1}{u+3} \right) \\
+\Rightarrow \frac{1}{4}\int \left( \frac{1}{u-1} - \frac{1}{u+3} \right)\,\mathrm{d}u &= C_1 - x \\
+\frac{1}{4}\Big(\ln|u-1| - \ln|u + 3|\Big) &= C_1 - x \\
+\ln\left|\frac{u-1}{u+3}\right| &= C_2 - 4x
+```
+We then need to think about converting this back into $u = u(x,\,y)$, so lets try to collect together terms:
+```{math}
+\frac{u-1}{u+3} &= e^{C_2 - 4x} = C_3\,e^{-4x} \\
+u-1 &= C_3\,(u+3)\,e^{-4x} \\
+\Rightarrow u(1 - C_3\,e^{-4x}) &= 1 + 3C_3\,e^{-4x} \\
+u = \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}} &= 4x - y \\
+\Rightarrow y &= 4x - \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}}
+```
+and using the condition $y(0) = 2$:
+```{math}
+2 = 0 - \frac{1+3C_3}{1 - C_3} \Rightarrow C_3 = -3
+```
+giving a final solution of the form:
+```{math}
+y = 4x - \frac{1 - 9\,e^{-4x}}{1 + 3\,e^{-4x}}
+```
+
+b\. 
+Writing in the form $y' = f(ax+by) = f(u)$:
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}
+```
+which suggests we pick a substitution $u = 9y - x$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} &= 9 \frac{\mathrm{d}y}{\mathrm{d}x} - 1 = 9 e^u - 1\\
+\int \frac{\mathrm{d}u}{9 e^u - 1} &= \int\,\mathrm{d}x \\
+\int \frac{e^{-u}}{9 - e^{-u}}\,\mathrm{d}u &= x + C_1\\
+\ln|9 - e^{-u}| &= x + C_1
+```
+separating out the variables:
+```{math}
+9 - e^{-u} &= e^{x + C_1} = C_2\,e^x \\
+e^{-u} &= 9 - C_2\,e^x \\
+u &= -\ln(9 - c_2\,e^x) \\
+\Rightarrow y &= \frac{1}{9}\Big( x - \ln(9 - C_2\,e^x)\Big)
+```
+and using the condition $y(0) = 0$:
+```{math}
+0 = \frac{1}{9}\Big(0 - \ln(9-C_2)\Big) \Rightarrow C_2 = 8
+```
+hence the final solution is:
+```{math}
+y = \frac{1}{9}\Big( x - \ln(9 - 8\,e^x)\Big)
+```
+````
+
 
 ### Benoulli form
 
@@ -614,7 +918,7 @@ u = y^{1-n} &\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} = (1-n)y^{-n}\frac{\mat
 \frac{\mathrm{d}y}{\mathrm{d}x} + P(x)\,y = Q(x)\,y^n &\Rightarrow (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x} + (1-n)\,P(x)\,y^{1-n} = (1-n)\,Q(x)\\
 &\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - (n-1)\,P(x)\,u = -(n-1)\,Q(x)
 ```
-which as it is linear in $y$ can be solved using the integrating factor method. 
+and as this ODE is linear in $u$, it can be solved using the integrating factor method. 
 ````
 
 ````{admonition} Worked example
@@ -623,64 +927,112 @@ If we want to solve the ODE:
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2
 ```
-using the substitution $u = y^{-1}$ here (as the highest power on the RHS is $n=2$):
+we need to put it in the form $y' = f(u,\,x)$:
 ```{math}
-\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}
+\frac{\mathrm{d}y}{\mathrm{d}x} = xy^2 - \frac{y}{x}
+```
+as the highest power on the RHS is $n=2$, using the substitution $u = y^{1-n} = y^{-1}$:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}
 ```
 and therefore:
 ```{math}
-\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
-xy^2 &= \frac{x}{u^2}
+\frac{\mathrm{d}u}{\mathrm{d}x} &= -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{1}{xy} - x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &= \frac{u}{x} - x \\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &= - x
 ```
-substituing these results in to the ODE:
+which we can then solve using the IF method, with $\mu = e^{\int -1/x\,\mathrm{d}x} = e^{-\ln|x|} = \frac{1}{x}$:
 ```{math}
-\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &= \frac{x}{u^2} \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &= -x
+\frac{\mathrm{d}}{\mathrm{d}x}\Big(\frac{u}{x}\Big) &=  -1 \\
+\frac{u}{x} &= -\int \,\mathrm{d}x \\
+\frac{u}{x} &= -x + C \\
+u &= x(C - x) \\
+y &= \frac{1}{x(C-x)}
 ```
-which we can then solve using the IF method, with $\mu = e^{-x^2/2}$:
-```{math}
-\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &=  e^{-x^2/2}\,x \\
-e^{-x^2/2}\,u &= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x 
-```
-Using a subsitution (or inspection) we can integrate this RHS term to find:
-```{math}
-e^{-x^2/2}\,u &= -e^{-x^2/2} + C \\
-u(x) &= -1 + Ce^{x^2/2} \\
-y(x) &= \frac{1}{Ce^{x^2/2}-1}
-```
-where we must not forget to return the answer back to the form of $y(x)$ at the end.
+where we must not forget to return the answer back to the form of $y(x)$ at the end (if possible).
 ````
 
 ````{admonition} Practice questions
 :class: seealso, dropdown
 
-Solve the following ODEs:
 1\. 
+Solve the following ODEs:
+
+a\.
 ```{math}
 6\frac{\mathrm{d}y}{\mathrm{d}x} - 2y = x\,y^4
 ```
 which satisfies the condition $y(0) = -2$.
 
-2\.
+b\.
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} - \sqrt{y} = 0
 ```
-which satisfies the condition $$y(1) = 0$,
+which satisfies the condition $y(1) = 0$,
 ````
 
 ````{admonition} Solutions
 :class: seealso, dropdown
 
-1\. 
+a\. 
 ```{math}
 \frac{\mathrm{d}y}{\mathrm{d}x} - \frac{1}{3}y = \frac{1}{6}x\,y^4 
 ```
-since the highest power on the RHS is $n = 4$, this means the substitution we need is $u = y^{1-n} = y^{-3}$ and hence 
+since the highest power on the RHS is $n = 4$, this means the substitution we need is $u = y^{1-n} = y^{-3}$ and hence:
 ```{math}
-\frac{\mathrm{d}u}{\mathrm{d}y} = -3y^{-4}\frac{\mathrm{d}y}{\mathrm{d}x}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -3y^{-4}\frac{\mathrm{d}y}{\mathrm{d}x}& \\
+\Rightarrow -3y^{-4}\,\frac{\mathrm{d}y}{\mathrm{d}x} + y^{-3} &= -\frac{1}{2}x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + u(x) &= -\frac{1}{2}x
+```
+which suggests an IF of the form $\mu = \displaystyle e^{\int\,\mathrm{d}x} = e^x$, hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}\,e^x + u(x)\,e^x &= -\frac{1}{2}x\,e^x \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,e^x\right) &= -\frac{1}{2}x\,e^x \\
+u\,e^x = -\frac{1}{2}\int x\,e^x\,\mathrm{d}x + C &= -\frac{1}{2}(x-1)\,e^{x} + C \\
+u = y^{-3} &= -\frac{1}{2}(x-1) + C\,e^{-x}
 ```
 
-2\.
+Using the condition $y(0)=-2$:
+
+```{math}
+-\frac{1}{8} = \frac{1}{2} + C \Rightarrow C = -\frac{5}{8}
+```
+
+meaning the final solution is:
+
+```{math}
+y(x) = -\frac{2}{(4x-4 + 5\,e^{-x})^{1/3}}
+```
+
+b\.
+```{math}
+\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = y^{1/2}
+```
+since the highest power on the RHS is $n = \frac{1}{2}$, this means the substitution we need is $u = y^{1-n} = y^{1/2}$ and hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = \frac{1}{2}y^{-1/2}\frac{\mathrm{d}y}{\mathrm{d}x}& \\
+\Rightarrow \frac{1}{2}y^{-1/2}\,\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{1}{2}\frac{y^{1/2}}{x} &= \frac{1}{2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{1}{2x}u(x) &= \frac{1}{2}
+```
+which suggests an IF of the form $\mu = \displaystyle e^{\int\frac{1}{2x}\,\mathrm{d}x} = e^{\frac{1}{2}\ln|x|} = x^{1/2}$, hence:
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x}\,x^{1/2} + u(x) &= \frac{1}{2}x^{1/2} \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,x^{1/2}\right) &= \frac{1}{2}x^{1/2} \\
+u\,x^{1/2} = -\frac{1}{2}\int x\,\mathrm{d}x + C &= \frac{1}{2}\frac{2}{3}x^{3/2} + C \\
+u = y^{1/2} &= \frac{1}{3}x + C\,x^{-1/2}
+```
+
+Using the condition $y(1)=0$:
+
+```{math}
+0 = \frac{1}{3} + C \Rightarrow C = -\frac{1}{3}
+```
+
+meaning the final solution is:
+
+```{math}
+y(x) = \left(\frac{1}{3}x - \frac{1}{3}x^{-1/2} \right)^2 = \frac{x^3-2x^{3/2}+1}{9x}
+```
 
 
 ````
@@ -690,52 +1042,85 @@ since the highest power on the RHS is $n = 4$, this means the substitution we ne
 A Riccati differential equation takes the form:
 ```{math}
 :label: riccatiODE
-\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)
+\frac{\mathrm{d}y}{\mathrm{d}x} = p(x)\,y^2(x) + q(x)\,y(x) + r(x)
 ```
 which we can recast in terms of a variable $u(x)$, which satisfies an ODE:
 ```{math}
-u'' - R\,u' + S\,u =0, \quad R = q_1 + \frac{q_2'}{q_2}, \quad S = q_0\,q_2
+\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u =0, \quad R = q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S = r\,p
 ```
 and we can solve to find $y(x)$:
 ```{math}
-y = -\frac{u'}{q_2\,u}
+y = -\frac{1}{p\,u}\frac{\mathrm{d}u}{\mathrm{d}x}
 ```
 ````
-
-We see that if $q_0=0$, then this just reduces to a Benoulli equation with $n=2$ and if $q_2=0$, then this is just in integrating form factor, so this 
+Using the transformation $v = p\,y$ we find:
+```{math}
+\frac{\mathrm{d}v}{\mathrm{d}x} &= \frac{\mathrm{d}p}{\mathrm{d}x}\,y + p\,\frac{\mathrm{d}y}{\mathrm{d}x} \\
+p\,\frac{\mathrm{d}y}{\mathrm{d}x} &= p^2\,y^2 + q\,p\,y + p\,r \\
+\Rightarrow \frac{\mathrm{d}v}{\mathrm{d}x} &= v^2 + q\,v + p\,r + y\,\frac{\mathrm{d}p}{\mathrm{d}x} = v^2 + v\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r 
+```
+and then switching to the variable $u(x)$, where $v = -\displaystyle \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}$ means:
+```{math}
+\frac{\mathrm{d}v}{\mathrm{d}x} &= \frac{1}{u^2}\left(\frac{\mathrm{d}u}{\mathrm{d}x}\right)^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} 
+= v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} \\
+v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &= v^2 - \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r \\
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &= \left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right)\frac{\mathrm{d}u}{\mathrm{d}x} - p\,r\,u\\
+\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &- R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u = 0\\
+R(x) &= q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S(x) = r\,p
+```
+We see that if $r=0$, then this just reduces to a Benoulli equation with $n=2$ and if $p=0$, then this is just in integrating form factor, so this 
 equation can be thought of as a hybrid between the two.
 
 ````{admonition} Worked example
 :class: seealso
 Consider the ODE:
 ```{math}
-y' - \frac{2y}{x} = - x^2\,y^2 \\
+\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{2y}{x} = - x^2\,y^2 \\
 ```
 this equation can be rewritten as:
 ```{math}
-y' = \frac{2y}{x}-x^2\,y^2
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x}-x^2\,y^2
 ```
 and then transformed into the 2nd order ODE:
 ```{math}
-u'' - R\,u' + S\,u &= 0 \\
+\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u &= 0 \\
 R = \frac{4}{x}\,\quad & S = 0 \\
-\Rightarrow u'' -\frac{4}{x} \,u' &= 0
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d} x^2} -\frac{4}{x} \,\frac{\mathrm{d}u}{\mathrm{d}x} &= 0
 ```
 which we can solve using an IF method, with $\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}$:
 ```{math}
-x^{-4}\,u'' - 4\,x^{-5} \,u' &= 0 \\
-\Big(x^{-4}\,u'\Big)^\prime &= 0
+x^{-4}\,\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - 4\,x^{-5} \,\frac{\mathrm{d}u}{\mathrm{d}x} &= 0 \\
+\Big(x^{-4}\,\frac{\mathrm{d}u}{\mathrm{d}x}\Big)^\prime &= 0
 ```
 Since the derivative of a constant is zero, this means:
 ```{math}
-u' &= C_1\,x^4 \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &= C_1\,x^4 \\
 u &= \frac{C_1\,x^5}{5} + C_2 \\
-\Rightarrow y &= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
+\Rightarrow y &= \frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\
 ```
-where $C_1,\, C_2$ are constants, we can tidy this expression up:
+where $C_1,\, C_2$ are constants.  We can tidy this expression up:
 ```{math}
-y = -\frac{5x^2}{x^5 + C_3}
+y = \frac{5x^2}{x^5 + C_3}
 ```
-where $C_3$ is a constants.
+and $C_3$ is a constant.
+
+We note that this problem has $r(x) = 0$, therefore is also a Bernoulli type expression, with highest power $y^2$, so $u = y^{1-2} = y^{-1}$:
+
+```{math}
+\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2} \frac{\mathrm{d}y}{\mathrm{d}x}\\
+-\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{xy} &= x^2  \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \left(\frac{2u}{x}\right) &= x^2
+```
+which is also solveable using an IF, $\mu = \displaystyle e^{\int \frac{2}{x}\,\mathrm{d}x} = x^2$:
+```{math}
+x^2\frac{\mathrm{d}u}{\mathrm{d}x} + 2x\,u &= x^4 \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(x^2\,u\right) &= x^4 \\
+x^2\,u &= \frac{1}{5}x^5 + C \\
+\Rightarrow u = \frac{1}{5}x^3 + Cx^{-2} &= \frac{x^5 + C}{5x^2}\\
+y &= \frac{5x^2}{x^5 + C}
+```
+which agrees with the earlier result.
 ````
 
+Whilst this method is good at converting a non-linear 1st order ODE into a linear 2nd order ODE, most of the time the 
+resulting equation will need some quite powerful techinques to solve, especially if $R(x)$ and $S(x)$ are both functions of $x$.

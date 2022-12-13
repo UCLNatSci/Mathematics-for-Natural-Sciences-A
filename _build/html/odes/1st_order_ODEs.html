@@ -169,11 +169,6 @@
    14. Second Order ODEs
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/ode_solver_demo.html">
-   15. ODEs with Python
-  </a>
- </li>
 </ul>
 
     </div>
@@ -275,6 +270,13 @@
   <a class="reference internal nav-link" href="#perfect-differential-form">
    13.3. Perfect differential form
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixing-the-perfect-form">
+     13.3.1. Fixing the perfect form
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#substitution-methods">
@@ -345,6 +347,13 @@
   <a class="reference internal nav-link" href="#perfect-differential-form">
    13.3. Perfect differential form
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixing-the-perfect-form">
+     13.3.1. Fixing the perfect form
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#substitution-methods">
@@ -715,8 +724,9 @@ P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y &amp;= 0\end{split}\]</div>
 <p>this condition is met and so to detemine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial f}{\partial x} = 3y^3\,e^{3xy} - 1\Rightarrow f(x,\,y) = \int \Big(3y^3\,e^{3xy} - 1\Big)\,\mathrm{d}x = y^2\,e^{3xy} - x + g(y)\]</div>
-<p>We could attempt the same process on <span class="math notranslate nohighlight">\(f_y\)</span> however this will involve multiple integration by parts calculations (we could simplify this with a reduce formulae <span class="math notranslate nohighlight">\(\int y^n\,e^{axy}\,mathrm{d}y\)</span>, but
-we could instead by differentiate this preliminary expression for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> and then compare <span class="math notranslate nohighlight">\(f_y\)</span> with what is left to figure out the anti-derivative:</p>
+<p>We could attempt the same process on <span class="math notranslate nohighlight">\(f_y\)</span> however this will involve multiple integration by parts calculations (we could simplify this with a
+reduction formula <span class="math notranslate nohighlight">\(\int y^n\,e^{axy}\,\mathrm{d}y\)</span>), but here we will instead differentiate this preliminary expression for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> and then
+compare <span class="math notranslate nohighlight">\(f_y\)</span> with what is left to figure out the anti-derivative:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f   &amp;= y^2\,e^{3xy} - x + g(y) \\
 f_y &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy} + g'(y) \\
@@ -732,22 +742,252 @@ Q   &amp;= 2y\,e^{3xy} + 3x\,y^2\,e^{3xy}\end{split}\]</div>
 \[y^2\,e^{3xy} - x  = 1\]</div>
 <p>Which we have to leave in this form as no simple elementary function solution exists.</p>
 </div>
+<div class="section" id="fixing-the-perfect-form">
+<h3><span class="section-number">13.3.1. </span>Fixing the perfect form<a class="headerlink" href="#fixing-the-perfect-form" title="Permalink to this headline">¶</a></h3>
+<p>This method relies on the differential given being perfect, if it is not, then we cannot find the function <span class="math notranslate nohighlight">\(f(x,\, y)\)</span>.  However there is an analagous method for finding
+a multivariable integrating factor, allowing us to <em>potentially</em> convert imperfect differentials into a perfect form .</p>
+<div class="admonition-multivariable-integrating-factor admonition">
+<p class="admonition-title">Multivariable integrating factor</p>
+<p>Consider an imperfect differential:</p>
+<div class="math notranslate nohighlight">
+\[P(x,\,y)\,\mathrm{d}x + Q(x,\,y)\,\mathrm{d}y = 0\qquad \frac{\partial P}{\partial y} \neq \frac{\partial Q}{\partial x}\]</div>
+<p>Lets introduce an integrating factor <span class="math notranslate nohighlight">\(M(x,\,y)\)</span>, which means now that:</p>
+<div class="math notranslate nohighlight">
+\[M(x,\,y)\,P(x,\,y)\,\mathrm{d}x + M(x,\,y)\,Q(x,\,y)\,\mathrm{d}y = 0 \qquad \frac{\partial (M P)}{\partial y} = \frac{\partial (M Q)}{\partial x}\]</div>
+<p>and we can write the form of <span class="math notranslate nohighlight">\(M(x,\,y)\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[M(x,\,y) = e^{\int G(x)\,\mathrm{d}x}\,e^{\int H(y)\,\mathrm{d}y}\]</div>
+</div>
+<p>The form of the multivariable integrating factor means that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_x &amp;= G(x)\,M \\
+M_y &amp;= H(y)\,M\end{split}\]</div>
+<p>Solving the key requirement for a perfect differential:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial (M P)}{\partial y} &amp;= M_y\,P + M\,P_y = M(H\,P + P_y)\\
+\frac{\partial (M Q)}{\partial x} &amp;= M_x\,Q + M\,Q_x = M(G\,Q + Q_x)\\
+&amp;\Rightarrow H(y)\,P + P_y = G(x)\,Q + Q_x\end{split}\]</div>
+<p>our aim here is separate out variables.  If each of <span class="math notranslate nohighlight">\(P(x,\,y),\, Q(x,\,y)\)</span> are in a separable form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(x,\,y) &amp;= p_1(x)\,p_2(y) \\
+Q(x,\,y) &amp;= q_1(x)\,q_2(y)\end{split}\]</div>
+<p>which means therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(y)\,p_1(x)\,p_2(y) + p_1(x)\,{p_2}'(y) &amp;= G(x)\,q_1(x)\,q_2(y) + {q_1}'(x)\,q_2(y) \\
+\Rightarrow p_1(x)\Big(H(y)\,p_2(y) + {p_2}'(y)\Big) &amp;= q_2(y)\Big(G(x)\,q_1(x) + {q_1}'(x)\Big) \\
+\frac{H(y)\,p_2(y) + {p_2}'(y)}{q_2(y)} &amp;= \frac{G(x)\,q_1(x) + {q_1}'(x)}{p_1(x)} = C\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant.  We find that this expression is a constant, because although the LHS depends <em>only</em> on <span class="math notranslate nohighlight">\(y\)</span>, the RHS does not, hence the LHS is overall a
+constant in <span class="math notranslate nohighlight">\(y\)</span>.  A similar argument holds for <span class="math notranslate nohighlight">\(x\)</span> and the RHS, meaning that overall the two expressions are constant.  This mean therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(y)\,p_2(y) + {p_2}'(y) &amp;= C\,q_2(y) \Rightarrow H(y) = \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} \\
+G(x)\,q_1(x) + {q_1}'(x) &amp;= C\,p_1(x) \Rightarrow G(x) = \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)}\end{split}\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Consider the differential:</p>
+<div class="math notranslate nohighlight">
+\[2x\sin(y)\,\mathrm{d}x + x^3\,\cos(y)\,\mathrm{d}y = 0\]</div>
+<p>Looking at the derivatives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_y &amp;= 2x\,\cos(y) \\
+Q_x &amp;= 3x^2\,\cos(y)\end{split}\]</div>
+<p>hence this is not an exact differential.</p>
+<p>However since here the functions <span class="math notranslate nohighlight">\(P(x,\,y),\, Q(x,\,y)\)</span> are separable, we can find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p_1(x) &amp;= 2x \qquad p_2(y) = \sin(y) \\
+q_1(x) &amp;= x^3 \qquad q_2(y) = \cos(y)\\
+H(y) &amp;= \frac{C\,q_2(y) - {p_2}'(y)}{p_2(y)} = \frac{C\,\cos(y) - \cos(y)}{\sin(y)} = (C-1)\,\cot(y) \\
+G(x) &amp;= \frac{C\,p_1(x) - {q_1}'(x)}{q_1(x)} = \frac{2Cx - 3x^2}{x^3} = \frac{2C - 3x}{x^2}\\
+\ln(M) &amp;= \int G(x)\,\mathrm{d}x + \int H(y)\,\mathrm{d}y = (C-1)\ln|\sin(x)| - \frac{2C}{x} - 3 \ln|x|\\
+\Rightarrow M(x,\,y) &amp;= \frac{\sin^{C-1}(y)\,e^{-2C/x}}{x^3}\end{split}\]</div>
+<p>This means that our differential function is satisfied by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_x &amp;= \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2} \\
+\Rightarrow f &amp;= \int \frac{2\,\sin^{C}(y)\,e^{-2C/x}}{x^2}\,\mathrm{d}x = \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_1(y)\\
+f_y &amp;= \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x} \\
+\Rightarrow f &amp;= \int \sin^{C-1}(y)\,\cos(y)\,e^{-2C/x}\,\mathrm{d}y =  \frac{\sin^{C}(y)\,e^{-2C/x}}{C} + K_2(x)\end{split}\]</div>
+<p>and so <span class="math notranslate nohighlight">\(K_1 = K_2\)</span> are constants here, which we can absorb into the constant for <span class="math notranslate nohighlight">\(f(x,\,y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sin^{C}(y)= K\,e^{2C/x}\]</div>
+<p>where <span class="math notranslate nohighlight">\(K\)</span> will be fixed by initial conditions, however <span class="math notranslate nohighlight">\(C\)</span> is a system parameter - it shows that this systems integrating factor is not unique! We could simplify this down to:</p>
+<div class="math notranslate nohighlight">
+\[\sin(y)= K\,e^{2/x}\]</div>
+</div>
+</div>
 </div>
 <div class="section" id="substitution-methods">
 <h2><span class="section-number">13.4. </span>Substitution methods<a class="headerlink" href="#substitution-methods" title="Permalink to this headline">¶</a></h2>
 <p>We sometimes find that we can reduce more complicated (even non-linear) first order differential equations down to a solvable form using a substitution.</p>
 <div class="section" id="y-f-y-x-form">
 <h3><span class="section-number">13.4.1. </span><span class="math notranslate nohighlight">\(y' = f(y/x)\)</span> form<a class="headerlink" href="#y-f-y-x-form" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A <strong>homogeneous</strong> first order differential equation is one of the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = f\left(\frac{y}{x}\right)\]</div>
+<p>and this is typically one that, through a substitution, can be solved using separation of variables.  Let our substitution here be <span class="math notranslate nohighlight">\(u = \displaystyle\frac{y}{x}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y &amp;= ux\\
+\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= \frac{\mathrm{d}u}{\mathrm{d}x}x + u \\
+\frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= f(u) \\
+\Rightarrow \int\frac{\mathrm{d}u}{f(u) - u} &amp;= \int\frac{\mathrm{d}x}{x}\end{split}\]</div>
+<p>and depending on the complexity of this LHS integral, this problem is solvable!</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example</p>
+<p>Solve the ODE <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{x^2 + y^2}{xy}\)</span>.</p>
+<p>Rewriting this to be in the form <span class="math notranslate nohighlight">\(y' = f(y/x) = f(u)\)</span>, means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= \frac{x}{y} + \frac{y}{x} = u + \frac{1}{u}\\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x}x &amp;=  \frac{1}{u}\end{split}\]</div>
+<p>This is now in a form for separation of variables and integrating:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int u\,\mathrm{d}u &amp;= \int \frac{\mathrm{d}x}{x} \\
+\frac{1}{2}u^2 &amp;= \ln|x| + C \\
+u &amp;= \sqrt{2 \ln|x| + C}\end{split}\]</div>
+<p>Remember that before finishing the question, we must convert this back into <span class="math notranslate nohighlight">\(y(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y = x\sqrt{2 \ln|x| + C}\]</div>
+</div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice questions</p>
-<p>1. Solve the following ODEs
-a.</p>
+<p>1. Solve the following ODEs:</p>
+<p>a.</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x} + \cos\left(\frac{y}{x^2}\right)\]</div>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y(x-y)}{x^2}\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(1) = 1\)</span>.</p>
+<p>b.</p>
+<div class="math notranslate nohighlight">
+\[x\frac{\mathrm{d}y}{\mathrm{d}x} = y - x \sin^2\left(\frac{y}{x}\right)\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(1) =\displaystyle  \frac{\pi}{4}\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Solve the following ODEs</p>
+<p>a.
+Rearrange to get into the form <span class="math notranslate nohighlight">\(y' = f(y/x) = f(u)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{y}{x} - \left(\frac{y}{x}\right)^2 = u - u^2\]</div>
+<p>and then use the result <span class="math notranslate nohighlight">\(y' = xu' + u\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= u - u^2 \\
+\Rightarrow -\int \frac{\mathrm{d}u}{u^2} &amp;= \int\frac{\mathrm{d}x}{x} \\
+\frac{1}{u} &amp;= \ln|x| + C \\
+y &amp;= \frac{x}{\ln|x| + C}\end{split}\]</div>
+<p>Using the condition <span class="math notranslate nohighlight">\(y(1) = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[1 = \frac{1}{0 + C} \Rightarrow C = 1\]</div>
+<p>gives the final solution:</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{x}{\ln|x| + 1}\]</div>
+<p>b.
+Rearrange to get into the form <span class="math notranslate nohighlight">\(y' = f(y/x) = f(u)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{y}{x} - \sin^2\left(\frac{y}{x}\right) = u - \sin^2(u)\]</div>
+<p>and then use the result <span class="math notranslate nohighlight">\(y' = xu' + u\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}x + u &amp;= u - \sin^2(u) \\
+\Rightarrow -\int \frac{\mathrm{d}u}{\sin^2(u)} &amp;= \int\frac{\mathrm{d}x}{x} \\
+\int (-\text{cosec}^2(u))\,\mathrm{d}u &amp;= \ln|x| + C\end{split}\]</div>
+<p>using the fact that <span class="math notranslate nohighlight">\((\cot(u))' = -\text{cosec}^2(u)\)</span>, this means:</p>
+<div class="math notranslate nohighlight">
+\[\cot(u) = \ln|x| + C \Rightarrow \cot\left( \frac{y}{x}\right) = \ln|x| + C \]</div>
+<p>Using condition <span class="math notranslate nohighlight">\(y(1) = \displaystyle  \frac{\pi}{4}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\cot\left(\frac{\pi}{4}\right) = 1 = 0 + C \Rightarrow C = 1\]</div>
+<p>gives a  solution:</p>
+<div class="math notranslate nohighlight">
+\[\cot\left( \frac{y}{x}\right) = \ln|x| + 1 \]</div>
+<p>and we could simplify further even:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tan\left( \frac{y}{x}\right) &amp;= \frac{1}{\ln|x| + 1}\\
+y = x\arctan&amp;\left( \frac{1}{\ln|x| + 1}\right)\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="y-f-ax-by-form">
 <h3><span class="section-number">13.4.2. </span><span class="math notranslate nohighlight">\(y' = f(ax+by)\)</span> form<a class="headerlink" href="#y-f-ax-by-form" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A first order differential equation of the form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = f(ax+by)\]</div>
+<p>can also be solved through a substitution which leads to separation of variables.  Let our substitution here be <span class="math notranslate nohighlight">\(u = ax+by\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = a + b\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= a + b\,f(u)\\
+\Rightarrow \int\frac{\mathrm{d}u}{a + b f(u) } &amp;= \int\,\mathrm{d}x\end{split}\]</div>
+<p>and depending on the complexity of this LHS integral, this problem is solvable!</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Practice questions</p>
+<p>1. Solve the following ODEs:</p>
+<p>a.</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}\frac{\mathrm{d}y}{\mathrm{d}x} - \left(x + \frac{1-y}{4}\right)^2 = 0\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(0) = 2\)</span>.</p>
+<p>b.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}\]</div>
+<p>with condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span>.</p>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Solutions</p>
+<p>1. Solve the following ODEs</p>
+<p>a.
+Writing this in the form <span class="math notranslate nohighlight">\(y' = f(ax+by) = f(u)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \left(4x -y + 1\right)^2\]</div>
+<p>means we can pick our substitution to be <span class="math notranslate nohighlight">\(u = 4x - y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 4 - \frac{\mathrm{d}y}{\mathrm{d}x}= 4 - \left(u + 1\right)^2\\
+\Rightarrow \int \frac{\mathrm{d}u}{4 - \left(u + 1\right)^2} &amp;= \int \mathrm{d}x \\
+\int \frac{\mathrm{d}u}{u^2 + 2u -3} &amp;= -x + C_1 \\
+\end{split}\]</div>
+<p>This integrand can be represented in terms of partial fractions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{u^2 + 2u -3} = \frac{1}{(u-1)(u+3)} &amp;= \frac{A}{v-1} + \frac{B}{v+3} \\
+&amp;= \frac{A(u+3) + B(u-1)}{(u-1)(u+3)} \\
+\Rightarrow  1 &amp;= A(u+3) + B(u-1) \end{split}\]</div>
+<p>For <span class="math notranslate nohighlight">\(u = 1\)</span>, <span class="math notranslate nohighlight">\(4A = 1 \Rightarrow A = \displaystyle \frac{1}{4}\)</span> and for <span class="math notranslate nohighlight">\(u = -3\)</span>, <span class="math notranslate nohighlight">\(-4B = 1 \Rightarrow B = \displaystyle -\frac{1}{4}\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{u^2 + 2u -3} &amp;= \frac{1}{4}\left( \frac{1}{u-1} - \frac{1}{u+3} \right) \\
+\Rightarrow \frac{1}{4}\int \left( \frac{1}{u-1} - \frac{1}{u+3} \right)\,\mathrm{d}u &amp;= C_1 - x \\
+\frac{1}{4}\Big(\ln|u-1| - \ln|u + 3|\Big) &amp;= C_1 - x \\
+\ln\left|\frac{u-1}{u+3}\right| &amp;= C_2 - 4x\end{split}\]</div>
+<p>We then need to think about converting this back into <span class="math notranslate nohighlight">\(u = u(x,\,y)\)</span>, so lets try to collect together terms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{u-1}{u+3} &amp;= e^{C_2 - 4x} = C_3\,e^{-4x} \\
+u-1 &amp;= C_3\,(u+3)\,e^{-4x} \\
+\Rightarrow u(1 - C_3\,e^{-4x}) &amp;= 1 + 3C_3\,e^{-4x} \\
+u = \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}} &amp;= 4x - y \\
+\Rightarrow y &amp;= 4x - \frac{1 + 3C_3\,e^{-4x}}{1 - C_3\,e^{-4x}}\end{split}\]</div>
+<p>and using the condition <span class="math notranslate nohighlight">\(y(0) = 2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[2 = 0 - \frac{1+3C_3}{1 - C_3} \Rightarrow C_3 = -3\]</div>
+<p>giving a final solution of the form:</p>
+<div class="math notranslate nohighlight">
+\[y = 4x - \frac{1 - 9\,e^{-4x}}{1 + 3\,e^{-4x}}\]</div>
+<p>b.
+Writing in the form <span class="math notranslate nohighlight">\(y' = f(ax+by) = f(u)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = e^{9y-x}\]</div>
+<p>which suggests we pick a substitution <span class="math notranslate nohighlight">\(u = 9y - x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 9 \frac{\mathrm{d}y}{\mathrm{d}x} - 1 = 9 e^u - 1\\
+\int \frac{\mathrm{d}u}{9 e^u - 1} &amp;= \int\,\mathrm{d}x \\
+\int \frac{e^{-u}}{9 - e^{-u}}\,\mathrm{d}u &amp;= x + C_1\\
+\ln|9 - e^{-u}| &amp;= x + C_1\end{split}\]</div>
+<p>separating out the variables:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}9 - e^{-u} &amp;= e^{x + C_1} = C_2\,e^x \\
+e^{-u} &amp;= 9 - C_2\,e^x \\
+u &amp;= -\ln(9 - c_2\,e^x) \\
+\Rightarrow y &amp;= \frac{1}{9}\Big( x - \ln(9 - C_2\,e^x)\Big)\end{split}\]</div>
+<p>and using the condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{1}{9}\Big(0 - \ln(9-C_2)\Big) \Rightarrow C_2 = 8\]</div>
+<p>hence the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{1}{9}\Big( x - \ln(9 - 8\,e^x)\Big)\]</div>
+</div>
 </div>
 <div class="section" id="benoulli-form">
 <h3><span class="section-number">13.4.3. </span>Benoulli form<a class="headerlink" href="#benoulli-form" title="Permalink to this headline">¶</a></h3>
@@ -765,56 +1005,88 @@ a.</p>
 \[\begin{split}u = y^{1-n} &amp;\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} = (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x}\\
 \frac{\mathrm{d}y}{\mathrm{d}x} + P(x)\,y = Q(x)\,y^n &amp;\Rightarrow (1-n)y^{-n}\frac{\mathrm{d}y}{\mathrm{d}x} + (1-n)\,P(x)\,y^{1-n} = (1-n)\,Q(x)\\
 &amp;\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - (n-1)\,P(x)\,u = -(n-1)\,Q(x)\end{split}\]</div>
-<p>which as it is linear in <span class="math notranslate nohighlight">\(y\)</span> can be solved using the integrating factor method.</p>
+<p>and as this ODE is linear in <span class="math notranslate nohighlight">\(u\)</span>, it can be solved using the integrating factor method.</p>
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>If we want to solve the ODE:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = xy^2\]</div>
-<p>using the substitution <span class="math notranslate nohighlight">\(u = y^{-1}\)</span> here (as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>):</p>
+<p>we need to put it in the form <span class="math notranslate nohighlight">\(y' = f(u,\,x)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} \Rightarrow \frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = xy^2 - \frac{y}{x}\]</div>
+<p>as the highest power on the RHS is <span class="math notranslate nohighlight">\(n=2\)</span>, using the substitution <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x}\]</div>
 <p>and therefore:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} &amp;= -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} \\
-xy^2 &amp;= \frac{x}{u^2}\end{split}\]</div>
-<p>substituing these results in to the ODE:</p>
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= -\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{1}{xy} - x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= \frac{u}{x} - x \\
+\Rightarrow \frac{\mathrm{d}u}{\mathrm{d}x} - \frac{u}{x} &amp;= - x\end{split}\]</div>
+<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{\int -1/x\,\mathrm{d}x} = e^{-\ln|x|} = \frac{1}{x}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Rightarrow -\frac{1}{u^2}\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{x}{u} &amp;= \frac{x}{u^2} \\
-\frac{\mathrm{d}u}{\mathrm{d}x} - x\,u &amp;= -x\end{split}\]</div>
-<p>which we can then solve using the IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-x^2/2}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(e^{-x^2/2}\,u\Big) &amp;=  e^{-x^2/2}\,x \\
-e^{-x^2/2}\,u &amp;= \int \Big(e^{-x^2/2}\,x\Big)\,\mathrm{d}x \end{split}\]</div>
-<p>Using a subsitution (or inspection) we can integrate this RHS term to find:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}e^{-x^2/2}\,u &amp;= -e^{-x^2/2} + C \\
-u(x) &amp;= -1 + Ce^{x^2/2} \\
-y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
-<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end.</p>
+\[\begin{split}\frac{\mathrm{d}}{\mathrm{d}x}\Big(\frac{u}{x}\Big) &amp;=  -1 \\
+\frac{u}{x} &amp;= -\int \,\mathrm{d}x \\
+\frac{u}{x} &amp;= -x + C \\
+u &amp;= x(C - x) \\
+y &amp;= \frac{1}{x(C-x)}\end{split}\]</div>
+<p>where we must not forget to return the answer back to the form of <span class="math notranslate nohighlight">\(y(x)\)</span> at the end (if possible).</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Practice questions</p>
-<p>Solve the following ODEs:
-1.</p>
+<p>1.
+Solve the following ODEs:</p>
+<p>a.</p>
 <div class="math notranslate nohighlight">
 \[6\frac{\mathrm{d}y}{\mathrm{d}x} - 2y = x\,y^4\]</div>
 <p>which satisfies the condition <span class="math notranslate nohighlight">\(y(0) = -2\)</span>.</p>
-<p>2.</p>
+<p>b.</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} - \sqrt{y} = 0\]</div>
-<p>which satisfies the condition $<span class="math notranslate nohighlight">\(y(1) = 0\)</span>,</p>
+<p>which satisfies the condition <span class="math notranslate nohighlight">\(y(1) = 0\)</span>,</p>
 </div>
 <div class="seealso dropdown admonition">
 <p class="admonition-title">Solutions</p>
-<p>1.</p>
+<p>a.</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{1}{3}y = \frac{1}{6}x\,y^4 \]</div>
-<p>since the highest power on the RHS is <span class="math notranslate nohighlight">\(n = 4\)</span>, this means the substitution we need is <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-3}\)</span> and hence</p>
+<p>since the highest power on the RHS is <span class="math notranslate nohighlight">\(n = 4\)</span>, this means the substitution we need is <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{-3}\)</span> and hence:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mathrm{d}u}{\mathrm{d}y} = -3y^{-4}\frac{\mathrm{d}y}{\mathrm{d}x}\]</div>
-<p>2.</p>
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = -3y^{-4}\frac{\mathrm{d}y}{\mathrm{d}x}&amp; \\
+\Rightarrow -3y^{-4}\,\frac{\mathrm{d}y}{\mathrm{d}x} + y^{-3} &amp;= -\frac{1}{2}x \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + u(x) &amp;= -\frac{1}{2}x\end{split}\]</div>
+<p>which suggests an IF of the form <span class="math notranslate nohighlight">\(\mu = \displaystyle e^{\int\,\mathrm{d}x} = e^x\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}\,e^x + u(x)\,e^x &amp;= -\frac{1}{2}x\,e^x \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,e^x\right) &amp;= -\frac{1}{2}x\,e^x \\
+u\,e^x = -\frac{1}{2}\int x\,e^x\,\mathrm{d}x + C &amp;= -\frac{1}{2}(x-1)\,e^{x} + C \\
+u = y^{-3} &amp;= -\frac{1}{2}(x-1) + C\,e^{-x}\end{split}\]</div>
+<p>Using the condition <span class="math notranslate nohighlight">\(y(0)=-2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[-\frac{1}{8} = \frac{1}{2} + C \Rightarrow C = -\frac{5}{8}\]</div>
+<p>meaning the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = -\frac{2}{(4x-4 + 5\,e^{-x})^{1/3}}\]</div>
+<p>b.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y}{x} = y^{1/2}\]</div>
+<p>since the highest power on the RHS is <span class="math notranslate nohighlight">\(n = \frac{1}{2}\)</span>, this means the substitution we need is <span class="math notranslate nohighlight">\(u = y^{1-n} = y^{1/2}\)</span> and hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = \frac{1}{2}y^{-1/2}\frac{\mathrm{d}y}{\mathrm{d}x}&amp; \\
+\Rightarrow \frac{1}{2}y^{-1/2}\,\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{1}{2}\frac{y^{1/2}}{x} &amp;= \frac{1}{2} \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \frac{1}{2x}u(x) &amp;= \frac{1}{2}\end{split}\]</div>
+<p>which suggests an IF of the form <span class="math notranslate nohighlight">\(\mu = \displaystyle e^{\int\frac{1}{2x}\,\mathrm{d}x} = e^{\frac{1}{2}\ln|x|} = x^{1/2}\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x}\,x^{1/2} + u(x) &amp;= \frac{1}{2}x^{1/2} \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(u\,x^{1/2}\right) &amp;= \frac{1}{2}x^{1/2} \\
+u\,x^{1/2} = -\frac{1}{2}\int x\,\mathrm{d}x + C &amp;= \frac{1}{2}\frac{2}{3}x^{3/2} + C \\
+u = y^{1/2} &amp;= \frac{1}{3}x + C\,x^{-1/2}\end{split}\]</div>
+<p>Using the condition <span class="math notranslate nohighlight">\(y(1)=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{1}{3} + C \Rightarrow C = -\frac{1}{3}\]</div>
+<p>meaning the final solution is:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \left(\frac{1}{3}x - \frac{1}{3}x^{-1/2} \right)^2 = \frac{x^3-2x^{3/2}+1}{9x}\]</div>
 </div>
 </div>
 <div class="section" id="riccati-form">
@@ -823,43 +1095,71 @@ y(x) &amp;= \frac{1}{Ce^{x^2/2}-1}\end{split}\]</div>
 <p class="admonition-title">Defintion</p>
 <p>A Riccati differential equation takes the form:</p>
 <div class="math notranslate nohighlight" id="equation-riccatiode">
-<span class="eqno">(13.7)<a class="headerlink" href="#equation-riccatiode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = q_0(x) + q_1(x)\,y(x) + q_2(x)y^2(x)\]</div>
+<span class="eqno">(13.7)<a class="headerlink" href="#equation-riccatiode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}y}{\mathrm{d}x} = p(x)\,y^2(x) + q(x)\,y(x) + r(x)\]</div>
 <p>which we can recast in terms of a variable <span class="math notranslate nohighlight">\(u(x)\)</span>, which satisfies an ODE:</p>
 <div class="math notranslate nohighlight">
-\[u'' - R\,u' + S\,u =0, \quad R = q_1 + \frac{q_2'}{q_2}, \quad S = q_0\,q_2\]</div>
+\[\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u =0, \quad R = q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S = r\,p\]</div>
 <p>and we can solve to find <span class="math notranslate nohighlight">\(y(x)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[y = -\frac{u'}{q_2\,u}\]</div>
+\[y = -\frac{1}{p\,u}\frac{\mathrm{d}u}{\mathrm{d}x}\]</div>
 </div>
-<p>We see that if <span class="math notranslate nohighlight">\(q_0=0\)</span>, then this just reduces to a Benoulli equation with <span class="math notranslate nohighlight">\(n=2\)</span> and if <span class="math notranslate nohighlight">\(q_2=0\)</span>, then this is just in integrating form factor, so this
+<p>Using the transformation <span class="math notranslate nohighlight">\(v = p\,y\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}v}{\mathrm{d}x} &amp;= \frac{\mathrm{d}p}{\mathrm{d}x}\,y + p\,\frac{\mathrm{d}y}{\mathrm{d}x} \\
+p\,\frac{\mathrm{d}y}{\mathrm{d}x} &amp;= p^2\,y^2 + q\,p\,y + p\,r \\
+\Rightarrow \frac{\mathrm{d}v}{\mathrm{d}x} &amp;= v^2 + q\,v + p\,r + y\,\frac{\mathrm{d}p}{\mathrm{d}x} = v^2 + v\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r \end{split}\]</div>
+<p>and then switching to the variable <span class="math notranslate nohighlight">\(u(x)\)</span>, where <span class="math notranslate nohighlight">\(v = -\displaystyle \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}\)</span> means:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}v}{\mathrm{d}x} &amp;= \frac{1}{u^2}\left(\frac{\mathrm{d}u}{\mathrm{d}x}\right)^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} 
+= v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} \\
+v^2 - \frac{1}{u}\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &amp;= v^2 - \frac{1}{u}\frac{\mathrm{d}u}{\mathrm{d}x}\left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right) + p\,r \\
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &amp;= \left(q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x} \right)\frac{\mathrm{d}u}{\mathrm{d}x} - p\,r\,u\\
+\frac{\mathrm{d}^2 u}{\mathrm{d}x^2} &amp;- R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u = 0\\
+R(x) &amp;= q + \frac{1}{p}\frac{\mathrm{d}p}{\mathrm{d}x}, \quad S(x) = r\,p\end{split}\]</div>
+<p>We see that if <span class="math notranslate nohighlight">\(r=0\)</span>, then this just reduces to a Benoulli equation with <span class="math notranslate nohighlight">\(n=2\)</span> and if <span class="math notranslate nohighlight">\(p=0\)</span>, then this is just in integrating form factor, so this
 equation can be thought of as a hybrid between the two.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Worked example</p>
 <p>Consider the ODE:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}y' - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
+\[\begin{split}\frac{\mathrm{d}y}{\mathrm{d}x} - \frac{2y}{x} = - x^2\,y^2 \\\end{split}\]</div>
 <p>this equation can be rewritten as:</p>
 <div class="math notranslate nohighlight">
-\[y' = \frac{2y}{x}-x^2\,y^2\]</div>
+\[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{2y}{x}-x^2\,y^2\]</div>
 <p>and then transformed into the 2nd order ODE:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u'' - R\,u' + S\,u &amp;= 0 \\
+\[\begin{split}\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - R\,\frac{\mathrm{d}u}{\mathrm{d}x} + S\,u &amp;= 0 \\
 R = \frac{4}{x}\,\quad &amp; S = 0 \\
-\Rightarrow u'' -\frac{4}{x} \,u' &amp;= 0\end{split}\]</div>
+\Rightarrow \frac{\mathrm{d}^2 u}{\mathrm{d} x^2} -\frac{4}{x} \,\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 0\end{split}\]</div>
 <p>which we can solve using an IF method, with <span class="math notranslate nohighlight">\(\mu = e^{-\int 4/x\,\mathrm{d}x} = x^{-4}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x^{-4}\,u'' - 4\,x^{-5} \,u' &amp;= 0 \\
-\Big(x^{-4}\,u'\Big)^\prime &amp;= 0\end{split}\]</div>
+\[\begin{split}x^{-4}\,\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} - 4\,x^{-5} \,\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= 0 \\
+\Big(x^{-4}\,\frac{\mathrm{d}u}{\mathrm{d}x}\Big)^\prime &amp;= 0\end{split}\]</div>
 <p>Since the derivative of a constant is zero, this means:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u' &amp;= C_1\,x^4 \\
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} &amp;= C_1\,x^4 \\
 u &amp;= \frac{C_1\,x^5}{5} + C_2 \\
-\Rightarrow y &amp;= -\frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants, we can tidy this expression up:</p>
+\Rightarrow y &amp;= \frac{C_1\,x^2}{\frac{C_1x^5}{5} + C_2}\\\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1,\, C_2\)</span> are constants.  We can tidy this expression up:</p>
 <div class="math notranslate nohighlight">
-\[y = -\frac{5x^2}{x^5 + C_3}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C_3\)</span> is a constants.</p>
+\[y = \frac{5x^2}{x^5 + C_3}\]</div>
+<p>and <span class="math notranslate nohighlight">\(C_3\)</span> is a constant.</p>
+<p>We note that this problem has <span class="math notranslate nohighlight">\(r(x) = 0\)</span>, therefore is also a Bernoulli type expression, with highest power <span class="math notranslate nohighlight">\(y^2\)</span>, so <span class="math notranslate nohighlight">\(u = y^{1-2} = y^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\mathrm{d}u}{\mathrm{d}x} = -\frac{1}{y^2} \frac{\mathrm{d}y}{\mathrm{d}x}\\
+-\frac{1}{y^2}\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{2}{xy} &amp;= x^2  \\
+\frac{\mathrm{d}u}{\mathrm{d}x} + \left(\frac{2u}{x}\right) &amp;= x^2\end{split}\]</div>
+<p>which is also solveable using an IF, <span class="math notranslate nohighlight">\(\mu = \displaystyle e^{\int \frac{2}{x}\,\mathrm{d}x} = x^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^2\frac{\mathrm{d}u}{\mathrm{d}x} + 2x\,u &amp;= x^4 \\
+\frac{\mathrm{d}}{\mathrm{d}x}\left(x^2\,u\right) &amp;= x^4 \\
+x^2\,u &amp;= \frac{1}{5}x^5 + C \\
+\Rightarrow u = \frac{1}{5}x^3 + Cx^{-2} &amp;= \frac{x^5 + C}{5x^2}\\
+y &amp;= \frac{5x^2}{x^5 + C}\end{split}\]</div>
+<p>which agrees with the earlier result.</p>
 </div>
+<p>Whilst this method is good at converting a non-linear 1st order ODE into a linear 2nd order ODE, most of the time the
+resulting equation will need some quite powerful techinques to solve, especially if <span class="math notranslate nohighlight">\(R(x)\)</span> and <span class="math notranslate nohighlight">\(S(x)\)</span> are both functions of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </div>
 </div>
 </div>
